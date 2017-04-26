@@ -1,4 +1,4 @@
-## Interface: 70100
+## Interface: 70200
 ## Title: ElitismHelper
 ## Version: 0.0.1
 ## Notes: Helps with being an elitist by calling out fails
