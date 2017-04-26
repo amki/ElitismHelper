@@ -6,8 +6,23 @@
 }]]--
 
 local Spells = {
+	-- Affixes
 	-- Volcanic Plume
-	[209862] = true
+	[209862] = true,
+	-- Blackrook Hold
+	-- Bonebreaking Strike
+	[200261] = true,
+	-- Boulder Crush
+	[222397] = true,
+	-- Dark Blast
+	[198820] = true,
+	-- Dark Obliteration
+	[199567] = true,
+	-- Maw of Souls
+	-- Cosmic Scythe
+	[194216] = true,
+	-- DEBUG
+	--[239740] = true
 }
 
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
@@ -33,15 +48,27 @@ function table.pack(...)
 end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-	print(srcName.." dealt "..aAmount.." damage to "..dstName.." with spell "..spellId)
+	if srcName then
+		print(srcName.." dealt "..aAmount.." damage to "..dstName.." with spell "..spellId)
+	else
+		print("Someone (env) dealt "..aAmount.." damage to "..dstName.." with spell "..spellId)
+	end
 	if Spells[spellId] then
-		name, rank, icon, castingTime, minRange, maxRange, spellID = GetSpellInfo(spellId) 
-		UIErrorsFrame:AddMessage(dstName.." got hit by "..name.." for "..aAmount)
+		name, rank, icon, castingTime, minRange, maxRange, spellId = GetSpellInfo(spellId)
+		if IsInRaid() then
+			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",RAID)
+		elseif IsInGroup() then
+			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",PARTY)
+		end
 	end
 end
 
 function ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, aAmount)
-	print(srcName.." dealt "..aAmount.." damage to "..dstName.." with a melee hit")
+	if(srcName) then
+		print(srcName.." dealt "..aAmount.." damage to "..dstName.." with a melee hit")
+	else
+		print("Someone (env) dealt "..aAmount.." damage to "..dstName.." with a melee hit.")
+	end
 end
 
 function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
