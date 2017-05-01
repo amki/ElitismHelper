@@ -16,13 +16,27 @@ local Spells = {
 	[222397] = true,
 	-- Dark Blast
 	[198820] = true,
+	-- Raven's Dive
+	[214001] = true,
 	-- Dark Obliteration
 	[199567] = true,
+	-- Eye of Azshara
+	-- Abrasive Slime
+	[195473] = true,
+	-- Static Nova
+	[193597] = true,
+	-- Halls of Valor
 	-- Maw of Souls
 	-- Cosmic Scythe
-	[194216] = true,
+	[194216] = true
 	-- DEBUG
-	--[239740] = true
+	--[190984] = true,
+	--[194153] = true
+}
+
+local Auras = {
+	-- DEBUG
+	--[164812] = true
 }
 
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
@@ -53,8 +67,7 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 	else
 		print("Someone (env) dealt "..aAmount.." damage to "..dstName.." with spell "..spellId)
 	end
-	if Spells[spellId] then
-		name, rank, icon, castingTime, minRange, maxRange, spellId = GetSpellInfo(spellId)
+	if Spells[spellId] and UnitIsPlayer(dstName) then
 		if IsInRaid() then
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",RAID)
 		elseif IsInGroup() then
@@ -71,48 +84,42 @@ function ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFla
 	end
 end
 
+function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
+	if Auras[spellId] and UnitIsPlayer(dstName) then
+		if auraAmount then
+			if IsInRaid() then
+				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",RAID)
+			elseif IsInGroup() then
+				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",PARTY)
+			end
+		else
+			if IsInRaid() then
+				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",RAID)
+			elseif IsInGroup() then
+				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",PARTY)
+			end
+		end
+	end
+end
+
 function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = select(1,...); -- Those arguments appear for all combat event variants.
 	local eventPrefix, eventSuffix = eventType:match("^(.-)_?([^_]*)$");
 	if (eventPrefix:match("^SPELL") or eventPrefix:match("^RANGE")) and eventSuffix == "DAMAGE" then
-			local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand, _ = select(12,...)
-			ElitismFrame:SpellDamage(timestamp, eventtype, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, sAmount)
+		local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand, _ = select(12,...)
+		ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, sAmount)
 	elseif eventPrefix:match("^SWING") and eventSuffix == "DAMAGE" then
 		local aAmount, aOverkill, aSchool, aResisted, aBlocked, aAbsorbed, aCritical, aGlancing, aCrushing, aOffhand, _ = select(12,...)
 		ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, aAmount)
-	elseif eventPrefix:match("^SPELL") and eventSuffix == "ABSORBED" then
-		local chk = select(12,...)
-        local spellId, spellName, spellSchool, aGUID, aName, aFlags, aRaidFlags, aspellId, aspellName, aspellSchool, aAmount
-		-- If chk is a number it's a spell because spellId follows for spells but player GUID for melee swings (player GUID is not a number)
-        if type(chk) == "number" then
-            -- Spell event
-            spellId, spellName, spellSchool, aGUID, aName, aFlags, aRaidFlags, aspellId, aspellName, aspellSchool, aAmount = select(12,...)
-            
-            -- Exclude Spirit Shift damage
-            if aspellId == 184553 then
-                return
-            end
-                
-            if aAmount then
-                ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-			else
-				print("<EH> DEBUG: AbsorbSpell detected but no amount?")
-            end
-        else
-            -- Swing event
-            aGUID, aName, aFlags, aRaidFlags, aspellId, aspellName, aspellSchool, aAmount = select(12,...)
-
-            -- Exclude Spirit Shift damage
-            if aspellId == 184553 then
-                return
-            end
-                
-            if aAmount then
-                ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, aAmount)
-			else
-				print("<EH> DEBUG: AbsorbSwing detected but no amount?")
-            end
-        end
+	elseif eventPrefix:match("^SPELL") and eventSuffix == "MISSED" then
+		local spellId, spellName, spellSchool, missType, isOffHand, mAmount  = select(12,...)
+		ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, mAmount)
+	elseif eventType == "SPELL_AURA_APPLIED" then
+		local spellId, spellName, spellSchool, auraType = select(12,...)
+		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType)
+	elseif eventType == "SPELL_AURA_APPLIED_DOSE" then
+		local spellId, spellName, spellSchool, auraType, auraAmount = select(12,...)
+		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	else
 		--print("Unhandled "..eventType)
 	end
