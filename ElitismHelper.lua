@@ -1,9 +1,4 @@
 --version 0.0.1
---[[local Slots = {
-	"Head","Neck","Shoulder","Back","Chest","Wrist",
-	"Hands","Waist","Legs","Feet","Finger0","Finger1",
-	"Trinket0","Trinket1","MainHand","SecondaryHand"
-}]]--
 
 local Users = {}
 local activeUser = nil
@@ -11,56 +6,61 @@ local playerUser = GetUnitName("player",true).."-"..GetRealmName()
 
 local Spells = {
 	-- Affixes
-	[209862] = true,		-- Volcanic Plume
-	
+	[209862] = true,		-- Volcanic Plume (Environment)
+
 	-- Blackrook Hold
-	[200261] = true,		-- Bonebreaking Strike
-	[222397] = true,		-- Boulder Crush
-	[198820] = true,		-- Dark Blast
-	[214001] = true,		-- Raven's Dive
-	[199567] = true,		-- Dark Obliteration
-	
+	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
+	[222397] = true,		-- Boulder Crush (Environment)
+	[198820] = true,		-- Dark Blast (Latosius)
+	[214001] = true,		-- Raven's Dive (Risen Lancer)
+	[199567] = true,		-- Dark Obliteration (Image of Latosius)
+
 	-- Court of Stars
-	[207979] = true,		-- Shockwave
-	[209027] = true,		-- Quelling Strike
-	
+	[207979] = true,		-- Shockwave (Jazshariu)
+	[209027] = true,		-- Quelling Strike (Duskwatch Guard)
+
 	-- Darkheart Thicket
-	[200658] = true,		-- Star Shower
-	[201273] = true,		-- Blood Bomb
-	[201227] = true,		-- Blood Assault
-	
+	[200658] = true,		-- Star Shower (Dreadsoul Ruiner)
+	[201273] = true,		-- Blood Bomb (Bloodtainted Fury)
+	[201227] = true,		-- Blood Assault (Bloodtainted Fury)
+
 	-- Eye of Azshara
-	[195473] = true,		-- Abrasive Slime
-	[193597] = true,		-- Static Nova
-	
-	-- Halls of Valor
-	
+	[195473] = true,		-- Abrasive Slime (Gritslime Snail)
+
 	-- Maw of Souls
-	[194216] = true,		-- Cosmic Scythe
-	
-	-- DEBUG
-	--[190984] = true,
-	--[194153] = true
+	[194216] = true,		-- Cosmic Scythe (Harbaron)
+	[195309] = true,		-- Swirling Water (Helya)
+
+	-- Nighthold
+	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
 }
 
 local Auras = {
 	-- Court of Stars
-	[209602] = true,		-- Blade Surge
-	
+	[209602] = true,		-- Blade Surge (Advisor Melandrus)
+
 	-- Darkheart Thicket
-	[200769] = true,		-- Propelling Charge
-	-- DEBUG
-	--[164812] = true
+	[200769] = true,		-- Propelling Charge (Crazed Razorbeak)
+
+	-- Halls of Valor
+	[198088] = true,		-- Glowing Fragment (Odyn)
+
+	-- Emerald Nightmare
+	[210315] = true,		-- Nightmare Brambles (Cenarius)
+	[203110] = true,		-- Slumbering Nightmare (Dragons of Nightmare)
+
+	-- Trial of Valor
+	[227781] = true,		-- Glowing Fragment (Odyn)
+
+	-- Nighthold
+	[204483] = true,		-- Focused Blast (Skorpyron)
+	[206896] = true,		-- Torn Soul (Gul'dan)
 }
 
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
-print("Registering COMBAT_LOG_EVENT")
 ElitismFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 local MSG_PREFIX = "ElitismHelper"
 local success = RegisterAddonMessagePrefix(MSG_PREFIX)
-if(success) then
-	print("Registered AddonMessagePrefix")
-end
 ElitismFrame:RegisterEvent("CHAT_MSG_ADDON")
 ElitismFrame:RegisterEvent("GROUP_ROSTER_UPDATE")
 ElitismFrame:RegisterEvent("ADDON_LOADED")
@@ -195,6 +195,5 @@ function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 		local spellId, spellName, spellSchool, auraType, auraAmount = select(12,...)
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	else
-		--print("Unhandled "..eventType)
 	end
 end
