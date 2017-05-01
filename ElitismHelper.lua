@@ -39,8 +39,8 @@ local Spells = {
 	[194216] = true,		-- Cosmic Scythe
 	
 	-- DEBUG
-	[190984] = true,
-	[194153] = true
+	--[190984] = true,
+	--[194153] = true
 }
 
 local Auras = {
@@ -50,7 +50,7 @@ local Auras = {
 	-- Darkheart Thicket
 	[200769] = true,		-- Propelling Charge
 	-- DEBUG
-	[164812] = true
+	--[164812] = true
 }
 
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
@@ -89,6 +89,10 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 		print("activeUser is "..activeUser)
 	elseif msg == "resync" then
 		ElitismFrame:RebuildTable()
+	elseif msg == "table" then
+		for k,v in pairs(Users) do
+			print(k.." ;;; "..v)
+		end
 	end
 end
 
@@ -133,7 +137,6 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 				activeUser = k
 			end
 		end
-		print("Active User is now: "..activeUser)
 	else
 		print("Unknown message: "..message)
 	end
