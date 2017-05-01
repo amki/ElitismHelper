@@ -33,6 +33,8 @@ local Spells = {
 
 	-- Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
+	
+	[197629] = true
 }
 
 local Auras = {
@@ -84,7 +86,6 @@ ElitismFrame:SetScript("OnEvent", function(self, event_name, ...)
 end)
 
 SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
-	print("SLASH COMMAND!")
 	if msg == "activeuser" then
 		print("activeUser is "..activeUser)
 	elseif msg == "resync" then
@@ -111,8 +112,10 @@ function ElitismFrame:RebuildTable()
 	end
 end
 
-function ElitismFrame:ADDON_LOADED(event,...)
-	ElitismFrame:RebuildTable()
+function ElitismFrame:ADDON_LOADED(event,addon)
+	if addon == "ElitismHelper" then
+		ElitismFrame:RebuildTable()
+	end
 end
 
 function ElitismFrame:GROUP_ROSTER_UPDATE(event,...)
