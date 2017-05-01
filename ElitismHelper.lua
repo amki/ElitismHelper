@@ -62,11 +62,6 @@ function table.pack(...)
 end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-	if srcName then
-		print(srcName.." dealt "..aAmount.." damage to "..dstName.." with spell "..spellId)
-	else
-		print("Someone (env) dealt "..aAmount.." damage to "..dstName.." with spell "..spellId)
-	end
 	if Spells[spellId] and UnitIsPlayer(dstName) then
 		if IsInRaid() then
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",RAID)
@@ -77,11 +72,6 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 end
 
 function ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, aAmount)
-	if(srcName) then
-		print(srcName.." dealt "..aAmount.." damage to "..dstName.." with a melee hit")
-	else
-		print("Someone (env) dealt "..aAmount.." damage to "..dstName.." with a melee hit.")
-	end
 end
 
 function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
