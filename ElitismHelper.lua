@@ -7,6 +7,7 @@
 
 local Users = {}
 local activeUser = nil
+local playerUser = GetUnitName("player",true).."-"..GetRealmName()
 
 local Spells = {
 	-- Affixes
@@ -35,11 +36,11 @@ local Spells = {
 	-- Halls of Valor
 	
 	-- Maw of Souls
-	[194216] = true			-- Cosmic Scythe
+	[194216] = true,		-- Cosmic Scythe
 	
 	-- DEBUG
-	--[190984] = true,
-	--[194153] = true
+	[190984] = true,
+	[194153] = true
 }
 
 local Auras = {
@@ -47,9 +48,9 @@ local Auras = {
 	[209602] = true,		-- Blade Surge
 	
 	-- Darkheart Thicket
-	[200769] = true			-- Propelling Charge
+	[200769] = true,		-- Propelling Charge
 	-- DEBUG
-	--[164812] = true
+	[164812] = true
 }
 
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
@@ -82,6 +83,17 @@ ElitismFrame:SetScript("OnEvent", function(self, event_name, ...)
 	end
 end)
 
+SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
+	print("SLASH COMMAND!")
+	if msg == "activeuser" then
+		print("activeUser is "..activeUser)
+	elseif msg == "resync" then
+		ElitismFrame:RebuildTable()
+	end
+end
+
+SLASH_ELITISMHELPER1 = "/eh"
+
 function ElitismFrame:RebuildTable()
 	Users = {}
 	activeUser = nil
@@ -90,7 +102,7 @@ function ElitismFrame:RebuildTable()
 		SendAddonMessage(MSG_PREFIX,"VREQ",RAID)
 	else
 		name = GetUnitName("player",true)
-		activeUser = name
+		activeUser = name.."-"..GetRealmName()
 		print("We are alone, activeUser: "..activeUser)
 	end
 end
@@ -101,10 +113,6 @@ end
 
 function ElitismFrame:GROUP_ROSTER_UPDATE(event,...)
 	print("GROUP_ROSTER_UPDATE")
-	local args = table.pack(...)
-	for i=1,args.n,1 do
-		print(i.." is "..args[i])
-	end
 	ElitismFrame:RebuildTable()
 end
 
@@ -118,7 +126,6 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 	elseif message:match("^VANS") then
 		Users[sender] = message
 		for k,v in pairs(Users) do
-			print("User: "..k.." "..v)
 			if activeUser == nil then
 				activeUser = k
 			end
@@ -164,6 +171,9 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 end
 
 function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
+	if activeUser ~= playerUser then
+		return
+	end
 	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = select(1,...); -- Those arguments appear for all combat event variants.
 	local eventPrefix, eventSuffix = eventType:match("^(.-)_?([^_]*)$");
 	if (eventPrefix:match("^SPELL") or eventPrefix:match("^RANGE")) and eventSuffix == "DAMAGE" then
