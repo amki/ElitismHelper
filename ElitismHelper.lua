@@ -31,10 +31,11 @@ local Spells = {
 	[194216] = true,		-- Cosmic Scythe (Harbaron)
 	[195309] = true,		-- Swirling Water (Helya)
 
-	-- Nighthold
+	-- The Arcway
+	[211209] = true,		-- Arcane Slicer (Arcane Anomaly)
+
+	-- The Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
-	
-	[197629] = true
 }
 
 local Auras = {
@@ -54,7 +55,7 @@ local Auras = {
 	-- Trial of Valor
 	[227781] = true,		-- Glowing Fragment (Odyn)
 
-	-- Nighthold
+	-- The Nighthold
 	[204483] = true,		-- Focused Blast (Skorpyron)
 	[206896] = true,		-- Torn Soul (Gul'dan)
 }
