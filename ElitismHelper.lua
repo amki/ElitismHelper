@@ -191,7 +191,9 @@ function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 		ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, aAmount)
 	elseif eventPrefix:match("^SPELL") and eventSuffix == "MISSED" then
 		local spellId, spellName, spellSchool, missType, isOffHand, mAmount  = select(12,...)
-		ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, mAmount)
+		if mAmount then
+			ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, mAmount)
+		end
 	elseif eventType == "SPELL_AURA_APPLIED" then
 		local spellId, spellName, spellSchool, auraType = select(12,...)
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType)
