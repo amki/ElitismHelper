@@ -20,19 +20,30 @@ local Spells = {
 	[209027] = true,		-- Quelling Strike (Duskwatch Guard)
 
 	-- Darkheart Thicket
-	[200658] = true,		-- Star Shower (Dreadsoul Ruiner)
+	[204402] = true,		-- Star Shower (Dreadsoul Ruiner)
 	[201273] = true,		-- Blood Bomb (Bloodtainted Fury)
 	[201227] = true,		-- Blood Assault (Bloodtainted Fury)
+	[201123] = true,		-- Root Burst (Vilethorn Blossom)
 
 	-- Eye of Azshara
 	[195473] = true,		-- Abrasive Slime (Gritslime Snail)
 
 	-- Maw of Souls
-	[194216] = true,		-- Cosmic Scythe (Harbaron)
-	[195309] = true,		-- Swirling Water (Helya)
+	[194218] = true,		-- Cosmic Scythe (Harbaron)
+	[195309] = true,		-- Swirling Water (MoS Helya)
+	[202098] = true,		-- Brackwater Barrage (MoS Helya) 
+	[195036] = true,		-- Defiant Strike #1 (Seacursed Soulkeeper)
+	[195033] = true,		-- Defiant Strike #2 (Seacursed Soulkeeper)
+	[195035] = true,		-- Defiant Strike #3 (Seacursed Soulkeeper)
+	[195038] = true,		-- Defiant Strike #4 (Seacursed Soulkeeper)
+	[194443] = true,		-- Six Pound Barrel (Waterlogged Soul Guard)
 
 	-- The Arcway
 	[211209] = true,		-- Arcane Slicer (Arcane Anomaly)
+	[196142] = true,		-- Exterminate (Corstilax)
+
+	-- Neltharion's Lair
+	[183100] = true,		-- Avalanche (Mightstone Breaker)
 
 	-- The Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
@@ -40,20 +51,23 @@ local Spells = {
 
 local Auras = {
 	-- Court of Stars
-	[209602] = true,		-- Blade Surge (Advisor Melandrus)
+	[209667] = true,		-- Blade Surge (Advisor Melandrus)
 
 	-- Darkheart Thicket
-	[200769] = true,		-- Propelling Charge (Crazed Razorbeak)
+	[200771] = true,		-- Propelling Charge (Crazed Razorbeak)
 
 	-- Halls of Valor
-	[198088] = true,		-- Glowing Fragment (Odyn)
+	[198088] = true,		-- Glowing Fragment (HoV Odyn)
+
+	-- Lower Karazhan
+	[227977] = true,		-- Flashlight (Skeletal Usher)
 
 	-- Emerald Nightmare
 	[210315] = true,		-- Nightmare Brambles (Cenarius)
 	[203110] = true,		-- Slumbering Nightmare (Dragons of Nightmare)
 
 	-- Trial of Valor
-	[227781] = true,		-- Glowing Fragment (Odyn)
+	[227781] = true,		-- Glowing Fragment (ToV Odyn)
 
 	-- The Nighthold
 	[204483] = true,		-- Focused Blast (Skorpyron)
