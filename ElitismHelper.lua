@@ -139,7 +139,7 @@ function ElitismFrame:RebuildTable()
 	Users = {}
 	activeUser = nil
 	-- print("Reset Addon Users table")
-	if IsInGroup() or IsInRaid() or IsInInstanceGroup() then
+	if IsInGroup() or IsInRaid() or IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
 		SendAddonMessage(MSG_PREFIX,"VREQ",RAID)
 	else
 		name = GetUnitName("player",true)
@@ -187,6 +187,8 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",RAID)
 		elseif IsInGroup() then
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",PARTY)
+		elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
+			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",INSTANCE)
 		end
 	end
 end
@@ -201,12 +203,16 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",RAID)
 			elseif IsInGroup() then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",PARTY)
+			elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
+				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",INSTANCE)
 			end
 		else
 			if IsInRaid() then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",RAID)
 			elseif IsInGroup() then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",PARTY)
+			elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
+				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",INSTANCE)
 			end
 		end
 	end
