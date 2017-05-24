@@ -10,10 +10,13 @@ local Spells = {
 
 	-- Blackrook Hold
 	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
+	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard) \\ credit to Grâve-Kazzak
 	[222397] = true,		-- Boulder Crush (Environment)
 	[198820] = true,		-- Dark Blast (Latosius)
 	[214001] = true,		-- Raven's Dive (Risen Lancer)
 	[199567] = true,		-- Dark Obliteration (Image of Latosius)
+	[200256] = true,		-- Phased Explosion (Arcane Minion) \\ credit to Darlinda-Kazzak, Grâve-Kazzak, Banefury-Kazzak and Solacè-Kazzak
+	[198781] = true,		-- Whirling Blade (Kur'talos Ravencrest) \\ credit to Darlinda-Kazzak and Grâve-Kazzak
 
 	-- Court of Stars
 	[207979] = true,		-- Shockwave (Jazshariu)
@@ -45,8 +48,26 @@ local Spells = {
 	-- Neltharion's Lair
 	[183100] = true,		-- Avalanche (Mightstone Breaker)
 
+	-- Halls of Valor
+	[192206] = true,		-- Sanctify (Olmyr & Hyrja)
+	[199210] = true,		-- Penetrating Shot (Valarjar Marksman)
+	[199337] = true,		-- Bear Trap (Valarjar Trapper)
+	[199818] = true,		-- Crackle (Stormforged Sentinel)
+	[210875] = true,		-- Charged Pulse (Stormforged Sentinel)
+	[193234] = true,		-- Dancing Blade (Hymdall)
+
 	-- The Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
+	[207631] = true,		-- Annihilation (Trilliax)
+	[205391] = true,		-- Fel Beam (Krosus)
+	[215988] = true,		-- Carrion Nightmare (Tichondrius)
+	[207720] = true,		-- Witness the Void (Thing That Should Not Be, Star Augur Etraeus)
+	[218463] = true,		-- Controlled Chaos (High Botanist Tel'arn, 10 yards explosion?)
+	[218466] = true,		-- Controlled Chaos (High Botanist Tel'arn, 20 yards explosion?)
+	[218470] = true,		-- Controlled Chaos (High Botanist Tel'arn, 30 yards explosion?)
+	[218155] = true,		-- Solar Collapse (High Botanist Tel'arn)
+	[206515] = true,		-- Fel Efflux (Gul'dan)
+	[212262] = true,		-- Hand of Gul'dan (Gul'dan)
 }
 
 local Auras = {
@@ -117,13 +138,13 @@ SLASH_ELITISMHELPER1 = "/eh"
 function ElitismFrame:RebuildTable()
 	Users = {}
 	activeUser = nil
-	print("Reset Addon Users table")
-	if IsInGroup() or IsInRaid() then
+	-- print("Reset Addon Users table")
+	if IsInGroup() or IsInRaid() or IsInInstanceGroup() then
 		SendAddonMessage(MSG_PREFIX,"VREQ",RAID)
 	else
 		name = GetUnitName("player",true)
 		activeUser = name.."-"..GetRealmName()
-		print("We are alone, activeUser: "..activeUser)
+		-- print("We are alone, activeUser: "..activeUser)
 	end
 end
 
@@ -134,7 +155,7 @@ function ElitismFrame:ADDON_LOADED(event,addon)
 end
 
 function ElitismFrame:GROUP_ROSTER_UPDATE(event,...)
-	print("GROUP_ROSTER_UPDATE")
+	-- print("GROUP_ROSTER_UPDATE")
 	ElitismFrame:RebuildTable()
 end
 
@@ -156,7 +177,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 			end
 		end
 	else
-		print("Unknown message: "..message)
+		-- print("Unknown message: "..message)
 	end
 end
 
