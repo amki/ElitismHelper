@@ -60,13 +60,11 @@ local Spells = {
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
 	[207631] = true,		-- Annihilation (Trilliax)
 	[205391] = true,		-- Fel Beam (Krosus)
-	[215988] = true,		-- Carrion Nightmare (Tichondrius)
-	[207720] = true,		-- Witness the Void (Thing That Should Not Be, Star Augur Etraeus)
+	[215988] = true,		-- Carrion Nightmare (Tichondrius)^
 	[218463] = true,		-- Controlled Chaos (High Botanist Tel'arn, 10 yards explosion?)
 	[218466] = true,		-- Controlled Chaos (High Botanist Tel'arn, 20 yards explosion?)
 	[218470] = true,		-- Controlled Chaos (High Botanist Tel'arn, 30 yards explosion?)
 	[218155] = true,		-- Solar Collapse (High Botanist Tel'arn)
-	[206515] = true,		-- Fel Efflux (Gul'dan)
 	[212262] = true,		-- Hand of Gul'dan (Gul'dan)
 }
 
@@ -93,6 +91,7 @@ local Auras = {
 	-- The Nighthold
 	[204483] = true,		-- Focused Blast (Skorpyron)
 	[206896] = true,		-- Torn Soul (Gul'dan)
+	[207720] = true,		-- Witness the Void (Thing That Should Not Be, Star Augur Etraeus)
 }
 
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
