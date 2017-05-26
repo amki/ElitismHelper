@@ -40,6 +40,7 @@ local Spells = {
 	[195035] = true,		-- Defiant Strike #3 (Seacursed Soulkeeper)
 	[195038] = true,		-- Defiant Strike #4 (Seacursed Soulkeeper)
 	[194443] = true,		-- Six Pound Barrel (Waterlogged Soul Guard)
+	[199250] = true,		-- Deceptive Strike (Seacursed Swiftblade)
 
 	-- The Arcway
 	[211209] = true,		-- Arcane Slicer (Arcane Anomaly)
@@ -47,14 +48,16 @@ local Spells = {
 
 	-- Neltharion's Lair
 	[183100] = true,		-- Avalanche (Mightstone Breaker)
+	[198475] = true,		-- Strike of the Mountain (Ularogg Cragshaper)
 
 	-- Halls of Valor
 	[192206] = true,		-- Sanctify (Olmyr & Hyrja)
 	[199210] = true,		-- Penetrating Shot (Valarjar Marksman)
 	[199337] = true,		-- Bear Trap (Valarjar Trapper)
-	[199818] = true,		-- Crackle (Stormforged Sentinel)
 	[210875] = true,		-- Charged Pulse (Stormforged Sentinel)
 	[193234] = true,		-- Dancing Blade (Hymdall)
+	[193260] = true,		-- Static Field (Storm Drake, Hymdall)
+	[188395] = true,		-- Ball Lightning (Static Field, Hymdall)
 
 	-- The Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
@@ -66,6 +69,7 @@ local Spells = {
 	[218470] = true,		-- Controlled Chaos (High Botanist Tel'arn, 30 yards explosion?)
 	[218155] = true,		-- Solar Collapse (High Botanist Tel'arn)
 	[212262] = true,		-- Hand of Gul'dan (Gul'dan)
+	[229948] = true,		-- Fel Obelisk (Fel Lord Kuraz'mal, Gul'dan)
 }
 
 local Auras = {
