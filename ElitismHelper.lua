@@ -10,13 +10,13 @@ local Spells = {
 
 	-- Blackrook Hold
 	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
-	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard) \\ credit to Grâve-Kazzak
+	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard)
 	[222397] = true,		-- Boulder Crush (Environment)
 	[198820] = true,		-- Dark Blast (Latosius)
 	[214002] = true,		-- Raven's Dive (Risen Lancer)
 	[199567] = true,		-- Dark Obliteration (Image of Latosius)
-	[200256] = true,		-- Phased Explosion (Arcane Minion) \\ credit to Darlinda-Kazzak, Grâve-Kazzak, Banefury-Kazzak and Solacè-Kazzak
-	[198781] = true,		-- Whirling Blade (Kur'talos Ravencrest) \\ credit to Darlinda-Kazzak and Grâve-Kazzak
+	[200256] = true,		-- Phased Explosion (Arcane Minion)
+	[198781] = true,		-- Whirling Blade (Kur'talos Ravencrest)
 
 	-- Court of Stars
 	[207979] = true,		-- Shockwave (Jazshariu)
@@ -30,6 +30,8 @@ local Spells = {
 
 	-- Eye of Azshara
 	[195473] = true,		-- Abrasive Slime (Gritslime Snail)
+	[196129] = true,		-- Spray Sand (Mak'rana Siltwalker)
+	[195832] = true,		-- Massive Quake (Skrog Tidestomper)
 
 	-- Maw of Souls
 	[194218] = true,		-- Cosmic Scythe (Harbaron)
@@ -63,7 +65,7 @@ local Spells = {
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
 	[207631] = true,		-- Annihilation (Trilliax)
 	[205391] = true,		-- Fel Beam (Krosus)
-	[215988] = true,		-- Carrion Nightmare (Tichondrius)^
+	[215988] = true,		-- Carrion Nightmare (Tichondrius)
 	[218463] = true,		-- Controlled Chaos (High Botanist Tel'arn, 10 yards explosion?)
 	[218466] = true,		-- Controlled Chaos (High Botanist Tel'arn, 20 yards explosion?)
 	[218470] = true,		-- Controlled Chaos (High Botanist Tel'arn, 30 yards explosion?)
