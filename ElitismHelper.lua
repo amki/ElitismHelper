@@ -94,7 +94,6 @@ local Auras = {
 
 	-- The Nighthold
 	[204483] = true,		-- Focused Blast (Skorpyron)
-	[206896] = true,		-- Torn Soul (Gul'dan)
 	[207720] = true,		-- Witness the Void (Thing That Should Not Be, Star Augur Etraeus)
 }
 
