@@ -32,6 +32,7 @@ local Spells = {
 	[195473] = true,		-- Abrasive Slime (Gritslime Snail)
 	[196129] = true,		-- Spray Sand (Mak'rana Siltwalker)
 	[195832] = true,		-- Massive Quake (Skrog Tidestomper)
+	[192801] = true,		-- Tidal Wave (Wrath of Azshara)
 
 	-- Maw of Souls
 	[194218] = true,		-- Cosmic Scythe (Harbaron)
@@ -47,10 +48,12 @@ local Spells = {
 	-- The Arcway
 	[211209] = true,		-- Arcane Slicer (Arcane Anomaly)
 	[196142] = true,		-- Exterminate (Corstilax)
+	[203833] = true,		-- Time Split (Chrono Shards, Advisor Vandros)
 
 	-- Neltharion's Lair
 	[183100] = true,		-- Avalanche (Mightstone Breaker)
 	[198475] = true,		-- Strike of the Mountain (Ularogg Cragshaper)
+	[200723] = true,		-- Molten Crash (Active Mitigation fail, Dargrul)
 
 	-- Halls of Valor
 	[192206] = true,		-- Sanctify (Olmyr & Hyrja)
@@ -60,6 +63,15 @@ local Spells = {
 	[193234] = true,		-- Dancing Blade (Hymdall)
 	[193260] = true,		-- Static Field (Storm Drake, Hymdall)
 	[188395] = true,		-- Ball Lightning (Static Field, Hymdall)
+
+	-- Return to Karazhan (Upper)
+	[229298] = true,		-- Knight Move (Knight)
+	[227806] = true,		-- Ceaseless Winter (Shade of Medivh)
+	[227620] = true,		-- Arcane Bomb (Mana Devourer)
+	[229248] = true,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
+	[229285] = true,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
+	[229151] = true,		-- Disintegrate (Viz'aduum the Watcher)
+	[230067] = true,		-- Shadow Phlegm (Explosive Shadows, Viz'aduum the Watcher)
 
 	-- The Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
@@ -81,10 +93,14 @@ local Auras = {
 	-- Darkheart Thicket
 	[200771] = true,		-- Propelling Charge (Crazed Razorbeak)
 
+	-- Eye of Azshara
+	[196665] = true,		-- Magic Resonance (Wrath of Azshara)
+	[196666] = true,		-- Frost Resonance (Wrath of Azshara)
+
 	-- Halls of Valor
 	[198088] = true,		-- Glowing Fragment (HoV Odyn)
 
-	-- Lower Karazhan
+	-- Return to Karazhan (Lower)
 	[227977] = true,		-- Flashlight (Skeletal Usher)
 
 	-- Emerald Nightmare
