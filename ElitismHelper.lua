@@ -89,7 +89,7 @@ local Spells = {
 
 local Auras = {
 	-- Black Rook Hold
-	[222397] = true,		-- Boulder Crush (Environment)
+	[222417] = true,		-- Boulder Crush (Environment)
 	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
 	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard)
 	[214002] = true,		-- Raven's Dive (Risen Lancer)
