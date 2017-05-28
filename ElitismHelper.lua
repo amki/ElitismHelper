@@ -8,15 +8,11 @@ local Spells = {
 	-- Affixes
 	[209862] = true,		-- Volcanic Plume (Environment)
 
-	-- Blackrook Hold
-	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
-	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard)
-	[222397] = true,		-- Boulder Crush (Environment)
+	-- Black Rook Hold
 	[198820] = true,		-- Dark Blast (Latosius)
-	[214002] = true,		-- Raven's Dive (Risen Lancer)
 	[199567] = true,		-- Dark Obliteration (Image of Latosius)
 	[200256] = true,		-- Phased Explosion (Arcane Minion)
-	[198781] = true,		-- Whirling Blade (Kur'talos Ravencrest)
+	[198781] = true,		-- Whirling Blade (Lord Kur'talos Ravencrest)
 
 	-- Court of Stars
 	[207979] = true,		-- Shockwave (Jazshariu)
@@ -48,6 +44,8 @@ local Spells = {
 	-- The Arcway
 	[211209] = true,		-- Arcane Slicer (Arcane Anomaly)
 	[196142] = true,		-- Exterminate (Corstilax)
+	[196074] = true,		-- Suppression Protocol (Corstilax)
+	[220500] = true,		-- Destabilized Orb (Corstilax)
 	[203833] = true,		-- Time Split (Chrono Shards, Advisor Vandros)
 
 	-- Neltharion's Lair
@@ -58,20 +56,23 @@ local Spells = {
 	-- Halls of Valor
 	[192206] = true,		-- Sanctify (Olmyr & Hyrja)
 	[199210] = true,		-- Penetrating Shot (Valarjar Marksman)
-	[199337] = true,		-- Bear Trap (Valarjar Trapper)
 	[210875] = true,		-- Charged Pulse (Stormforged Sentinel)
 	[193234] = true,		-- Dancing Blade (Hymdall)
 	[193260] = true,		-- Static Field (Storm Drake, Hymdall)
 	[188395] = true,		-- Ball Lightning (Static Field, Hymdall)
 
 	-- Return to Karazhan (Upper)
-	[229298] = true,		-- Knight Move (Knight)
+	[229563] = true,		-- Knight Move (Knight)
+	[229559] = true,		-- Bishop Move (Bishop)
+	[229384] = true,		-- Queen Move (Queen)
+	[229427] = true,		-- Royal Slash (King)
 	[227806] = true,		-- Ceaseless Winter (Shade of Medivh)
+	[228261] = true,		-- Flame Wreath (Shade of Medivh)
 	[227620] = true,		-- Arcane Bomb (Mana Devourer)
 	[229248] = true,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
 	[229285] = true,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
 	[229151] = true,		-- Disintegrate (Viz'aduum the Watcher)
-	[230067] = true,		-- Shadow Phlegm (Explosive Shadows, Viz'aduum the Watcher)
+	[229159] = true,		-- Chaotic Shadows (Viz'aduum the Watcher)
 
 	-- The Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
@@ -87,6 +88,13 @@ local Spells = {
 }
 
 local Auras = {
+	-- Black Rook Hold
+	[222397] = true,		-- Boulder Crush (Environment)
+	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
+	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard)
+	[214002] = true,		-- Raven's Dive (Risen Lancer)
+	[199097] = true,		-- Cloud of Hypnosis (Lord Kur'talos Ravencrest)
+
 	-- Court of Stars
 	[209667] = true,		-- Blade Surge (Advisor Melandrus)
 
@@ -99,9 +107,13 @@ local Auras = {
 
 	-- Halls of Valor
 	[198088] = true,		-- Glowing Fragment (HoV Odyn)
+	[199337] = true,		-- Bear Trap (Valarjar Trapper)
 
 	-- Return to Karazhan (Lower)
 	[227977] = true,		-- Flashlight (Skeletal Usher)
+
+	-- Return to Karazhan (Upper)
+	[227592] = true,		-- Frostbite (Shade of Medivh)
 
 	-- Emerald Nightmare
 	[210315] = true,		-- Nightmare Brambles (Cenarius)
