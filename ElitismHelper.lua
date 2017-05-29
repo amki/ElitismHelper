@@ -1,4 +1,4 @@
---version 0.0.1
+--version 0.3.1
 
 local Users = {}
 local activeUser = nil
@@ -32,12 +32,9 @@ local Spells = {
 
 	-- Maw of Souls
 	[194218] = true,		-- Cosmic Scythe (Harbaron)
-	[195309] = true,		-- Swirling Water (MoS Helya)
-	[202098] = true,		-- Brackwater Barrage (MoS Helya) 
-	[195036] = true,		-- Defiant Strike #1 (Seacursed Soulkeeper)
-	[195033] = true,		-- Defiant Strike #2 (Seacursed Soulkeeper)
-	[195035] = true,		-- Defiant Strike #3 (Seacursed Soulkeeper)
-	[195038] = true,		-- Defiant Strike #4 (Seacursed Soulkeeper)
+	[195309] = true,		-- Swirling Water (Helya)
+	[202098] = true,		-- Brackwater Barrage (Helya) 
+	[195036] = true,		-- Defiant Strike (Seacursed Soulkeeper)
 	[194443] = true,		-- Six Pound Barrel (Waterlogged Soul Guard)
 	[199250] = true,		-- Deceptive Strike (Seacursed Swiftblade)
 
@@ -47,6 +44,9 @@ local Spells = {
 	[196074] = true,		-- Suppression Protocol (Corstilax)
 	[220500] = true,		-- Destabilized Orb (Corstilax)
 	[203833] = true,		-- Time Split (Chrono Shards, Advisor Vandros)
+	[197579] = true,		-- Fel Eruption (General Xakal)
+	[212071] = true,		-- Shadow Slash (General Xakal)
+	[220443] = true,		-- Wake of Shadows (Shadow Slash, General Xakal)
 
 	-- Neltharion's Lair
 	[183100] = true,		-- Avalanche (Mightstone Breaker)
@@ -106,8 +106,11 @@ local Auras = {
 	[196666] = true,		-- Frost Resonance (Wrath of Azshara)
 
 	-- Halls of Valor
-	[198088] = true,		-- Glowing Fragment (HoV Odyn)
+	[198088] = true,		-- Glowing Fragment (Odyn)
 	[199337] = true,		-- Bear Trap (Valarjar Trapper)
+
+	-- Maw of Souls
+	[193364] = true,		-- Screams of the Dead (Ymiron, the Fallen King)
 
 	-- Return to Karazhan (Lower)
 	[227977] = true,		-- Flashlight (Skeletal Usher)
@@ -120,7 +123,7 @@ local Auras = {
 	[203110] = true,		-- Slumbering Nightmare (Dragons of Nightmare)
 
 	-- Trial of Valor
-	[227781] = true,		-- Glowing Fragment (ToV Odyn)
+	[227781] = true,		-- Glowing Fragment (Odyn)
 
 	-- The Nighthold
 	[204483] = true,		-- Focused Blast (Skorpyron)
