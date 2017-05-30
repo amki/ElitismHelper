@@ -217,7 +217,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-	if Spells[spellId] and UnitIsPlayer(dstName) then
+	if Spells[spellId] and UnitIsPlayer(dstName) and aAmount > 500000 then
 		if IsInRaid() then
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",RAID)
 		elseif IsInGroup() then
