@@ -1,4 +1,4 @@
---version 0.3.1
+--version 0.3.2
 
 local Users = {}
 local activeUser = nil
@@ -174,7 +174,7 @@ function ElitismFrame:RebuildTable()
 	Users = {}
 	activeUser = nil
 	-- print("Reset Addon Users table")
-	if IsInGroup() or IsInRaid() or IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
+	if IsInGroup() or IsInRaid() or IsInLFGDungeon() or IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
 		SendAddonMessage(MSG_PREFIX,"VREQ",RAID)
 	else
 		name = GetUnitName("player",true)
@@ -223,7 +223,7 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 		elseif IsInGroup() then
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",PARTY)
 		elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
-			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",INSTANCE)
+			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",INSTANCE_CHAT)
 		end
 	end
 end
@@ -239,7 +239,7 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 			elseif IsInGroup() then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",PARTY)
 			elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
-				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",INSTANCE)
+				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",INSTANCE_CHAT)
 			end
 		else
 			if IsInRaid() then
@@ -247,7 +247,7 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 			elseif IsInGroup() then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",PARTY)
 			elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
-				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",INSTANCE)
+				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",INSTANCE_CHAT)
 			end
 		end
 	end
