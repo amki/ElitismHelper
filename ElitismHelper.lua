@@ -14,10 +14,6 @@ local Spells = {
 	[200256] = true,		-- Phased Explosion (Arcane Minion)
 	[198781] = true,		-- Whirling Blade (Lord Kur'talos Ravencrest)
 
-	-- Court of Stars
-	[207979] = true,		-- Shockwave (Jazshariu)
-	[209027] = true,		-- Quelling Strike (Duskwatch Guard)
-
 	-- Darkheart Thicket
 	[204402] = true,		-- Star Shower (Dreadsoul Ruiner)
 	[201273] = true,		-- Blood Bomb (Bloodtainted Fury)
@@ -65,14 +61,16 @@ local Spells = {
 	[229563] = true,		-- Knight Move (Knight)
 	[229559] = true,		-- Bishop Move (Bishop)
 	[229384] = true,		-- Queen Move (Queen)
+	[229568] = true,		-- Rook Move (Rook)
 	[229427] = true,		-- Royal Slash (King)
+	[242894] = true,		-- Unstable Energy (Damaged Golem)
 	[227806] = true,		-- Ceaseless Winter (Shade of Medivh)
-	[228261] = true,		-- Flame Wreath (Shade of Medivh)
+	--[228261] = true,		-- Flame Wreath (Shade of Medivh)
 	[227620] = true,		-- Arcane Bomb (Mana Devourer)
 	[229248] = true,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
 	[229285] = true,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
 	[229151] = true,		-- Disintegrate (Viz'aduum the Watcher)
-	[229159] = true,		-- Chaotic Shadows (Viz'aduum the Watcher)
+	--[229159] = true,		-- Chaotic Shadows (Viz'aduum the Watcher)
 
 	-- The Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
@@ -97,6 +95,8 @@ local Auras = {
 
 	-- Court of Stars
 	[209667] = true,		-- Blade Surge (Advisor Melandrus)
+	[207979] = true,		-- Shockwave (Jazshariu)
+	[209027] = true,		-- Quelling Strike (Duskwatch Guard)
 
 	-- Darkheart Thicket
 	[200771] = true,		-- Propelling Charge (Crazed Razorbeak)
