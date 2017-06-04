@@ -1,4 +1,4 @@
---version 0.3.2
+--version 0.4
 
 local Users = {}
 local activeUser = nil
@@ -13,12 +13,15 @@ local Spells = {
 	[199567] = true,		-- Dark Obliteration (Image of Latosius)
 	[200256] = true,		-- Phased Explosion (Arcane Minion)
 	[198781] = true,		-- Whirling Blade (Lord Kur'talos Ravencrest)
+	[196517] = true,		-- Swirling Scythe (Amalgam of Souls)
 
 	-- Darkheart Thicket
 	[204402] = true,		-- Star Shower (Dreadsoul Ruiner)
 	[201273] = true,		-- Blood Bomb (Bloodtainted Fury)
 	[201227] = true,		-- Blood Assault (Bloodtainted Fury)
 	[201123] = true,		-- Root Burst (Vilethorn Blossom)
+	[198386] = true,		-- Primal Rampage (Archdruid Glaidalis)
+	[191326] = true,		-- Breath of Corruption (Dresaron)
 
 	-- Eye of Azshara
 	[195473] = true,		-- Abrasive Slime (Gritslime Snail)
@@ -57,8 +60,15 @@ local Spells = {
 	[193260] = true,		-- Static Field (Storm Drake, Hymdall)
 	[188395] = true,		-- Ball Lightning (Static Field, Hymdall)
 
+	-- Return to Karazhan (Lower)
+	[227645] = true,		-- Spectral Charge (Midnight, Attumen the Huntsman)
+	[227339] = true,		-- Mezair (Midnight, Attumen the Huntsman)
+	[227672] = true,		-- Will Breaker (Lord Crispin Ference, Moroes)
+	[228001] = true,		-- Pennies From Heaven (Ghostly Philanthropist)
+
 	-- Return to Karazhan (Upper)
 	[229563] = true,		-- Knight Move (Knight)
+	[229298] = true,		-- Knight Move (Knight)
 	[229559] = true,		-- Bishop Move (Bishop)
 	[229384] = true,		-- Queen Move (Queen)
 	[229568] = true,		-- Rook Move (Rook)
@@ -70,7 +80,9 @@ local Spells = {
 	[229248] = true,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
 	[229285] = true,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
 	[229151] = true,		-- Disintegrate (Viz'aduum the Watcher)
-	--[229159] = true,		-- Chaotic Shadows (Viz'aduum the Watcher)
+	[229161] = true,		-- Explosive Shadows (Viz'aduum the Watcher)
+	[227465] = true,		-- Power Discharge (The Curator)
+	[227285] = true,		-- Power Discharge (The Curator)
 
 	-- The Nighthold
 	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
@@ -114,6 +126,8 @@ local Auras = {
 
 	-- Return to Karazhan (Lower)
 	[227977] = true,		-- Flashlight (Skeletal Usher)
+	[228280] = true,		-- Oath of Fealty (Spectral Retainer)
+	[228221] = true,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
 
 	-- Return to Karazhan (Upper)
 	[227592] = true,		-- Frostbite (Shade of Medivh)
