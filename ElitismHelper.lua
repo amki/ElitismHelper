@@ -28,6 +28,8 @@ local Spells = {
 	[196129] = true,		-- Spray Sand (Mak'rana Siltwalker)
 	[195832] = true,		-- Massive Quake (Skrog Tidestomper)
 	[192801] = true,		-- Tidal Wave (Wrath of Azshara)
+	[193171] = true,		-- Aftershock (Quake, King Deepbeard)
+	[192794] = true,		-- Lightning Strike (Environment)
 
 	-- Maw of Souls
 	[194218] = true,		-- Cosmic Scythe (Harbaron)
@@ -46,6 +48,9 @@ local Spells = {
 	[197579] = true,		-- Fel Eruption (General Xakal)
 	[212071] = true,		-- Shadow Slash (General Xakal)
 	[220443] = true,		-- Wake of Shadows (Shadow Slash, General Xakal)
+	[199812] = true,		-- Blink Strikes (Nal'tira)
+	[211921] = true,		-- Felstorm (Priestess of Misery)
+	[220875] = true,		-- Unstable Mana (Advisor Vandros)
 
 	-- Neltharion's Lair
 	[183100] = true,		-- Avalanche (Mightstone Breaker)
