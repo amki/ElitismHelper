@@ -30,6 +30,9 @@ local Spells = {
 	[192801] = true,		-- Tidal Wave (Wrath of Azshara)
 	[193171] = true,		-- Aftershock (Quake, King Deepbeard)
 	[192794] = true,		-- Lightning Strike (Environment)
+	[191847] = true,		-- Poison Spit (Serpentrix)
+	[196293] = true,		-- Chaotic Tempest (Stormwake Hydra)
+	[196299] = true,		-- Roiling Storm (Stormwake Hydra)
 
 	-- Maw of Souls
 	[194218] = true,		-- Cosmic Scythe (Harbaron)
@@ -119,6 +122,7 @@ local Auras = {
 	[200771] = true,		-- Propelling Charge (Crazed Razorbeak)
 
 	-- Eye of Azshara
+	[193597] = true,		-- Static Nova (Lady Hatecoil)
 	[196665] = true,		-- Magic Resonance (Wrath of Azshara)
 	[196666] = true,		-- Frost Resonance (Wrath of Azshara)
 
