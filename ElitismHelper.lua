@@ -1,5 +1,3 @@
---version 0.4
-
 local Users = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName()
@@ -159,6 +157,7 @@ local MSG_PREFIX = "ElitismHelper"
 local success = RegisterAddonMessagePrefix(MSG_PREFIX)
 ElitismFrame:RegisterEvent("CHAT_MSG_ADDON")
 ElitismFrame:RegisterEvent("GROUP_ROSTER_UPDATE")
+ElitismFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 ElitismFrame:RegisterEvent("ADDON_LOADED")
 
 ElitismFrame:ClearAllPoints()
@@ -196,9 +195,8 @@ SLASH_ELITISMHELPER1 = "/eh"
 function ElitismFrame:RebuildTable()
 	Users = {}
 	activeUser = nil
-	local InInstance, InstanceType = IsInInstance()
 	-- print("Reset Addon Users table")
-	if IsInGroup(LE_PARTY_CATEGORY_HOME) or IsInRaid(LE_PARTY_CATEGORY_HOME) or IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) and not (UnitIsPVP("player") == 1 or InstanceType == "arena" or InstanceType == "scenario" or InstanceType == "none") then
+	if IsInGroup(LE_PARTY_CATEGORY_HOME) or IsInRaid(LE_PARTY_CATEGORY_HOME) or IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
 		SendAddonMessage(MSG_PREFIX,"VREQ",RAID)
 	else
 		name = GetUnitName("player",true)
@@ -215,6 +213,11 @@ end
 
 function ElitismFrame:GROUP_ROSTER_UPDATE(event,...)
 	-- print("GROUP_ROSTER_UPDATE")
+	ElitismFrame:RebuildTable()
+end
+
+function ElitismFrame:ZONE_CHANGED_NEW_AREA(event,...)
+	-- print("ZONE_CHANGED_NEW_AREA")
 	ElitismFrame:RebuildTable()
 end
 
@@ -246,9 +249,7 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",RAID)
 		elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",PARTY)
-		elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
-			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",INSTANCE_CHAT)
-		elseif IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
+		elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",INSTANCE_CHAT)
 		end
 	end
@@ -264,9 +265,7 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",RAID)
 			elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",PARTY)
-			elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
-				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",INSTANCE_CHAT)
-			elseif IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
+			elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.",INSTANCE_CHAT)
 			end
 		else
@@ -274,9 +273,7 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",RAID)
 			elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",PARTY)
-			elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
-				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",INSTANCE_CHAT)
-			elseif IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
+			elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
 				SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".",INSTANCE_CHAT)
 			end
 		end
