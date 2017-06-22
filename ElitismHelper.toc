@@ -1,5 +1,5 @@
 ## Interface: 70200
 ## Title: ElitismHelper
-## Version: 0.6
+## Version: 0.7
 ## Notes: Helps with being an elitist by calling out fails
 ElitismHelper.lua

@@ -109,7 +109,19 @@ local Spells = {
 	[218155] = true,		-- Solar Collapse (High Botanist Tel'arn)
 	[212262] = true,		-- Hand of Gul'dan (Gul'dan)
 	[229948] = true,		-- Fel Obelisk (Fel Lord Kuraz'mal, Gul'dan)
-}
+
+	-- Tomb of Sargeras
+	[233021] = true,		-- Infernal Spike (Goroth)
+	[236329] = true,		-- Star Burn (Goroth)
+	[239144] = true,		-- Tormented Eruption (Demonic Inquisition)
+	[233426] = true,		-- Scythe Sweep (Atrigan, Demonic Inquisition)
+	[232885] = true,		-- Devour Whole (Sarukel, Mistress Sassz'ine)
+	[232827] = true,		-- Crashing Wave (Vellius, Mistress Sassz'ine)
+	[236480] = true,		-- Glaive Storm (Huntress Kasparian, Sisters of the Moon)
+	[234062] = true,		-- Unbound Chaos (Fallen Avatar)
+	[240249] = true,		-- Molten Fel (Fallen Avatar)
+	[239852] = true,		-- Demonic Obelisk (Kil'jaeden)
+	}
 
 local Auras = {
 	-- Black Rook Hold
