@@ -99,7 +99,6 @@ local Spells = {
 	[227285] = true,		-- Power Discharge (The Curator)
 
 	-- The Nighthold
-	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
 	[207631] = true,		-- Annihilation (Trilliax)
 	[205391] = true,		-- Fel Beam (Krosus)
 	[215988] = true,		-- Carrion Nightmare (Tichondrius)
@@ -107,6 +106,7 @@ local Spells = {
 	[218466] = true,		-- Controlled Chaos (High Botanist Tel'arn, 20 yards explosion?)
 	[218470] = true,		-- Controlled Chaos (High Botanist Tel'arn, 30 yards explosion?)
 	[218155] = true,		-- Solar Collapse (High Botanist Tel'arn)
+	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
 	[212262] = true,		-- Hand of Gul'dan (Gul'dan)
 	[229948] = true,		-- Fel Obelisk (Fel Lord Kuraz'mal, Gul'dan)
 
@@ -114,10 +114,12 @@ local Spells = {
 	[233021] = true,		-- Infernal Spike (Goroth)
 	[236329] = true,		-- Star Burn (Goroth)
 	[239144] = true,		-- Tormented Eruption (Demonic Inquisition)
-	[233426] = true,		-- Scythe Sweep (Atrigan, Demonic Inquisition)
 	[232885] = true,		-- Devour Whole (Sarukel, Mistress Sassz'ine)
 	[232827] = true,		-- Crashing Wave (Vellius, Mistress Sassz'ine)
 	[236480] = true,		-- Glaive Storm (Huntress Kasparian, Sisters of the Moon)
+	[236158] = true,		-- Soul Eruption (Soul Residue, The Desolate Host)
+	[236241] = true,		-- Soul Rot (Soul Residue, The Desolate Host)
+	[235907] = true,		-- Collapsing Fissure (The Desolate Host)
 	[234062] = true,		-- Unbound Chaos (Fallen Avatar)
 	[240249] = true,		-- Molten Fel (Fallen Avatar)
 	[239852] = true,		-- Demonic Obelisk (Kil'jaeden)
@@ -170,6 +172,9 @@ local Auras = {
 	-- The Nighthold
 	[204483] = true,		-- Focused Blast (Skorpyron)
 	[207720] = true,		-- Witness the Void (Thing That Should Not Be, Star Augur Etraeus)
+
+	-- Tomb of Sargeras
+	[234332] = true,		-- Hydra Acid (Mistress Sassz'ine)
 }
 
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
