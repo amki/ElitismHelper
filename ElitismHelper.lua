@@ -13,6 +13,15 @@ local Spells = {
 	[198781] = true,		-- Whirling Blade (Lord Kur'talos Ravencrest)
 	[196517] = true,		-- Swirling Scythe (Amalgam of Souls)
 
+	--Court of Stars
+	[219498] = true,		-- Streetsweeper (Patrol Captain Gerdo)
+	[206574] = true,		-- Resonant Slash (Patrol Captain Gerdo)
+	[206580] = true,		-- Resonant Slash (Patrol Captain Gerdo)
+	[209477] = true,		-- Wild Detonation (Mana Wyrm)
+	[211457] = true,		-- Infernal Eruption (Talixae Flamewreath)
+	[209630] = true,		-- Piercing Gale (Images of Advisor Melandrus)
+	[209628] = true,		-- Piercing Gale (Advisor Melandrus)
+
 	-- Darkheart Thicket
 	[204402] = true,		-- Star Shower (Dreadsoul Ruiner)
 	[201273] = true,		-- Blood Bomb (Bloodtainted Fury)
@@ -137,6 +146,8 @@ local Auras = {
 	[209667] = true,		-- Blade Surge (Advisor Melandrus)
 	[207979] = true,		-- Shockwave (Jazshariu)
 	[209027] = true,		-- Quelling Strike (Duskwatch Guard)
+	[213304] = true,		-- Righteous Indignation (Suspicious Noble)
+	[211464] = true,		-- Fel Detonation (Felbound Enforcer)
 
 	-- Darkheart Thicket
 	[200771] = true,		-- Propelling Charge (Crazed Razorbeak)
