@@ -130,7 +130,6 @@ local Spells = {
 	[236241] = true,		-- Soul Rot (Soul Residue, The Desolate Host)
 	[235907] = true,		-- Collapsing Fissure (The Desolate Host)
 	[234062] = true,		-- Unbound Chaos (Fallen Avatar)
-	[240249] = true,		-- Molten Fel (Fallen Avatar)
 	[239852] = true,		-- Demonic Obelisk (Kil'jaeden)
 	}
 
@@ -281,7 +280,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-	if Spells[spellId] and UnitIsPlayer(dstName) and aAmount > 500000 then
+	if Spells[spellId] and UnitIsPlayer(dstName) and aAmount > 750000 then
 		if IsInRaid(LE_PARTY_CATEGORY_HOME) then
 			SendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".",RAID)
 		elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
