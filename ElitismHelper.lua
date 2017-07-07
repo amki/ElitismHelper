@@ -13,6 +13,18 @@ local Spells = {
 	[198781] = true,		-- Whirling Blade (Lord Kur'talos Ravencrest)
 	[196517] = true,		-- Swirling Scythe (Amalgam of Souls)
 
+	-- Cathedral of Eternal Night
+	[238653] = true,		-- Shadow Wave (Dul'zak)
+	[238673] = true,		-- Floral Fulmination (Fulminating Lasher, Agronox)
+	[239217] = true,		-- Blinding Glare (Gazerax)
+	[239201] = true,		-- Fel Glare (Gazerax)
+	[239326] = true,		-- Felblaze Orb (Fel Orb)
+	[240951] = true,		-- Destructive Rampage (Thrashbite the Scornful)
+	[236543] = true,		-- Felsoul Cleave (Domatrax)
+	[242760] = true,		-- Lumbering Crash (Vilebark Walker)
+	[240279] = true,		-- Fel Strike (Wrathguard Invader)
+	[238469] = true,		-- Scornful Charge (Thrashbite the Scornful)
+
 	--Court of Stars
 	[219498] = true,		-- Streetsweeper (Patrol Captain Gerdo)
 	[206574] = true,		-- Resonant Slash (Patrol Captain Gerdo)
