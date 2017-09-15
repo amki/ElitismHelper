@@ -5,7 +5,7 @@ local playerUser = GetUnitName("player",true).."-"..GetRealmName()
 local Spells = {
 	-- Affixes
 	[209862] = true,		-- Volcanic Plume (Environment)
-	[239740] = true,        -- DEBUG Chaos Blast (Void Caller) DEBUG
+	--[239740] = true,        -- DEBUG Chaos Blast (Void Caller) DEBUG
 
 	-- Black Rook Hold
 	[198820] = true,		-- Dark Blast (Latosius)
@@ -100,7 +100,6 @@ local Spells = {
 	[227568] = true,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westfall Story)
 	[227799] = true,		-- Wash Away (Mrrgria, Opera Hall: Westfall Story)
 	[227434] = true,		-- Bubble Blast (Shoreline Tidespeaker, Opera Hall: Westfall Story)
-	[228637] = true,		-- Smash (Spectral Journeyman)
 
 	-- Return to Karazhan (Upper)
 	[229563] = true,		-- Knight Move (Knight)
@@ -119,31 +118,6 @@ local Spells = {
 	[229161] = true,		-- Explosive Shadows (Viz'aduum the Watcher)
 	[227465] = true,		-- Power Discharge (The Curator)
 	[227285] = true,		-- Power Discharge (The Curator)
-
-	-- The Nighthold
-	[207631] = true,		-- Annihilation (Trilliax)
-	[205391] = true,		-- Fel Beam (Krosus)
-	[215988] = true,		-- Carrion Nightmare (Tichondrius)
-	[218463] = true,		-- Controlled Chaos (High Botanist Tel'arn, 10 yards explosion?)
-	[218466] = true,		-- Controlled Chaos (High Botanist Tel'arn, 20 yards explosion?)
-	[218470] = true,		-- Controlled Chaos (High Botanist Tel'arn, 30 yards explosion?)
-	[218155] = true,		-- Solar Collapse (High Botanist Tel'arn)
-	[208659] = true,		-- Arcanetic Ring (Grand Magistrix Elisande)
-	[212262] = true,		-- Hand of Gul'dan (Gul'dan)
-	[229948] = true,		-- Fel Obelisk (Fel Lord Kuraz'mal, Gul'dan)
-
-	-- Tomb of Sargeras
-	[233021] = true,		-- Infernal Spike (Goroth)
-	[236329] = true,		-- Star Burn (Goroth)
-	[239144] = true,		-- Tormented Eruption (Demonic Inquisition)
-	[232885] = true,		-- Devour Whole (Sarukel, Mistress Sassz'ine)
-	[232827] = true,		-- Crashing Wave (Vellius, Mistress Sassz'ine)
-	[236480] = true,		-- Glaive Storm (Huntress Kasparian, Sisters of the Moon)
-	[236158] = true,		-- Soul Eruption (Soul Residue, The Desolate Host)
-	[236241] = true,		-- Soul Rot (Soul Residue, The Desolate Host)
-	[235907] = true,		-- Collapsing Fissure (The Desolate Host)
-	[234062] = true,		-- Unbound Chaos (Fallen Avatar)
-	[239852] = true,		-- Demonic Obelisk (Kil'jaeden)
 	}
 
 local Auras = {
@@ -184,20 +158,6 @@ local Auras = {
 
 	-- Return to Karazhan (Upper)
 	[227592] = true,		-- Frostbite (Shade of Medivh)
-
-	-- Emerald Nightmare
-	[210315] = true,		-- Nightmare Brambles (Cenarius)
-	[203110] = true,		-- Slumbering Nightmare (Dragons of Nightmare)
-
-	-- Trial of Valor
-	[227781] = true,		-- Glowing Fragment (Odyn)
-
-	-- The Nighthold
-	[204483] = true,		-- Focused Blast (Skorpyron)
-	[207720] = true,		-- Witness the Void (Thing That Should Not Be, Star Augur Etraeus)
-
-	-- Tomb of Sargeras
-	[234332] = true,		-- Hydra Acid (Mistress Sassz'ine)
 }
 
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
