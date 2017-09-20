@@ -289,7 +289,7 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 		if dstHealthMax > 0 then
 			local pct = Round(aAmount / dstHealthMax * 100)
 			if pct > 20 then
-				maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..round(aAmount/1000000,1).."mio ("..pct.."%).")
+				maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..round(aAmount/1000000,1).."mil ("..pct.."%).")
 			end
 		elseif aAmount > 1000000 then
 			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".")
