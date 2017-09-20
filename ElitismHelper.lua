@@ -88,6 +88,12 @@ local Spells = {
 	[193260] = true,		-- Static Field (Storm Drake, Hymdall)
 	[188395] = true,		-- Ball Lightning (Static Field, Hymdall)
 
+	-- Vault of the Wardens
+	[193610] = true,		-- Fel Detonation (Glayvianna Soulrender)
+	[214625] = true,		-- Fel Chain (Tirathon Saltheril)
+	[197541] = true,		-- Detonation (Cordana Felsong)
+	[197506] = true,		-- Creeping Doom (Cordana Felsong)
+
 	-- Return to Karazhan (Lower)
 	[227645] = true,		-- Spectral Charge (Midnight, Attumen the Huntsman)
 	[227339] = true,		-- Mezair (Midnight, Attumen the Huntsman)
