@@ -275,7 +275,15 @@ end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
 	if Spells[spellId] and UnitIsPlayer(dstName) then
-		maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".")
+		local dstHealthMax = UnitHealthMax(dstName)
+		if dstHealthMax > 0 then
+			local pct = Round(aAmount / dstHealthMax * 100)
+			if pct > 20 then
+				maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..pct.."% of max health.")
+			end
+		elseif aAmount > 1000000 then
+			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".")
+		end
 	end
 end
 
