@@ -1,11 +1,12 @@
 local Users = {}
+local Timers = {}
+local TimerData = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName()
 
 local Spells = {
 	-- Affixes
 	[209862] = true,		-- Volcanic Plume (Environment)
-	--[239740] = true,        -- DEBUG Chaos Blast (Void Caller) DEBUG
 
 	-- Black Rook Hold
 	[198820] = true,		-- Dark Blast (Latosius)
@@ -198,6 +199,36 @@ ElitismFrame:SetScript("OnEvent", function(self, event_name, ...)
 	end
 end)
 
+
+
+function generateMaybeOutput(user)
+	local func = function()
+			local msg = user.." got hit by "
+			local amount = 0
+			for k,v in pairs(TimerData[user]) do
+				msg = msg..GetSpellLink(k).." "
+				amount = amount + v
+			end
+			TimerData[user] = nil
+			Timers[user] = nil
+			local userMaxHealth = UnitHealthMax(user)
+			local msgAmount = round(amount / 1000000,1)
+			if userMaxHealth > 0 then
+				local pct = Round(amount / userMaxHealth * 100)
+				if pct >= 20 then
+					msg = msg.."for "..msgAmount.." ("..pct.."%)."
+					maybeSendChatMessage(msg)
+				end
+			else
+				if amount >= 1000000 then
+					msg = msg.."for "..msgAmount.."."
+					maybeSendChatMessage(msg)
+				end
+			end
+		end
+	return func
+end
+
 SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 	if msg == "activeuser" then
 		print("activeUser is "..activeUser)
@@ -285,14 +316,17 @@ end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
 	if Spells[spellId] and UnitIsPlayer(dstName) then
-		local dstHealthMax = UnitHealthMax(dstName)
-		if dstHealthMax > 0 then
-			local pct = Round(aAmount / dstHealthMax * 100)
-			if pct > 20 then
-				maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..round(aAmount/1000000,1).."mil ("..pct.."%).")
-			end
-		elseif aAmount > 1000000 then
-			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".")
+		if TimerData[dstName] == nil then
+			TimerData[dstName] = {}
+		end
+		if TimerData[dstName][spellId] == nil then
+			TimerData[dstName][spellId] = aAmount
+		else
+			TimerData[dstName][spellId] = TimerData[dstName][spellId] + aAmount
+		end
+		if Timers[dstName] == nil then
+			Timers[dstName] = true
+			C_Timer.After(2,generateMaybeOutput(dstName))
 		end
 	end
 end
