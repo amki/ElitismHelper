@@ -160,6 +160,10 @@ local Auras = {
 	[227592] = true,		-- Frostbite (Shade of Medivh)
 }
 
+function round(number, decimals)
+    return (("%%.%df"):format(decimals)):format(number)
+end
+
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
 ElitismFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 local MSG_PREFIX = "ElitismHelper"
@@ -279,7 +283,7 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 		if dstHealthMax > 0 then
 			local pct = Round(aAmount / dstHealthMax * 100)
 			if pct > 20 then
-				maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..pct.."% of max health.")
+				maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..round(aAmount/1000000,1).."mio ("..pct.."%).")
 			end
 		elseif aAmount > 1000000 then
 			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId).." for "..aAmount..".")
