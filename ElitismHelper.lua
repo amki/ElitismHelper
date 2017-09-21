@@ -58,7 +58,8 @@ local Spells = {
 	-- Maw of Souls
 	[194218] = true,		-- Cosmic Scythe (Harbaron)
 	[195309] = true,		-- Swirling Water (Helya)
-	[202098] = true,		-- Brackwater Barrage (Helya) 
+	[202098] = true,		-- Brackwater Barrage (Helya)
+	[202472] = true,		-- Tainted Essence (Seacursed Swiftblade)
 	[195036] = true,		-- Defiant Strike (Seacursed Soulkeeper)
 	[194443] = true,		-- Six Pound Barrel (Waterlogged Soul Guard)
 	[199250] = true,		-- Deceptive Strike (Seacursed Swiftblade)
