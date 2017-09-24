@@ -217,12 +217,12 @@ function generateMaybeOutput(user)
 			if userMaxHealth > 0 then
 				local pct = Round(amount / userMaxHealth * 100)
 				if pct >= 20 then
-					msg = msg.."for "..msgAmount.." ("..pct.."%)."
+					msg = msg.."for "..msgAmount.."mil ("..pct.."%)."
 					maybeSendChatMessage(msg)
 				end
 			else
 				if amount >= 1000000 then
-					msg = msg.."for "..msgAmount.."."
+					msg = msg.."for "..msgAmount.."mil."
 					maybeSendChatMessage(msg)
 				end
 			end
