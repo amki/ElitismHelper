@@ -126,7 +126,10 @@ local Spells = {
 	[229161] = true,		-- Explosive Shadows (Viz'aduum the Watcher)
 	[227465] = true,		-- Power Discharge (The Curator)
 	[227285] = true,		-- Power Discharge (The Curator)
-	}
+}
+
+local SpellsNoTank = {
+}
 
 local Auras = {
 	-- Black Rook Hold
@@ -166,6 +169,9 @@ local Auras = {
 
 	-- Return to Karazhan (Upper)
 	[227592] = true,		-- Frostbite (Shade of Medivh)
+}
+
+local AurasNoTank = {
 }
 
 function round(number, decimals)
@@ -316,7 +322,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-	if Spells[spellId] and UnitIsPlayer(dstName) then
+	if (Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName) then
 		if TimerData[dstName] == nil then
 			TimerData[dstName] = {}
 		end
@@ -336,7 +342,7 @@ function ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFla
 end
 
 function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
-	if Auras[spellId] and UnitIsPlayer(dstName) then
+	if (Auras[spellId] or (AurasNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName)  then
 		if auraAmount then
 			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.")
 		else
