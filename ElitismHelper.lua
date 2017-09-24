@@ -94,6 +94,10 @@ local Spells = {
 	-- Vault of the Wardens
 	[193610] = true,		-- Fel Detonation (Glayvianna Soulrender)
 	[214625] = true,		-- Fel Chain (Tirathon Saltheril)
+	[190836] = true,		-- Hatred (Tirathon Saltheril)
+	[214893] = true,		-- Pulse (Glazer)
+	[194945] = true,		-- Lingering Gaze (Glazer)
+	[192519] = true,		-- Lava (Ash'Golm)
 	[197541] = true,		-- Detonation (Cordana Felsong)
 	[197506] = true,		-- Creeping Doom (Cordana Felsong)
 
