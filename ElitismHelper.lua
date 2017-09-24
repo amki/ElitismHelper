@@ -9,6 +9,7 @@ local Spells = {
 	[209862] = true,		-- Volcanic Plume (Environment)
 
 	-- Black Rook Hold
+	[197821] = true,		-- Felblazed Ground (Illysanna Ravencrest, AoE Ground from Eye Beams)
 	[198820] = true,		-- Dark Blast (Latosius)
 	[199567] = true,		-- Dark Obliteration (Image of Latosius)
 	[200256] = true,		-- Phased Explosion (Arcane Minion)
