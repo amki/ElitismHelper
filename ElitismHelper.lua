@@ -36,6 +36,7 @@ local Spells = {
 	[211457] = true,		-- Infernal Eruption (Talixae Flamewreath)
 	[209630] = true,		-- Piercing Gale (Images of Advisor Melandrus)
 	[209628] = true,		-- Piercing Gale (Advisor Melandrus)
+	[214688] = true,		-- Carrion Swarm (Gerenth the Vile)
 
 	-- Darkheart Thicket
 	[204402] = true,		-- Star Shower (Dreadsoul Ruiner)
@@ -60,8 +61,15 @@ local Spells = {
 	[194218] = true,		-- Cosmic Scythe (Harbaron)
 	[195309] = true,		-- Swirling Water (Helya)
 	[202098] = true,		-- Brackwater Barrage (Helya)
+	[227234] = true,		-- Corrupted Bellow (Helya)
+	[197117] = true,		-- Piercing Tentacle (Helya)
 	[202472] = true,		-- Tainted Essence (Seacursed Swiftblade)
 	[195036] = true,		-- Defiant Strike (Seacursed Soulkeeper)
+	[195033] = true,		-- Defiant Strike (Seacursed Soulkeeper)
+	[195038] = true,		-- Defiant Strike (Seacursed Soulkeeper)
+	[195035] = true,		-- Defiant Strike (Seacursed Soulkeeper)
+	[193513] = true,		-- Bane (Ymiron, the Fallen King)
+	[198330] = true,		-- Give No Quarter (Skjal)
 	[194443] = true,		-- Six Pound Barrel (Waterlogged Soul Guard)
 	[199250] = true,		-- Deceptive Strike (Seacursed Swiftblade)
 
@@ -75,8 +83,13 @@ local Spells = {
 	[212071] = true,		-- Shadow Slash (General Xakal)
 	[220443] = true,		-- Wake of Shadows (Shadow Slash, General Xakal)
 	[199812] = true,		-- Blink Strikes (Nal'tira)
+	[200040] = true,		-- Nether Venom (Nal'tira)
 	[211921] = true,		-- Felstorm (Priestess of Misery)
 	[220875] = true,		-- Unstable Mana (Advisor Vandros)
+	[203593] = true,		-- Nether Spike (Mana Wyrm)
+	[211198] = true,		-- Destructive Wake (Astral Spark)
+	[211501] = true,		-- Arcane Discharge (Enchanted Broodling)
+	[220597] = true,		-- Charged Bolt (Ivanyr)
 
 	-- Neltharion's Lair
 	[183100] = true,		-- Avalanche (Mightstone Breaker)
