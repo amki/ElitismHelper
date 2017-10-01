@@ -336,6 +336,7 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 	for k,v in pairs(u) do
 			maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000000,1).." mil")
 	end
+	CombinedFails = {}
 end
 
 function ElitismFrame:CHAT_MSG_ADDON(event,...)
