@@ -233,7 +233,7 @@ end)
 
 function generateMaybeOutput(user)
 	local func = function()
-			local msg = user.." got hit by "
+			local msg = "<EH> "..user.." got hit by "
 			local amount = 0
 			for k,v in pairs(TimerData[user]) do
 				msg = msg..GetSpellLink(k).." "
