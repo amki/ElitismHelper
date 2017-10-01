@@ -1,6 +1,7 @@
 local Users = {}
 local Timers = {}
 local TimerData = {}
+local CombinedFails = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName()
 
@@ -224,8 +225,6 @@ ElitismFrame:SetScript("OnEvent", function(self, event_name, ...)
 	end
 end)
 
-
-
 function generateMaybeOutput(user)
 	local func = function()
 			local msg = user.." got hit by "
@@ -263,6 +262,8 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 		for k,v in pairs(Users) do
 			print(k.." ;;; "..v)
 		end
+	elseif msg == "eod" then
+		ElitismFrame:CHALLENGE_MODE_COMPLETED()
 	end
 end
 
@@ -277,6 +278,9 @@ function maybeSendAddonMessage(prefix, message)
 end
 
 function maybeSendChatMessage(message)
+	if activeUser ~= playerUser then
+		return
+	end
 	if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
 		SendChatMessage(message,"PARTY")
 	elseif IsInGroup() and not IsInGroup(2) and IsInRaid() then
@@ -313,8 +317,25 @@ function ElitismFrame:ZONE_CHANGED_NEW_AREA(event,...)
 	ElitismFrame:RebuildTable()
 end
 
+function compareDamage(a,b)
+	return a["value"] < b["value"]
+end
+
 function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
-	print("CHALLENGE_MODE_COMPLETED EVENT!")
+	local count = 0
+	for _ in pairs(CombinedFails) do count = count + 1 end
+	if count == 0 then
+		maybeSendChatMessage("Thank you for travelling with ElitismHelper. No failure damage was taken this run.")
+		return
+	else
+		maybeSendChatMessage("Thank you for travelling with ElitismHelper. Amount of failure damage:")
+	end
+	local u = { }
+	for k, v in pairs(CombinedFails) do table.insert(u, { key = k, value = v }) end
+	table.sort(u, compareDamage)
+	for k,v in pairs(u) do
+			maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000000,1).." mil")
+	end
 end
 
 function ElitismFrame:CHAT_MSG_ADDON(event,...)
@@ -340,10 +361,15 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-	if (Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName) then
+	if --(Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and
+	UnitIsPlayer(dstName) then
 		if TimerData[dstName] == nil then
 			TimerData[dstName] = {}
 		end
+		if CombinedFails[dstName] == nil then
+			CombinedFails[dstName] = 0
+		end
+		CombinedFails[dstName] = CombinedFails[dstName] + aAmount
 		if TimerData[dstName][spellId] == nil then
 			TimerData[dstName][spellId] = aAmount
 		else
@@ -370,9 +396,6 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 end
 
 function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
-	if activeUser ~= playerUser then
-		return
-	end
 	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = select(1,...); -- Those arguments appear for all combat event variants.
 	local eventPrefix, eventSuffix = eventType:match("^(.-)_?([^_]*)$");
 	if (eventPrefix:match("^SPELL") or eventPrefix:match("^RANGE")) and eventSuffix == "DAMAGE" then
