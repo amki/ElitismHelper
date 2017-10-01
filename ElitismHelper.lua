@@ -108,10 +108,13 @@ local Spells = {
 	-- Vault of the Wardens
 	[193610] = true,		-- Fel Detonation (Glayvianna Soulrender)
 	[214625] = true,		-- Fel Chain (Tirathon Saltheril)
-	[190836] = true,		-- Hatred (Tirathon Saltheril)
+	[202862] = true,		-- Hatred (Tirathon Saltheril)
+	[191853] = true,		-- Furious Flames (Tirathon Saltheril)
+	[202046] = true,		-- Beam (Glazer)
 	[214893] = true,		-- Pulse (Glazer)
 	[194945] = true,		-- Lingering Gaze (Glazer)
 	[192519] = true,		-- Lava (Ash'Golm)
+	[213395] = true,		-- Deepening Shadows (Cordana Felsong)
 	[197541] = true,		-- Detonation (Cordana Felsong)
 	[197506] = true,		-- Creeping Doom (Cordana Felsong)
 
@@ -188,6 +191,9 @@ local Auras = {
 
 	-- Return to Karazhan (Upper)
 	[227592] = true,		-- Frostbite (Shade of Medivh)
+	
+	-- Vault of the Wardens
+	[212565] = true,		-- Inquisitive Stare (Inquisitor Tormentorum)
 }
 
 local AurasNoTank = {
@@ -318,7 +324,7 @@ function ElitismFrame:ZONE_CHANGED_NEW_AREA(event,...)
 end
 
 function compareDamage(a,b)
-	return a["value"] < b["value"]
+	return a["value"] > b["value"]
 end
 
 function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
