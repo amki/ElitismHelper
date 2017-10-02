@@ -178,7 +178,7 @@ local Auras = {
 	[213304] = true,		-- Righteous Indignation (Suspicious Noble)
 	[211464] = true,		-- Fel Detonation (Felbound Enforcer)
 
-	--Darkheart Thicket
+	-- Darkheart Thicket
 	[200329] = true,		-- Overwhelming Terror (Shade of Xavius)
 
 	-- Eye of Azshara
