@@ -46,6 +46,10 @@ local Spells = {
 	[201123] = true,		-- Root Burst (Vilethorn Blossom)
 	[198386] = true,		-- Primal Rampage (Archdruid Glaidalis)
 	[191326] = true,		-- Breath of Corruption (Dresaron)
+	[198408] = true,		-- Nightfall (Archdruid Glaidalis)
+	[199063] = true,		-- Strangling Roots (Strangling Roots, Oakheart)
+	[218759] = true,		-- Corruption Pool (Festerhide Grizzly)
+	[200771] = true,		-- Propelling Charge (Crazed Razorbeak)
 
 	-- Eye of Azshara
 	[195473] = true,		-- Abrasive Slime (Gritslime Snail)
@@ -151,6 +155,12 @@ local Spells = {
 local SpellsNoTank = {
 	[196074] = true,		-- Suppression Protocol (Corstilax)
 	[220875] = true,		-- Unstable Mana (Advisor Vandros)
+	[204667] = true,		-- Nightmare Breath (Oakheart)
+	[196512] = true,		-- Claw Frenzy (Fenryr)
+	[193092] = true,		-- Bloodletting Sweep (Hymdall)
+	[192018] = true,		-- Shield of Light (Hyrja)
+	[198888] = true,		-- Lightning Breath (Storm Drake)
+	[199050] = true,		-- Mortal Hew (Valarjar Shieldmaiden)
 }
 
 local Auras = {
@@ -168,8 +178,8 @@ local Auras = {
 	[213304] = true,		-- Righteous Indignation (Suspicious Noble)
 	[211464] = true,		-- Fel Detonation (Felbound Enforcer)
 
-	-- Darkheart Thicket
-	[200771] = true,		-- Propelling Charge (Crazed Razorbeak)
+	--Darkheart Thicket
+	[200329] = true,		-- Overwhelming Terror (Shade of Xavius)
 
 	-- Eye of Azshara
 	[193597] = true,		-- Static Nova (Lady Hatecoil)
