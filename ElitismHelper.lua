@@ -77,7 +77,6 @@ local Spells = {
 	-- The Arcway
 	[211209] = true,		-- Arcane Slicer (Arcane Anomaly)
 	[196142] = true,		-- Exterminate (Corstilax)
-	[196074] = true,		-- Suppression Protocol (Corstilax)
 	[220500] = true,		-- Destabilized Orb (Corstilax)
 	[203833] = true,		-- Time Split (Chrono Shards, Advisor Vandros)
 	[197579] = true,		-- Fel Eruption (General Xakal)
@@ -86,7 +85,6 @@ local Spells = {
 	[199812] = true,		-- Blink Strikes (Nal'tira)
 	[200040] = true,		-- Nether Venom (Nal'tira)
 	[211921] = true,		-- Felstorm (Priestess of Misery)
-	[220875] = true,		-- Unstable Mana (Advisor Vandros)
 	[203593] = true,		-- Nether Spike (Mana Wyrm)
 	[211198] = true,		-- Destructive Wake (Astral Spark)
 	[211501] = true,		-- Arcane Discharge (Enchanted Broodling)
@@ -151,6 +149,8 @@ local Spells = {
 }
 
 local SpellsNoTank = {
+	[196074] = true,		-- Suppression Protocol (Corstilax)
+	[220875] = true,		-- Unstable Mana (Advisor Vandros)
 }
 
 local Auras = {
