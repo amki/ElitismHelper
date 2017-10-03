@@ -131,7 +131,6 @@ local Spells = {
 	[227925] = true,		-- Final Curtain (Ghostly Understudy)
 	[227568] = true,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westfall Story)
 	[227799] = true,		-- Wash Away (Mrrgria, Opera Hall: Westfall Story)
-	[227434] = true,		-- Bubble Blast (Shoreline Tidespeaker, Opera Hall: Westfall Story)
 
 	-- Return to Karazhan (Upper)
 	[229563] = true,		-- Knight Move (Knight)
