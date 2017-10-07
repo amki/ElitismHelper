@@ -8,6 +8,7 @@ local playerUser = GetUnitName("player",true).."-"..GetRealmName()
 local Spells = {
 	-- Affixes
 	[209862] = true,		-- Volcanic Plume (Environment)
+	[226512] = true,		-- Sanguine Ichor (Environment)
 
 	-- Black Rook Hold
 	[197821] = true,		-- Felblazed Ground (Illysanna Ravencrest, AoE Ground from Eye Beams)
@@ -16,6 +17,7 @@ local Spells = {
 	[200256] = true,		-- Phased Explosion (Arcane Minion)
 	[198781] = true,		-- Whirling Blade (Lord Kur'talos Ravencrest)
 	[196517] = true,		-- Swirling Scythe (Amalgam of Souls)
+	[222417] = true,		-- Boulder Crush (Environment)
 
 	-- Cathedral of Eternal Night
 	[238653] = true,		-- Shadow Wave (Dul'zak)
@@ -47,9 +49,9 @@ local Spells = {
 	[198386] = true,		-- Primal Rampage (Archdruid Glaidalis)
 	[191326] = true,		-- Breath of Corruption (Dresaron)
 	[198408] = true,		-- Nightfall (Archdruid Glaidalis)
-	[199063] = true,		-- Strangling Roots (Strangling Roots, Oakheart)
 	[218759] = true,		-- Corruption Pool (Festerhide Grizzly)
 	[200771] = true,		-- Propelling Charge (Crazed Razorbeak)
+	[198916] = true,		-- Vile Burst (Vile Mushroom)
 
 	-- Eye of Azshara
 	[195473] = true,		-- Abrasive Slime (Gritslime Snail)
@@ -119,13 +121,12 @@ local Spells = {
 	[213395] = true,		-- Deepening Shadows (Cordana Felsong)
 	[197541] = true,		-- Detonation (Cordana Felsong)
 	[197506] = true,		-- Creeping Doom (Cordana Felsong)
+	[202607] = true,		-- Anguished Souls (Grimhorn the Enslaver)
 
 	-- Return to Karazhan (Lower)
 	[227645] = true,		-- Spectral Charge (Midnight, Attumen the Huntsman)
 	[227339] = true,		-- Mezair (Midnight, Attumen the Huntsman)
-	[227363] = true,		-- Mighty Stomp (Midnight, Attumen the Huntsman)
 	[227672] = true,		-- Will Breaker (Lord Crispin Ference, Moroes)
-	[227651] = true,		-- Iron Whirlwind (Baron Rafe Dreuger, Moroes)
 	[228001] = true,		-- Pennies From Heaven (Ghostly Philanthropist)
 	[238606] = true,		-- Arcane Eruption (Arcane Warden)
 	[227925] = true,		-- Final Curtain (Ghostly Understudy)
@@ -155,7 +156,6 @@ local SpellsNoTank = {
 	[196074] = true,		-- Suppression Protocol (Corstilax)
 	[220875] = true,		-- Unstable Mana (Advisor Vandros)
 	[204667] = true,		-- Nightmare Breath (Oakheart)
-	[196512] = true,		-- Claw Frenzy (Fenryr)
 	[193092] = true,		-- Bloodletting Sweep (Hymdall)
 	[192018] = true,		-- Shield of Light (Hyrja)
 	[198888] = true,		-- Lightning Breath (Storm Drake)
@@ -164,7 +164,6 @@ local SpellsNoTank = {
 
 local Auras = {
 	-- Black Rook Hold
-	[222417] = true,		-- Boulder Crush (Environment)
 	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
 	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard)
 	[214002] = true,		-- Raven's Dive (Risen Lancer)
