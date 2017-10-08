@@ -12,12 +12,15 @@ local Spells = {
 
 	-- Black Rook Hold
 	[197821] = true,		-- Felblazed Ground (Illysanna Ravencrest, AoE Ground from Eye Beams)
+	[197521] = true,		-- Blazing Trail (Illysanna Ravencrest)
 	[198820] = true,		-- Dark Blast (Latosius)
 	[199567] = true,		-- Dark Obliteration (Image of Latosius)
 	[200256] = true,		-- Phased Explosion (Arcane Minion)
 	[198781] = true,		-- Whirling Blade (Lord Kur'talos Ravencrest)
 	[196517] = true,		-- Swirling Scythe (Amalgam of Souls)
 	[222417] = true,		-- Boulder Crush (Environment)
+	[198501] = true,		-- Fel Vomitus (Smashspite the Hateful)
+	[201062] = true,		-- Bowled Over! (Wyrmtonge Scavanger)
 
 	-- Cathedral of Eternal Night
 	[238653] = true,		-- Shadow Wave (Dul'zak)
@@ -79,6 +82,7 @@ local Spells = {
 	[198330] = true,		-- Give No Quarter (Skjal)
 	[194443] = true,		-- Six Pound Barrel (Waterlogged Soul Guard)
 	[199250] = true,		-- Deceptive Strike (Seacursed Swiftblade)
+	[199093] = true,		-- Flare (Runecarver Slave)
 
 	-- The Arcway
 	[211209] = true,		-- Arcane Slicer (Arcane Anomaly)
