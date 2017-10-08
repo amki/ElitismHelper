@@ -154,16 +154,25 @@ local Spells = {
 	[229161] = true,		-- Explosive Shadows (Viz'aduum the Watcher)
 	[227465] = true,		-- Power Discharge (The Curator)
 	[227285] = true,		-- Power Discharge (The Curator)
+	[229988] = true,		-- Burning Tile (Wrathguard Flamebringer)
 }
 
 local SpellsNoTank = {
+	-- The Arcway
 	[196074] = true,		-- Suppression Protocol (Corstilax)
 	[220875] = true,		-- Unstable Mana (Advisor Vandros)
+
+	-- Darkheart Thicket
 	[204667] = true,		-- Nightmare Breath (Oakheart)
+
+	-- Halls of Valor
 	[193092] = true,		-- Bloodletting Sweep (Hymdall)
 	[192018] = true,		-- Shield of Light (Hyrja)
 	[198888] = true,		-- Lightning Breath (Storm Drake)
 	[199050] = true,		-- Mortal Hew (Valarjar Shieldmaiden)
+
+	-- Return to Karazhan (Upper)
+	[229608] = true,		-- Mighty Swing (Erudite Slayer)
 }
 
 local Auras = {
@@ -203,7 +212,7 @@ local Auras = {
 
 	-- Return to Karazhan (Upper)
 	[227592] = true,		-- Frostbite (Shade of Medivh)
-	
+
 	-- Vault of the Wardens
 	[212565] = true,		-- Inquisitive Stare (Inquisitor Tormentorum)
 }
