@@ -10,10 +10,10 @@ local Spells = {
 	-- Debug
 	--[252144] = 1,
 	--[252150] = 1,
-	
+
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
-	[226512] = 20,		-- Sanguine Ichor (Environment)
+	[226512] = 50,		-- Sanguine Ichor (Environment)
 
 	-- Black Rook Hold
 	[197821] = 20,		-- Felblazed Ground (Illysanna Ravencrest, AoE Ground from Eye Beams)
@@ -26,7 +26,7 @@ local Spells = {
 	[222397] = 20,		-- Boulder Crush (Environment)
 	[198501] = 20,		-- Fel Vomitus (Smashspite the Hateful)
 	[201062] = 20,		-- Bowled Over! (Wyrmtonge Scavanger)
-	[200914] = 20,		-- Indigestion (Wyrmtonge Scavanger)
+	[200914] = 50,		-- Indigestion (Wyrmtonge Scavanger)
 
 	-- Cathedral of Eternal Night
 	[238653] = 20,		-- Shadow Wave (Dul'zak)
@@ -52,7 +52,7 @@ local Spells = {
 
 	-- Darkheart Thicket
 	[204402] = 20,		-- Star Shower (Dreadsoul Ruiner)
-	[201273] = 20,		-- Blood Bomb (Bloodtainted Fury)
+	[201273] = 10,		-- Blood Bomb (Bloodtainted Fury)
 	[201227] = 20,		-- Blood Assault (Bloodtainted Fury)
 	[201123] = 20,		-- Root Burst (Vilethorn Blossom)
 	[198386] = 20,		-- Primal Rampage (Archdruid Glaidalis)
@@ -80,10 +80,10 @@ local Spells = {
 	[227234] = 20,		-- Corrupted Bellow (Helya)
 	[197117] = 20,		-- Piercing Tentacle (Helya)
 	[202472] = 20,		-- Tainted Essence (Seacursed Swiftblade)
-	[195036] = 20,		-- Defiant Strike (Seacursed Soulkeeper)
-	[195033] = 20,		-- Defiant Strike (Seacursed Soulkeeper)
-	[195038] = 20,		-- Defiant Strike (Seacursed Soulkeeper)
-	[195035] = 20,		-- Defiant Strike (Seacursed Soulkeeper)
+	[195036] = 40,		-- Defiant Strike (Seacursed Soulkeeper)
+	[195033] = 40,		-- Defiant Strike (Seacursed Soulkeeper)
+	[195038] = 40,		-- Defiant Strike (Seacursed Soulkeeper)
+	[195035] = 40,		-- Defiant Strike (Seacursed Soulkeeper)
 	[193513] = 20,		-- Bane (Ymiron, the Fallen King)
 	[198330] = 20,		-- Give No Quarter (Skjal)
 	[194443] = 20,		-- Six Pound Barrel (Waterlogged Soul Guard)
@@ -93,12 +93,12 @@ local Spells = {
 	-- The Arcway
 	[211209] = 20,		-- Arcane Slicer (Arcane Anomaly)
 	[196142] = 20,		-- Exterminate (Corstilax)
-	[220500] = 20,		-- Destabilized Orb (Corstilax)
+	[220500] = 40,		-- Destabilized Orb (Corstilax)
 	[203833] = 20,		-- Time Split (Chrono Shards, Advisor Vandros)
 	[197579] = 20,		-- Fel Eruption (General Xakal)
 	[212071] = 20,		-- Shadow Slash (General Xakal)
 	[220443] = 20,		-- Wake of Shadows (Shadow Slash, General Xakal)
-	[199812] = 20,		-- Blink Strikes (Nal'tira)
+	[199812] = 40,		-- Blink Strikes (Nal'tira)
 	[200040] = 20,		-- Nether Venom (Nal'tira)
 	[211921] = 20,		-- Felstorm (Priestess of Misery)
 	[203593] = 20,		-- Nether Spike (Mana Wyrm)
@@ -151,8 +151,7 @@ local Spells = {
 	[229568] = 20,		-- Rook Move (Rook)
 	[229427] = 20,		-- Royal Slash (King)
 	[242894] = 20,		-- Unstable Energy (Damaged Golem)
-	[227806] = 20,		-- Ceaseless Winter (Shade of Medivh)
-	--[228261] = 20,		-- Flame Wreath (Shade of Medivh)
+	[227806] = 25,		-- Ceaseless Winter (Shade of Medivh)
 	[227620] = 20,		-- Arcane Bomb (Mana Devourer)
 	[229248] = 20,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
 	[229285] = 20,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
@@ -169,8 +168,8 @@ local Spells = {
 
 local SpellsNoTank = {
 	-- The Arcway
-	[196074] = 20,		-- Suppression Protocol (Corstilax)
-	[220875] = 20,		-- Unstable Mana (Advisor Vandros)
+	[196074] = 25,		-- Suppression Protocol (Corstilax)
+	[220875] = 25,		-- Unstable Mana (Advisor Vandros)
 
 	-- Darkheart Thicket
 	[204667] = 20,		-- Nightmare Breath (Oakheart)
@@ -190,47 +189,47 @@ local SpellsNoTank = {
 
 local Auras = {
 	-- Black Rook Hold
-	[200261] = 20,		-- Bonebreaking Strike (Soul-Torn Champion)
-	[197974] = 20,		-- Bonecrushing Strike (Soul-torn Vanguard)
-	[214002] = 20,		-- Raven's Dive (Risen Lancer)
-	[199097] = 20,		-- Cloud of Hypnosis (Lord Kur'talos Ravencrest)
+	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
+	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard)
+	[214002] = true,		-- Raven's Dive (Risen Lancer)
+	[199097] = true,		-- Cloud of Hypnosis (Lord Kur'talos Ravencrest)
 
 	-- Court of Stars
-	[209667] = 20,		-- Blade Surge (Advisor Melandrus)
-	[207979] = 20,		-- Shockwave (Jazshariu)
-	[209027] = 20,		-- Quelling Strike (Duskwatch Guard)
-	[213304] = 20,		-- Righteous Indignation (Suspicious Noble)
-	[211464] = 20,		-- Fel Detonation (Felbound Enforcer)
+	[209667] = true,		-- Blade Surge (Advisor Melandrus)
+	[207979] = true,		-- Shockwave (Jazshariu)
+	[209027] = true,		-- Quelling Strike (Duskwatch Guard)
+	[213304] = true,		-- Righteous Indignation (Suspicious Noble)
+	[211464] = true,		-- Fel Detonation (Felbound Enforcer)
 
 	-- Darkheart Thicket
-	[200329] = 20,		-- Overwhelming Terror (Shade of Xavius)
+	[200329] = true,		-- Overwhelming Terror (Shade of Xavius)
 
 	-- Eye of Azshara
-	[193597] = 20,		-- Static Nova (Lady Hatecoil)
-	[196665] = 20,		-- Magic Resonance (Wrath of Azshara)
-	[196666] = 20,		-- Frost Resonance (Wrath of Azshara)
+	[193597] = true,		-- Static Nova (Lady Hatecoil)
+	[196665] = true,		-- Magic Resonance (Wrath of Azshara)
+	[196666] = true,		-- Frost Resonance (Wrath of Azshara)
 
 	-- Halls of Valor
-	[198088] = 20,		-- Glowing Fragment (Odyn)
-	[199337] = 20,		-- Bear Trap (Valarjar Trapper)
+	[198088] = true,		-- Glowing Fragment (Odyn)
+	[199337] = true,		-- Bear Trap (Valarjar Trapper)
 
 	-- Maw of Souls
-	[193364] = 20,		-- Screams of the Dead (Ymiron, the Fallen King)
+	[193364] = true,		-- Screams of the Dead (Ymiron, the Fallen King)
 
 	-- Return to Karazhan (Lower)
-	[227977] = 20,		-- Flashlight (Skeletal Usher)
-	[228280] = 20,		-- Oath of Fealty (Spectral Retainer)
-	[228221] = 20,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
-	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
+	[227977] = true,		-- Flashlight (Skeletal Usher)
+	[228280] = true,		-- Oath of Fealty (Spectral Retainer)
+	[228221] = true,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
+	[227917] = true,		-- Poetry Slam (Ghostly Understudy)
 
 	-- Return to Karazhan (Upper)
-	[227592] = 20,		-- Frostbite (Shade of Medivh)
+	[227592] = true,		-- Frostbite (Shade of Medivh)
 
 	-- Vault of the Wardens
-	[212565] = 20,		-- Inquisitive Stare (Inquisitor Tormentorum)
+	[212565] = true,		-- Inquisitive Stare (Inquisitor Tormentorum)
 
 	-- Seat of the Triumvirate
-	[246026] = 20,		-- Void Trap (Saprish)
+	[246026] = true,		-- Void Trap (Saprish)
 }
 
 local AurasNoTank = {
