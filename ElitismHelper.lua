@@ -419,8 +419,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-	if --(Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and 
-		UnitIsPlayer(dstName) then
+	if (Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName) then
 		-- Initialize TimerData and CombinedFails for Timer shot
 		if TimerData[dstName] == nil then
 			TimerData[dstName] = {}
