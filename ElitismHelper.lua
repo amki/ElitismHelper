@@ -18,9 +18,10 @@ local Spells = {
 	[200256] = true,		-- Phased Explosion (Arcane Minion)
 	[198781] = true,		-- Whirling Blade (Lord Kur'talos Ravencrest)
 	[196517] = true,		-- Swirling Scythe (Amalgam of Souls)
-	[222417] = true,		-- Boulder Crush (Environment)
+	[222397] = true,		-- Boulder Crush (Environment)
 	[198501] = true,		-- Fel Vomitus (Smashspite the Hateful)
 	[201062] = true,		-- Bowled Over! (Wyrmtonge Scavanger)
+	[200914] = true,		-- Indigestion (Wyrmtonge Scavanger)
 
 	-- Cathedral of Eternal Night
 	[238653] = true,		-- Shadow Wave (Dul'zak)
@@ -30,7 +31,7 @@ local Spells = {
 	[239326] = true,		-- Felblaze Orb (Fel Orb)
 	[240951] = true,		-- Destructive Rampage (Thrashbite the Scornful)
 	[236543] = true,		-- Felsoul Cleave (Domatrax)
-	[242760] = true,		-- Lumbering Crash (Vilebark Walker)
+	[236551] = true,		-- Chaotic Energy (Domatrax)
 	[240279] = true,		-- Fel Strike (Wrathguard Invader)
 	[238469] = true,		-- Scornful Charge (Thrashbite the Scornful)
 
@@ -155,6 +156,10 @@ local Spells = {
 	[227465] = true,		-- Power Discharge (The Curator)
 	[227285] = true,		-- Power Discharge (The Curator)
 	[229988] = true,		-- Burning Tile (Wrathguard Flamebringer)
+
+	-- Seat of the Triumvirate
+	[245803] = true,		-- Ravaging Darkness (Darkfang)
+	[246688] = true,		-- Suppression Field (Shadowguard Subjugator)
 }
 
 local SpellsNoTank = {
@@ -173,6 +178,9 @@ local SpellsNoTank = {
 
 	-- Return to Karazhan (Upper)
 	[229608] = true,		-- Mighty Swing (Erudite Slayer)
+
+	-- Cathedral of Eternal Night
+	[237599] = true,		-- Devastating Swipe (Helblaze Felbringer)
 }
 
 local Auras = {
@@ -215,6 +223,9 @@ local Auras = {
 
 	-- Vault of the Wardens
 	[212565] = true,		-- Inquisitive Stare (Inquisitor Tormentorum)
+
+	-- Seat of the Triumvirate
+	[246026] = true,		-- Void Trap (Saprish)
 }
 
 local AurasNoTank = {
