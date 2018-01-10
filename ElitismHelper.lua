@@ -3,7 +3,7 @@ local Timers = {}
 local TimerData = {}
 local CombinedFails = {}
 local activeUser = nil
-local playerUser = GetUnitName("player",true).."-"..GetRealmName()
+local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
 local hardMinPct = 20
 
 local Spells = {
@@ -309,6 +309,9 @@ end
 SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 	if msg == "activeuser" then
 		print("activeUser is "..activeUser)
+		if activeUser == playerUser then
+			print("You are the activeUser")
+		end
 	elseif msg == "resync" then
 		ElitismFrame:RebuildTable()
 	elseif msg == "table" then
