@@ -56,6 +56,7 @@ local Spells = {
 	[201227] = 20,		-- Blood Assault (Bloodtainted Fury)
 	[201123] = 20,		-- Root Burst (Vilethorn Blossom)
 	[198386] = 20,		-- Primal Rampage (Archdruid Glaidalis)
+	[201191] = 20,      -- Dreadburst (Red Blood Blobs)
 	[191326] = 20,		-- Breath of Corruption (Dresaron)
 	[198408] = 20,		-- Nightfall (Archdruid Glaidalis)
 	[218759] = 20,		-- Corruption Pool (Festerhide Grizzly)
@@ -64,6 +65,7 @@ local Spells = {
 
 	-- Eye of Azshara
 	[195473] = 20,		-- Abrasive Slime (Gritslime Snail)
+	[195528] = 20,      -- Water Spout (Water Spout)
 	[196129] = 20,		-- Spray Sand (Mak'rana Siltwalker)
 	[195832] = 20,		-- Massive Quake (Skrog Tidestomper)
 	[192801] = 20,		-- Tidal Wave (Wrath of Azshara)
@@ -169,6 +171,7 @@ local Spells = {
 local SpellsNoTank = {
 	-- The Arcway
 	[196074] = 25,		-- Suppression Protocol (Corstilax)
+	[210750] = 20,      -- Collapsing Rift (Withered Manawraith)
 	[220875] = 25,		-- Unstable Mana (Advisor Vandros)
 
 	-- Darkheart Thicket
