@@ -35,9 +35,10 @@ local Spells = {
 	[239201] = 20,		-- Fel Glare (Gazerax)
 	[239326] = 20,		-- Felblaze Orb (Fel Orb)
 	[240951] = 20,		-- Destructive Rampage (Thrashbite the Scornful)
+	[237276] = 20,      -- Pulverizing Cudgel (Thrashbite the Scornful)
 	[236543] = 20,		-- Felsoul Cleave (Domatrax)
-	[236551] = 20,		-- Chaotic Energy (Domatrax)
-	[240279] = 20,		-- Fel Strike (Wrathguard Invader)
+	[236551] = 50,		-- Chaotic Energy (Domatrax)
+	[240279] = 40,		-- Fel Strike (Wrathguard Invader)
 	[238469] = 20,		-- Scornful Charge (Thrashbite the Scornful)
 
 	--Court of Stars
@@ -65,15 +66,19 @@ local Spells = {
 
 	-- Eye of Azshara
 	[195473] = 20,		-- Abrasive Slime (Gritslime Snail)
+	[192053] = 25,      -- Quicksand (Warlord Parjesh)
 	[195528] = 20,      -- Water Spout (Water Spout)
+	[193636] = 30,      -- Watery Splash (Saltsea Droplet)
+	[196287] = 20,      -- Tail Whip (Stormwake Hydra)
 	[196129] = 20,		-- Spray Sand (Mak'rana Siltwalker)
 	[195832] = 20,		-- Massive Quake (Skrog Tidestomper)
 	[192801] = 20,		-- Tidal Wave (Wrath of Azshara)
-	[193171] = 20,		-- Aftershock (Quake, King Deepbeard)
+	[193171] = 40,		-- Aftershock (Quake, King Deepbeard)
 	[192794] = 20,		-- Lightning Strike (Environment)
 	[191847] = 20,		-- Poison Spit (Serpentrix)
 	[196293] = 20,		-- Chaotic Tempest (Stormwake Hydra)
 	[196299] = 20,		-- Roiling Storm (Stormwake Hydra)
+	[199948] = 10,      -- Tempest (Environment, Wrath of Azshara Lightning)
 
 	-- Maw of Souls
 	[194218] = 20,		-- Cosmic Scythe (Harbaron)
@@ -109,9 +114,12 @@ local Spells = {
 	[220597] = 20,		-- Charged Bolt (Ivanyr)
 
 	-- Neltharion's Lair
+	[198028] = 30,      -- Crystalline Ground (Rokmora)
+	[192800] = 20,      -- Choking Dust (Rokmora Skitter AoE Cloud)
 	[183100] = 20,		-- Avalanche (Mightstone Breaker)
 	[198475] = 20,		-- Strike of the Mountain (Ularogg Cragshaper)
 	[200723] = 20,		-- Molten Crash (Active Mitigation fail, Dargrul)
+	[217090] = 20,      -- Magma Wave (Dargrul)
 
 	-- Halls of Valor
 	[192206] = 20,		-- Sanctify (Olmyr & Hyrja)
@@ -142,6 +150,7 @@ local Spells = {
 	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
 	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
 	[227925] = 20,		-- Final Curtain (Ghostly Understudy)
+	[241774] = 10,      -- Shield Smash (Phantom Guardsman)
 	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westfall Story)
 	[227799] = 20,		-- Wash Away (Mrrgria, Opera Hall: Westfall Story)
 
@@ -169,6 +178,11 @@ local Spells = {
 }
 
 local SpellsNoTank = {
+	-- Cathedral of Eternal Night
+	[237599] = 20,      -- Devastating Swipe (Helblaze Felbringer)
+    -- Eye of Azshara
+	[196203] = 20,      -- Clobbering Claws (Mak'rana Hardshell)
+	
 	-- The Arcway
 	[196074] = 25,		-- Suppression Protocol (Corstilax)
 	[210750] = 20,      -- Collapsing Rift (Withered Manawraith)
@@ -176,6 +190,10 @@ local SpellsNoTank = {
 
 	-- Darkheart Thicket
 	[204667] = 20,		-- Nightmare Breath (Oakheart)
+	
+	-- Neltharion's Lair
+	[226406] = 20,      -- Ember Swip (Emberhusk Dominator)
+	[193505] = 20,      -- Fracture (Vileshard Hulk)
 
 	-- Halls of Valor
 	[193092] = 20,		-- Bloodletting Sweep (Hymdall)
