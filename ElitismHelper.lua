@@ -402,6 +402,10 @@ function ElitismFrame:ADDON_LOADED(event,addon)
 	if addon == "ElitismHelper" then
 		ElitismFrame:RebuildTable()
 	end
+	
+	if not EHLoud then
+		EHLoud = true
+	end
 end
 
 function ElitismFrame:GROUP_ROSTER_UPDATE(event,...)
