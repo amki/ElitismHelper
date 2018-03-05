@@ -95,6 +95,7 @@ local Spells = {
 	[198330] = 20,		-- Give No Quarter (Skjal)
 	[194443] = 20,		-- Six Pound Barrel (Waterlogged Soul Guard)
 	[199250] = 20,		-- Deceptive Strike (Seacursed Swiftblade)
+	[201566] = 30,      -- Swirling Muck (Seacursed Slaver)
 	[199093] = 20,		-- Flare (Runecarver Slave)
 
 	-- The Arcway
@@ -395,7 +396,7 @@ function ElitismFrame:ZONE_CHANGED_NEW_AREA(event,...)
 end
 
 function compareDamage(a,b)
-	return a["value"] > b["value"]
+	return a["value"] < b["value"]
 end
 
 function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
