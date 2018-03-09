@@ -320,7 +320,7 @@ function generateMaybeOutput(user)
 			local userMaxHealth = UnitHealthMax(user)
 			local msgAmount = round(amount / 1000000,1)
 			local pct = Round(amount / userMaxHealth * 100)
-			if pct >= hardMinPct and pct >= minPct then
+			if pct >= hardMinPct and pct >= minPct and EHLoud then
 				msg = msg.."for "..msgAmount.."mil ("..pct.."%)."
 				maybeSendChatMessage(msg)
 			end
@@ -328,24 +328,43 @@ function generateMaybeOutput(user)
 	return func
 end
 
+SLASH_ELITISMHELPER1 = "/eh"
+
 SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 	if msg == "activeuser" then
 		print("activeUser is "..activeUser)
 		if activeUser == playerUser then
 			print("You are the activeUser")
 		end
+		
 	elseif msg == "resync" then
 		ElitismFrame:RebuildTable()
+		
 	elseif msg == "table" then
 		for k,v in pairs(Users) do
 			print(k.." ;;; "..v)
 		end
+		
 	elseif msg == "eod" then
 		ElitismFrame:CHALLENGE_MODE_COMPLETED()
+		
+	elseif msg == "on" or msg == "enable" then
+		if EHLoud then
+			print("ElitismHelper: Damage notifications are already enabled.")
+		else
+			EHLoud = true
+			print("ElitismHelper: All damage notifications enabled.")
+		end
+		
+	elseif msg == "off" or msg == "disable" then
+		if not EHLoud then
+			print("ElitismHelper: Damage notifications are already disabled.")
+		else
+			EHLoud = false
+			print("ElitismHelper: Will only announce at the end of the dungeon.")
+		end
 	end
 end
-
-SLASH_ELITISMHELPER1 = "/eh"
 
 function maybeSendAddonMessage(prefix, message)
 	if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
@@ -382,6 +401,10 @@ end
 function ElitismFrame:ADDON_LOADED(event,addon)
 	if addon == "ElitismHelper" then
 		ElitismFrame:RebuildTable()
+	end
+	
+	if not EHLoud then
+		EHLoud = true
 	end
 end
 
@@ -474,9 +497,9 @@ end
 
 function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	if (Auras[spellId] or (AurasNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName)  then
-		if auraAmount then
+		if auraAmount and EHLoud then
 			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.")
-		else
+		elseif EHLoud then
 			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".")
 		end
 	end
