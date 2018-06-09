@@ -4,7 +4,7 @@ local TimerData = {}
 local CombinedFails = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
-local hardMinPct = 20
+local hardMinPct = 40
 
 local Spells = {
 	-- Debug
@@ -544,7 +544,7 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 		-- If there is no timer yet, start one with this event
 		if Timers[dstName] == nil then
 			Timers[dstName] = true
-			C_Timer.After(2,generateMaybeOutput(dstName))
+			C_Timer.After(4,generateMaybeOutput(dstName))
 		end
 	end
 end
