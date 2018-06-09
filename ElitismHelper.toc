@@ -1,6 +1,6 @@
 ## Interface: 70300
 ## Title: ElitismHelper
-## Version: 0.7.8
+## Version: 0.8.0
 ## Notes: Helps with being an elitist by calling out fails
 ## SavedVariables: ElitismHelperDB
 ElitismHelper.lua
