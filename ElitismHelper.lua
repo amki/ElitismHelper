@@ -320,7 +320,7 @@ function generateMaybeOutput(user)
 			local userMaxHealth = UnitHealthMax(user)
 			local msgAmount = round(amount / 1000000,1)
 			local pct = Round(amount / userMaxHealth * 100)
-			if pct >= hardMinPct and pct >= minPct and EHLoud then
+			if pct >= hardMinPct and pct >= minPct and ElitismHelperDB.Loud then
 				msg = msg.."for "..msgAmount.."mil ("..pct.."%)."
 				maybeSendChatMessage(msg)
 			end
@@ -331,39 +331,85 @@ end
 SLASH_ELITISMHELPER1 = "/eh"
 
 SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
-	if msg == "activeuser" then
-		print("activeUser is "..activeUser)
-		if activeUser == playerUser then
-			print("You are the activeUser")
-		end
-		
-	elseif msg == "resync" then
-		ElitismFrame:RebuildTable()
-		
-	elseif msg == "table" then
-		for k,v in pairs(Users) do
-			print(k.." ;;; "..v)
-		end
-		
-	elseif msg == "eod" then
-		ElitismFrame:CHALLENGE_MODE_COMPLETED()
-		
-	elseif msg == "on" or msg == "enable" then
-		if EHLoud then
+	function enableElitismHelper()
+		if ElitismHelperDB.Loud then
 			print("ElitismHelper: Damage notifications are already enabled.")
 		else
-			EHLoud = true
+			ElitismHelperDB.Loud = true
 			print("ElitismHelper: All damage notifications enabled.")
 		end
-		
-	elseif msg == "off" or msg == "disable" then
-		if not EHLoud then
+	end
+	function disableElisitmHelper()
+		if not ElitismHelperDB.Loud then
 			print("ElitismHelper: Damage notifications are already disabled.")
 		else
-			EHLoud = false
+			ElitismHelperDB.Loud = false
 			print("ElitismHelper: Will only announce at the end of the dungeon.")
 		end
 	end
+
+	actions = {
+		["activeuser"] = function()
+			print("activeUser is "..activeUser)
+			if activeUser == playerUser then
+				print("You are the activeUser")
+			end
+		end,
+		["resync"] = function()
+			ElitismFrame:RebuildTable()
+		end,
+		["table"] = function()
+			for k,v in pairs(Users) do
+				print(k.." ;;; "..v)
+			end
+		end,
+		["eod"] = function()
+			ElitismFrame:CHALLENGE_MODE_COMPLETED()
+		end,
+		["on"] = enableElitismHelper,
+		["enable"] = enableElitismHelper,
+		["off"] = disableElisitmHelper,
+		["disable"] = disableElisitmHelper,
+		["output"] = function(argsFunc)
+			if argsFunc == "default" then
+				ElitismHelperDB.OutputMode = "default"
+				print("Output set to party in parties, raid in raids")
+			elseif argsFunc == "party" then
+				ElitismHelperDB.OutputMode = "party"
+				print("Output set to party always")
+			elseif argsFunc == "raid" then
+				ElitismHelperDB.OutputMode = "raid"
+				print("Output set to raid always")
+			elseif argsFunc == "self" then
+				ElitismHelperDB.OutputMode = "self"
+				print("Output set to self only always")
+			else
+				print("Valid targets are default | party | raid | self")
+				print("Current target is "..ElitismHelperDB.OutputMode)
+			end
+		end,
+		["help"] = function()
+			print("Elitism Helper options:")
+			print(" on/enable: Enable Elitism Helper announcer")
+			print(" off/disable: Disable Elitism Helper announcer")
+			print(" eod: Dungeon is complete")
+			print(" table: Prints users")
+			print(" resync: Rebuilts table")
+			print(" activeUser: Prints active user")
+			print(" output: Define output channel between default | party | raid | self")
+		end,
+		["messageTest"] = function()
+			print("Testing output for "..ElitismHelperDB.OutputMode)
+			maybeSendChatMessage("This is a test message")
+		end
+	}
+
+	local _, _, cmd, args = string.find(msg, "%s?(%w+)%s?(.*)")
+	local commandFunction = actions[cmd]
+	if not commandFunction then
+		commandFunction = actions["help"]
+	end
+	commandFunction(args)
 end
 
 function maybeSendAddonMessage(prefix, message)
@@ -378,10 +424,18 @@ function maybeSendChatMessage(message)
 	if activeUser ~= playerUser then
 		return
 	end
-	if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
+	if ElitismHelperDB.OutputMode == "self" then
+		print(message)
+	elseif ElitismHelperDB.OutputMode == "party" and IsInGroup() and not IsInGroup(2) then
 		SendChatMessage(message,"PARTY")
-	elseif IsInGroup() and not IsInGroup(2) and IsInRaid() then
+	elseif ElitismHelperDB.OutputMode == "raid" and IsInGroup() and not IsInGroup(2) and IsInRaid() then
 		SendChatMessage(message,"RAID")
+	elseif ElitismHelperDB.OutputMode == "default" then
+		if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
+			SendChatMessage(message,"PARTY")
+		elseif IsInGroup() and not IsInGroup(2) and IsInRaid() then
+			SendChatMessage(message,"RAID")
+		end
 	end
 end
 
@@ -403,8 +457,11 @@ function ElitismFrame:ADDON_LOADED(event,addon)
 		ElitismFrame:RebuildTable()
 	end
 	
-	if not EHLoud then
-		EHLoud = true
+	if not ElitismHelperDB then
+		ElitismHelperDB = {
+			Loud = true,
+			OutputMode = "default"
+		}
 	end
 end
 
@@ -497,9 +554,9 @@ end
 
 function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	if (Auras[spellId] or (AurasNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName)  then
-		if auraAmount and EHLoud then
+		if auraAmount and ElitismHelperDB.Loud then
 			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.")
-		elseif EHLoud then
+		elseif ElitismHelperDB.Loud then
 			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".")
 		end
 	end
@@ -527,3 +584,4 @@ function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	end
 end
+
