@@ -264,7 +264,7 @@ end
 local ElitismFrame = CreateFrame("Frame", "ElitismFrame")
 ElitismFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 local MSG_PREFIX = "ElitismHelper"
-local success = RegisterAddonMessagePrefix(MSG_PREFIX)
+local success = C_ChatInfo.RegisterAddonMessagePrefix(MSG_PREFIX)
 ElitismFrame:RegisterEvent("CHAT_MSG_ADDON")
 ElitismFrame:RegisterEvent("GROUP_ROSTER_UPDATE")
 ElitismFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
@@ -414,9 +414,9 @@ end
 
 function maybeSendAddonMessage(prefix, message)
 	if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
-		SendAddonMessage(prefix,message,"PARTY")
+		C_ChatInfo.SendAddonMessage(prefix,message,"PARTY")
 	elseif IsInGroup() and not IsInGroup(2) and IsInRaid() then
-		SendAddonMessage(prefix,message,"RAID")
+		C_ChatInfo.SendAddonMessage(prefix,message,"RAID")
 	end
 end
 
@@ -563,7 +563,7 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 end
 
 function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
-	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = select(1,...); -- Those arguments appear for all combat event variants.
+	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = CombatLogGetCurrentEventInfo(); -- Those arguments appear for all combat event variants.
 	local eventPrefix, eventSuffix = eventType:match("^(.-)_?([^_]*)$");
 	if (eventPrefix:match("^SPELL") or eventPrefix:match("^RANGE")) and eventSuffix == "DAMAGE" then
 		local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand, _ = select(12,...)
