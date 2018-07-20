@@ -318,10 +318,10 @@ function generateMaybeOutput(user)
 			TimerData[user] = nil
 			Timers[user] = nil
 			local userMaxHealth = UnitHealthMax(user)
-			local msgAmount = round(amount / 1000000,1)
+			local msgAmount = round(amount / 1000,1)
 			local pct = Round(amount / userMaxHealth * 100)
 			if pct >= hardMinPct and pct >= minPct and ElitismHelperDB.Loud then
-				msg = msg.."for "..msgAmount.."mil ("..pct.."%)."
+				msg = msg.."for "..msgAmount.."k ("..pct.."%)."
 				maybeSendChatMessage(msg)
 			end
 		end
@@ -492,7 +492,7 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 	for k, v in pairs(CombinedFails) do table.insert(u, { key = k, value = v }) end
 	table.sort(u, compareDamage)
 	for k,v in pairs(u) do
-			maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000000,1).." mil")
+			maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000,1).."k")
 	end
 	CombinedFails = {}
 end
@@ -566,21 +566,21 @@ function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = CombatLogGetCurrentEventInfo(); -- Those arguments appear for all combat event variants.
 	local eventPrefix, eventSuffix = eventType:match("^(.-)_?([^_]*)$");
 	if (eventPrefix:match("^SPELL") or eventPrefix:match("^RANGE")) and eventSuffix == "DAMAGE" then
-		local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand, _ = select(12,...)
+		local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand, _ = select(12,CombatLogGetCurrentEventInfo())
 		ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, sAmount)
 	elseif eventPrefix:match("^SWING") and eventSuffix == "DAMAGE" then
-		local aAmount, aOverkill, aSchool, aResisted, aBlocked, aAbsorbed, aCritical, aGlancing, aCrushing, aOffhand, _ = select(12,...)
+		local aAmount, aOverkill, aSchool, aResisted, aBlocked, aAbsorbed, aCritical, aGlancing, aCrushing, aOffhand, _ = select(12,CombatLogGetCurrentEventInfo())
 		ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, aAmount)
 	elseif eventPrefix:match("^SPELL") and eventSuffix == "MISSED" then
-		local spellId, spellName, spellSchool, missType, isOffHand, mAmount  = select(12,...)
+		local spellId, spellName, spellSchool, missType, isOffHand, mAmount  = select(12,CombatLogGetCurrentEventInfo())
 		if mAmount then
 			ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, mAmount)
 		end
 	elseif eventType == "SPELL_AURA_APPLIED" then
-		local spellId, spellName, spellSchool, auraType = select(12,...)
+		local spellId, spellName, spellSchool, auraType = select(12,CombatLogGetCurrentEventInfo())
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType)
 	elseif eventType == "SPELL_AURA_APPLIED_DOSE" then
-		local spellId, spellName, spellSchool, auraType, auraAmount = select(12,...)
+		local spellId, spellName, spellSchool, auraType, auraAmount = select(12,CombatLogGetCurrentEventInfo())
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	end
 end
