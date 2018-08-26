@@ -15,243 +15,82 @@ local Spells = {
 	[209862] = 20,		-- Volcanic Plume (Environment)
 	[226512] = 50,		-- Sanguine Ichor (Environment)
 
-	-- Black Rook Hold
-	[197821] = 20,		-- Felblazed Ground (Illysanna Ravencrest, AoE Ground from Eye Beams)
-	[197521] = 20,		-- Blazing Trail (Illysanna Ravencrest)
-	[198820] = 20,		-- Dark Blast (Latosius)
-	[199567] = 20,		-- Dark Obliteration (Image of Latosius)
-	[200256] = 20,		-- Phased Explosion (Arcane Minion)
-	[198781] = 20,		-- Whirling Blade (Lord Kur'talos Ravencrest)
-	[196517] = 20,		-- Swirling Scythe (Amalgam of Souls)
-	[222397] = 20,		-- Boulder Crush (Environment)
-	[198501] = 20,		-- Fel Vomitus (Smashspite the Hateful)
-	[201062] = 20,		-- Bowled Over! (Wyrmtonge Scavanger)
-	[200914] = 50,		-- Indigestion (Wyrmtonge Scavanger)
+	-- Freehold
+	[274389] = 25,		-- Rat Traps (Vermin Trapper)
 
-	-- Cathedral of Eternal Night
-	[238653] = 20,		-- Shadow Wave (Dul'zak)
-	[238673] = 20,		-- Floral Fulmination (Fulminating Lasher, Agronox)
-	[239217] = 20,		-- Blinding Glare (Gazerax)
-	[239201] = 20,		-- Fel Glare (Gazerax)
-	[239326] = 20,		-- Felblaze Orb (Fel Orb)
-	[240951] = 20,		-- Destructive Rampage (Thrashbite the Scornful)
-	[237276] = 60,      -- Pulverizing Cudgel (Thrashbite the Scornful)
-	[236543] = 20,		-- Felsoul Cleave (Domatrax)
-	[236551] = 50,		-- Chaotic Energy (Domatrax)
-	[240279] = 40,		-- Fel Strike (Wrathguard Invader)
-	[238469] = 20,		-- Scornful Charge (Thrashbite the Scornful)
+	-- Shrine of the Storm
 
-	--Court of Stars
-	[219498] = 20,		-- Streetsweeper (Patrol Captain Gerdo)
-	[206574] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
-	[206580] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
-	[209477] = 20,		-- Wild Detonation (Mana Wyrm)
-	[211457] = 20,		-- Infernal Eruption (Talixae Flamewreath)
-	[209630] = 20,		-- Piercing Gale (Images of Advisor Melandrus)
-	[209628] = 20,		-- Piercing Gale (Advisor Melandrus)
-	[214688] = 20,		-- Carrion Swarm (Gerenth the Vile)
+	-- Siege of Boralus
 
-	-- Darkheart Thicket
-	[204402] = 20,		-- Star Shower (Dreadsoul Ruiner)
-	[201273] = 10,		-- Blood Bomb (Bloodtainted Fury)
-	[201227] = 20,		-- Blood Assault (Bloodtainted Fury)
-	[201123] = 20,		-- Root Burst (Vilethorn Blossom)
-	[198386] = 20,		-- Primal Rampage (Archdruid Glaidalis)
-	[201191] = 20,      -- Dreadburst (Red Blood Blobs)
-	[191326] = 20,		-- Breath of Corruption (Dresaron)
-	[198408] = 20,		-- Nightfall (Archdruid Glaidalis)
-	[218759] = 20,		-- Corruption Pool (Festerhide Grizzly)
-	[200771] = 20,		-- Propelling Charge (Crazed Razorbeak)
-	[198916] = 20,		-- Vile Burst (Vile Mushroom)
+	-- Tol Dagor
 
-	-- Eye of Azshara
-	[195473] = 20,		-- Abrasive Slime (Gritslime Snail)
-	[192053] = 25,      -- Quicksand (Warlord Parjesh)
-	[195528] = 20,      -- Water Spout (Water Spout)
-	[193636] = 30,      -- Watery Splash (Saltsea Droplet)
-	[196287] = 20,      -- Tail Whip (Stormwake Hydra)
-	[196129] = 20,		-- Spray Sand (Mak'rana Siltwalker)
-	[195832] = 20,		-- Massive Quake (Skrog Tidestomper)
-	[192801] = 20,		-- Tidal Wave (Wrath of Azshara)
-	[193171] = 40,		-- Aftershock (Quake, King Deepbeard)
-	[192794] = 20,		-- Lightning Strike (Environment)
-	[191847] = 20,		-- Poison Spit (Serpentrix)
-	[196293] = 20,		-- Chaotic Tempest (Stormwake Hydra)
-	[196299] = 20,		-- Roiling Storm (Stormwake Hydra)
-	[199948] = 10,      -- Tempest (Environment, Wrath of Azshara Lightning)
+	-- Waycrest Manor
 
-	-- Maw of Souls
-	[194218] = 20,		-- Cosmic Scythe (Harbaron)
-	[195309] = 20,		-- Swirling Water (Helya)
-	[202098] = 20,		-- Brackwater Barrage (Helya)
-	[227234] = 20,		-- Corrupted Bellow (Helya)
-	[197117] = 20,		-- Piercing Tentacle (Helya)
-	[202472] = 20,		-- Tainted Essence (Seacursed Swiftblade)
-	[195036] = 40,		-- Defiant Strike (Seacursed Soulkeeper)
-	[195033] = 40,		-- Defiant Strike (Seacursed Soulkeeper)
-	[195038] = 40,		-- Defiant Strike (Seacursed Soulkeeper)
-	[195035] = 40,		-- Defiant Strike (Seacursed Soulkeeper)
-	[193513] = 20,		-- Bane (Ymiron, the Fallen King)
-	[198330] = 20,		-- Give No Quarter (Skjal)
-	[194443] = 20,		-- Six Pound Barrel (Waterlogged Soul Guard)
-	[199250] = 20,		-- Deceptive Strike (Seacursed Swiftblade)
-	[201566] = 30,      -- Swirling Muck (Seacursed Slaver)
-	[199093] = 20,		-- Flare (Runecarver Slave)
+	-- Atal'Dazar
 
-	-- The Arcway
-	[211209] = 20,		-- Arcane Slicer (Arcane Anomaly)
-	[196142] = 20,		-- Exterminate (Corstilax)
-	[220500] = 40,		-- Destabilized Orb (Corstilax)
-	[203833] = 20,		-- Time Split (Chrono Shards, Advisor Vandros)
-	[197579] = 20,		-- Fel Eruption (General Xakal)
-	[212071] = 20,		-- Shadow Slash (General Xakal)
-	[220443] = 20,		-- Wake of Shadows (Shadow Slash, General Xakal)
-	[199812] = 40,		-- Blink Strikes (Nal'tira)
-	[200040] = 20,		-- Nether Venom (Nal'tira)
-	[211921] = 20,		-- Felstorm (Priestess of Misery)
-	[203593] = 20,		-- Nether Spike (Mana Wyrm)
-	[211198] = 20,		-- Destructive Wake (Astral Spark)
-	[211501] = 20,		-- Arcane Discharge (Enchanted Broodling)
-	[220597] = 20,		-- Charged Bolt (Ivanyr)
+	-- King's Rest
 
-	-- Neltharion's Lair
-	[198028] = 30,      -- Crystalline Ground (Rokmora)
-	[192800] = 20,      -- Choking Dust (Rokmora Skitter AoE Cloud)
-	[183100] = 20,		-- Avalanche (Mightstone Breaker)
-	[198475] = 20,		-- Strike of the Mountain (Ularogg Cragshaper)
-	[200723] = 20,		-- Molten Crash (Active Mitigation fail, Dargrul)
-	[217090] = 20,      -- Magma Wave (Dargrul)
+	-- The MOTHERLODE!!
 
-	-- Halls of Valor
-	[192206] = 20,		-- Sanctify (Olmyr & Hyrja)
-	[199210] = 20,		-- Penetrating Shot (Valarjar Marksman)
-	[210875] = 20,		-- Charged Pulse (Stormforged Sentinel)
-	[193234] = 20,		-- Dancing Blade (Hymdall)
-	[193260] = 20,		-- Static Field (Storm Drake, Hymdall)
-	[188395] = 20,		-- Ball Lightning (Static Field, Hymdall)
+	-- Temple of Sethraliss
 
-	-- Vault of the Wardens
-	[193610] = 20,		-- Fel Detonation (Glayvianna Soulrender)
-	[214625] = 20,		-- Fel Chain (Tirathon Saltheril)
-	[202862] = 20,		-- Hatred (Tirathon Saltheril)
-	[191853] = 20,		-- Furious Flames (Tirathon Saltheril)
-	[202046] = 20,		-- Beam (Glazer)
-	[214893] = 20,		-- Pulse (Glazer)
-	[194945] = 20,		-- Lingering Gaze (Glazer)
-	[192519] = 20,		-- Lava (Ash'Golm)
-	[213395] = 20,		-- Deepening Shadows (Cordana Felsong)
-	[197541] = 20,		-- Detonation (Cordana Felsong)
-	[197506] = 20,		-- Creeping Doom (Cordana Felsong)
-	[202607] = 20,		-- Anguished Souls (Grimhorn the Enslaver)
+	-- Underrot
 
-	-- Return to Karazhan (Lower)
-	[227645] = 20,		-- Spectral Charge (Midnight, Attumen the Huntsman)
-	[227339] = 20,		-- Mezair (Midnight, Attumen the Huntsman)
-	[227672] = 20,		-- Will Breaker (Lord Crispin Ference, Moroes)
-	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
-	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
-	[227925] = 20,		-- Final Curtain (Ghostly Understudy)
-	[241774] = 10,      -- Shield Smash (Phantom Guardsman)
-	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westfall Story)
-	[227799] = 20,		-- Wash Away (Mrrgria, Opera Hall: Westfall Story)
-
-	-- Return to Karazhan (Upper)
-	[229563] = 20,		-- Knight Move (Knight)
-	[229298] = 20,		-- Knight Move (Knight)
-	[229559] = 20,		-- Bishop Move (Bishop)
-	[229384] = 20,		-- Queen Move (Queen)
-	[229568] = 20,		-- Rook Move (Rook)
-	[229427] = 20,		-- Royal Slash (King)
-	[242894] = 20,		-- Unstable Energy (Damaged Golem)
-	[227806] = 25,		-- Ceaseless Winter (Shade of Medivh)
-	[227620] = 20,		-- Arcane Bomb (Mana Devourer)
-	[229248] = 20,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
-	[229285] = 20,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
-	[229151] = 20,		-- Disintegrate (Viz'aduum the Watcher)
-	[229161] = 20,		-- Explosive Shadows (Viz'aduum the Watcher)
-	[227465] = 20,		-- Power Discharge (The Curator)
-	[227285] = 20,		-- Power Discharge (The Curator)
-	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
-
-	-- Seat of the Triumvirate
-	[245803] = 20,		-- Ravaging Darkness (Darkfang)
-	[246688] = 20,		-- Suppression Field (Shadowguard Subjugator)
 }
 
 local SpellsNoTank = {
-	-- Cathedral of Eternal Night
-	[237599] = 20,      -- Devastating Swipe (Helblaze Felbringer)
-    -- Eye of Azshara
-	[196203] = 20,      -- Clobbering Claws (Mak'rana Hardshell)
-	
-	-- The Arcway
-	[196074] = 25,		-- Suppression Protocol (Corstilax)
-	[210750] = 20,      -- Collapsing Rift (Withered Manawraith)
-	[220875] = 25,		-- Unstable Mana (Advisor Vandros)
+	-- Freehold
 
-	-- Darkheart Thicket
-	[204667] = 20,		-- Nightmare Breath (Oakheart)
-	
-	-- Neltharion's Lair
-	[226406] = 20,      -- Ember Swip (Emberhusk Dominator)
-	[193505] = 20,      -- Fracture (Vileshard Hulk)
+	-- Shrine of the Storm
 
-	-- Halls of Valor
-	[193092] = 20,		-- Bloodletting Sweep (Hymdall)
-	[192018] = 20,		-- Shield of Light (Hyrja)
-	[198888] = 20,		-- Lightning Breath (Storm Drake)
-	[199050] = 20,		-- Mortal Hew (Valarjar Shieldmaiden)
+	-- Siege of Boralus
 
-	-- Return to Karazhan (Upper)
-	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
+	-- Tol Dagor
 
-	-- Cathedral of Eternal Night
-	[237599] = 20,		-- Devastating Swipe (Helblaze Felbringer)
+	-- Waycrest Manor
+
+	-- Atal'Dazar
+
+	-- King's Rest
+
+	-- The MOTHERLODE!!
+
+	-- Temple of Sethraliss
+
+	-- Underrot
+
 }
 
 local Auras = {
-	-- Black Rook Hold
-	[200261] = true,		-- Bonebreaking Strike (Soul-Torn Champion)
-	[197974] = true,		-- Bonecrushing Strike (Soul-torn Vanguard)
-	[214002] = true,		-- Raven's Dive (Risen Lancer)
-	[199097] = true,		-- Cloud of Hypnosis (Lord Kur'talos Ravencrest)
+	-- Freehold
 
-	-- Court of Stars
-	[209667] = true,		-- Blade Surge (Advisor Melandrus)
-	[207979] = true,		-- Shockwave (Jazshariu)
-	[209027] = true,		-- Quelling Strike (Duskwatch Guard)
-	[213304] = true,		-- Righteous Indignation (Suspicious Noble)
-	[211464] = true,		-- Fel Detonation (Felbound Enforcer)
+	-- Shrine of the Storm
+	[268391] = true,		-- Mental Assault (Abyssal Cultist)
+	[276268] = true,		-- Heaving Blow (Shrine Templar)
 
-	-- Darkheart Thicket
-	[200329] = true,		-- Overwhelming Terror (Shade of Xavius)
+	-- Siege of Boralus
+	[257292] = true,		-- Heavy Slash (Kul Tiran Vanguard)
+	[272874] = true,		-- Trample (Ashvane Commander)
 
-	-- Eye of Azshara
-	[193597] = true,		-- Static Nova (Lady Hatecoil)
-	[196665] = true,		-- Magic Resonance (Wrath of Azshara)
-	[196666] = true,		-- Frost Resonance (Wrath of Azshara)
+	-- Tol Dagor
+	[257119] = true,		-- Sand Trap (The Sand Queen)
+	[256474] = true,		-- Heartstopper Venom (Overseer Korgus)
 
-	-- Halls of Valor
-	[198088] = true,		-- Glowing Fragment (Odyn)
-	[199337] = true,		-- Bear Trap (Valarjar Trapper)
+	-- Waycrest Manor
 
-	-- Maw of Souls
-	[193364] = true,		-- Screams of the Dead (Ymiron, the Fallen King)
+	-- Atal'Dazar
 
-	-- Return to Karazhan (Lower)
-	[227977] = true,		-- Flashlight (Skeletal Usher)
-	[228280] = true,		-- Oath of Fealty (Spectral Retainer)
-	[228221] = true,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
-	[227917] = true,		-- Poetry Slam (Ghostly Understudy)
+	-- King's Rest
+	[270003] = true,		-- Suppression Slam (Animated Guardian)
 
-	-- Return to Karazhan (Upper)
-	[227592] = true,		-- Frostbite (Shade of Medivh)
+	-- The MOTHERLODE!!
 
-	-- Vault of the Wardens
-	[212565] = true,		-- Inquisitive Stare (Inquisitor Tormentorum)
+	-- Temple of Sethraliss
+	[263914] = true,		-- Blinding Sand (Merektha)
 
-	-- Seat of the Triumvirate
-	[246026] = true,		-- Void Trap (Saprish)
+	-- Underrot
+	[272609] = true,		-- Maddening Gaze (Faceless Corrupter)
+
 }
 
 local AurasNoTank = {
@@ -584,4 +423,3 @@ function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	end
 end
-
