@@ -33,10 +33,10 @@ local Spells = {
 	[264923] = 20,		-- Tenderize (Raal the Gluttonous)
 
 	-- Atal'Dazar
-	[250259] = 3,		--- Toxic Leap
-	[250022] = 3,		--- Echoes of Shadra
-	[250585] = 3, 		--- Toxic Pool
-	[250036] = 3,		--- Shadowy Remains
+	[250259] = 20,		--- Toxic Leap
+	[250022] = 20,		--- Echoes of Shadra
+	[250585] = 20, 		--- Toxic Pool
+	[250036] = 20,		--- Shadowy Remains
 
 	-- King's Rest
 
@@ -225,6 +225,10 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				print(k.." ;;; "..v)
 			end
 		end,
+		["sod"] = function()
+			ElitismFrame:CHALLENGE_MODE_START()
+			print("Failure damage recording has been started.")
+		end,
 		["eod"] = function()
 			ElitismFrame:CHALLENGE_MODE_COMPLETED()
 		end,
@@ -254,6 +258,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print("Elitism Helper options:")
 			print(" on/enable: Enable Elitism Helper announcer")
 			print(" off/disable: Disable Elitism Helper announcer")
+			print(" sod: Begin failure damage recording")
 			print(" eod: Dungeon is complete")
 			print(" table: Prints users")
 			print(" resync: Rebuilts table")
