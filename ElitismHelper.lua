@@ -17,20 +17,43 @@ local Spells = {
 
 	-- Freehold
 	[274389] = 25,		-- Rat Traps (Vermin Trapper)
-
+	[256546] = 20,		--- Shark Tonado
+	[257310] = 20,		--- Cannon Barrage
+	
 	-- Shrine of the Storm
 
 	-- Siege of Boralus
 
 	-- Tol Dagor
-
+	[257785] = 20,		--- Flashing Daggers
+	[256976] = 20,		--- Ignition (Knight Captain Valyri)
+	
 	-- Waycrest Manor
+	[260569] = 20,		-- Wildfire (Soulbound Goliath)
+	[264923] = 20,		-- Tenderize (Raal the Gluttonous)
 
 	-- Atal'Dazar
+	[250259] = 3,		--- Toxic Leap
+	[250022] = 3,		--- Echoes of Shadra
+	[250585] = 3, 		--- Toxic Pool
+	[250036] = 3,		--- Shadowy Remains
 
 	-- King's Rest
 
 	-- The MOTHERLODE!!
+	[257371] = 20,		--- Gas Can, Mechanized Peace keeper
+	[268365] = 20,		--- Mining Charge
+	[268704] = 20,		--- Furious Quake
+	[275907] = 20,		--- Tectonic Smash
+	[259533] = 20,		--- Azerite Catalyst
+	[260103] = 20,		--- Propellant Blast
+	[260279] = 20,		--- Gattling Gun 
+	[276234] = 20, 		--- Micro Missiles
+	[270277] = 20,		--- Big Red Rocket
+	[271432] = 20,		--- Test Missile
+	[262348] = 20,		--- Mine Blast
+	[257337] = 20,		--- Shocking Claw
+	[269092] = 20,		--- Artillery Barrage
 
 	-- Temple of Sethraliss
 
