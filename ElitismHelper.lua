@@ -16,25 +16,59 @@ local Spells = {
 	[226512] = 50,		-- Sanguine Ichor (Environment)
 
 	-- Freehold
-	[274389] = 25,		-- Rat Traps (Vermin Trapper)
-
+	[274389] = 20,		-- Rat Traps (Vermin Trapper)
+	[256546] = 20,		--- Shark Tonado
+	[257310] = 20,		--- Cannon Barrage
+	
 	-- Shrine of the Storm
 
 	-- Siege of Boralus
 
 	-- Tol Dagor
-
+	[257785] = 20,		--- Flashing Daggers
+	[256976] = 20,		--- Ignition (Knight Captain Valyri)
+	[256955] = 20,		--- Cinderflame (Knight Captain Valyri)
+	[256083] = 20,		--- Cross Ignition (Overseer Korgus)
+	[263345] = 20,		--- Massive Blast (Overseer Korgus)
+	[258864] = 20,		--- Suppression Fire (Ashvane Marine/Spotter)
+	[258364] = 20,		--- Fuselighter (Ashvane Flamecaster)
+	
 	-- Waycrest Manor
+	[260569] = 20,		--- Wildfire (Soulbound Goliath)
+	[265407] = 20,		--- Dinner Bell (Banquet Steward)
+	[264923] = 20,		--- Tenderize (Raal the Gluttonous)
+	[265757] = 20,		--- Splinter Spike (Matron Bryndle)
+	[271174] = 20,		--- Retch (Pallid Gorger)
+	[268387] = 20,		--- Contagious Remnants (Lord Waycrest)
+	[268308] = 20,		--- Discordant Cadenza (Lady Waycrest
 
 	-- Atal'Dazar
+	[250259] = 20,		--- Toxic Leap
+	[250022] = 20,		--- Echoes of Shadra
+	[250585] = 20, 		--- Toxic Pool
+	[250036] = 20,		--- Shadowy Remains
 
 	-- King's Rest
 
 	-- The MOTHERLODE!!
+	[257371] = 20,		--- Gas Can, Mechanized Peace keeper
+	[268365] = 20,		--- Mining Charge
+	[268704] = 20,		--- Furious Quake
+	[275907] = 20,		--- Tectonic Smash
+	[259533] = 20,		--- Azerite Catalyst
+	[260103] = 20,		--- Propellant Blast
+	[260279] = 20,		--- Gattling Gun 
+	[276234] = 20, 		--- Micro Missiles
+	[270277] = 20,		--- Big Red Rocket
+	[271432] = 20,		--- Test Missile
+	[262348] = 20,		--- Mine Blast
+	[257337] = 20,		--- Shocking Claw
+	[269092] = 20,		--- Artillery Barrage
 
 	-- Temple of Sethraliss
 
 	-- Underrot
+
 
 }
 
@@ -202,6 +236,9 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				print(k.." ;;; "..v)
 			end
 		end,
+		["start"] = function()
+			ElitismFrame:CHALLENGE_MODE_START()
+		end,
 		["eod"] = function()
 			ElitismFrame:CHALLENGE_MODE_COMPLETED()
 		end,
@@ -231,6 +268,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print("Elitism Helper options:")
 			print(" on/enable: Enable Elitism Helper announcer")
 			print(" off/disable: Disable Elitism Helper announcer")
+			print(" start: Start logging failure damage")
 			print(" eod: Dungeon is complete")
 			print(" table: Prints users")
 			print(" resync: Rebuilts table")
@@ -338,6 +376,7 @@ end
 
 function ElitismFrame:CHALLENGE_MODE_START(event,...)
 	CombinedFails = {}
+	print("Failure damage now being recorded.")
 end
 
 function ElitismFrame:CHAT_MSG_ADDON(event,...)
