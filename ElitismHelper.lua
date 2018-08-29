@@ -21,7 +21,9 @@ local Spells = {
 	[257310] = 20,		--- Cannon Barrage
 	
 	-- Shrine of the Storm
-
+	[276286] = 20,		--- Slicing Hurricane (Environment)
+	[276292] = 20,		--- Whirlign Slam (Ironhull Apprentice)
+	
 	-- Siege of Boralus
 
 	-- Tol Dagor
