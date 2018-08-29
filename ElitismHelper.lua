@@ -18,6 +18,13 @@ local Spells = {
 	-- Freehold
 	[256546] = 20,		--- Shark Tonado
 	[257310] = 20,		--- Cannon Barrage
+	[276061] = 20,		--- Boulder Throw (Irontide Crusher)
+	[258779] = 20,		--- Sea Spout (Irontide Oarsman)
+	[274400] = 20,		--- Duelist Dash (Cutwater Duelist)
+	[257274] = 20,		--- Vile Coating (Environment)
+	
+	
+	
 	
 	-- Shrine of the Storm
 	[276286] = 20,		--- Slicing Hurricane (Environment)
@@ -69,7 +76,7 @@ local Spells = {
 	-- Temple of Sethraliss
 
 	-- Underrot
-
+	[265542] = 20,		--- Fetid Maggot (?? Not sure if Underrot)
 
 }
 
