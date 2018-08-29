@@ -16,7 +16,6 @@ local Spells = {
 	[226512] = 50,		-- Sanguine Ichor (Environment)
 
 	-- Freehold
-	[274389] = 20,		-- Rat Traps (Vermin Trapper)
 	[256546] = 20,		--- Shark Tonado
 	[257310] = 20,		--- Cannon Barrage
 	
@@ -94,12 +93,12 @@ local SpellsNoTank = {
 	-- Temple of Sethraliss
 
 	-- Underrot
-
+	[265019] = 3,		--- Savage Cleave (Chosen Blood Matron)
 }
 
 local Auras = {
 	-- Freehold
-
+	[274389] = 20,		-- Rat Traps (Vermin Trapper)
 	-- Shrine of the Storm
 	[268391] = true,		-- Mental Assault (Abyssal Cultist)
 	[276268] = true,		-- Heaving Blow (Shrine Templar)
