@@ -52,6 +52,8 @@ local Spells = {
 	[268308] = 20,		--- Discordant Cadenza (Lady Waycrest
 
 	-- Atal'Dazar
+	[255620] = 20,		--- Festering Eruption (Reanimated Honor Guard)
+	[256959] = 20,		--- Rotting Decay (Renaimated Honor Guard)
 	[250259] = 20,		--- Toxic Leap
 	[250022] = 20,		--- Echoes of Shadra
 	[250585] = 20, 		--- Toxic Pool
@@ -139,6 +141,7 @@ local Auras = {
 	
 	-- Temple of Sethraliss
 	[263914] = true,		-- Blinding Sand (Merektha)
+	[269970] = true,		-- Blinding Sand (Merektha)
 
 	-- Underrot
 	[272609] = true,		-- Maddening Gaze (Faceless Corrupter)
