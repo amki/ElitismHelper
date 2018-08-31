@@ -59,9 +59,8 @@ local Spells = {
 	-- King's Rest
 
 	-- The MOTHERLODE!!
-	[257371] = 20,		--- Gas Can, Mechanized Peace keeper
+	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
 	[268365] = 20,		--- Mining Charge
-	[268704] = 20,		--- Furious Quake
 	[275907] = 20,		--- Tectonic Smash
 	[259533] = 20,		--- Azerite Catalyst
 	[260103] = 20,		--- Propellant Blast
@@ -70,6 +69,7 @@ local Spells = {
 	[270277] = 20,		--- Big Red Rocket
 	[271432] = 20,		--- Test Missile
 	[262348] = 20,		--- Mine Blast
+	[269313] = 20,		--- Final Blast (Wanton Sapper)
 	[257337] = 20,		--- Shocking Claw
 	[269092] = 20,		--- Artillery Barrage
 
@@ -105,7 +105,8 @@ local SpellsNoTank = {
 
 local Auras = {
 	-- Freehold
-	[274389] = 20,		-- Rat Traps (Vermin Trapper)
+	[274389] = true,		-- Rat Traps (Vermin Trapper)
+	
 	-- Shrine of the Storm
 	[268391] = true,		-- Mental Assault (Abyssal Cultist)
 	[276268] = true,		-- Heaving Blow (Shrine Templar)
@@ -126,7 +127,7 @@ local Auras = {
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
 
 	-- The MOTHERLODE!!
-
+	
 	-- Temple of Sethraliss
 	[263914] = true,		-- Blinding Sand (Merektha)
 
