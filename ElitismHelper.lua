@@ -74,6 +74,7 @@ local Spells = {
 
 	-- Underrot
 	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
+	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
 
 }
 
