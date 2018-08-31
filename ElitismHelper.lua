@@ -16,7 +16,7 @@ local Spells = {
 	[226512] = 50,		-- Sanguine Ichor (Environment)
 
 	-- Freehold
-	[256546] = 20,		--- Shark Tonado
+	[256546] = 20,		--- Shark Tornado
 	[257310] = 20,		--- Cannon Barrage
 	[276061] = 20,		--- Boulder Throw (Irontide Crusher)
 	[258779] = 20,		--- Sea Spout (Irontide Oarsman)
@@ -63,18 +63,19 @@ local Spells = {
 
 	-- The MOTHERLODE!!
 	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
-	[268365] = 20,		--- Mining Charge
-	[275907] = 20,		--- Tectonic Smash
-	[259533] = 20,		--- Azerite Catalyst
-	[260103] = 20,		--- Propellant Blast
-	[260279] = 20,		--- Gattling Gun 
-	[276234] = 20, 		--- Micro Missiles
-	[270277] = 20,		--- Big Red Rocket
-	[271432] = 20,		--- Test Missile
-	[262348] = 20,		--- Mine Blast
+	[262287] = 20,		-- Concussion Charge (Mech Jockey / Venture Co. Skyscorcher)
+	[268365] = 20,		--- Mining Charge (Wanton Sapper)
 	[269313] = 20,		--- Final Blast (Wanton Sapper)
+	[275907] = 20,		--- Tectonic Smash
+	[259533] = 20,		--- Azerite Catalyst (Rixxa Fluxflame)
+	[260103] = 20,		--- Propellant Blast
+	[260279] = 20,		--- Gattling Gun (Mogul Razdunk)
+	[276234] = 20, 		--- Micro Missiles
+	[270277] = 20,		--- Big Red Rocket (Mogul Razdunk)
+	[271432] = 20,		--- Test Missile (Venture Co. War Machine)
+	[262348] = 20,		--- Mine Blast
 	[257337] = 20,		--- Shocking Claw
-	[269092] = 20,		--- Artillery Barrage
+	[269092] = 20,		--- Artillery Barrage (Ordnance Specialist)
 
 	-- Temple of Sethraliss
 	[273225] = 20,		--- Volley (Sandswept Marksman)
@@ -85,8 +86,6 @@ local Spells = {
 	-- Underrot
 	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
 	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
-	
-	
 
 }
 
