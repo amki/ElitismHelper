@@ -43,6 +43,7 @@ local Spells = {
 	[265407] = 20,		--- Dinner Bell (Banquet Steward)
 	[264923] = 20,		--- Tenderize (Raal the Gluttonous)
 	[265757] = 20,		--- Splinter Spike (Matron Bryndle)
+	[264150] = 20,		--- Shatter (Thornguard)
 	[271174] = 20,		--- Retch (Pallid Gorger)
 	[268387] = 20,		--- Contagious Remnants (Lord Waycrest)
 	[268308] = 20,		--- Discordant Cadenza (Lady Waycrest
@@ -118,7 +119,8 @@ local Auras = {
 	[256474] = true,		-- Heartstopper Venom (Overseer Korgus)
 
 	-- Waycrest Manor
-
+	[265352] = true,		-- Toad Blight (Toad)
+	
 	-- Atal'Dazar
 
 	-- King's Rest
