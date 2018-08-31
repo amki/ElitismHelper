@@ -24,8 +24,11 @@ local Spells = {
 	[257274] = 20,		--- Vile Coating (Environment)
 	
 	-- Shrine of the Storm
+	[264560] = 20,		--- Choking Brine (Aqualing)
+	[268280] = 20,		--- Tidal Pod (Tidesage Enforcer)
 	[276286] = 20,		--- Slicing Hurricane (Environment)
 	[276292] = 20,		--- Whirlign Slam (Ironhull Apprentice)
+	[269104] = 20,		--- Explosive Void (Lord Stormsong)
 	
 	-- Siege of Boralus
 
@@ -72,10 +75,18 @@ local Spells = {
 	[269092] = 20,		--- Artillery Barrage
 
 	-- Temple of Sethraliss
-
+	[273225] = 20,		--- Volley (Sandswept Marksman)
+	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
+	[264206] = 20,		--- Burrow (Merektha)
+	[272820] = 20,		--- Shock (Spark Channeler)
+	
+	
+	
 	-- Underrot
 	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
 	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
+	
+	
 
 }
 
