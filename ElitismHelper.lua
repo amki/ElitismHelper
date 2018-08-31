@@ -79,9 +79,7 @@ local Spells = {
 	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
 	[264206] = 20,		--- Burrow (Merektha)
 	[272820] = 20,		--- Shock (Spark Channeler)
-	
-	
-	
+
 	-- Underrot
 	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
 	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
