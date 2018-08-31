@@ -108,7 +108,7 @@ local SpellsNoTank = {
 	-- Temple of Sethraliss
 
 	-- Underrot
-	[265019] = 3,		--- Savage Cleave (Chosen Blood Matron)
+	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
 }
 
 local Auras = {
