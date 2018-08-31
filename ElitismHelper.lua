@@ -23,9 +23,6 @@ local Spells = {
 	[274400] = 20,		--- Duelist Dash (Cutwater Duelist)
 	[257274] = 20,		--- Vile Coating (Environment)
 	
-	
-	
-	
 	-- Shrine of the Storm
 	[276286] = 20,		--- Slicing Hurricane (Environment)
 	[276292] = 20,		--- Whirlign Slam (Ironhull Apprentice)
@@ -76,7 +73,7 @@ local Spells = {
 	-- Temple of Sethraliss
 
 	-- Underrot
-	[265542] = 20,		--- Fetid Maggot (?? Not sure if Underrot)
+	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
 
 }
 
