@@ -57,6 +57,7 @@ local Spells = {
 
 	-- Atal'Dazar
 	[253666] = 20,		--- Fiery Bolt (Dazar'ai Juggernaught)
+	[257692] = 20,		--- Tiki Blaze (Environment)
 	[255620] = 20,		--- Festering Eruption (Reanimated Honor Guard)
 	[256959] = 20,		--- Rotting Decay (Renaimated Honor Guard)
 	[250259] = 20,		--- Toxic Leap
