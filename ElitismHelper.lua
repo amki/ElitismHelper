@@ -16,6 +16,7 @@ local Spells = {
 	[226512] = 50,		-- Sanguine Ichor (Environment)
 
 	-- Freehold
+	[272046] = 20,		--- Dive Bomb (Sharkbait)
 	[256546] = 20,		--- Shark Tornado
 	[257310] = 20,		--- Cannon Barrage
 	[257902] = 20,		--- Shell Bounce (Ludwig Von Tortollan)
