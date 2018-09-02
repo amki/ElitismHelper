@@ -18,6 +18,8 @@ local Spells = {
 	-- Freehold
 	[256546] = 20,		--- Shark Tornado
 	[257310] = 20,		--- Cannon Barrage
+	[257902] = 20,		--- Shell Bounce (Ludwig Von Tortollan)
+	[258199] = 20,		--- Ground Shatter (Irontide Crusher)
 	[276061] = 20,		--- Boulder Throw (Irontide Crusher)
 	[258779] = 20,		--- Sea Spout (Irontide Oarsman)
 	[274400] = 20,		--- Duelist Dash (Cutwater Duelist)
@@ -25,10 +27,12 @@ local Spells = {
 	
 	-- Shrine of the Storm
 	[264560] = 20,		--- Choking Brine (Aqualing)
+	[267899] = 20,		--- Hindering Cleave (Brother Ironhull)
 	[268280] = 20,		--- Tidal Pod (Tidesage Enforcer)
 	[276286] = 20,		--- Slicing Hurricane (Environment)
 	[276292] = 20,		--- Whirlign Slam (Ironhull Apprentice)
 	[269104] = 20,		--- Explosive Void (Lord Stormsong)
+	[267385] = 20,		--- Tentacle Slam (Vol'zith the Whisperer)
 	
 	-- Siege of Boralus
 
@@ -45,7 +49,6 @@ local Spells = {
 	[260569] = 20,		--- Wildfire (Soulbound Goliath)
 	[265407] = 20,		--- Dinner Bell (Banquet Steward)
 	[264923] = 20,		--- Tenderize (Raal the Gluttonous)
-	[265757] = 20,		--- Splinter Spike (Matron Bryndle)
 	[264150] = 20,		--- Shatter (Thornguard)
 	[271174] = 20,		--- Retch (Pallid Gorger)
 	[268387] = 20,		--- Contagious Remnants (Lord Waycrest)
