@@ -16,12 +16,25 @@ local Spells = {
 	[226512] = 50,		-- Sanguine Ichor (Environment)
 
 	-- Freehold
-	[274389] = 20,		-- Rat Traps (Vermin Trapper)
-	[256546] = 20,		--- Shark Tonado
+	[272046] = 20,		--- Dive Bomb (Sharkbait)
+	[256546] = 20,		--- Shark Tornado
 	[257310] = 20,		--- Cannon Barrage
+	[257902] = 20,		--- Shell Bounce (Ludwig Von Tortollan)
+	[258199] = 20,		--- Ground Shatter (Irontide Crusher)
+	[276061] = 20,		--- Boulder Throw (Irontide Crusher)
+	[258779] = 20,		--- Sea Spout (Irontide Oarsman)
+	[274400] = 20,		--- Duelist Dash (Cutwater Duelist)
+	[257274] = 20,		--- Vile Coating (Environment)
 	
 	-- Shrine of the Storm
-
+	[264560] = 20,		--- Choking Brine (Aqualing)
+	[267899] = 20,		--- Hindering Cleave (Brother Ironhull)
+	[268280] = 20,		--- Tidal Pod (Tidesage Enforcer)
+	[276286] = 20,		--- Slicing Hurricane (Environment)
+	[276292] = 20,		--- Whirlign Slam (Ironhull Apprentice)
+	[269104] = 20,		--- Explosive Void (Lord Stormsong)
+	[267385] = 20,		--- Tentacle Slam (Vol'zith the Whisperer)
+	
 	-- Siege of Boralus
 
 	-- Tol Dagor
@@ -37,38 +50,48 @@ local Spells = {
 	[260569] = 20,		--- Wildfire (Soulbound Goliath)
 	[265407] = 20,		--- Dinner Bell (Banquet Steward)
 	[264923] = 20,		--- Tenderize (Raal the Gluttonous)
-	[265757] = 20,		--- Splinter Spike (Matron Bryndle)
+	[264150] = 20,		--- Shatter (Thornguard)
 	[271174] = 20,		--- Retch (Pallid Gorger)
 	[268387] = 20,		--- Contagious Remnants (Lord Waycrest)
 	[268308] = 20,		--- Discordant Cadenza (Lady Waycrest
 
 	-- Atal'Dazar
+	[253666] = 20,		--- Fiery Bolt (Dazar'ai Juggernaught)
+	[257692] = 20,		--- Tiki Blaze (Environment)
+	[255620] = 20,		--- Festering Eruption (Reanimated Honor Guard)
+	[256959] = 20,		--- Rotting Decay (Renaimated Honor Guard)
 	[250259] = 20,		--- Toxic Leap
-	[250022] = 20,		--- Echoes of Shadra
+	[250022] = 20,		--- Echoes of Shadra (Echoes of Shadra)
 	[250585] = 20, 		--- Toxic Pool
 	[250036] = 20,		--- Shadowy Remains
 
 	-- King's Rest
 
 	-- The MOTHERLODE!!
-	[257371] = 20,		--- Gas Can, Mechanized Peace keeper
-	[268365] = 20,		--- Mining Charge
-	[268704] = 20,		--- Furious Quake
+	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
+	[262287] = 20,		-- Concussion Charge (Mech Jockey / Venture Co. Skyscorcher)
+	[268365] = 20,		--- Mining Charge (Wanton Sapper)
+	[269313] = 20,		--- Final Blast (Wanton Sapper)
 	[275907] = 20,		--- Tectonic Smash
-	[259533] = 20,		--- Azerite Catalyst
+	[259533] = 20,		--- Azerite Catalyst (Rixxa Fluxflame)
 	[260103] = 20,		--- Propellant Blast
-	[260279] = 20,		--- Gattling Gun 
+	[260279] = 20,		--- Gattling Gun (Mogul Razdunk)
 	[276234] = 20, 		--- Micro Missiles
-	[270277] = 20,		--- Big Red Rocket
-	[271432] = 20,		--- Test Missile
+	[270277] = 20,		--- Big Red Rocket (Mogul Razdunk)
+	[271432] = 20,		--- Test Missile (Venture Co. War Machine)
 	[262348] = 20,		--- Mine Blast
 	[257337] = 20,		--- Shocking Claw
-	[269092] = 20,		--- Artillery Barrage
+	[269092] = 20,		--- Artillery Barrage (Ordnance Specialist)
 
 	-- Temple of Sethraliss
+	[273225] = 20,		--- Volley (Sandswept Marksman)
+	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
+	[264206] = 20,		--- Burrow (Merektha)
+	[272820] = 20,		--- Shock (Spark Channeler)
 
 	-- Underrot
-
+	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
+	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
 
 }
 
@@ -93,12 +116,13 @@ local SpellsNoTank = {
 	-- Temple of Sethraliss
 
 	-- Underrot
-
+	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
 }
 
 local Auras = {
 	-- Freehold
-
+	[274389] = true,		-- Rat Traps (Vermin Trapper)
+	
 	-- Shrine of the Storm
 	[268391] = true,		-- Mental Assault (Abyssal Cultist)
 	[276268] = true,		-- Heaving Blow (Shrine Templar)
@@ -112,16 +136,18 @@ local Auras = {
 	[256474] = true,		-- Heartstopper Venom (Overseer Korgus)
 
 	-- Waycrest Manor
-
+	[265352] = true,		-- Toad Blight (Toad)
+	
 	-- Atal'Dazar
 
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
 
 	-- The MOTHERLODE!!
-
+	
 	-- Temple of Sethraliss
 	[263914] = true,		-- Blinding Sand (Merektha)
+	[269970] = true,		-- Blinding Sand (Merektha)
 
 	-- Underrot
 	[272609] = true,		-- Maddening Gaze (Faceless Corrupter)
