@@ -76,6 +76,7 @@ local SpellsNoTank = {
 	-- Freehold
 
 	-- Shrine of the Storm
+	[267899] = 20,     --- Hindering Cleave
 
 	-- Siege of Boralus
 
