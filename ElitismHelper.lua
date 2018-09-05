@@ -17,6 +17,9 @@ local Spells = {
 
 	-- Freehold
 	[272046] = 20,		--- Dive Bomb (Sharkbait)
+	[257426] = 20,		--- Brutal Backhand (Irontide Enforcer)
+	[258352] = 20,		--- Grapeshot (Captain Eudora)
+	[272374] = 20,		--- Whirlpool of Blades
 	[256546] = 20,		--- Shark Tornado
 	[257310] = 20,		--- Cannon Barrage
 	[257902] = 20,		--- Shell Bounce (Ludwig Von Tortollan)
@@ -66,7 +69,15 @@ local Spells = {
 	[250036] = 20,		--- Shadowy Remains
 
 	-- King's Rest
-
+	[265914] = 20,		--- Molten Gold (The Golden Serpent)
+	[270289] = 20,		--- Purification Beam
+	[270503] = 20,		--- Hunting Leap (Honored Raptor)
+	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
+	[270485] = 20,		--- Blooded Leap (Spectral Berserker)
+	
+	
+	
+	
 	-- The MOTHERLODE!!
 	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
 	[262287] = 20,		-- Concussion Charge (Mech Jockey / Venture Co. Skyscorcher)
@@ -142,6 +153,7 @@ local Auras = {
 
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
+	[270931] = true,		-- Darkshot
 
 	-- The MOTHERLODE!!
 	
