@@ -13,10 +13,13 @@ local Spells = {
 
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
-	[226512] = 50,		-- Sanguine Ichor (Environment)
+	[226512] = 20,		-- Sanguine Ichor (Environment)
 
 	-- Freehold
 	[272046] = 20,		--- Dive Bomb (Sharkbait)
+	[257426] = 20,		--- Brutal Backhand (Irontide Enforcer)
+	[258352] = 20,		--- Grapeshot (Captain Eudora)
+	[272374] = 20,		--- Whirlpool of Blades
 	[256546] = 20,		--- Shark Tornado
 	[257310] = 20,		--- Cannon Barrage
 	[257902] = 20,		--- Shell Bounce (Ludwig Von Tortollan)
@@ -36,7 +39,10 @@ local Spells = {
 	[267385] = 20,		--- Tentacle Slam (Vol'zith the Whisperer)
 	
 	-- Siege of Boralus
-
+	[275775] = 20,		--- SSavage Tempest (Irontide Raider)
+	[272426] = 20,		--- Sighted Artillery
+	[272140] = 20,		--- Iron Volley
+	
 	-- Tol Dagor
 	[257785] = 20,		--- Flashing Daggers
 	[256976] = 20,		--- Ignition (Knight Captain Valyri)
@@ -66,7 +72,13 @@ local Spells = {
 	[250036] = 20,		--- Shadowy Remains
 
 	-- King's Rest
-
+	[265914] = 20,		--- Molten Gold (The Golden Serpent)
+	[266191] = 20,		--- Whirling Axe (Council of Tribes)
+	[270289] = 20,		--- Purification Beam
+	[270503] = 20,		--- Hunting Leap (Honored Raptor)
+	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
+	[270485] = 20,		--- Blooded Leap (Spectral Berserker)
+	
 	-- The MOTHERLODE!!
 	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
 	[262287] = 20,		-- Concussion Charge (Mech Jockey / Venture Co. Skyscorcher)
@@ -92,14 +104,15 @@ local Spells = {
 	-- Underrot
 	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
 	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
-
+	[261498] = 20,		--- Creeping Rot (Elder Leaxa)
+	[265665] = 20,		--- Foul Sludge (Living Rot)
 }
 
 local SpellsNoTank = {
 	-- Freehold
 
 	-- Shrine of the Storm
-	[267899] = 20,     --- Hindering Cleave
+	[267899] = 20,  		--- Hindering Cleave
 
 	-- Siege of Boralus
 
@@ -116,12 +129,13 @@ local SpellsNoTank = {
 	-- Temple of Sethraliss
 
 	-- Underrot
-	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
+	[265019] = 20,			--- Savage Cleave (Chosen Blood Matron)
 }
 
 local Auras = {
 	-- Freehold
 	[274389] = true,		-- Rat Traps (Vermin Trapper)
+	[274516] = true,		-- Slippery Suds
 	
 	-- Shrine of the Storm
 	[268391] = true,		-- Mental Assault (Abyssal Cultist)
@@ -142,6 +156,7 @@ local Auras = {
 
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
+	[270931] = true,		-- Darkshot
 
 	-- The MOTHERLODE!!
 	
