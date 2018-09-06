@@ -13,7 +13,7 @@ local Spells = {
 
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
-	[226512] = 50,		-- Sanguine Ichor (Environment)
+	[226512] = 20,		-- Sanguine Ichor (Environment)
 
 	-- Freehold
 	[272046] = 20,		--- Dive Bomb (Sharkbait)
@@ -39,7 +39,10 @@ local Spells = {
 	[267385] = 20,		--- Tentacle Slam (Vol'zith the Whisperer)
 	
 	-- Siege of Boralus
-
+	[275775] = 20,		--- SSavage Tempest (Irontide Raider)
+	[272426] = 20,		--- Sighted Artillery
+	[272140] = 20,		--- Iron Volley
+	
 	-- Tol Dagor
 	[257785] = 20,		--- Flashing Daggers
 	[256976] = 20,		--- Ignition (Knight Captain Valyri)
@@ -76,9 +79,6 @@ local Spells = {
 	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
 	[270485] = 20,		--- Blooded Leap (Spectral Berserker)
 	
-	
-	
-	
 	-- The MOTHERLODE!!
 	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
 	[262287] = 20,		-- Concussion Charge (Mech Jockey / Venture Co. Skyscorcher)
@@ -106,14 +106,13 @@ local Spells = {
 	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
 	[261498] = 20,		--- Creeping Rot (Elder Leaxa)
 	[265665] = 20,		--- Foul Sludge (Living Rot)
-
 }
 
 local SpellsNoTank = {
 	-- Freehold
 
 	-- Shrine of the Storm
-	[267899] = 20,     --- Hindering Cleave
+	[267899] = 20,  		--- Hindering Cleave
 
 	-- Siege of Boralus
 
@@ -130,7 +129,7 @@ local SpellsNoTank = {
 	-- Temple of Sethraliss
 
 	-- Underrot
-	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
+	[265019] = 20,			--- Savage Cleave (Chosen Blood Matron)
 }
 
 local Auras = {
