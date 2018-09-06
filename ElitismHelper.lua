@@ -70,6 +70,7 @@ local Spells = {
 
 	-- King's Rest
 	[265914] = 20,		--- Molten Gold (The Golden Serpent)
+	[266191] = 20,		--- Whirling Axe (Council of Tribes)
 	[270289] = 20,		--- Purification Beam
 	[270503] = 20,		--- Hunting Leap (Honored Raptor)
 	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
