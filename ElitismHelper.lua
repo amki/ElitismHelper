@@ -100,6 +100,8 @@ local Spells = {
 	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
 	[264206] = 20,		--- Burrow (Merektha)
 	[272820] = 20,		--- Shock (Spark Channeler)
+	[272657] = 20,		--- Noxious Breath
+	
 
 	-- Underrot
 	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
@@ -127,6 +129,7 @@ local SpellsNoTank = {
 	-- The MOTHERLODE!!
 
 	-- Temple of Sethraliss
+	[255741] = 20,			--- Cleave (Scaled Krolusk Rider)
 
 	-- Underrot
 	[265019] = 20,			--- Savage Cleave (Chosen Blood Matron)
@@ -157,6 +160,7 @@ local Auras = {
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
 	[270931] = true,		-- Darkshot
+	[268796] = true,		-- (Kind Dazar)
 
 	-- The MOTHERLODE!!
 	
