@@ -51,6 +51,7 @@ local Spells = {
 	[263345] = 20,		--- Massive Blast (Overseer Korgus)
 	[258864] = 20,		--- Suppression Fire (Ashvane Marine/Spotter)
 	[258364] = 20,		--- Fuselighter (Ashvane Flamecaster)
+	[259711] = 20,		--- Lockdown (Ashvane Warden)
 	
 	-- Waycrest Manor
 	[260569] = 20,		--- Wildfire (Soulbound Goliath)
