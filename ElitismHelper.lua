@@ -78,6 +78,7 @@ local Spells = {
 	[270503] = 20,		--- Hunting Leap (Honored Raptor)
 	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
 	[270485] = 20,		--- Blooded Leap (Spectral Berserker)
+	[270931] = 20,		-- Darkshot
 	
 	-- The MOTHERLODE!!
 	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
@@ -156,7 +157,7 @@ local Auras = {
 
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
-	[270931] = true,		-- Darkshot
+	
 
 	-- The MOTHERLODE!!
 	
