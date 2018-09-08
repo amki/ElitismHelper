@@ -79,6 +79,7 @@ local Spells = {
 	[270503] = 20,		--- Hunting Leap (Honored Raptor)
 	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
 	[270485] = 20,		--- Blooded Leap (Spectral Berserker)
+	[267639] = 20,		--- Burn Corruption (Mchimba the Embalmer)
 	
 	-- The MOTHERLODE!!
 	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
