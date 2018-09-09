@@ -39,9 +39,12 @@ local Spells = {
 	[267385] = 20,		--- Tentacle Slam (Vol'zith the Whisperer)
 	
 	-- Siege of Boralus
-	[275775] = 20,		--- SSavage Tempest (Irontide Raider)
+	[256663] = 20,		--- Burning Tar (Blacktar Bomber)
+	[275775] = 20,		--- Savage Tempest (Irontide Raider)
 	[272426] = 20,		--- Sighted Artillery
 	[272140] = 20,		--- Iron Volley
+	[273681] = 20,		--- Heavy Hitter (Chopper Redhook)
+	
 	
 	-- Tol Dagor
 	[257785] = 20,		--- Flashing Daggers
@@ -51,6 +54,7 @@ local Spells = {
 	[263345] = 20,		--- Massive Blast (Overseer Korgus)
 	[258864] = 20,		--- Suppression Fire (Ashvane Marine/Spotter)
 	[258364] = 20,		--- Fuselighter (Ashvane Flamecaster)
+	[259711] = 20,		--- Lockdown (Ashvane Warden)
 	
 	-- Waycrest Manor
 	[260569] = 20,		--- Wildfire (Soulbound Goliath)
@@ -78,6 +82,7 @@ local Spells = {
 	[270503] = 20,		--- Hunting Leap (Honored Raptor)
 	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
 	[270485] = 20,		--- Blooded Leap (Spectral Berserker)
+	[267639] = 20,		--- Burn Corruption (Mchimba the Embalmer)
 	[270931] = 20,		-- Darkshot
 	
 	-- The MOTHERLODE!!
@@ -100,7 +105,8 @@ local Spells = {
 	[273225] = 20,		--- Volley (Sandswept Marksman)
 	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
 	[264206] = 20,		--- Burrow (Merektha)
-	[272820] = 20,		--- Shock (Spark Channeler)
+	[272657] = 20,		--- Noxious Breath
+	
 
 	-- Underrot
 	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
@@ -128,6 +134,7 @@ local SpellsNoTank = {
 	-- The MOTHERLODE!!
 
 	-- Temple of Sethraliss
+	[255741] = 20,			--- Cleave (Scaled Krolusk Rider)
 
 	-- Underrot
 	[265019] = 20,			--- Savage Cleave (Chosen Blood Matron)
@@ -157,7 +164,8 @@ local Auras = {
 
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
-	
+	[270931] = true,		-- Darkshot
+	[268796] = true,		-- (Kind Dazar)
 
 	-- The MOTHERLODE!!
 	
