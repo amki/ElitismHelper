@@ -39,9 +39,12 @@ local Spells = {
 	[267385] = 20,		--- Tentacle Slam (Vol'zith the Whisperer)
 	
 	-- Siege of Boralus
-	[275775] = 20,		--- SSavage Tempest (Irontide Raider)
+	[256663] = 20,		--- Burning Tar (Blacktar Bomber)
+	[275775] = 20,		--- Savage Tempest (Irontide Raider)
 	[272426] = 20,		--- Sighted Artillery
 	[272140] = 20,		--- Iron Volley
+	[273681] = 20,		--- Heavy Hitter (Chopper Redhook)
+	
 	
 	-- Tol Dagor
 	[257785] = 20,		--- Flashing Daggers
@@ -101,7 +104,6 @@ local Spells = {
 	[273225] = 20,		--- Volley (Sandswept Marksman)
 	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
 	[264206] = 20,		--- Burrow (Merektha)
-	[272820] = 20,		--- Shock (Spark Channeler)
 	[272657] = 20,		--- Noxious Breath
 	
 
