@@ -83,6 +83,7 @@ local Spells = {
 	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
 	[270485] = 20,		--- Blooded Leap (Spectral Berserker)
 	[267639] = 20,		--- Burn Corruption (Mchimba the Embalmer)
+	[270931] = 20,		-- Darkshot
 	
 	-- The MOTHERLODE!!
 	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
