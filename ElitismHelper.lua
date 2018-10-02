@@ -161,6 +161,7 @@ local Auras = {
 	[265352] = true,		-- Toad Blight (Toad)
 	
 	-- Atal'Dazar
+	[255371] = true,		-- Terrifying Visage (Rezan)
 
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
