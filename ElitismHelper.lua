@@ -102,6 +102,7 @@ local Spells = {
 	[269092] = 20,		--- Artillery Barrage (Ordnance Specialist)
 
 	-- Temple of Sethraliss
+	[263425] = 20,		--- Arc Dash (Adderis)
 	[273225] = 20,		--- Volley (Sandswept Marksman)
 	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
 	[264206] = 20,		--- Burrow (Merektha)
@@ -142,7 +143,7 @@ local SpellsNoTank = {
 
 local Auras = {
 	-- Freehold
-	[274389] = true,		-- Rat Traps (Vermin Trapper)
+	[2/4389] = true,		-- Rat Traps (Vermin Trapper)
 	[274516] = true,		-- Slippery Suds
 	
 	-- Shrine of the Storm
