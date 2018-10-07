@@ -172,7 +172,8 @@ local Auras = {
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
 	[270931] = true,		-- Darkshot
-	[268796] = true,		-- (Kind Dazar)
+	[268419] = true,		-- Gale Slash (King Dazar)
+	[268796] = true,		-- (King Dazar)
 
 	-- The MOTHERLODE!!
 	
