@@ -19,6 +19,7 @@ local Spells = {
 	[272046] = 20,		--- Dive Bomb (Sharkbait)
 	[257426] = 20,		--- Brutal Backhand (Irontide Enforcer)
 	[258352] = 20,		--- Grapeshot (Captain Eudora)
+	[256594] = 20,		--- Barrel Smash (Captain Raoul)
 	[272374] = 20,		--- Whirlpool of Blades
 	[256546] = 20,		--- Shark Tornado
 	[257310] = 20,		--- Cannon Barrage
