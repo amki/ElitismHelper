@@ -45,6 +45,8 @@ local Spells = {
 	[272426] = 20,		--- Sighted Artillery
 	[272140] = 20,		--- Iron Volley
 	[273681] = 20,		--- Heavy Hitter (Chopper Redhook)
+	[272713] = 20,		--- Crushing Slam (Bilge Rat Demolisher)
+	[277535] = 20,		-- Viq'Goth's Wrath (Viq'Goth)
 	
 	
 	-- Tol Dagor
@@ -154,6 +156,8 @@ local Auras = {
 	-- Siege of Boralus
 	[257292] = true,		-- Heavy Slash (Kul Tiran Vanguard)
 	[272874] = true,		-- Trample (Ashvane Commander)
+	[274942] = true,		-- Banana Rampage
+	[257169] = true,		-- Fear
 
 	-- Tol Dagor
 	[257119] = true,		-- Sand Trap (The Sand Queen)
