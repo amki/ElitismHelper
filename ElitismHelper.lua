@@ -144,7 +144,7 @@ local SpellsNoTank = {
 
 local Auras = {
 	-- Freehold
-	[2/4389] = true,		-- Rat Traps (Vermin Trapper)
+	[274389] = true,		-- Rat Traps (Vermin Trapper)
 	[274516] = true,		-- Slippery Suds
 	
 	-- Shrine of the Storm
