@@ -152,7 +152,8 @@ local Auras = {
 	-- Shrine of the Storm
 	[268391] = true,		-- Mental Assault (Abyssal Cultist)
 	[276268] = true,		-- Heaving Blow (Shrine Templar)
-
+	[267956] = true,		-- Zap (Jellyfish)
+	
 	-- Siege of Boralus
 	[257292] = true,		-- Heavy Slash (Kul Tiran Vanguard)
 	[272874] = true,		-- Trample (Ashvane Commander)
