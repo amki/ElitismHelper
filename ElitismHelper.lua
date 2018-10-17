@@ -19,6 +19,7 @@ local Spells = {
 	[272046] = 20,		--- Dive Bomb (Sharkbait)
 	[257426] = 20,		--- Brutal Backhand (Irontide Enforcer)
 	[258352] = 20,		--- Grapeshot (Captain Eudora)
+	[256594] = 20,		--- Barrel Smash (Captain Raoul)
 	[272374] = 20,		--- Whirlpool of Blades
 	[256546] = 20,		--- Shark Tornado
 	[257310] = 20,		--- Cannon Barrage
@@ -44,6 +45,8 @@ local Spells = {
 	[272426] = 20,		--- Sighted Artillery
 	[272140] = 20,		--- Iron Volley
 	[273681] = 20,		--- Heavy Hitter (Chopper Redhook)
+	[272713] = 20,		--- Crushing Slam (Bilge Rat Demolisher)
+	[277535] = 20,		-- Viq'Goth's Wrath (Viq'Goth)
 	
 	
 	-- Tol Dagor
@@ -102,6 +105,7 @@ local Spells = {
 	[269092] = 20,		--- Artillery Barrage (Ordnance Specialist)
 
 	-- Temple of Sethraliss
+	[263425] = 20,		--- Arc Dash (Adderis)
 	[273225] = 20,		--- Volley (Sandswept Marksman)
 	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
 	[264206] = 20,		--- Burrow (Merektha)
@@ -148,10 +152,13 @@ local Auras = {
 	-- Shrine of the Storm
 	[268391] = true,		-- Mental Assault (Abyssal Cultist)
 	[276268] = true,		-- Heaving Blow (Shrine Templar)
-
+	[267956] = true,		-- Zap (Jellyfish)
+	
 	-- Siege of Boralus
 	[257292] = true,		-- Heavy Slash (Kul Tiran Vanguard)
 	[272874] = true,		-- Trample (Ashvane Commander)
+	[274942] = true,		-- Banana Rampage
+	[257169] = true,		-- Fear
 
 	-- Tol Dagor
 	[257119] = true,		-- Sand Trap (The Sand Queen)
@@ -161,11 +168,13 @@ local Auras = {
 	[265352] = true,		-- Toad Blight (Toad)
 	
 	-- Atal'Dazar
+	[255371] = true,		-- Terrifying Visage (Rezan)
 
 	-- King's Rest
 	[270003] = true,		-- Suppression Slam (Animated Guardian)
 	[270931] = true,		-- Darkshot
-	[268796] = true,		-- (Kind Dazar)
+	[268419] = true,		-- Gale Slash (King Dazar)
+	[268796] = true,		-- (King Dazar)
 
 	-- The MOTHERLODE!!
 	
