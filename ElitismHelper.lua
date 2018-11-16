@@ -4,7 +4,7 @@ local TimerData = {}
 local CombinedFails = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
-local hardMinPct = 40
+local hardMinPct = 20
 
 local Spells = {
 	-- Debug
@@ -20,51 +20,75 @@ local Spells = {
 	[257426] = 20,		--- Brutal Backhand (Irontide Enforcer)
 	[258352] = 20,		--- Grapeshot (Captain Eudora)
 	[256594] = 20,		--- Barrel Smash (Captain Raoul)
-	[272374] = 20,		--- Whirlpool of Blades
-	[256546] = 20,		--- Shark Tornado
-	[257310] = 20,		--- Cannon Barrage
+	[272374] = 20,		--- Whirlpool of Blades (Captain Jolly)
+	[256546] = 20,		--- Shark Tornado (Trothak)
+	[257310] = 20,		--- Cannon Barrage (Harlan Sweete)
+	[257784] = 20,		--- Frost Blast (Bilge Rat Brinescale)
 	[257902] = 20,		--- Shell Bounce (Ludwig Von Tortollan)
 	[258199] = 20,		--- Ground Shatter (Irontide Crusher)
 	[276061] = 20,		--- Boulder Throw (Irontide Crusher)
 	[258779] = 20,		--- Sea Spout (Irontide Oarsman)
 	[274400] = 20,		--- Duelist Dash (Cutwater Duelist)
 	[257274] = 20,		--- Vile Coating (Environment)
+	[258673] = 20,		--- Azerite Grenade (Irontide Crackshot)
+	[274389] = 20,		--- Rat Traps (Vermin Trapper)
+	[257460] = 20,		--- Fiery Debris (Harlan Sweete)
+	--[257871] = 20,		--- Blade Barrage (Irontide Buccaneer)
+	--[257757] = 20,		--- Goin' Bananas (Bilge Rat Buccaneer)
 	
 	-- Shrine of the Storm
-	[264560] = 20,		--- Choking Brine (Aqualing)
+	[276268] = 20,		--- Heaving Blow (Shrine Templar)
+	[267973] = 20,		--- Wash Away (Temple Attendant)
+	[268059] = 20,		--- Anchor of Binding (Tidesage Spiritualist)
+	[264155] = 20,		--- Surging Rush (Aqu'sirr)
+	[267841] = 20,		--- Blowback (Galecaller Faye)
 	[267899] = 20,		--- Hindering Cleave (Brother Ironhull)
 	[268280] = 20,		--- Tidal Pod (Tidesage Enforcer)
-	[276286] = 20,		--- Slicing Hurricane (Environment)
+	[276286] = 20,		--- Slicing Hurricane (Galecaller Apprentice)
 	[276292] = 20,		--- Whirlign Slam (Ironhull Apprentice)
-	[269104] = 20,		--- Explosive Void (Lord Stormsong)
 	[267385] = 20,		--- Tentacle Slam (Vol'zith the Whisperer)
 	
 	-- Siege of Boralus
+	[256627] = 20,		--- Slobber Knocker (Kul Tiran Halberd)
 	[256663] = 20,		--- Burning Tar (Blacktar Bomber)
 	[275775] = 20,		--- Savage Tempest (Irontide Raider)
-	[272426] = 20,		--- Sighted Artillery
-	[272140] = 20,		--- Iron Volley
+	[257292] = 20,		--- Heavy Slash (Kul Tiran Vanguard)
+	[272426] = 20,		--- Sighted Artillery (Ashvane Spotter)
+	[257069] = 20,		--- Watertight Shell (Kul Tiran Wavetender)
 	[273681] = 20,		--- Heavy Hitter (Chopper Redhook)
+	[272874] = 20,		--- Trample (Ashvane Commander)
+	[268260] = 20,		--- Broadside (Ashvane Cannoneer)
+	[269029] = 20,		--- Clear the Deck (Dread Captain Lockwood)
 	[272713] = 20,		--- Crushing Slam (Bilge Rat Demolisher)
-	[277535] = 20,		-- Viq'Goth's Wrath (Viq'Goth)
-	
+	[274941] = 20,		--- Banana Rampage swirlies(Bilge Rat Buccaneer)
+	[276068] = 20,		--- Tidal Surge (Hadal Darkfathom)
+	[257886] = 20,		--- Brine Pool (Hadal Darkfathom)
+	[261565] = 20,		--- Crashing Tide (Hadal Darkfathom)
+	[277535] = 20,		--- Viq'Goth's Wrath (Viq'Goth)
 	
 	-- Tol Dagor
-	[257785] = 20,		--- Flashing Daggers
+	[257119] = 20,		--- Sand Trap (The Sand Queen)
+	[257785] = 20,		--- Flashing Daggers (Jes Howlis)
 	[256976] = 20,		--- Ignition (Knight Captain Valyri)
 	[256955] = 20,		--- Cinderflame (Knight Captain Valyri)
 	[256083] = 20,		--- Cross Ignition (Overseer Korgus)
 	[263345] = 20,		--- Massive Blast (Overseer Korgus)
-	[258864] = 20,		--- Suppression Fire (Ashvane Marine/Spotter)
 	[258364] = 20,		--- Fuselighter (Ashvane Flamecaster)
 	[259711] = 20,		--- Lockdown (Ashvane Warden)
+	[256710] = 20,		--- Burning Arsenal (Knight Captain Valyri)
 	
 	-- Waycrest Manor
+	[264531] = 20,		--- Shrapnel Trap (Maddened Survivalist)
+	[264476] = 20,		--- Tracking Explosive (Crazed Marksman)
 	[260569] = 20,		--- Wildfire (Soulbound Goliath)
 	[265407] = 20,		--- Dinner Bell (Banquet Steward)
 	[264923] = 20,		--- Tenderize (Raal the Gluttonous)
+	[264712] = 20,		--- Rotten Expulsion (Raal the Gluttonous)
+	[272669] = 20,		--- Burning Fists (Soulbound Goliath)
+	[278849] = 20,		--- Uproot (Coven Thornshaper)
+	[264040] = 20,		--- Uprooted Thorns (Coven Thornshaper)
+	[265757] = 20,		--- Splinter Spike (Matron Bryndle)
 	[264150] = 20,		--- Shatter (Thornguard)
-	[271174] = 20,		--- Retch (Pallid Gorger)
 	[268387] = 20,		--- Contagious Remnants (Lord Waycrest)
 	[268308] = 20,		--- Discordant Cadenza (Lady Waycrest
 
@@ -72,122 +96,155 @@ local Spells = {
 	[253666] = 20,		--- Fiery Bolt (Dazar'ai Juggernaught)
 	[257692] = 20,		--- Tiki Blaze (Environment)
 	[255620] = 20,		--- Festering Eruption (Reanimated Honor Guard)
-	[256959] = 20,		--- Rotting Decay (Renaimated Honor Guard)
-	[250259] = 20,		--- Toxic Leap
-	[250022] = 20,		--- Echoes of Shadra (Echoes of Shadra)
-	[250585] = 20, 		--- Toxic Pool
-	[250036] = 20,		--- Shadowy Remains
+	[258723] = 20,		--- Grotesque Pool (Renaimated Honor Guard)
+	[250259] = 20,		--- Toxic Leap (Vol'kaal)
+	[250022] = 20,		--- Echoes of Shadra (Yazma)
+	[250585] = 20, 		--- Toxic Pool (Vol'kaal)
+	[250036] = 20,		--- Shadowy Remains (Echoes of Shadra)
+	[255567] = 20,		--- Frenzied Charge (T'lonja)
 
 	-- King's Rest
+	[270003] = 20,		--- Suppression Slam (Animated Guardian)
+	[269932] = 20,		--- Ghust Slash (Shadow-Borne Warrior)
+	[265781] = 20,		--- Serpentine Gust (The Golden Serpent)
 	[265914] = 20,		--- Molten Gold (The Golden Serpent)
+	[270928] = 20,		--- Bladestorm (King Timalji)
+	[270931] = 20,		--- Darkshot (Queen Patlaa)
+	[270891] = 20,		--- Channel Lightning (King Rahu'ai)
 	[266191] = 20,		--- Whirling Axe (Council of Tribes)
-	[270289] = 20,		--- Purification Beam
+	[270292] = 20,		--- Purifying Flame (Purification Construct)
 	[270503] = 20,		--- Hunting Leap (Honored Raptor)
+	[270514] = 20,		--- Ground Crush (Spectral Brute)
 	[271564] = 20,		--- Embalming Fluid (Embalming Fluid)
 	[270485] = 20,		--- Blooded Leap (Spectral Berserker)
 	[267639] = 20,		--- Burn Corruption (Mchimba the Embalmer)
-	[270931] = 20,		-- Darkshot
+	[268419] = 20,		--- Gale Slash (King Dazar)
+	[268796] = 20,		--- Impaling Spear (King Dazar)
 	
 	-- The MOTHERLODE!!
 	[257371] = 20,		--- Gas Can (Mechanized Peace Keeper)
-	[262287] = 20,		-- Concussion Charge (Mech Jockey / Venture Co. Skyscorcher)
+	[262287] = 20,		--- Concussion Charge (Mech Jockey / Venture Co. Skyscorcher)
 	[268365] = 20,		--- Mining Charge (Wanton Sapper)
 	[269313] = 20,		--- Final Blast (Wanton Sapper)
-	[275907] = 20,		--- Tectonic Smash
+	[275907] = 20,		--- Tectonic Smash (Azerokk)
 	[259533] = 20,		--- Azerite Catalyst (Rixxa Fluxflame)
-	[260103] = 20,		--- Propellant Blast
+	[260103] = 20,		--- Propellant Blast (Rixxa Fluxflame)
 	[260279] = 20,		--- Gattling Gun (Mogul Razdunk)
-	[276234] = 20, 		--- Micro Missiles
+	[276234] = 20, 		--- Micro Missiles (Mogul Razdunk)
 	[270277] = 20,		--- Big Red Rocket (Mogul Razdunk)
 	[271432] = 20,		--- Test Missile (Venture Co. War Machine)
-	[262348] = 20,		--- Mine Blast
-	[257337] = 20,		--- Shocking Claw
+	[262348] = 20,		--- Mine Blast (Crawler Mine)
+	[257337] = 20,		--- Shocking Claw (Coin-Operated Pummeler)
+	[268417] = 20,		--- Power Through (Azerite Extractor)
+	[268704] = 20,		--- Furious Quake (Stonefury)
+	[258628] = 20,		--- Resonant Quake (Earthrager)
+	--[268865] = 20,		--- Force Cannon (Weapons Tester) is targeted on random player i think
 	[269092] = 20,		--- Artillery Barrage (Ordnance Specialist)
+	[271583] = 20,		--- Black Powder Special (Mines near the track)
+	[269831] = 20,		--- Toxic Sludge (Oil Environment)
 
 	-- Temple of Sethraliss
 	[263425] = 20,		--- Arc Dash (Adderis)
+	[268851] = 20,		--- Lightning Shield (Aspix and Adderis)
+	[263573] = 20,		--- Cyclone Strike (Adderis)
+	[272658] = 20,		--- Electrified Scales (Scaled Krolusk Rider)
+	--what is this? dodgeable?
 	[273225] = 20,		--- Volley (Sandswept Marksman)
+	[272655] = 20,		--- Scouring Sand (Mature Krolusk)
 	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
+	[272696] = 20,		--- Lightning in a Bottle (Crazed Incubator)
 	[264206] = 20,		--- Burrow (Merektha)
-	[272657] = 20,		--- Noxious Breath
+	[272657] = 20,		--- Noxious Breath (Merektha)
+	[272821] = 20,		--- Call Lightning (Imbued Stormcaller)
+	[264763] = 20,		--- Spark (Static-charged Dervish)
+	[279014] = 20,		--- Cardiac Shock (Avatar, Environment)
 	
-
 	-- Underrot
 	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
 	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
 	[261498] = 20,		--- Creeping Rot (Elder Leaxa)
+	[264757] = 20,		--- Sanguine Feast (Elder Leaxa)
 	[265665] = 20,		--- Foul Sludge (Living Rot)
+	[260793] = 20,		--- Indigestion (Cragmaw the Infested)
+	[260312] = 20,		--- Charge (Cragmaw the Infested)
+	[265511] = 20,		--- Spirit Drain (Spirit Drain Totem)
+	[259720] = 20,		--- Upheaval (Sporecaller Zancha)
+	[272609] = 20,		--- Maddenin Gaze (Faceless Corruptor)
+	[272469] = 20,		--- Abyssal Slam (Faceless Corruptor)
+	[270108] = 20,		--- Rotting Spore (Unbound Abomination)
 }
 
 local SpellsNoTank = {
 	-- Freehold
 
 	-- Shrine of the Storm
-	[267899] = 20,  		--- Hindering Cleave
-
+	
 	-- Siege of Boralus
-
+	[268230] = 20,		--- Crimson Swipe (Ashvane Deckhand)
+	
 	-- Tol Dagor
-
+	[258864] = 20,		--- Suppression Fire (Ashvane Marine/Spotter)
+	
 	-- Waycrest Manor
-
+	[263905] = 20,		--- Marking Cleave (Heartsbane Runeweaver)
+	[265372] = 20,		---	Shadow Cleave (Enthralled Guard)
+	[271174] = 20,		--- Retch (Pallid Gorger)
+	
 	-- Atal'Dazar
 
 	-- King's Rest
-
+	[270289] = 20,		--- Purification Beam (Purification Construct)
+	
 	-- The MOTHERLODE!!
-
+	[268846] = 20,		--- Echo Blade (Weapons Tester)
+	[263105] = 20,		--- Blowtorch (Feckless Assistant)
+	[263583] = 20,		--- Broad Slash (Taskmaster Askari)
+		
 	-- Temple of Sethraliss
-	[255741] = 20,			--- Cleave (Scaled Krolusk Rider)
+	[255741] = 20,		--- Cleave (Scaled Krolusk Rider)
 
 	-- Underrot
-	[265019] = 20,			--- Savage Cleave (Chosen Blood Matron)
+	[272457] = 20,		--- Shockwave (Sporecaller Zancha)
+	
 }
 
 local Auras = {
 	-- Freehold
-	[274389] = true,		-- Rat Traps (Vermin Trapper)
 	[274516] = true,		-- Slippery Suds
 	
 	-- Shrine of the Storm
 	[268391] = true,		-- Mental Assault (Abyssal Cultist)
-	[276268] = true,		-- Heaving Blow (Shrine Templar)
+	[269104] = true,		-- Explosive Void (Lord Stormsong)
 	[267956] = true,		-- Zap (Jellyfish)
 	
 	-- Siege of Boralus
-	[257292] = true,		-- Heavy Slash (Kul Tiran Vanguard)
-	[272874] = true,		-- Trample (Ashvane Commander)
-	[274942] = true,		-- Banana Rampage
+	[274942] = true,		-- Banana Stun
 	[257169] = true,		-- Fear
 
 	-- Tol Dagor
-	[257119] = true,		-- Sand Trap (The Sand Queen)
 	[256474] = true,		-- Heartstopper Venom (Overseer Korgus)
 
 	-- Waycrest Manor
 	[265352] = true,		-- Toad Blight (Toad)
+	[278468] = true,		-- Freezing Trap
 	
 	-- Atal'Dazar
 	[255371] = true,		-- Terrifying Visage (Rezan)
 
 	-- King's Rest
-	[270003] = true,		-- Suppression Slam (Animated Guardian)
-	[270931] = true,		-- Darkshot
-	[268419] = true,		-- Gale Slash (King Dazar)
-	[268796] = true,		-- (King Dazar)
+	[276031] = true,		-- Pit of Despair (Minion of Zul)
 
 	-- The MOTHERLODE!!
 	
 	-- Temple of Sethraliss
-	[263914] = true,		-- Blinding Sand (Merektha)
 	[269970] = true,		-- Blinding Sand (Merektha)
 
 	-- Underrot
-	[272609] = true,		-- Maddening Gaze (Faceless Corrupter)
 
 }
 
 local AurasNoTank = {
+	[272140] = true,		--- Iron Volley
 }
 
 function round(number, decimals)
