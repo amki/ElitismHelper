@@ -283,37 +283,46 @@ end)
 function generateMaybeOutput(user)
 	local func = function()
 			local msg = "<EH> "..user.." got hit by "
-			local amount = 0
-			local minPct = math.huge
-			for k,v in pairs(TimerData[user]) do
-				msg = msg..GetSpellLink(k).." "
+			local sending = false
+			local _i = 0
+			for spellID,amount in pairs(TimerData[user]) do
+				local minPct = math.huge
 				local spellMinPct = nil
-				if Spells[k] then
-					spellMinPct = Spells[k]
-				elseif SpellsNoTank[k] then
-					spellMinPct = SpellsNoTank[k]
+				if Spells[spellID] then
+					spellMinPct = Spells[spellID]
+				elseif SpellsNoTank[spellID] then
+					spellMinPct = SpellsNoTank[spellID]
 				end
 				if spellMinPct ~= nil and spellMinPct < minPct then
 					minPct = spellMinPct
 				end
-				amount = amount + v
-			end
-			if minPct == math.huge then
-				local spellNames = " "
-				for k,v in pairs(TimerData[user]) do
-					spellNames = spellNames..GetSpellLink(k).." "
+				if minPct == math.huge then
+					local spellNames = " "
+					for spellID,amount in pairs(TimerData[user]) do
+						spellNames = spellNames..GetSpellLink(spellID).." "
+					end
+					print("<EH> Error: Could not find spells"..spellNames.."in Spells or SpellsNoTank but got Timer for them. wtf")
 				end
-				print("<EH> Error: Could not find spells"..spellNames.."in Spells or SpellsNoTank but got Timer for them. wtf")
+				local userMaxHealth = UnitHealthMax(user)
+				local msgAmount = round(amount / 1000,1)
+				local pct = Round(amount / userMaxHealth * 100)
+				if pct >= hardMinPct and pct >= minPct and ElitismHelperDB.Loud then
+					if _i > 0 then
+						msg = msg.." and "..GetSpellLink(spellID).." "
+					else
+						msg = msg..GetSpellLink(spellID).." "
+					end
+					msg = msg.."for "..msgAmount.."k ("..pct.."%)"
+					sending = true
+					_i = _i + 1
+				end
+			end
+			msg = msg.."."
+			if sending then
+				maybeSendChatMessage(msg)
 			end
 			TimerData[user] = nil
 			Timers[user] = nil
-			local userMaxHealth = UnitHealthMax(user)
-			local msgAmount = round(amount / 1000,1)
-			local pct = Round(amount / userMaxHealth * 100)
-			if pct >= hardMinPct and pct >= minPct and ElitismHelperDB.Loud then
-				msg = msg.."for "..msgAmount.."k ("..pct.."%)."
-				maybeSendChatMessage(msg)
-			end
 		end
 	return func
 end
