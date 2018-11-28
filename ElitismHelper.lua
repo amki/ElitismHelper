@@ -4,7 +4,7 @@ local TimerData = {}
 local CombinedFails = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
-local hardMinPct = 20
+local hardMinPct = 40
 
 local Spells = {
 	-- Debug
