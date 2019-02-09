@@ -11,6 +11,11 @@ local Spells = {
 	--[252144] = 1,
 	--[252150] = 1,
 
+        -- Reaping
+	--[290085] = 20,          -- Expel Soul (Environment)
+	[288694] = 20,          -- Shadow Smash (Lost Soul)
+	[288693] = 20,          -- Grave Bolt (Tormented Soul)
+	
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
 	[226512] = 20,		-- Sanguine Ichor (Environment)
