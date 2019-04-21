@@ -387,11 +387,14 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			elseif argsFunc == "raid" then
 				ElitismHelperDB.OutputMode = "raid"
 				print("Output set to raid always")
+			elseif argsFunc == "yell" then
+				ElitismHelperDB.OutputMode = "yell"
+				print("Output set to yell always")
 			elseif argsFunc == "self" then
 				ElitismHelperDB.OutputMode = "self"
 				print("Output set to self only always")
 			else
-				print("Valid targets are default | party | raid | self")
+				print("Valid targets are default | party | raid | yell | self")
 				print("Current target is "..ElitismHelperDB.OutputMode)
 			end
 		end,
@@ -404,7 +407,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print(" table: Prints users")
 			print(" resync: Rebuilts table")
 			print(" activeUser: Prints active user")
-			print(" output: Define output channel between default | party | raid | self")
+			print(" output: Define output channel between default | party | raid | yell | self")
 		end,
 		["messageTest"] = function()
 			print("Testing output for "..ElitismHelperDB.OutputMode)
@@ -438,6 +441,8 @@ function maybeSendChatMessage(message)
 		SendChatMessage(message,"PARTY")
 	elseif ElitismHelperDB.OutputMode == "raid" and IsInGroup() and not IsInGroup(2) and IsInRaid() then
 		SendChatMessage(message,"RAID")
+	elseif ElitismHelperDB.OutputMode == "yell" then
+		SendChatMessage(message,"YELL")
 	elseif ElitismHelperDB.OutputMode == "default" then
 		if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
 			SendChatMessage(message,"PARTY")
