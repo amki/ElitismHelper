@@ -529,7 +529,8 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 	local count = 0
 	for _ in pairs(CombinedFails) do count = count + 1 end
 	if count == 0 then
-		maybeSendChatMessage("Thank you for travelling with ElitismHelper. No failure damage was taken this run.")
+		print("No Damage?");
+		--maybeSendChatMessage("Thank you for travelling with ElitismHelper. No failure damage was taken this run.")
 		return
 	else
 		maybeSendChatMessage("Thank you for travelling with ElitismHelper. Amount of failure damage:")
@@ -545,6 +546,7 @@ end
 
 function ElitismFrame:CHALLENGE_MODE_START(event,...)
 	CombinedFails = {}
+	FailByAbility = {}
 	print("Failure damage now being recorded.")
 end
 
