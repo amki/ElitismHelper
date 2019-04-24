@@ -485,6 +485,15 @@ function maybeSendChatMessage(message)
 	end
 end
 
+function delayMaybeSendChatMessage(message, delay)
+	C_Timer.After(
+		delay,
+		function()
+			maybeSendChatMessage(message)
+		end
+	)
+end
+
 function ElitismFrame:RebuildTable()
 	Users = {}
 	activeUser = nil
