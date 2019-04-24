@@ -2,6 +2,7 @@ local Users = {}
 local Timers = {}
 local TimerData = {}
 local CombinedFails = {}
+local FailByAbility = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
 local hardMinPct = 40
@@ -12,9 +13,9 @@ local Spells = {
 	--[252150] = 1,
 
         -- Reaping
-	--[290085] = 20,          -- Expel Soul (Environment)
+	[288858] = 20,          -- Expel Soul (Environment)
 	[288694] = 20,          -- Shadow Smash (Lost Soul)
-	[288693] = 20,          -- Grave Bolt (Tormented Soul)
+	--[288693] = 20,          -- Grave Bolt (Tormented Soul)
 	
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
@@ -138,7 +139,7 @@ local Spells = {
 	[276234] = 20, 		--- Micro Missiles (Mogul Razdunk)
 	[270277] = 20,		--- Big Red Rocket (Mogul Razdunk)
 	[271432] = 20,		--- Test Missile (Venture Co. War Machine)
-	[262348] = 20,		--- Mine Blast (Crawler Mine)
+	--[262348] = 20,		--- Mine Blast (Crawler Mine)
 	[257337] = 20,		--- Shocking Claw (Coin-Operated Pummeler)
 	[268417] = 20,		--- Power Through (Azerite Extractor)
 	[268704] = 20,		--- Furious Quake (Stonefury)
@@ -170,7 +171,6 @@ local Spells = {
 	[261498] = 20,		--- Creeping Rot (Elder Leaxa)
 	[264757] = 20,		--- Sanguine Feast (Elder Leaxa)
 	[265665] = 20,		--- Foul Sludge (Living Rot)
-	[260793] = 20,		--- Indigestion (Cragmaw the Infested)
 	[260312] = 20,		--- Charge (Cragmaw the Infested)
 	[265511] = 20,		--- Spirit Drain (Spirit Drain Totem)
 	[259720] = 20,		--- Upheaval (Sporecaller Zancha)
@@ -210,6 +210,7 @@ local SpellsNoTank = {
 
 	-- Underrot
 	[272457] = 20,		--- Shockwave (Sporecaller Zancha)
+	[260793] = 20,		--- Indigestion (Cragmaw the Infested)
 	
 }
 
@@ -412,6 +413,38 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 		["messageTest"] = function()
 			print("Testing output for "..ElitismHelperDB.OutputMode)
 			maybeSendChatMessage("This is a test message")
+		end,
+		["list"] = function(args)
+			local name = args
+						
+			if FailByAbility[name] == nil then
+				name = GetUnitName(args, true)
+			end
+						
+			if name == nil or FailByAbility[name] == nil then
+				name = GetUnitName(args)
+			end
+				
+			if name == nil or FailByAbility[name] == nil then
+				for player,fails in pairs(FailByAbility) do
+					print("Hits for "..player)
+					for k,v in pairs(fails) do
+						print("  " .. v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k")
+					end
+				end
+			else
+				--print("hits for " .. name)
+				maybeSendChatMessage("Hits for "..name)
+				
+				local delay = 0;
+				
+				for k,v in pairs(FailByAbility[name]) do
+					--print(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k; " .. delay)
+					--maybeSendChatMessage(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k")
+					delayMaybeSendChatMessage(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k", delay * 0.1)
+					delay = delay + 1
+				end
+			end
 		end
 	}
 
@@ -507,7 +540,7 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 	for k,v in pairs(u) do
 			maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000,1).."k")
 	end
-	CombinedFails = {}
+	--CombinedFails = {}
 end
 
 function ElitismFrame:CHALLENGE_MODE_START(event,...)
@@ -560,6 +593,21 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 			Timers[dstName] = true
 			C_Timer.After(4,generateMaybeOutput(dstName))
 		end
+		
+		-- Add hit and damage to table
+		if FailByAbility[dstName] == nil then
+			FailByAbility[dstName] = {}
+		end
+		
+		if FailByAbility[dstName][spellId] == nil then
+			FailByAbility[dstName][spellId] = {
+				cnt = 0,
+				sum = 0
+			}
+		end
+		
+		FailByAbility[dstName][spellId].cnt = FailByAbility[dstName][spellId].cnt + 1
+		FailByAbility[dstName][spellId].sum = FailByAbility[dstName][spellId].sum + aAmount
 	end
 end
 
