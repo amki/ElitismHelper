@@ -14,7 +14,7 @@ local Spells = {
         -- Reaping
 	--[290085] = 20,          -- Expel Soul (Environment)
 	[288694] = 20,          -- Shadow Smash (Lost Soul)
-	[288693] = 20,          -- Grave Bolt (Tormented Soul)
+	-- [288693] = 20,          -- Grave Bolt (Tormented Soul) Is this really avoidable?
 	
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
