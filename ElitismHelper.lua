@@ -14,7 +14,7 @@ local Spells = {
 
         -- Reaping
 	[288858] = 20,          -- Expel Soul (Environment)
-	[288694] = 20,          -- Shadow Smash (Lost Soul)
+	[296142] = 20,          -- Shadow Smash (Lost Soul) -- fixed ID
 	--[288693] = 20,          -- Grave Bolt (Tormented Soul)
 	
 	-- Affixes
