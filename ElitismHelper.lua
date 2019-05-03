@@ -12,10 +12,10 @@ local Spells = {
 	--[252144] = 1,
 	--[252150] = 1,
 
-        -- Reaping
-	[288858] = 20,          -- Expel Soul (Environment)
-	[296142] = 20,          -- Shadow Smash (Lost Soul) -- fixed ID
-	--[288693] = 20,          -- Grave Bolt (Tormented Soul)
+  -- Reaping
+	--[290085] = 20,          -- Expel Soul (Environment)
+	[296142] = 20,          -- Shadow Smash (Lost Soul)
+	-- [288693] = 20,          -- Grave Bolt (Tormented Soul) Is this really avoidable?
 	
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
