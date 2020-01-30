@@ -146,7 +146,6 @@ local Spells = {
 	[268417] = 20,		--- Power Through (Azerite Extractor)
 	[268704] = 20,		--- Furious Quake (Stonefury)
 	[258628] = 20,		--- Resonant Quake (Earthrager)
-	--[268865] = 20,		--- Force Cannon (Weapons Tester) is targeted on random player i think
 	[269092] = 20,		--- Artillery Barrage (Ordnance Specialist)
 	[271583] = 20,		--- Black Powder Special (Mines near the track)
 	[269831] = 20,		--- Toxic Sludge (Oil Environment)
@@ -155,8 +154,6 @@ local Spells = {
 	[263425] = 20,		--- Arc Dash (Adderis)
 	[268851] = 20,		--- Lightning Shield (Aspix and Adderis)
 	[263573] = 20,		--- Cyclone Strike (Adderis)
-	[272658] = 20,		--- Electrified Scales (Scaled Krolusk Rider)
-	--what is this? dodgeable?
 	[273225] = 20,		--- Volley (Sandswept Marksman)
 	[272655] = 20,		--- Scouring Sand (Mature Krolusk)
 	[273995] = 20,		--- Pyrrhic Blast (Crazed Incubator)
@@ -180,6 +177,21 @@ local Spells = {
 	[272609] = 20,		--- Maddenin Gaze (Faceless Corruptor)
 	[272469] = 20,		--- Abyssal Slam (Faceless Corruptor)
 	[270108] = 20,		--- Rotting Spore (Unbound Abomination)
+	
+	-- Mechagon Workshop
+	[294128] = 20,		--- Rocket Barrage (Rocket Tonk)
+	[294291] = 20,		--- Process Waste ()
+	[291949] = 20,		--- Venting Flames (K.U-J.0.)
+	[294324] = 20,		--- Mega Drill (Waste Processing Unit)
+	[293861] = 20,		--- Anti-Personnel Squirrel (Anti-Personnel Squirrel)
+	[295168] = 20,		--- Capacitor Discharge (Blastatron X-80)
+	[293986] = 20,		--- Sonic Pulse (Blastatron X-80)
+	[294954] = 20,		--- Self-Trimming Hedge (Head Machinist Sparkflux)
+	
+	--- Awakened Lieutenant
+	[314309] = 20,		--- Dark Fury (Urg'roth, Breaker of Heroes)
+	[314467] = 20,		--- Volatile Rupture (Voidweaver Mal'thir)
+	[314565] = 20,		--- Defiled Ground (Blood of the Corruptor)
 }
 
 local SpellsNoTank = {
