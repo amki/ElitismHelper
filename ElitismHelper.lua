@@ -180,7 +180,7 @@ local Spells = {
 	
 	-- Mechagon Workshop
 	[294128] = 20,		--- Rocket Barrage (Rocket Tonk)
-	[285020 = 20,		--- Whirling Edge (The Platinum Pummeler)
+	[285020] = 20,		--- Whirling Edge (The Platinum Pummeler)
 	[294291] = 20,		--- Process Waste ()
 	[291930] = 20,		--- Air Drop (K.U-J.0)
 	[291949] = 20,		--- Venting Flames (K.U-J.0.)
