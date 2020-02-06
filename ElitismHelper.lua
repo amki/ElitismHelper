@@ -189,6 +189,24 @@ local Spells = {
 	[295168] = 20,		--- Capacitor Discharge (Blastatron X-80)
 	[294954] = 20,		--- Self-Trimming Hedge (Head Machinist Sparkflux)
 	
+	
+	-- Mechagon Junkyard
+	[300816] = 20,		--- Slimewave (Slime Elemental)
+	[300188] = 20,		--- Scrap Cannon (Weaponized Crawler)
+	[300427] = 20,		--- Shockwave (Scrapbone Bully)
+	[294890] = 20,		--- Gryro-Scrap (Malfunctioning Scrapbot)
+	[300129] = 20,		--- Self-Destruct Protocol (Malfunctioning Scrapbot)
+	[300561] = 20,		--- Explosion (Scrapbone Trashtosser)
+	[299475] = 20,		--- B.O.R.K. (Scraphound)
+	[299535] = 20,		--- Scrap Blast (Pistonhead Blaster)
+	[298940] = 20,		--- Bolt Buster (Naeno Megacrash)
+	
+	
+	
+	
+	
+	
+	
 	--- Awakened Lieutenant
 	[314309] = 20,		--- Dark Fury (Urg'roth, Breaker of Heroes)
 	[314467] = 20,		--- Volatile Rupture (Voidweaver Mal'thir)
@@ -262,10 +280,13 @@ local Auras = {
 	[269970] = true,		-- Blinding Sand (Merektha)
 
 	-- Underrot
-
 	
 	-- Mechagon Workshop
 	[293986] = true,		--- Sonic Pulse (Blastatron X-80)
+	
+	-- Mechaton Junkyard
+	[398529] = true,		-- Gooped (Gunker)
+	[300659] = true,		-- Consuming Slime (Toxic Monstrosity)
 }
 
 local AurasNoTank = {
