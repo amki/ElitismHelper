@@ -199,11 +199,7 @@ local Spells = {
 	[299475] = 20,		--- B.O.R.K. (Scraphound)
 	[299535] = 20,		--- Scrap Blast (Pistonhead Blaster)
 	[298940] = 20,		--- Bolt Buster (Naeno Megacrash)
-	
-	
-	
-	
-	
+	[297283] = 20,		--- Cave In (King Gobbamak)
 	
 	
 	--- Awakened Lieutenant
