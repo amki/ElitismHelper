@@ -183,11 +183,24 @@ local Spells = {
 	[285020] = 20,		--- Whirling Edge (The Platinum Pummeler)
 	[294291] = 20,		--- Process Waste ()
 	[291930] = 20,		--- Air Drop (K.U-J.0)
-	[291949] = 20,		--- Venting Flames (K.U-J.0.)
 	[294324] = 20,		--- Mega Drill (Waste Processing Unit)
 	[293861] = 20,		--- Anti-Personnel Squirrel (Anti-Personnel Squirrel)
 	[295168] = 20,		--- Capacitor Discharge (Blastatron X-80)
 	[294954] = 20,		--- Self-Trimming Hedge (Head Machinist Sparkflux)
+	
+	
+	-- Mechagon Junkyard
+	[300816] = 20,		--- Slimewave (Slime Elemental)
+	[300188] = 20,		--- Scrap Cannon (Weaponized Crawler)
+	[300427] = 20,		--- Shockwave (Scrapbone Bully)
+	[294890] = 20,		--- Gryro-Scrap (Malfunctioning Scrapbot)
+	[300129] = 20,		--- Self-Destruct Protocol (Malfunctioning Scrapbot)
+	[300561] = 20,		--- Explosion (Scrapbone Trashtosser)
+	[299475] = 20,		--- B.O.R.K. (Scraphound)
+	[299535] = 20,		--- Scrap Blast (Pistonhead Blaster)
+	[298940] = 20,		--- Bolt Buster (Naeno Megacrash)
+	[297283] = 20,		--- Cave In (King Gobbamak)
+	
 	
 	--- Awakened Lieutenant
 	[314309] = 20,		--- Dark Fury (Urg'roth, Breaker of Heroes)
@@ -262,10 +275,13 @@ local Auras = {
 	[269970] = true,		-- Blinding Sand (Merektha)
 
 	-- Underrot
-
 	
 	-- Mechagon Workshop
 	[293986] = true,		--- Sonic Pulse (Blastatron X-80)
+	
+	-- Mechaton Junkyard
+	[398529] = true,		-- Gooped (Gunker)
+	[300659] = true,		-- Consuming Slime (Toxic Monstrosity)
 }
 
 local AurasNoTank = {
