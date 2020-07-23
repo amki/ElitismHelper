@@ -288,6 +288,11 @@ local AurasNoTank = {
 	[272140] = true,		--- Iron Volley
 }
 
+local Corruption = {
+	[315161] = 20, -- Eye of Corruption - 20+ Corruption
+	[315197] = 20, -- Thing From Beyond - 40+ Corruption
+}
+
 function round(number, decimals)
     return (("%%.%df"):format(decimals)):format(number)
 end
@@ -434,6 +439,18 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				print("Current target is "..ElitismHelperDB.OutputMode)
 			end
 		end,
+		["output"] = function(argsFunc)
+			if argsFunc == "on" then
+				ElitismHelperDB.CorruptionAlerts = "on"
+				print("Enable corruption damage tracking")
+			elseif argsFunc == "off" then
+				ElitismHelperDB.CorruptionAlerts = "off"
+				print("Disable corruption damage tracking")
+			else
+				print("Enables tracking of damage caused by 'Eye of Corruption' and 'Thing from Beyond'")
+				print("Current setting is " .. ElitismHelperDB.CorruptionAlerts)
+			end
+		end,
 		["help"] = function()
 			print("Elitism Helper options:")
 			print(" on/enable: Enable Elitism Helper announcer")
@@ -550,7 +567,8 @@ function ElitismFrame:ADDON_LOADED(event,addon)
 	if not ElitismHelperDB then
 		ElitismHelperDB = {
 			Loud = true,
-			OutputMode = "default"
+			CorruptionAlerts = "off",
+			OutputMode = "default",
 		}
 	end
 end
@@ -617,7 +635,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
-	if (Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName) then
+	if (Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK") or (Corruption[spellId]) and ElitismHelperDB.Corruption == "on") and UnitIsPlayer(dstName) then
 		-- Initialize TimerData and CombinedFails for Timer shot
 		if TimerData[dstName] == nil then
 			TimerData[dstName] = {}
