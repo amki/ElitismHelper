@@ -598,7 +598,7 @@ local function outputCharacterSummary()
 end
 
 local function outputSpellSummary()
-	maybeSendChatMessage("Failure damage by spell:")
+	maybeSendChatMessage("Top 5 Failure damage by spell:")
 
 	-- { cnt: 12, sum: 120000 } = FailByAbility[playerName][spellId]
 
@@ -621,7 +621,9 @@ local function outputSpellSummary()
 	local i = 1
 	for spellId,failDetail in pairs(spellFails) do
 		maybeSendChatMessage(i..". "..GetSpellLink(spellId).." "..round(failDetail.sum / 1000,1).."k")
+
 		i = i + 1
+		if i > 5 then break	end
 	end
 end
 
