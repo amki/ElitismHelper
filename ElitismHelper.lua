@@ -598,8 +598,6 @@ local function outputCharacterSummary()
 end
 
 local function outputSpellSummary()
-	tprint(FailByAbility, 0)
-
 	maybeSendChatMessage("Failure damage by spell:")
 
 	-- { cnt: 12, sum: 120000 } = FailByAbility[playerName][spellId]
@@ -752,19 +750,4 @@ function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 		local spellId, spellName, spellSchool, auraType, auraAmount = select(12,CombatLogGetCurrentEventInfo())
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	end
-end
-
-local function tprint (tbl, indent)
-  if not indent then indent = 0 end
-  for k, v in pairs(tbl) do
-	formatting = string.rep("  ", indent) .. k .. ": "
-	if type(v) == "table" then
-	  print(formatting)
-	  tprint(v, indent+1)
-	elseif type(v) == 'boolean' then
-	  print(formatting .. tostring(v))      
-	else
-	  print(formatting .. v)
-	end
-  end
 end
