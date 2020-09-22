@@ -309,6 +309,8 @@ ElitismFrame.text:SetAllPoints()
 ElitismFrame.text:SetTextHeight(13)
 ElitismFrame:SetAlpha(1)
 
+print ("EH registered")
+
 function table.pack(...)
   return { n = select("#", ...), ... }
 end
@@ -432,6 +434,24 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				print("Current target is "..ElitismHelperDB.OutputMode)
 			end
 		end,
+		["summary"] = function(argsFunc)
+			if argsFunc == "character" then
+				ElitismHelperDB.SummaryMode = "character"
+			elseif argsFunc == "spell" then
+				ElitismHelperDB.SummaryMode = "spell"
+			elseif argsFunc == "full" then
+				ElitismHelperDB.SummaryMode = "full"
+			else
+				print("Valid formats are character | spell | full")
+				print("Current format is "..ElitismHelperDB.SummaryMode)
+			end
+		end,
+		["insertTestData"] = function()
+			ElitismFrame:SpellDamage(nil, nil, nil, nil, nil, nil, GetUnitName("player",true), nil, 272046, nil, nil, 1000)
+		end,
+		["testSummary"] = function()
+			ElitismFrame:CHALLENGE_MODE_COMPLETED(nil)
+		end,
 		["help"] = function()
 			print("Elitism Helper options:")
 			print(" on/enable: Enable Elitism Helper announcer")
@@ -548,7 +568,8 @@ function ElitismFrame:ADDON_LOADED(event,addon)
 	if not ElitismHelperDB then
 		ElitismHelperDB = {
 			Loud = true,
-			OutputMode = "default"
+			OutputMode = "default",
+			SummaryMode = "character"
 		}
 	end
 end
@@ -563,8 +584,47 @@ function ElitismFrame:ZONE_CHANGED_NEW_AREA(event,...)
 	ElitismFrame:RebuildTable()
 end
 
-function compareDamage(a,b)
-	return a["value"] < b["value"]
+local function outputCharacterSummary()
+	maybeSendChatMessage("Failure damage by player:")
+
+	local u = { }
+	for k, v in pairs(CombinedFails) do 
+		table.insert(u, { key = k, value = v }) 
+	end
+	table.sort(u, function(a, b) return a["value"] < b["value"] end)
+	for k,v in pairs(u) do
+		maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000,1).."k")
+	end
+end
+
+local function outputSpellSummary()
+	tprint(FailByAbility, 0)
+
+	maybeSendChatMessage("Failure damage by spell:")
+
+	-- { cnt: 12, sum: 120000 } = FailByAbility[playerName][spellId]
+
+	local spellFails = { }
+
+	for _,fails in pairs(FailByAbility) do
+		-- { cnt: 12, sum: 120000 } = fails[spellId]
+		for spellId,failDetail in pairs(fails) do
+			if spellFails[spellId] == nil then
+				spellFails[spellId] = failDetail
+			else
+				spellFails[spellId].cnt = spellFails[spellId].cnt + failDetail.cnt
+				spellFails[spellId].sum = spellFails[spellId].sum + failDetail.sum
+			end
+		end
+	end
+	
+	table.sort(spellFails, function(a, b) return a["value"].sum < b["value"].sum end)
+
+	local i = 1
+	for spellId,failDetail in pairs(spellFails) do
+		maybeSendChatMessage(i..". "..GetSpellLink(spellId).." "..round(failDetail.sum / 1000,1).."k")
+		i = i + 1
+	end
 end
 
 function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
@@ -575,15 +635,18 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 		--maybeSendChatMessage("Thank you for travelling with ElitismHelper. No failure damage was taken this run.")
 		return
 	else
-		maybeSendChatMessage("Thank you for travelling with ElitismHelper. Amount of failure damage:")
+		maybeSendChatMessage("Thank you for travelling with ElitismHelper.")
 	end
-	local u = { }
-	for k, v in pairs(CombinedFails) do table.insert(u, { key = k, value = v }) end
-	table.sort(u, compareDamage)
-	for k,v in pairs(u) do
-			maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000,1).."k")
+
+	if ElitismHelperDB.SummaryMode == "character" then
+		outputCharacterSummary()
+	elseif ElitismHelperDB.SummaryMode == "spell" then
+		outputSpellSummary()
+	else
+		outputCharacterSummary()
+		maybeSendChatMessage("")
+		outputSpellSummary()
 	end
-	--CombinedFails = {}
 end
 
 function ElitismFrame:CHALLENGE_MODE_START(event,...)
@@ -689,4 +752,19 @@ function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 		local spellId, spellName, spellSchool, auraType, auraAmount = select(12,CombatLogGetCurrentEventInfo())
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	end
+end
+
+local function tprint (tbl, indent)
+  if not indent then indent = 0 end
+  for k, v in pairs(tbl) do
+	formatting = string.rep("  ", indent) .. k .. ": "
+	if type(v) == "table" then
+	  print(formatting)
+	  tprint(v, indent+1)
+	elseif type(v) == 'boolean' then
+	  print(formatting .. tostring(v))      
+	else
+	  print(formatting .. v)
+	end
+  end
 end
