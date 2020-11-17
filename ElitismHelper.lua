@@ -5,7 +5,6 @@ local CombinedFails = {}
 local FailByAbility = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
-local hardMinPct = 40
 
 local Spells = {
 	-- Debug
@@ -345,7 +344,7 @@ function generateMaybeOutput(user)
 				local userMaxHealth = UnitHealthMax(user)
 				local msgAmount = round(amount / 1000,1)
 				local pct = Round(amount / userMaxHealth * 100)
-				if pct >= hardMinPct and pct >= minPct and ElitismHelperDB.Loud then
+				if pct >= ElitismHelperDB.Threshold and pct >= minPct and ElitismHelperDB.Loud then
 					if _i > 0 then
 						msg = msg.." and "..GetSpellLink(spellID).." "
 					else
@@ -442,6 +441,26 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print(" resync: Rebuilts table")
 			print(" activeUser: Prints active user")
 			print(" output: Define output channel between default | party | raid | yell | self")
+		end,
+		["threshold"] = function(args)
+			if argsFunc ~= nil then
+				thresholdNumber = tonumber(argsFunc, 10)
+				if thresholdNumber == nil then
+					print("Error: Threshold value not valid: " .. argsFunc)
+					break
+				end
+				if (thresholdNumber > 100 or thresholdNumber < 0) then
+					print("Error: Threshold value over 100 or under 0: " .. argsFunc)
+					break
+				end
+				ElitismHelperDB.Threshold = argsFunc
+				print("Threshold Set to " .. argsFunc .. "%")
+			else
+				print("Sets threshold of health lost to notify on (as percentage):")
+				print(" eg. `/eh threshold 100` will show notifications for one-shot damage (> 100%)")
+				print(" Default Threshold: 40")
+				print(" Current Threshold: " .. ElitismHelperDB.Threshold)
+			end
 		end,
 		["messageTest"] = function()
 			print("Testing output for "..ElitismHelperDB.OutputMode)
