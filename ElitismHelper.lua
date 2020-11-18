@@ -436,12 +436,14 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print("Elitism Helper options:")
 			print(" on/enable: Enable Elitism Helper announcer")
 			print(" off/disable: Disable Elitism Helper announcer")
+			print(" output: Define output channel between default | party | raid | yell | self")
+			print(" ------ This is more or less for debugging ------")
 			print(" start: Start logging failure damage")
 			print(" eod: Dungeon is complete")
 			print(" table: Prints users")
 			print(" resync: Rebuilts table")
 			print(" activeUser: Prints active user")
-			print(" output: Define output channel between default | party | raid | yell | self")
+			print(" list: Locally print failed abilities and damage taken")
 		end,
 		["threshold"] = function(args)
 			if argsFunc ~= nil then
@@ -603,7 +605,6 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 	for k,v in pairs(u) do
 			maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000,1).."k")
 	end
-	--CombinedFails = {}
 end
 
 function ElitismFrame:CHALLENGE_MODE_START(event,...)
