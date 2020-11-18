@@ -448,11 +448,11 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				thresholdNumber = tonumber(argsFunc, 10)
 				if thresholdNumber == nil then
 					print("Error: Threshold value not valid: " .. argsFunc)
-					break
+					return
 				end
 				if (thresholdNumber > 100 or thresholdNumber < 0) then
 					print("Error: Threshold value over 100 or under 0: " .. argsFunc)
-					break
+					return
 				end
 				ElitismHelperDB.Threshold = argsFunc
 				print("Threshold Set to " .. argsFunc .. "%")
