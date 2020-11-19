@@ -446,23 +446,15 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print(" list: Locally print failed abilities and damage taken")
 		end,
 		["threshold"] = function(args)
-			if argsFunc ~= nil then
-				thresholdNumber = tonumber(argsFunc, 10)
-				if thresholdNumber == nil then
-					print("Error: Threshold value not valid: " .. argsFunc)
-					return
-				end
-				if (thresholdNumber > 100 or thresholdNumber < 0) then
-					print("Error: Threshold value over 100 or under 0: " .. argsFunc)
-					return
-				end
-				ElitismHelperDB.Threshold = argsFunc
-				print("Threshold Set to " .. argsFunc .. "%")
-			else
-				print("Sets threshold of health lost to notify on (as percentage):")
-				print(" eg. `/eh threshold 100` will show notifications for one-shot damage (> 100%)")
-				print(" Default Threshold: 40")
+			thresholdNumber = tonumber(args, 10)
+			if thresholdNumber == nil then
+				print("Sets threshold of health lost to notify on (as percentage): `/eh threshold 100` will show notifications for one-shot damage (> 100%)")
 				print(" Current Threshold: " .. ElitismHelperDB.Threshold)
+			elseif (thresholdNumber > 100 or thresholdNumber < 0) then
+				print("Error: Threshold value over 100 or under 0: " .. args)
+			else
+				ElitismHelperDB.Threshold = args
+				print("Threshold Set to " .. args .. "%")
 			end
 		end,
 		["messageTest"] = function()
@@ -570,6 +562,7 @@ function ElitismFrame:ADDON_LOADED(event,addon)
 	if not ElitismHelperDB then
 		ElitismHelperDB = {
 			Loud = true,
+			Threshold = 40,
 			OutputMode = "default"
 		}
 	end
