@@ -453,8 +453,8 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			elseif (thresholdNumber > 100 or thresholdNumber < 0) then
 				print("Error: Threshold value over 100 or under 0: " .. args)
 			else
-				ElitismHelperDB.Threshold = args
-				print("Threshold Set to " .. args .. "%")
+				ElitismHelperDB.Threshold = thresholdNumber
+				print("Threshold Set to " .. thresholdNumber .. "%")
 			end
 		end,
 		["messageTest"] = function()
