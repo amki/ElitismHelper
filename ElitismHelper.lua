@@ -8,6 +8,7 @@ local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
 
 local Spells = {
 	-- Debug
+	--[] = 20,      --  ()
 	--[252144] = 1,
 	--[252150] = 1,
 	
@@ -20,19 +21,36 @@ local Spells = {
 	-- Mists of Tirna Scythe
 	[323250] = 20,      -- Anima Puddle (Droman Oulfarran)
 	[325027] = 20,      -- Bramble Burst (Drust Boughbreaker)
-	[336759] = 20,      --- Dodge Ball (Mistcaller)
-	[326021] = 20,      --- Acid Globule (Spinemaw Gorger)
+	[336759] = 20,      -- Dodge Ball (Mistcaller)
+	[326021] = 20,      -- Acid Globule (Spinemaw Gorger)
+	
+	-- Spires of Ascension
+	[331251] = 20,      -- Deep Connection (Azules)
+	[317626] = 20,      -- Maw-Touched Venom (Azules)
+	[323786] = 20,      -- Swift Slice (Kyrian Dark-Praetor)
+	[324662] = 20,      -- Ionized Plasma (Multiple) Can this be avoided?
+	[324141] = 20,      -- Dark Bolt (Ventunax)
+	[317943] = 20,      -- Sweeping Blow (Frostsworn Vanguard)
+	[324608] = 20,      -- Charged Stomp (Oryphrion)
+	[328466] = 20,      -- Charged Spear (Astronos)
+	[323943] = 20,      -- Run Through (Devos)
 }
 
 local SpellsNoTank = {
     -- Mists of Tirna Scythe
 	[331721] = 20,      --- Spear Flurry (Mistveil Defender)
+	
+	-- Spires of Ascension
+	[320966] = 20,      -- Overhead Slash (Kin-Tara)
+	[336444] = 20,      -- Crescendo (Forsworn Helion)
 }
 
 local Auras = {
     -- Mists of Tirna Scythe
     [323137] = true,      --- Bewildering Pollen (Drohman Oulfarran)
 	[321893] = true,      --- Freezing Burst (Illusionary Vulpin)
+	
+	-- Spires of Ascension
 }
 
 local AurasNoTank = {
