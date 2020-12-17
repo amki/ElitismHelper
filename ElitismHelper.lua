@@ -31,8 +31,8 @@ local SpellsNoTank = {
 
 local Auras = {
     -- Mists of Tirna Scythe
-    [323137] = 20,      --- Bewildering Pollen (Drohman Oulfarran)
-	[321893] = 20,      --- Freezing Burst (Illusionary Vulpin)
+    [323137] = true,      --- Bewildering Pollen (Drohman Oulfarran)
+	[321893] = true,      --- Freezing Burst (Illusionary Vulpin)
 }
 
 local AurasNoTank = {
