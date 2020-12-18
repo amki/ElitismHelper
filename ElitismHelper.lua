@@ -17,6 +17,7 @@ local Spells = {
 	[226512] = 20,		-- Sanguine Ichor (Environment)
 	[240448] = 20,      -- Quaking (Environment)
 	[343520] = 20,      -- Storming (Environment)
+	[342466] = 20, 		-- Belligerent Boast(Season 1 Pridefull)
 	
 	-- Mists of Tirna Scythe
 	[321968] = 20, 		-- Bewildering Pollen (tirnenn Villager)
