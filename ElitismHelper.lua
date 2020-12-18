@@ -24,6 +24,22 @@ local Spells = {
 	[336759] = 20,      -- Dodge Ball (Mistcaller)
 	[326021] = 20,      -- Acid Globule (Spinemaw Gorger)
 	
+	-- De Other Side
+	[334051] = 20,		-- Erupting Darkness (Death Speaker)
+	[328740] = 20,		-- Dark Lotus (Risen Cultist)
+	[328729] = 20,		-- Dark Lotus (Risen Cultist)
+	[333250] = 20,		-- Reaver (Risen Warlord)
+	[333790] = 20, 		-- Enraged Mask (Enraged Spirit)
+	[342869] = 20,		-- Enraged Mask (Enraged Spirit)
+	[331933] = 20,		-- Haywire (Defunct Dental Drill)
+	[331927] = 20,		-- Haywire (Defunct Dental Drill)
+	[323567] = 20,   	-- Spilled Essence (Environement)
+		
+	[324090] = 20,		-- Displaced Blastwave (Dealer Xy'exa)
+	[325258] = 20,		-- Master of Death (Mueh'zala)
+	[334913] = 20,		-- Master of Death (Mueh'zala)
+	
+	
 	-- Spires of Ascension
 	[331251] = 20,      -- Deep Connection (Azules)
 	[317626] = 20,      -- Maw-Touched Venom (Azules)
@@ -33,16 +49,104 @@ local Spells = {
 	[317943] = 20,      -- Sweeping Blow (Frostsworn Vanguard)
 	[324608] = 20,      -- Charged Stomp (Oryphrion)
 	[328466] = 20,      -- Charged Spear (Astronos)
+	
 	[323943] = 20,      -- Run Through (Devos)
+	
+	-- The Necrotic Wakes
+	[327396] = 20,		-- Grim Fate (Zolramus Necromancer)
+	[327393] = 20,		-- Grim Fate (Zolramus Necromancer)
+	[327397] = 20,		-- Grim Fate (Zolramus Necromancer / Nar'Zudah)
+	[324387] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
+	[324391] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
+	[324372] = 20,		-- Reaping Winds (Skeletal Monstrosity)
+	
+	[320637] = 20, 		-- Fetid Gas (Blightbone)
+	[333492] = 20,		-- Necrotic Ichor (Amarth apply by Necrotic Breath)
+	[321956] = 20,		-- Comet Storm (Nalthor the Rimebinder)
+	[320784] = 20,		-- Comet Storm (Nalthor the Rimebinder)
+	[320772] = 20,		-- Comet Storm (Nalthor the Rimebinder)
+	
+	-- Plaguefall
+	[330403] = 20, 		-- Wing Buffet (Plagueroc)
+	[330404] = 20,		-- Wing Buffet (Plagueroc)
+	[327233] = 20, 		-- Belch Plague (Plageubelcher)
+	[320517] = 20, 		-- Jagged Spines (Blighted Spinebreaker)
+	[328501] = 20,		-- Plagued Bomb (Environement)
+	
+	[324527] = 20,		-- Plaguestomp (Globgrog)
+	[330026] = 20,		-- Slime Lunge (Doctor Ickus)
+	[329217] = 20,		-- Slime Lunge (Doctor Ickus)
+	[322473] = 20,		-- Plague Crash (Environement Margrave Stradama)
+	
+	-- Theater of Pain
+	[336996] = 20,		-- Whirling Blade (Environement)
+	[332708] = 20,		-- Ground Smash (Heavin the breaker)
+	[333294] = 20, 		-- Death Winds (Nefarious Darkspeaker)
+	[331237] = 20,		-- Bone Spikes (Soulforged Bonereaver)
+	[331223] = 20,		-- Bonestorm (Soulforged Bonereaver)
+	[330592] = 20,		-- Vile Eruption (Rancind Gasbag)
+	
+	[317231] = 20, 		-- Crushing Slam (Xav the Unfallen)
+	[339415] = 20,		-- Deafening Crash (Xav the Unfallen)
+	[320729] = 20,		-- Massive Cleave (Xav the Unfallen)
+	[318406] = 20,		-- Tenderizing Smash (Gorechop)
+	[323542] = 20,		-- Oozing (Gorechop)
+	[323608] = 20,		-- Dark Devastation (Mordretha) 
+	[339573] = 20,		-- Echos of Carnage (Mordretha)
+	
+	-- Sanguine Depths
+	[334563] = 20, 		-- Volatile Trap (Dreadful Huntmaster)
+	[334558] = 20,		-- Volatile Trap (Dreadful Huntmaster)
+	[320991] = 20,		-- Echoing Thrust (Regal Mistdancer)
+	[328170] = 20,		-- Craggy Fracture (Chamber Sentinel)
+	[322418] = 20,		-- Craggy Fracture (Chamber Sentinel)
+	[334329] = 20,		-- Sweeping Slash (Head Custodian Javlin)
+	[334615] = 20,		-- Sweeping Slash (Head Custodian Javlin)
+	[322212] = 20,		-- Growing Mistrust (Vestige of Doubt)
+	[322169] = 20,		-- Growing Mistrust (Vestige of Doubt)
+	
+	[328494] = 20, 		-- Sintouched Anima (Environement)
+	[322903] = 20, 		-- Gloom Squall (General Kaal)
+	[323821] = 20,		-- Piercing Blur (General Kaal)
+	
+	
+	-- Hall of Atonement 
+	[325523] = 20,		-- Deadly Thrust (Depraved Darkblade)
+	[325793] = 20,		-- Rapid Fire (Depraved Houndmaster)
+	[325799] = 20,		-- Rapid Fire (Depraved Houndmaster)
+	[326441] = 20,		-- Sin Quake (Shard of Halkias)
+	
+	
+	[322945] = 20,		-- Heave Debris (Halkias)
+	[324044] = 20, 		-- Refracted Sinlight (Halkias)
+	[322711] = 20,		-- Refracted Sinlight	(Halkias)
+	[329262] = 20, 		-- Telekinetic Toss (Lord Chamberlain)
+	[323143] = 20, 		-- Telekinetic Toss (Lord Chamberlain)
+	[329113] = 20,		-- Telekinteic Onslaught (Lord Chamberlain)
+	[327885] = 20,		-- Erupting Torment (Lord Chamberlain)
 }
 
 local SpellsNoTank = {
     -- Mists of Tirna Scythe
 	[331721] = 20,      --- Spear Flurry (Mistveil Defender)
 	
+	-- De Other Side
+	
 	-- Spires of Ascension
 	[320966] = 20,      -- Overhead Slash (Kin-Tara)
 	[336444] = 20,      -- Crescendo (Forsworn Helion)
+	
+	-- The Necrotic Wakes
+	[324323] = 20,		-- Gruesome Cleave (Skeletal Marauder)
+	-- Plaguefall
+	
+	-- Theater of Pain
+	
+	-- Sanguine Depths
+	
+	-- Hall of Atonement 
+	[118459] = 20,		-- Beast Cleave (Loyal Stoneborn)
+	[346866] = 20, 		-- Stone Breathe (Loyal Stoneborn)
 }
 
 local Auras = {
@@ -50,7 +154,19 @@ local Auras = {
     [323137] = true,      --- Bewildering Pollen (Drohman Oulfarran)
 	[321893] = true,      --- Freezing Burst (Illusionary Vulpin)
 	
+	-- De Other Side
+	
 	-- Spires of Ascension
+	
+	-- The Necrotic Wakes
+	
+	-- Plaguefall
+	
+	-- Theater of Pain
+	
+	-- Sanguine Depths
+	
+	-- Hall of Atonement 
 }
 
 local AurasNoTank = {
