@@ -6,6 +6,7 @@ local FailByAbility = {}
 local activeUser = nil
 local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
 
+
 local Spells = {
 	-- Debug
 	--[] = 20,      --  ()
@@ -304,7 +305,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 	end
 
 	actions = {
-		["activeuser"] = function()
+		["activeUser"] = function()
 			print("activeUser is "..activeUser)
 			if activeUser == playerUser then
 				print("You are the activeUser")
@@ -361,18 +362,20 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print(" resync: Rebuilts table")
 			print(" activeUser: Prints active user")
 			print(" list: Locally print failed abilities and damage taken")
+			print(" threshold : Configure the thresold damage")
+			print(" messageTest : Testing output")
 		end,
 		["threshold"] = function(args)
 			thresholdNumber = tonumber(args, 10)
-			if thresholdNumber == nil then
-				print("Sets threshold of health lost to notify on (as percentage): `/eh threshold 100` will show notifications for one-shot damage (> 100%)")
-				print(" Current Threshold: " .. ElitismHelperDB.Threshold)
-			elseif (thresholdNumber > 100 or thresholdNumber < 0) then
-				print("Error: Threshold value over 100 or under 0: " .. args)
-			else
-				ElitismHelperDB.Threshold = thresholdNumber
-				print("Threshold Set to " .. thresholdNumber .. "%")
-			end
+				if thresholdNumber == nil then
+					print("Sets threshold of health lost to notify on (as percentage): `/eh threshold 100` will show notifications for one-shot damage (> 100%)")
+					print(" Current Threshold: " .. ElitismHelperDB.Threshold)
+				elseif (thresholdNumber > 100 or thresholdNumber < 0) then
+					print("Error: Threshold value over 100 or under 0: " .. args)
+				else
+					ElitismHelperDB.Threshold = thresholdNumber
+					print("Threshold Set to " .. thresholdNumber .. "%")
+				end		
 		end,
 		["messageTest"] = function()
 			print("Testing output for "..ElitismHelperDB.OutputMode)
@@ -472,17 +475,18 @@ function ElitismFrame:RebuildTable()
 end
 
 function ElitismFrame:ADDON_LOADED(event,addon)
-	if addon == "ElitismHelper" then
+	if addon == "ElitismHelper" then	
 		ElitismFrame:RebuildTable()
 	end
 	
-	if not ElitismHelperDB then
+	if not ElitismHelperDB or not ElitismHelperDB.Threshold  then
 		ElitismHelperDB = {
 			Loud = true,
 			Threshold = 40,
 			OutputMode = "default"
 		}
 	end
+	
 end
 
 function ElitismFrame:GROUP_ROSTER_UPDATE(event,...)
