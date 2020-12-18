@@ -49,7 +49,7 @@ local Spells = {
 	[325258] = 20,		-- Master of Death (Mueh'zala)
 	[334913] = 20,		-- Master of Death (Mueh'zala)
 	[327427] = 20,		-- Shattered Dominion (Mueh'zala)
-	[33500]0 = 20,		-- Stellar cloud (Mueh'zala)
+	[335000] = 20,		-- Stellar cloud (Mueh'zala)
 	
 	
 	-- Spires of Ascension
