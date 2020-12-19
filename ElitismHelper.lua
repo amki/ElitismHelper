@@ -77,36 +77,38 @@ local Spells = {
 	
 	
 	-- The Necrotic Wakes
-	[327396] = 20,		-- Grim Fate (Zolramus Necromancer)
-	[327393] = 20,		-- Grim Fate (Zolramus Necromancer)
-	[327397] = 20,		-- Grim Fate (Zolramus Necromancer / Nar'Zudah)
 	[324387] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
 	[324391] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
 	[324372] = 20,		-- Reaping Winds (Skeletal Monstrosity)
-	[320571] = 20,		-- Shadow Well (Zolramus Sorcerer)
+	[320574] = 20,		-- Shadow Well (Zolramus Sorcerer)
 	[333477] = 20,		-- Gut Slice (Goregrind)
 	
 	[320637] = 20, 		-- Fetid Gas (Blightbone)
-	[320596] = 20,		-- Heaving Retch (Blightbone)
+	[333489] = 20,		-- Necrotic Breath (Amarth)
 	[333492] = 20,		-- Necrotic Ichor (Amarth apply by Necrotic Breath)
 	[327664] = 20,		-- Embalming Ichor (Stitchflesh)
-	[321956] = 20,		-- Comet Storm (Nalthor the Rimebinder)
+	[327952] = 20,		-- Meat Hook (Stitchflesh)
+	[327100] = 20,      -- Noxious Fog (Stitchflesh)
+	[328212] = 20,      -- Razorshard Ice (Nalthor the Rimebender)
 	[320784] = 20,		-- Comet Storm (Nalthor the Rimebinder)
-	[320772] = 20,		-- Comet Storm (Nalthor the Rimebinder)
 	
 	-- Plaguefall
+	[320072] = 20, 		-- Toxic Pool (Decaying Flesh Giant)
+	[335882] = 20, 		-- Clinging Infestation (Fen Hatchling)
 	[330403] = 20, 		-- Wing Buffet (Plagueroc)
 	[330404] = 20,		-- Wing Buffet (Plagueroc)
 	[320040] = 20,		-- Plagued Carrion (Decaying Flesh Giant)
 	[320072] = 20,		-- Toxic pool (Decaying Flesh Giant)
-	[327233] = 20, 		-- Belch Plague (Plageubelcher)
-	[320517] = 20, 		-- Jagged Spines (Blighted Spinebreaker)
+	[318949] = 20,      -- Festering Belch (Blighted Spinebreaker)
+	[320576] = 20,      -- Obliterating Ooze (Virulax Blightweaver)
+	[319120] = 20, 		-- Putrid Bile (Gushing Slime)
+	[327233] = 20, 		-- Belch Plague (Plagebelcher)
+	[320519] = 20, 		-- Jagged Spines (Blighted Spinebreaker)
 	[328501] = 20,		-- Plagued Bomb (Environement)
-	
 	[324667] = 20,		-- Slime Wave (Globgrog)
-	[330026] = 20,		-- Slime Lunge (Doctor Ickus)
+	[333808] = 20,		-- Oozing Outbreak (Doctor Ickus)
 	[329217] = 20,		-- Slime Lunge (Doctor Ickus)
-	[322473] = 20,		-- Plague Crash (Environement Margrave Stradama)
+	[322475] = 20,		-- Plague Crash (Environement Margrave Stradama)
 	
 	-- Theater of Pain
 	[336996] = 20,		-- Whirling Blade (Nekthara the Mangler)
@@ -125,20 +127,20 @@ local Spells = {
 	[339573] = 20,		-- Echos of Carnage (Mordretha)
 	
 	-- Sanguine Depths
-	[334558] = 20,		-- Volatile Trap (Dreadful Huntmaster)
+	[334563] = 20,		-- Volatile Trap (Dreadful Huntmaster)
 	[320991] = 20,		-- Echoing Thrust (Regal Mistdancer)
+	[320999] = 20,		-- Echoing Thrust (Regal Mistdancer Mirror)
 	[321019] = 20,		-- Sanctified Mists (Regal Mistcaller)
-	[334918] = 20,		-- Umbral Crash (Insatiable brute)
+	[334918] = 20,		-- Umbral Crash (Insatiable Brute)
 	[328170] = 20,		-- Craggy Fracture (Chamber Sentinel)
-	[322429] = 20,		-- Severing Slice (Chamber Sentinel
+	[322429] = 20,		-- Severing Slice (Chamber Sentinel)
+	[323573] = 20,      -- Residue (Fleeting Manifestation)
+	[324391] = 20,      -- Anguished Cries (Z'rali)
 	[334329] = 20,		-- Sweeping Slash (Head Custodian Javlin)
 	[334615] = 20,		-- Sweeping Slash (Head Custodian Javlin)
 	[322212] = 20,		-- Growing Mistrust (Vestige of Doubt)
-	[322169] = 20,		-- Growing Mistrust (Vestige of Doubt)
-	
 	[328494] = 20, 		-- Sintouched Anima (Environement)
-	[322903] = 20, 		-- Gloom Squall (General Kaal)
-	[323821] = 20,		-- Piercing Blur (General Kaal)
+	[323810] = 20,		-- Piercing Blur (General Kaal)
 	
 	
 	-- Hall of Atonement 
