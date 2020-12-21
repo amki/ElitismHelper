@@ -132,10 +132,9 @@ local Spells = {
 	-- id ?[321019] = 20,		-- Sanctified Mists (Regal Mistcaller)
 	[334921] = 20,		-- Umbral Crash (Insatiable Brute)
 	[322418] = 20,		-- Craggy Fracture (Chamber Sentinel)
-	[322429] = 20,		-- Severing Slice (Chamber Sentinel)
+	[334378] = 20,      -- Explosive Vellum (Research Scribe)
 	[323573] = 20,      -- Residue (Fleeting Manifestation)
 	[325885] = 20,      -- Anguished Cries (Z'rali)
-	[334615] = 20,		-- Sweeping Slash (Head Custodian Javlin)
 	[334615] = 20,		-- Sweeping Slash (Head Custodian Javlin)
 	[322212] = 20,		-- Growing Mistrust (Vestige of Doubt)
 	[328494] = 20, 		-- Sintouched Anima (Environement)
@@ -171,6 +170,7 @@ local SpellsNoTank = {
 	-- Theater of Pain
 	
 	-- Sanguine Depths
+	[322429] = 20,		-- Severing Slice (Chamber Sentinel)
 	
 	-- Hall of Atonement 
 	-- id ? [118459] = 20,		-- Beast Cleave (Loyal Stoneborn)
