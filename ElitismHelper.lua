@@ -486,7 +486,7 @@ function ElitismFrame:ADDON_LOADED(event,addon)
 	if not ElitismHelperDB or not ElitismHelperDB.Threshold  then
 		ElitismHelperDB = {
 			Loud = true,
-			Threshold = 40,
+			Threshold = 30,
 			OutputMode = "default"
 		}
 	end
