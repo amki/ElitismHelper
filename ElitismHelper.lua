@@ -43,13 +43,19 @@ local Spells = {
 	[333250] = 20,		-- Reaver (Risen Warlord)
 	[342869] = 20,		-- Enraged Mask (Enraged Spirit)
 	[333790] = 20,		-- Enraged Mask (Enraged Spirit)
+	[332672] = 20,      -- Bladestorm (Atal'ai Deathwalker)
+	[323118] = 20,      -- Blood Barrage (Hakkar the Soulflayer)
 	[331933] = 20,		-- Haywire (Defunct Dental Drill)
+	[332157] = 20,      -- Spinning Up (Headless Client)
 	[323569] = 20,   	-- Spilled Essence (Environement)
 	[320830] = 20,		-- Mechanical Bomb Squirrel
+	[323136] = 20,      -- Anima Starstorm (Runestag Elderhorn)
+	[323992] = 20,      -- Echo Finger Laser X-treme (Millificent Manastorm)
 			
 	[320723] = 20,		-- Displaced Blastwave (Dealer Xy'exa)
 	[334913] = 20,		-- Master of Death (Mueh'zala)
 	[327427] = 20,		-- Shattered Dominion (Mueh'zala)
+	[325691] = 20,      -- Cosmic Collapse (Mueh'zala)
 	[335000] = 20,		-- Stellar cloud (Mueh'zala)
 	
 	
@@ -184,6 +190,7 @@ local Auras = {
 	[321893] = true,      --- Freezing Burst (Illusionary Vulpin)
 	
 	-- De Other Side
+	[331381] = 20,		-- Slipped (Lubricator)
 	
 	-- Spires of Ascension
 	
