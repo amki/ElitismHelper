@@ -4,7 +4,15 @@ local TimerData = {}
 local CombinedFails = {}
 local FailByAbility = {}
 local activeUser = nil
+local AddonVersion = 0.2
 local playerUser = GetUnitName("player",true).."-"..GetRealmName():gsub(" ", "")
+
+local OutputModes = {
+    ["default"] = 0,
+	["party"] = 1,
+	["yell"] = 2,
+	["self"] = 3,
+}
 
 
 local Spells = {
@@ -339,10 +347,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				print("Output set to party in parties, raid in raids")
 			elseif argsFunc == "party" then
 				ElitismHelperDB.OutputMode = "party"
-				print("Output set to party always")
-			elseif argsFunc == "raid" then
-				ElitismHelperDB.OutputMode = "raid"
-				print("Output set to raid always")
+				print("Output set to party/raid always")
 			elseif argsFunc == "yell" then
 				ElitismHelperDB.OutputMode = "yell"
 				print("Output set to yell always")
@@ -531,21 +536,43 @@ function ElitismFrame:CHALLENGE_MODE_START(event,...)
 	print("Failure damage now being recorded.")
 end
 
+function ElitismFrame:SplitString(inputstr, sep)
+        if sep == nil then
+                sep = "%s"
+        end
+        local t={}
+        for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
+                table.insert(t, str)
+        end
+        return t
+end
+
+
 function ElitismFrame:CHAT_MSG_ADDON(event,...)
 	local prefix, message, channel, sender = select(1,...)
 	if prefix ~= MSG_PREFIX then
 		return
 	end
 	if message == "VREQ" then
-		maybeSendAddonMessage(MSG_PREFIX,"VANS;0.1")
+		maybeSendAddonMessage(MSG_PREFIX,"VANS;0.2;"..ElitismHelperDB.OutputMode)
 	elseif message:match("^VANS") then
+		print(sender.." sent "..message)
+		local msg = ElitismFrame:SplitString(message,";")
+		if(msg[1] == nil or msg[2] == nil) then
+			print("Received invalid EH message, ignoring: "..message)
+			return
+		end
+
 		Users[sender] = message
-		for k,v in pairs(Users) do
-			if activeUser == nil then
-				activeUser = k
-			end
-			if k < activeUser then
-				activeUser = k
+		-- Ignore users that only report to self. ==nil is legacy for old versions
+		if(msg[3] == nil or msg[3] ~= "self") then
+			for k,v in pairs(Users) do
+				if activeUser == nil then
+					activeUser = k
+				end
+				if k < activeUser then
+					activeUser = k
+				end
 			end
 		end
 	else
