@@ -554,7 +554,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 		return
 	end
 	if message == "VREQ" then
-		maybeSendAddonMessage(MSG_PREFIX,"VANS;0.2;"..ElitismHelperDB.OutputMode)
+		maybeSendAddonMessage(MSG_PREFIX,"VANS;"..AddonVersion..";"..ElitismHelperDB.OutputMode)
 	elseif message:match("^VANS") then
 		print(sender.." sent "..message)
 		local msg = ElitismFrame:SplitString(message,";")
