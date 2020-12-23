@@ -556,17 +556,16 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 	if message == "VREQ" then
 		maybeSendAddonMessage(MSG_PREFIX,"VANS;"..AddonVersion..";"..ElitismHelperDB.OutputMode)
 	elseif message:match("^VANS") then
-		print(sender.." sent "..message)
 		local msg = ElitismFrame:SplitString(message,";")
 		if(msg[1] == nil or msg[2] == nil) then
 			print("Received invalid EH message, ignoring: "..message)
 			return
 		end
 
-		Users[sender] = message
-		-- Ignore users that only report to self. ==nil is legacy for old versions
-		if(msg[3] == nil or msg[3] ~= "self") then
-			for k,v in pairs(Users) do
+		Users[sender] = msg
+		for k,v in pairs(Users) do
+			-- Ignore users that only report to self. ==nil is legacy for old versions, accept them, delete this later and require AddonVersion>=0.2
+			if(v[3] == nil or v[3] ~= "self") then
 				if activeUser == nil then
 					activeUser = k
 				end
