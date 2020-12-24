@@ -1,6 +1,8 @@
 local Users = {}
 local Timers = {}
 local TimerData = {}
+local TimersMelee = {}
+local TimerMeleeData = {}
 local CombinedFails = {}
 local FailByAbility = {}
 local activeUser = nil
@@ -216,6 +218,11 @@ local Auras = {
 local AurasNoTank = {
 }
 
+local MeleeHitters = {
+	[161917] = 20,		-- DEBUG
+	[174773] = 20,		-- Spiteful Shade
+}
+
 function round(number, decimals)
     return (("%%.%df"):format(decimals)):format(number)
 end
@@ -292,6 +299,32 @@ function generateMaybeOutput(user)
 			end
 			TimerData[user] = nil
 			Timers[user] = nil
+		end
+	return func
+end
+
+function generateMaybeMeleeOutput(user)
+	local func = function()
+			local msg = "<EH> "..user.." got hit by "
+			local sending = false
+			for srcID,obj in pairs(TimerMeleeData[user]) do
+				local name = obj.name
+				local amount = obj.amount
+				local userMaxHealth = UnitHealthMax(user)
+				print(user.." has "..userMaxHealth)
+				local msgAmount = round(amount / 1000,1)
+				local pct = Round(amount / userMaxHealth * 100)
+				if pct > MeleeHitters[srcID] and pct > ElitismHelperDB.Threshold and ElitismHelperDB.Loud then
+					msg = msg..name.." for "..msgAmount.."k ("..pct.."%)"
+					sending = true
+				end
+			end
+			msg = msg.."."
+			if sending then
+				maybeSendChatMessage(msg)
+			end
+			TimerMeleeData[user] = nil
+			TimersMelee[user] = nil
 		end
 	return func
 end
@@ -621,6 +654,31 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 end
 
 function ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, aAmount)
+	if(not srcGUID:match("^Creature")) then
+		return
+	end
+	local srcSplit = ElitismFrame:SplitString(srcGUID,"-")
+	local srcID = tonumber(srcSplit[#srcSplit-1])
+	--print(dstName.." got hit by "..srcName.." ("..srcGUID..") for "..aAmount.." srcID:"..srcID)
+	if(MeleeHitters[srcID] and UnitIsPlayer(dstName)) then
+		--print("I should track this")
+	
+		-- Initialize TimerMeleeData for Timer shot
+		if TimerMeleeData[dstName] == nil then
+			TimerMeleeData[dstName] = {}
+		end
+		if TimerMeleeData[dstName][srcID] == nil then
+			TimerMeleeData[dstName][srcID] = {name=srcName, amount=aAmount}
+		else
+			TimerMeleeData[dstName][srcID].amount = TimerMeleeData[dstName][srcID].amount + aAmount
+		end
+		
+		-- If there is no timer yet, start one with this event
+		if TimersMelee[dstName] == nil then
+			TimersMelee[dstName] = true
+			C_Timer.After(8,generateMaybeMeleeOutput(dstName))
+		end
+	end
 end
 
 function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
