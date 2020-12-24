@@ -666,6 +666,13 @@ function ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFla
 		if TimerMeleeData[dstName] == nil then
 			TimerMeleeData[dstName] = {}
 		end
+		
+		if CombinedFails[dstName] == nil then
+			CombinedFails[dstName] = 0
+		end
+		
+		CombinedFails[dstName] = CombinedFails[dstName] + aAmount
+		
 		if TimerMeleeData[dstName][srcID] == nil then
 			TimerMeleeData[dstName][srcID] = {name=srcName, amount=aAmount}
 		else
