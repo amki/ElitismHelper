@@ -311,7 +311,6 @@ function generateMaybeMeleeOutput(user)
 				local name = obj.name
 				local amount = obj.amount
 				local userMaxHealth = UnitHealthMax(user)
-				print(user.." has "..userMaxHealth)
 				local msgAmount = round(amount / 1000,1)
 				local pct = Round(amount / userMaxHealth * 100)
 				if pct > MeleeHitters[srcID] and pct > ElitismHelperDB.Threshold and ElitismHelperDB.Loud then
