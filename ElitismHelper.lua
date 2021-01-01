@@ -85,9 +85,8 @@ local Spells = {
 	[321034] = 20,      -- Charged Spear (Kin-Tara)
 	[324370] = 20,		-- Attenuated Barrage (Kin-Tara)
 	[324141] = 20,      -- Dark Bolt (Ventunax)
-	[324154] = 20,		-- Dark Stride (Venturax)
 	[323943] = 20,      -- Run Through (Devos)
-	[334625] = 20,		-- Seed of the Abyss (Devos)
+	-- [] = 20,		-- Seed of the Abyss (Devos) ???
 	
 	
 	-- The Necrotic Wakes
