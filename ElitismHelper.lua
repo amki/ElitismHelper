@@ -63,6 +63,7 @@ local Spells = {
 	[323992] = 20,      -- Echo Finger Laser X-treme (Millificent Manastorm)
 			
 	[320723] = 20,		-- Displaced Blastwave (Dealer Xy'exa)
+	[320232] = 20,      -- Explosive Contrivance (Dealer Xy'exa)
 	[334913] = 20,		-- Master of Death (Mueh'zala)
 	[327427] = 20,		-- Shattered Dominion (Mueh'zala)
 	[325691] = 20,      -- Cosmic Collapse (Mueh'zala)
