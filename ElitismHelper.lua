@@ -21,7 +21,7 @@ local Spells = {
 	-- Debug
 	--[] = 20,      --  ()
 	--[252144] = 1,
-	--[252150] = 1,
+	--[190984] = 1,       -- DEBUG Wrath
 	
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
@@ -360,7 +360,12 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 		end,
 		["table"] = function()
 			for k,v in pairs(Users) do
-				print(k.." ;;; "..v)
+				local out = ""
+				out = out..k
+				for i, m in ipairs(v) do
+					out = out..";;;"..m
+				end
+				print(out)
 			end
 		end,
 		["start"] = function()
@@ -383,13 +388,17 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			elseif argsFunc == "yell" then
 				ElitismHelperDB.OutputMode = "yell"
 				print("Output set to yell always")
+			elseif argsFunc == "emote" then
+				ElitismHelperDB.OutputMode = "emote"
+				print("Output set to emote always")
 			elseif argsFunc == "self" then
 				ElitismHelperDB.OutputMode = "self"
 				print("Output set to self only always")
 			else
-				print("Valid targets are default | party | raid | yell | self")
+				print("Valid targets are default | party | raid | yell | emote | self")
 				print("Current target is "..ElitismHelperDB.OutputMode)
 			end
+			ElitismFrame:RebuildTable()
 		end,
 		["help"] = function()
 			print("Elitism Helper options:")
@@ -484,6 +493,8 @@ function maybeSendChatMessage(message)
 		SendChatMessage(message,"RAID")
 	elseif ElitismHelperDB.OutputMode == "yell" then
 		SendChatMessage(message,"YELL")
+	elseif ElitismHelperDB.OutputMode == "emote" then
+		SendChatMessage(message,"EMOTE")
 	elseif ElitismHelperDB.OutputMode == "default" then
 		if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
 			SendChatMessage(message,"PARTY")
@@ -605,6 +616,10 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 					activeUser = k
 				end
 			end
+		end
+		-- We are in a group but nobody is eligible...
+		if(activeUser == nil) then
+			activeUser = playerUser
 		end
 	else
 		-- print("Unknown message: "..message)
