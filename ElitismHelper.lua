@@ -21,7 +21,9 @@ local Spells = {
 	-- Debug
 	--[] = 20,      --  ()
 	--[252144] = 1,
-	--[190984] = 1,       -- DEBUG Wrath
+	--[190984] = 1,       -- DEBUG Druid Wrath
+	--[285452] = 1,       -- DEBUG Shaman Lava Burst
+	--[188389] = 1,       -- DEBUG Shaman Flame Shock
 	
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
@@ -606,6 +608,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 		end
 
 		Users[sender] = msg
+		activeUser = nil
 		for k,v in pairs(Users) do
 			-- Ignore users that only report to self. ==nil is legacy for old versions, accept them, delete this later and require AddonVersion>=0.2
 			if(v[3] == nil or v[3] ~= "self") then
