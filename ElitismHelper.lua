@@ -37,6 +37,7 @@ local Spells = {
 	[240448] = 20,      -- Quaking (Environment)
 	[343520] = 20,      -- Storming (Environment)
 	[342494] = 20, 		-- Belligerent Boast(Season 1 Pridefull)
+	[350163] = 20, 		-- Melee (Spiteful Shade)
 	
 	-- Mists of Tirna Scythe
 	[321968] = 20, 		-- Bewildering Pollen (tirnenn Villager)
