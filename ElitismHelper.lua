@@ -437,7 +437,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print(" eodoff: Disable Elitism Helper end-of-dungeon stats")
 			print(" output: Define output channel between default | party | raid | yell | self")
 			print(" ------ This is more or less for debugging ------")
-			print(" start: Start logging failure damage")
+			print(" start: Start logging avoidable damage")
 			print(" eod: Dungeon is complete")
 			print(" table: Prints users")
 			print(" resync: Rebuilts table")
@@ -594,10 +594,12 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 		for _ in pairs(CombinedFails) do count = count + 1 end
 		if count == 0 then
 			print("No Damage?");
-			--maybeSendChatMessage("Thank you for travelling with ElitismHelper. No failure damage was taken this run.")
+			--maybeSendChatMessage("Thank you for travelling with ElitismHelper.)
+			--maybeSendChatMessage("<EH> No avoidable damage was taken this run.")
 			return
 		else
-			maybeSendChatMessage("Thank you for travelling with ElitismHelper. Amount of failure damage:")
+			maybeSendChatMessage("Thank you for travelling with ElitismHelper.)
+			maybeSendChatMessage("<EH> Amount of avoidable damage:")
 		end
 		local u = { }
 		for k, v in pairs(CombinedFails) do table.insert(u, { key = k, value = v }) end
@@ -611,7 +613,7 @@ end
 function ElitismFrame:CHALLENGE_MODE_START(event,...)
 	CombinedFails = {}
 	FailByAbility = {}
-	print("Failure damage now being recorded.")
+	print("Avoidable damage now being recorded.")
 end
 
 function ElitismFrame:SplitString(inputstr, sep)
