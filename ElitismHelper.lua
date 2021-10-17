@@ -134,17 +134,21 @@ local Spells = {
 	[322475] = 20,		-- Plague Crash (Environement Margrave Stradama)
 	
 	-- Theater of Pain
-	[337037] = 20,		-- Whirling Blade (Nekthara the Mangler)
+	[337037] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
+	[336996] = 20, -- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
 	[332708] = 20,		-- Ground Smash (Heavin the breaker)
 	[333297] = 20, 		-- Death Winds (Nefarious Darkspeaker)
 	[331243] = 20,		-- Bone Spikes (Soulforged Bonereaver)
 	[331224] = 20,		-- Bonestorm (Soulforged Bonereaver)
-	[330608] = 20,		-- Vile Eruption (Rancind Gasbag)
+	[330608] = 20,		-- Vile Eruption (Rancind Gasbag) ?? TODO: Which one is correct?
+	[330614] = 20,      -- Vile Eruption (Rancid Gasbag) ?? TODO: Which one is correct?
+	[321039] = 20,      -- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)	
 	
 	[317231] = 20, 		-- Crushing Slam (Xav the Unfallen)
 	[339415] = 20,		-- Deafening Crash (Xav the Unfallen)
 	[320729] = 20,		-- Massive Cleave (Xav the Unfallen)
 	[318406] = 20,		-- Tenderizing Smash (Gorechop)
+	[323406] = 20, -- Jagged Gash (Gorechop)
 	-- id ?[323542] = 20,		-- Oozing (Gorechop)
 	[323681] = 20,		-- Dark Devastation (Mordretha) 
 	[339573] = 20,		-- Echos of Carnage (Mordretha)
