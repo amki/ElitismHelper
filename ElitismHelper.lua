@@ -602,7 +602,7 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 			--maybeSendChatMessage("<EH> No avoidable damage was taken this run.")
 			return
 		else
-			maybeSendChatMessage("Thank you for travelling with ElitismHelper.)
+			maybeSendChatMessage("Thank you for travelling with ElitismHelper.")
 			maybeSendChatMessage("<EH> Amount of avoidable damage:")
 		end
 		local u = { }
