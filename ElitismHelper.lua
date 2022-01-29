@@ -36,8 +36,13 @@ local Spells = {
 	[226512] = 20,		-- Sanguine Ichor (Environment)
 	[240448] = 20,      -- Quaking (Environment)
 	[343520] = 20,      -- Storming (Environment)
-	[342494] = 20, 		-- Belligerent Boast(Season 1 Pridefull)
 	[350163] = 20, 		-- Melee (Spiteful Shade)
+
+	[342494] = 20, 		-- Belligerent Boast (Season 1 Prideful)
+	[356414] = 20, 		-- Frost Lance (Season 2 Oros)
+	[358894] = 20, 		-- Cold Snap (Season 2 Oros)
+	[355806] = 20, 		-- Massive Smash (Season 2 Soggodon)
+	[355737] = 20, 		-- Scorching Blast (Season 2 Arkolath)
 	
 	-- Mists of Tirna Scythe
 	[321968] = 20, 		-- Bewildering Pollen (tirnenn Villager)
@@ -47,14 +52,16 @@ local Spells = {
 	[326022] = 20,      -- Acid Globule (Spinemaw Gorger)
 	[340300] = 20,		-- Tongue Lashing (Mistveil Gorgegullet)
 	[340304] = 20,		-- Poisonous Secretions (Mistveil Gorgegullet)
+	[340311] = 20,      -- Crushing Leap (Mistveil Gorgegullet)
 	[331743] = 20,		-- Bucking Rampage (Mistveil Guardian)
+	[331748] = 20,      -- Back Kick (Mistveil Guardian)
 	--id ? [340160] = 20,		-- Radiant Breath (Mistveil Matriarch)
 	
 	--id ? [323177] = 20,		-- Tears of the Forest(Ingra Maloch)
+	[323250] = 20,      -- Anima Puddle (Droman Oulfarran)
 	[321834] = 20,      -- Dodge Ball (Mistcaller)
 	[336759] = 20,      -- Dodge Ball (Mistcaller)
 	[322655] = 20,		-- Acid Expulsion (Tred'Ova)
-	--id ? [322450] = 20,		-- Consumption (Tred'Ova)
 	
 	-- De Other Side
 	[334051] = 20,		-- Erupting Darkness (Death Speaker)
@@ -80,11 +87,7 @@ local Spells = {
 	
 	
 	-- Spires of Ascension
-	[331251] = 20,      -- Deep Connection (Azules / Kin-Tara)
-	[317626] = 20,      -- Maw-Touched Venom (Azules)
-	[323786] = 20,      -- Swift Slice (Kyrian Dark-Praetor)
-	[324662] = 20,      -- Ionized Plasma (Multiple) Can this be avoided?
-	[317943] = 20,      -- Sweeping Blow (Frostsworn Vanguard)
+	--[323786] = 20,      -- Swift Slice (Kyrian Dark-Praetor)
 	[324608] = 20,      -- Charged Stomp (Oryphrion)
 	[323740] = 20,		-- Impact (Forsworn Squad-Leader)
 	[336447] = 20,		-- Crashing Strike (Forsworn Squad-Leader)
@@ -92,16 +95,19 @@ local Spells = {
 	[328466] = 20,		-- Charged Spear (Lakesis / Klotos)
 	[336420] = 20,		-- Diminuendo (Klotos / Lakesis)
 	
-	[321034] = 20,      -- Charged Spear (Kin-Tara)
+	[331251] = 20,      -- Deep Connection (Azules / Kin-Tara)
+	[317626] = 20,      -- Maw-Touched Venom (Azules)
+	-- [321034] = 20,      -- Charged Spear (Kin-Tara) Cannot be avoided
+	[324662] = 20,      -- Ionized Plasma (Multiple) Can this be avoided?
 	[324370] = 20,		-- Attenuated Barrage (Kin-Tara)
 	[324141] = 20,      -- Dark Bolt (Ventunax)
 	[323943] = 20,      -- Run Through (Devos)
 	-- [] = 20,		-- Seed of the Abyss (Devos) ???
 	
 	
-	-- The Necrotic Wakes
+	-- The Necrotic Wake
 	[324391] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
-	-- id ?[324372] = 20,		-- Reaping Winds (Skeletal Monstrosity)
+	[324372] = 20,		-- Reaping Winds (Skeletal Monstrosity)
 	-- id ?[320574] = 20,		-- Shadow Well (Zolramus Sorcerer)
 	[333477] = 20,		-- Gut Slice (Goregrind)
 	
@@ -135,24 +141,27 @@ local Spells = {
 	
 	-- Theater of Pain
 	[337037] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
-	[336996] = 20, -- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
-	[332708] = 20,		-- Ground Smash (Heavin the breaker)
+	[336996] = 20,      -- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
+	[317605] = 20,      -- Whirlwind (Nekthara the Mangler and Rek the Hardened)
+	[332708] = 20,		-- Ground Smash (Heavin the Breaker)
 	[333297] = 20, 		-- Death Winds (Nefarious Darkspeaker)
 	[331243] = 20,		-- Bone Spikes (Soulforged Bonereaver)
 	[331224] = 20,		-- Bonestorm (Soulforged Bonereaver)
-	[330608] = 20,		-- Vile Eruption (Rancind Gasbag) ?? TODO: Which one is correct?
+	[330608] = 20,		-- Vile Eruption (Rancid Gasbag) ?? TODO: Which one is correct?
 	[330614] = 20,      -- Vile Eruption (Rancid Gasbag) ?? TODO: Which one is correct?
-	[321039] = 20,      -- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)	
+	[321039] = 20,      -- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)
+	[321041] = 20,      -- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)
 	
 	[317231] = 20, 		-- Crushing Slam (Xav the Unfallen)
 	[339415] = 20,		-- Deafening Crash (Xav the Unfallen)
 	[320729] = 20,		-- Massive Cleave (Xav the Unfallen)
 	[318406] = 20,		-- Tenderizing Smash (Gorechop)
-	[323406] = 20, -- Jagged Gash (Gorechop)
+	[323406] = 20,      -- Jagged Gash (Gorechop)
 	-- id ?[323542] = 20,		-- Oozing (Gorechop)
-	[323681] = 20,		-- Dark Devastation (Mordretha) 
-	[339573] = 20,		-- Echos of Carnage (Mordretha)
-	[339759] = 20,		-- Echos of Carnage (Mordretha)
+	[323681] = 20,		-- Dark Devastation (Mordretha)
+	[339550] = 20,		-- Echo of Battle (Mordretha)
+	[323831] = 20,		-- Death Grasp (Mordretha)
+	[339751] = 20,		-- Ghostly Charge (Mordretha)
 	
 	-- Sanguine Depths
 	[334563] = 20,		-- Volatile Trap (Dreadful Huntmaster)
@@ -173,10 +182,12 @@ local Spells = {
 	[325523] = 20,		-- Deadly Thrust (Depraved Darkblade)
 	[325799] = 20,		-- Rapid Fire (Depraved Houndmaster)
 	[326440] = 20,		-- Sin Quake (Shard of Halkias)
+	[326997] = 20,		-- Powerful Swipe (Stoneborn Slasher)
 	
 	[322945] = 20,		-- Heave Debris (Halkias)
 	[324044] = 20,		-- Refracted Sinlight (Halkias)
 	[319702] = 20,		-- Blood Torrent (Echelon)
+	[329340] = 20, 		-- Anima Fountain (High Adjudicator Aleez)
 	[323126] = 20, 		-- Telekinetic Collision (Lord Chamberlain)
     [329113] = 20,		-- Telekinteic Onslaught (Lord Chamberlain)
 	[327885] = 20,		-- Erupting Torment (Lord Chamberlain)
@@ -184,27 +195,26 @@ local Spells = {
 
 local SpellsNoTank = {
     -- Mists of Tirna Scythe
-	[331721] = 20,      --- Spear Flurry (Mistveil Defender)
+	[331721] = 20,      -- Spear Flurry (Mistveil Defender)
 	
 	-- De Other Side
 	
 	-- Spires of Ascension
-	[320966] = 20,      -- Overhead Slash (Kin-Tara)
-	[336444] = 20,      -- Crescendo (Forsworn Helion)
+	[317943] = 20,      -- Sweeping Blow (Frostsworn Vanguard)
 	
 	-- The Necrotic Wakes
 	[324323] = 20,		-- Gruesome Cleave (Skeletal Marauder)
+
 	-- Plaguefall
 	
 	-- Theater of Pain
 	
 	-- Sanguine Depths
-	[322429] = 20,		-- Severing Slice (Chamber Sentinel)
 	
 	-- Hall of Atonement 
-	-- id ? [118459] = 20,		-- Beast Cleave (Loyal Stoneborn)
-	[346866] = 20, 		-- Stone Breathe (Loyal Stoneborn)
-	[326997] = 20,		-- Powerful Swipe (Stoneborn Slasher)
+	--[323001] = 20,      -- Glass Shards (Halkias)
+	[322936] = 20,      -- Crumbling Slam (Halkias)
+	[346866] = 20, 		-- Stone Breath (Loyal Stoneborn)
 }
 
 local Auras = {
@@ -213,9 +223,10 @@ local Auras = {
 	[321893] = true,      --- Freezing Burst (Illusionary Vulpin)
 	
 	-- De Other Side
-	[331381] = 20,		-- Slipped (Lubricator)
+	[331381] = 20,	      -- Slipped (Lubricator)
 	
 	-- Spires of Ascension
+	[324205] = 20,        -- Blinding Flash (Ventunax)
 	
 	-- The Necrotic Wakes
 	
@@ -225,7 +236,10 @@ local Auras = {
 	
 	-- Sanguine Depths
 	
-	-- Hall of Atonement 
+	-- Hall of Atonement
+
+	-- Affixes
+	[358973] = 20,        -- Wave of Terror (Season 2 Affix - Varruth)
 }
 
 local AurasNoTank = {
