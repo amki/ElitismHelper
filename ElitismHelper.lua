@@ -55,7 +55,7 @@ local Spells = {
 	[340311] = 20,      -- Crushing Leap (Mistveil Gorgegullet)
 	[331743] = 20,		-- Bucking Rampage (Mistveil Guardian)
 	[331748] = 20,      -- Back Kick (Mistveil Guardian)
-	--id ? [340160] = 20,		-- Radiant Breath (Mistveil Matriarch)
+	[340160] = 20,		-- Radiant Breath (Mistveil Matriarch)
 	
 	--id ? [323177] = 20,		-- Tears of the Forest(Ingra Maloch)
 	[323250] = 20,      -- Anima Puddle (Droman Oulfarran)
@@ -88,7 +88,6 @@ local Spells = {
 	
 	-- Spires of Ascension
 	--[323786] = 20,      -- Swift Slice (Kyrian Dark-Praetor)
-	[324608] = 20,      -- Charged Stomp (Oryphrion)
 	[323740] = 20,		-- Impact (Forsworn Squad-Leader)
 	[336447] = 20,		-- Crashing Strike (Forsworn Squad-Leader)
 	[336444] = 20,		-- Crescendo (Forsworn Helion)
@@ -211,6 +210,7 @@ local SpellsNoTank = {
 	
 	-- Spires of Ascension
 	[317943] = 20,      -- Sweeping Blow (Frostsworn Vanguard)
+    [324608] = 20,      -- Charged Stomp (Oryphrion)
 	
 	-- The Necrotic Wake
 	[324323] = 20,		-- Gruesome Cleave (Skeletal Marauder)
