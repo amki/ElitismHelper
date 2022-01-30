@@ -44,7 +44,7 @@ local Spells = {
 	[355806] = 20, 		-- Massive Smash (Season 2 Soggodon)
 	[355737] = 20, 		-- Scorching Blast (Season 2 Arkolath)
 	
-	-- Mists of Tirna Scythe
+	-- Mists of Tirna Scithe
 	[321968] = 20, 		-- Bewildering Pollen (tirnenn Villager)
 	[323137] = 20, 		-- Bewildering Pollen (tirnenn Villager)
 	[323250] = 20,      -- Anima Puddle (Droman Oulfarran)
@@ -108,11 +108,19 @@ local Spells = {
 	-- The Necrotic Wake
 	[324391] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
 	[324381] = 20,		-- Chill Scythe / Reaping Winds (Skeletal Monstrosity)
+	[323957] = 20,      -- Animate Dead (Zolramus Necromancer - summons Warrior)
+	[324026] = 20,      -- Animate Dead (Zolramus Necromancer - summons Crossbowman)
+	[324027] = 20,      -- Animate Dead (Zolramus Necromancer - summons Mage)
 	[320574] = 20,		-- Shadow Well (Zolramus Sorcerer)
 	[333477] = 20,		-- Gut Slice (Goregrind)
-    [345625] = 20,      -- Death Burst (Nar'zudah)
+	[345625] = 20,      -- Death Burst (Nar'zudah)
+	[327240] = 20,      -- Spine Crush (Loyal Creation)
 	
 	-- id ?[320637] = 20, 		-- Fetid Gas (Blightbone)
+	[319897] = 20,      -- Land of the Dead (Amarth - summons Crossbowman)
+	[319902] = 20,      -- Land of the Dead (Amarth - summons Warrior)
+	[333627] = 20,      -- Land of the Dead (Amarth - summons Mage)
+	[321253] = 20,		-- Final Harvest (Amarth)
 	[333489] = 20,		-- Necrotic Breath (Amarth)
 	[333492] = 20,		-- Necrotic Ichor (Amarth apply by Necrotic Breath)
 	[320365] = 20,		-- Embalming Ichor (Surgeon Stitchflesh)
@@ -196,7 +204,7 @@ local Spells = {
 }
 
 local SpellsNoTank = {
-    -- Mists of Tirna Scythe
+    -- Mists of Tirna Scithe
 	[331721] = 20,      -- Spear Flurry (Mistveil Defender)
 	
 	-- De Other Side
@@ -204,7 +212,7 @@ local SpellsNoTank = {
 	-- Spires of Ascension
 	[317943] = 20,      -- Sweeping Blow (Frostsworn Vanguard)
 	
-	-- The Necrotic Wakes
+	-- The Necrotic Wake
 	[324323] = 20,		-- Gruesome Cleave (Skeletal Marauder)
 
 	-- Plaguefall
@@ -220,7 +228,7 @@ local SpellsNoTank = {
 }
 
 local Auras = {
-    -- Mists of Tirna Scythe
+    -- Mists of Tirna Scithe
     [323137] = true,      --- Bewildering Pollen (Drohman Oulfarran)
 	[321893] = true,      --- Freezing Burst (Illusionary Vulpin)
 	
@@ -230,7 +238,8 @@ local Auras = {
 	-- Spires of Ascension
 	[324205] = 20,        -- Blinding Flash (Ventunax)
 	
-	-- The Necrotic Wakes
+	-- The Necrotic Wake
+    [324293] = 20         -- Rasping Scream (Skeletal Marauder)
 	
 	-- Plaguefall
 	
