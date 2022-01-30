@@ -107,9 +107,10 @@ local Spells = {
 	
 	-- The Necrotic Wake
 	[324391] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
-	[324372] = 20,		-- Reaping Winds (Skeletal Monstrosity)
-	-- id ?[320574] = 20,		-- Shadow Well (Zolramus Sorcerer)
+	[324381] = 20,		-- Chill Scythe / Reaping Winds (Skeletal Monstrosity)
+	[320574] = 20,		-- Shadow Well (Zolramus Sorcerer)
 	[333477] = 20,		-- Gut Slice (Goregrind)
+    [345625] = 20,      -- Death Burst (Nar'zudah)
 	
 	-- id ?[320637] = 20, 		-- Fetid Gas (Blightbone)
 	[333489] = 20,		-- Necrotic Breath (Amarth)
@@ -118,8 +119,9 @@ local Spells = {
 	[320366] = 20,		-- Embalming Ichor (Surgeon Stitchflesh)
 	[327952] = 20,		-- Meat Hook (Stitchflesh)
 	[327100] = 20,      -- Noxious Fog (Stitchflesh)
-	[328212] = 20,      -- Razorshard Ice (Nalthor the Rimebender)
+	[328212] = 20,      -- Razorshard Ice (Nalthor the Rimebinder)
 	[320784] = 20,		-- Comet Storm (Nalthor the Rimebinder)
+	[321956] = 20,      -- Comet Storm (Nalthor the Rimebinder) (this one is for Dark Exiled players)
 	
 	-- Plaguefall
 	[320072] = 20, 		-- Toxic Pool (Decaying Flesh Giant)
@@ -144,6 +146,7 @@ local Spells = {
 	[336996] = 20,      -- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
 	[317605] = 20,      -- Whirlwind (Nekthara the Mangler and Rek the Hardened)
 	[332708] = 20,		-- Ground Smash (Heavin the Breaker)
+	[334025] = 20,		-- Bloodthirsty Charge (Haruga the Bloodthirsty)
 	[333297] = 20, 		-- Death Winds (Nefarious Darkspeaker)
 	[331243] = 20,		-- Bone Spikes (Soulforged Bonereaver)
 	[331224] = 20,		-- Bonestorm (Soulforged Bonereaver)
@@ -158,6 +161,7 @@ local Spells = {
 	[318406] = 20,		-- Tenderizing Smash (Gorechop)
 	[323406] = 20,      -- Jagged Gash (Gorechop)
 	-- id ?[323542] = 20,		-- Oozing (Gorechop)
+	[317367] = 20,      -- Necrotic Volley (Kul'tharok)
 	[323681] = 20,		-- Dark Devastation (Mordretha)
 	[339550] = 20,		-- Echo of Battle (Mordretha)
 	[323831] = 20,		-- Death Grasp (Mordretha)
@@ -167,8 +171,6 @@ local Spells = {
 	[334563] = 20,		-- Volatile Trap (Dreadful Huntmaster)
 	[320991] = 20,		-- Echoing Thrust (Regal Mistdancer)
 	[320999] = 20,		-- Echoing Thrust (Regal Mistdancer Mirror)
-	-- id ?[321019] = 20,		-- Sanctified Mists (Regal Mistcaller)
-	-- [334921] = 20,		-- Umbral Crash (Insatiable Brute)
 	[322418] = 20,		-- Craggy Fracture (Chamber Sentinel)
 	[334378] = 20,      -- Explosive Vellum (Research Scribe)
 	[323573] = 20,      -- Residue (Fleeting Manifestation)
@@ -212,7 +214,7 @@ local SpellsNoTank = {
 	-- Sanguine Depths
 	
 	-- Hall of Atonement 
-	--[323001] = 20,      -- Glass Shards (Halkias)
+	--[323001] = 20,      -- Glass Shards (Halkias) This is always unavoidable for tanks but sometimes unavoidable for everyone
 	[322936] = 20,      -- Crumbling Slam (Halkias)
 	[346866] = 20, 		-- Stone Breath (Loyal Stoneborn)
 }
