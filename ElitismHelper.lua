@@ -239,7 +239,7 @@ local Auras = {
 	[324205] = 20,        -- Blinding Flash (Ventunax)
 	
 	-- The Necrotic Wake
-    [324293] = 20         -- Rasping Scream (Skeletal Marauder)
+    [324293] = 20,        -- Rasping Scream (Skeletal Marauder)
 	
 	-- Plaguefall
 	
