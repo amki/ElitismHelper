@@ -43,6 +43,7 @@ local Spells = {
 	[358897] = 20,		-- Cold Snap (Season 2 Oros)
 	[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
 	[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
+	[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
 
 
 	-- Mists of Tirna Scithe
@@ -139,20 +140,25 @@ local Spells = {
 
 	-- Plaguefall
 	[320072] = 20,		-- Toxic Pool (Decaying Flesh Giant)
+	[330513] = 20,		-- Doom Shroom (Environment)
 	-- id ?[335882] = 20,		-- Clinging Infestation (Fen Hatchling)
 	[330404] = 20,		-- Wing Buffet (Plagueroc)
 	-- id ?[320040] = 20,		-- Plagued Carrion (Decaying Flesh Giant)
-	[320072] = 20,		-- Toxic pool (Decaying Flesh Giant)
+	[320072] = 20,		-- Toxic Pool (Decaying Flesh Giant)
+	[344001] = 20,		-- Slime Trail (Environment)
 	[318949] = 20,		-- Festering Belch (Blighted Spinebreaker)
-	-- id ?[320576] = 20,		-- Obliterating Ooze (Virulax Blightweaver)
+	[320576] = 20,		-- Obliterating Ooze (Virulax Blightweaver)
 	[319120] = 20,		-- Putrid Bile (Gushing Slime)
 	[327233] = 20,		-- Belch Plague (Plagebelcher)
 	[320519] = 20,		-- Jagged Spines (Blighted Spinebreaker)
-	[328501] = 20,		-- Plagued Bomb (Environment)
+	[328501] = 20,		-- Plague Bomb (Environment)
+	[328986] = 20,		-- Violent Detonation (Environment - Unstable Canister)
+
 	[324667] = 20,		-- Slime Wave (Globgrog)
-	[626242] = 20,		-- Slime Wave (Globgrog)
+	[326242] = 20,		-- Slime Wave DoT (Globgrog)
 	[333808] = 20,		-- Oozing Outbreak (Doctor Ickus)
 	[329217] = 20,		-- Slime Lunge (Doctor Ickus)
+	[330026] = 20,		-- Slime Lunge (Doctor Ickus)
 	[322475] = 20,		-- Plague Crash (Environment Margrave Stradama)
 
 
@@ -258,6 +264,7 @@ local Auras = {
 	[324293] = 20,		-- Rasping Scream (Skeletal Marauder)
 	
 	-- Plaguefall
+	[330092] = 20,		-- Plaguefallen (Environment)
 	
 	-- Theater of Pain
 	
