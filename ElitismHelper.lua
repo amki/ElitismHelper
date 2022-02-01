@@ -140,7 +140,8 @@ local Spells = {
 
 	-- Plaguefall
 	[320072] = 20,		-- Toxic Pool (Decaying Flesh Giant)
-	[330513] = 20,		-- Doom Shroom (Environment)
+	[330513] = 20,		-- Doom Shroom DoT (Environment)
+	[327552] = 20,		-- Doom Shroom (Environment)
 	-- id ?[335882] = 20,		-- Clinging Infestation (Fen Hatchling)
 	[330404] = 20,		-- Wing Buffet (Plagueroc)
 	-- id ?[320040] = 20,		-- Plagued Carrion (Decaying Flesh Giant)
@@ -153,6 +154,7 @@ local Spells = {
 	[320519] = 20,		-- Jagged Spines (Blighted Spinebreaker)
 	[328501] = 20,		-- Plague Bomb (Environment)
 	[328986] = 20,		-- Violent Detonation (Environment - Unstable Canister)
+	[330135] = 20,		-- Fount of Pestilence (Environment - Stradama's Slime)
 
 	[324667] = 20,		-- Slime Wave (Globgrog)
 	[326242] = 20,		-- Slime Wave DoT (Globgrog)
@@ -168,6 +170,7 @@ local Spells = {
 	[317605] = 20,		-- Whirlwind (Nekthara the Mangler and Rek the Hardened)
 	[332708] = 20,		-- Ground Smash (Heavin the Breaker)
 	[334025] = 20,		-- Bloodthirsty Charge (Haruga the Bloodthirsty)
+	[333301] = 20,		-- Curse of Desolation (Nefarious Darkspeaker)
 	[333297] = 20,		-- Death Winds (Nefarious Darkspeaker)
 	[331243] = 20,		-- Bone Spikes (Soulforged Bonereaver)
 	[331224] = 20,		-- Bonestorm (Soulforged Bonereaver)
@@ -265,6 +268,7 @@ local Auras = {
 	
 	-- Plaguefall
 	[330092] = 20,		-- Plaguefallen (Environment)
+	[336301] = 20,		-- Web Wrap (Domina Venomblade)
 	
 	-- Theater of Pain
 	
