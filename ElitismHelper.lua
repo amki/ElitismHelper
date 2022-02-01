@@ -217,11 +217,13 @@ local Spells = {
 	[322945] = 20,		-- Heave Debris (Halkias)
 	[324044] = 20,		-- Refracted Sinlight (Halkias)
 	[319702] = 20,		-- Blood Torrent (Echelon)
+	[319703] = 20,		-- Blood Torrent (Echelon)
 	[329340] = 20,		-- Anima Fountain (High Adjudicator Aleez)
 	[338013] = 20,		-- Anima Fountain (High Adjudicator Aleez)
 	[323126] = 20,		-- Telekinetic Collision (Lord Chamberlain)
 	[329113] = 20,		-- Telekinteic Onslaught (Lord Chamberlain)
 	[327885] = 20,		-- Erupting Torment (Lord Chamberlain)
+	[323236] = 20,		-- Unleashed Suffering (Lord Chamberlain)
 }
 
 local SpellsNoTank = {
