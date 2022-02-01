@@ -22,7 +22,6 @@ local OutputModes = {
 	["self"] = 3,
 }
 
-
 local Spells = {
 	-- Debug
 	--[] = 20,		-- ()
@@ -30,7 +29,7 @@ local Spells = {
 	--[190984] = 1,		 -- DEBUG Druid Wrath
 	--[285452] = 1,		 -- DEBUG Shaman Lava Burst
 	--[188389] = 1,		 -- DEBUG Shaman Flame Shock
-	
+
 	-- Affixes
 	[209862] = 20,		-- Volcanic Plume (Environment)
 	[226512] = 20,		-- Sanguine Ichor (Environment)
@@ -41,10 +40,11 @@ local Spells = {
 	[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
 	[356414] = 20,		-- Frost Lance (Season 2 Oros)
 	[358894] = 20,		-- Cold Snap (Season 2 Oros)
+	[358897] = 20,		-- Cold Snap (Season 2 Oros)
 	[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
 	[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
 
-	
+
 	-- Mists of Tirna Scithe
 	[321968] = 20,		-- Bewildering Pollen (Tirnenn Villager)
 	[323137] = 20,		-- Bewildering Pollen (Tirnenn Villager)
@@ -57,14 +57,14 @@ local Spells = {
 	[331743] = 20,		-- Bucking Rampage (Mistveil Guardian)
 	[331748] = 20,		-- Back Kick (Mistveil Guardian)
 	[340160] = 20,		-- Radiant Breath (Mistveil Matriarch)
-	
+
 	--id ? [323177] = 20,		-- Tears of the Forest (Ingra Maloch)
 	[323250] = 20,		-- Anima Puddle (Droman Oulfarran)
 	[321834] = 20,		-- Dodge Ball (Mistcaller)
 	[336759] = 20,		-- Dodge Ball (Mistcaller)
 	[322655] = 20,		-- Acid Expulsion (Tred'ova)
 
-	
+
 	-- De Other Side
 	[334051] = 20,		-- Erupting Darkness (Death Speaker)
 	[328729] = 20,		-- Dark Lotus (Risen Cultist)
@@ -74,18 +74,23 @@ local Spells = {
 	[332672] = 20,		-- Bladestorm (Atal'ai Deathwalker)
 	[323118] = 20,		-- Blood Barrage (Hakkar the Soulflayer)
 	[331933] = 20,		-- Haywire (Defunct Dental Drill)
-	[332157] = 20,		-- Spinning Up (Headless Client)
-	[323569] = 20,		-- Spilled Essence (Environment)
+	[331398] = 20,		-- Volatile Capacitor (Volatile Memory)
+	[331008] = 20,		-- Icky Sticky (Experimental Sludge)
+	[323569] = 20,		-- Spilled Essence (Environment - Son of Hakkar boss version)
+	[332332] = 20,		-- Spilled Essence (Environment - Son of Hakkar trash version)
 	[323136] = 20,		-- Anima Starstorm (Runestag Elderhorn)
+	[345498] = 20,		-- Anima Starstorm (Runestag Elderhorn)
+	[332729] = 20,		-- Malefic Blast (Environment - Dealer's Hallway)
+
 	[323992] = 20,		-- Echo Finger Laser X-treme (Millificent Manastorm)
-			
 	[320723] = 20,		-- Displaced Blastwave (Dealer Xy'exa)
+	[320727] = 20,		-- Displaced Blastwave (Dealer Xy'exa)
 	[320232] = 20,		-- Explosive Contrivance (Dealer Xy'exa)
 	[334913] = 20,		-- Master of Death (Mueh'zala)
 	[325691] = 20,		-- Cosmic Collapse (Mueh'zala)
 	[335000] = 20,		-- Stellar Cloud (Mueh'zala)
-	
-	
+
+
 	-- Spires of Ascension
 	--[323786] = 20,		-- Swift Slice (Kyrian Dark-Praetor)
 	[323740] = 20,		-- Impact (Forsworn Squad-Leader)
@@ -93,7 +98,7 @@ local Spells = {
 	[336444] = 20,		-- Crescendo (Forsworn Helion)
 	[328466] = 20,		-- Charged Spear (Lakesis / Klotos)
 	[336420] = 20,		-- Diminuendo (Klotos / Lakesis)
-	
+
 	[331251] = 20,		-- Deep Connection (Azules / Kin-Tara)
 	[317626] = 20,		-- Maw-Touched Venom (Azules)
 	-- [321034] = 20,		-- Charged Spear (Kin-Tara) Cannot be avoided
@@ -102,8 +107,8 @@ local Spells = {
 	[324141] = 20,		-- Dark Bolt (Ventunax)
 	[323943] = 20,		-- Run Through (Devos)
 	-- [] = 20,		-- Seed of the Abyss (Devos) ???
-	
-	
+
+
 	-- The Necrotic Wake
 	[324391] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
 	[324381] = 20,		-- Chill Scythe / Reaping Winds (Skeletal Monstrosity)
@@ -114,7 +119,7 @@ local Spells = {
 	[333477] = 20,		-- Gut Slice (Goregrind)
 	[345625] = 20,		-- Death Burst (Nar'zudah)
 	[327240] = 20,		-- Spine Crush (Loyal Creation)
-	
+
 	-- id ?[320637] = 20,		-- Fetid Gas (Blightbone)
 	[319897] = 20,		-- Land of the Dead (Amarth - summons Crossbowman)
 	[319902] = 20,		-- Land of the Dead (Amarth - summons Warrior)
@@ -129,8 +134,8 @@ local Spells = {
 	[328212] = 20,		-- Razorshard Ice (Nalthor the Rimebinder)
 	[320784] = 20,		-- Comet Storm (Nalthor the Rimebinder)
 	[321956] = 20,		-- Comet Storm (Nalthor the Rimebinder) (this one is for Dark Exiled players)
-	
-	
+
+
 	-- Plaguefall
 	[320072] = 20,		-- Toxic Pool (Decaying Flesh Giant)
 	-- id ?[335882] = 20,		-- Clinging Infestation (Fen Hatchling)
@@ -149,7 +154,7 @@ local Spells = {
 	[329217] = 20,		-- Slime Lunge (Doctor Ickus)
 	[322475] = 20,		-- Plague Crash (Environment Margrave Stradama)
 
-	
+
 	-- Theater of Pain
 	[337037] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
 	[336996] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
@@ -163,7 +168,7 @@ local Spells = {
 	[330614] = 20,		-- Vile Eruption (Rancid Gasbag) ?? TODO: Which one is correct?
 	[321039] = 20,		-- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)
 	[321041] = 20,		-- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)
-	
+
 	[317231] = 20,		-- Crushing Slam (Xav the Unfallen)
 	[339415] = 20,		-- Deafening Crash (Xav the Unfallen)
 	[320729] = 20,		-- Massive Cleave (Xav the Unfallen)
@@ -176,7 +181,7 @@ local Spells = {
 	[323831] = 20,		-- Death Grasp (Mordretha)
 	[339751] = 20,		-- Ghostly Charge (Mordretha)
 
-	
+
 	-- Sanguine Depths
 	[334563] = 20,		-- Volatile Trap (Dreadful Huntmaster)
 	[320991] = 20,		-- Echoing Thrust (Regal Mistdancer)
@@ -191,7 +196,7 @@ local Spells = {
 	[325885] = 20,		-- Anguished Cries (Z'rali)
 	[323810] = 20,		-- Piercing Blur (General Kaal)
 
-	
+
 	-- Halls of Atonement 
 	[325523] = 20,		-- Deadly Thrust (Depraved Darkblade)
 	[325799] = 20,		-- Rapid Fire (Depraved Houndmaster)
@@ -214,6 +219,7 @@ local SpellsNoTank = {
 	[331721] = 20,		-- Spear Flurry (Mistveil Defender)
 	
 	-- De Other Side
+	[332157] = 20,		-- Spinning Up (Headless Client)
 	
 	-- Spires of Ascension
 	[317943] = 20,		-- Sweeping Blow (Frostsworn Vanguard)
@@ -326,7 +332,7 @@ function generateMaybeOutput(user)
 					print("<EH> Error: Could not find spells"..spellNames.."in Spells or SpellsNoTank but got Timer for them. wtf")
 				end
 				local userMaxHealth = UnitHealthMax(user)
-				local msgAmount = round(amount / 1000,1)
+				local msgAmount = round(amount / 1000, 1)
 				local pct = Round(amount / userMaxHealth * 100)
 				if pct >= ElitismHelperDB.Threshold and pct >= minPct and ElitismHelperDB.Loud then
 					if _i > 0 then
@@ -357,7 +363,7 @@ function generateMaybeMeleeOutput(user)
 				local name = obj.name
 				local amount = obj.amount
 				local userMaxHealth = UnitHealthMax(user)
-				local msgAmount = round(amount / 1000,1)
+				local msgAmount = round(amount / 1000, 1)
 				local pct = Round(amount / userMaxHealth * 100)
 				if pct > MeleeHitters[srcID] and pct > ElitismHelperDB.Threshold and ElitismHelperDB.Loud then
 					msg = msg..name.." for "..msgAmount.."k ("..pct.."%)"
@@ -642,7 +648,7 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 		for k, v in pairs(CombinedFails) do table.insert(u, { key = k, value = v }) end
 		table.sort(u, compareDamage)
 		for k,v in pairs(u) do
-				maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000,1).."k")
+				maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000, 1).."k")
 		end
 	end
 end
@@ -791,21 +797,21 @@ function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
 	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = CombatLogGetCurrentEventInfo(); -- Those arguments appear for all combat event variants.
 	local eventPrefix, eventSuffix = eventType:match("^(.-)_?([^_]*)$");
 	if (eventPrefix:match("^SPELL") or eventPrefix:match("^RANGE")) and eventSuffix == "DAMAGE" then
-		local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand, _ = select(12,CombatLogGetCurrentEventInfo())
+		local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand, _ = select(12, CombatLogGetCurrentEventInfo())
 		ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, sAmount)
 	elseif eventPrefix:match("^SWING") and eventSuffix == "DAMAGE" then
-		local aAmount, aOverkill, aSchool, aResisted, aBlocked, aAbsorbed, aCritical, aGlancing, aCrushing, aOffhand, _ = select(12,CombatLogGetCurrentEventInfo())
+		local aAmount, aOverkill, aSchool, aResisted, aBlocked, aAbsorbed, aCritical, aGlancing, aCrushing, aOffhand, _ = select(12, CombatLogGetCurrentEventInfo())
 		ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, aAmount)
 	elseif eventPrefix:match("^SPELL") and eventSuffix == "MISSED" then
-		local spellId, spellName, spellSchool, missType, isOffHand, mAmount = select(12,CombatLogGetCurrentEventInfo())
+		local spellId, spellName, spellSchool, missType, isOffHand, mAmount = select(12, CombatLogGetCurrentEventInfo())
 		if mAmount then
 			ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, mAmount)
 		end
 	elseif eventType == "SPELL_AURA_APPLIED" then
-		local spellId, spellName, spellSchool, auraType = select(12,CombatLogGetCurrentEventInfo())
+		local spellId, spellName, spellSchool, auraType = select(12, CombatLogGetCurrentEventInfo())
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType)
 	elseif eventType == "SPELL_AURA_APPLIED_DOSE" then
-		local spellId, spellName, spellSchool, auraType, auraAmount = select(12,CombatLogGetCurrentEventInfo())
+		local spellId, spellName, spellSchool, auraType, auraAmount = select(12, CombatLogGetCurrentEventInfo())
 		ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	end
 end
