@@ -80,6 +80,7 @@ local Spells = {
 	[332332] = 20,		-- Spilled Essence (Environment - Son of Hakkar trash version)
 	[323136] = 20,		-- Anima Starstorm (Runestag Elderhorn)
 	[345498] = 20,		-- Anima Starstorm (Runestag Elderhorn)
+	[340026] = 20,		-- Wailing Grief (Mythresh, Sky's Talons)
 	[332729] = 20,		-- Malefic Blast (Environment - Dealer's Hallway)
 
 	[323992] = 20,		-- Echo Finger Laser X-treme (Millificent Manastorm)
@@ -248,6 +249,7 @@ local Auras = {
 	
 	-- De Other Side
 	[331381] = 20,		-- Slipped (Lubricator)
+	[334505] = 20,		-- Shimmerdust Sleep (Weald Shimmermoth)
 	
 	-- Spires of Ascension
 	[324205] = 20,		-- Blinding Flash (Ventunax)
