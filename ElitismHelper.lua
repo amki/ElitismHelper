@@ -73,17 +73,15 @@ local Spells = {
 	[323118] = 20,      -- Blood Barrage (Hakkar the Soulflayer)
 	[331933] = 20,		-- Haywire (Defunct Dental Drill)
 	[332157] = 20,      -- Spinning Up (Headless Client)
-	[323569] = 20,   	-- Spilled Essence (Environement)
-	[320830] = 20,		-- Mechanical Bomb Squirrel
+	[323569] = 20,   	-- Spilled Essence (Environment)
 	[323136] = 20,      -- Anima Starstorm (Runestag Elderhorn)
 	[323992] = 20,      -- Echo Finger Laser X-treme (Millificent Manastorm)
 			
 	[320723] = 20,		-- Displaced Blastwave (Dealer Xy'exa)
 	[320232] = 20,      -- Explosive Contrivance (Dealer Xy'exa)
 	[334913] = 20,		-- Master of Death (Mueh'zala)
-	[327427] = 20,		-- Shattered Dominion (Mueh'zala)
 	[325691] = 20,      -- Cosmic Collapse (Mueh'zala)
-	[335000] = 20,		-- Stellar cloud (Mueh'zala)
+	[335000] = 20,		-- Stellar Cloud (Mueh'zala)
 	
 	
 	-- Spires of Ascension
@@ -141,12 +139,12 @@ local Spells = {
 	[319120] = 20, 		-- Putrid Bile (Gushing Slime)
 	[327233] = 20, 		-- Belch Plague (Plagebelcher)
 	[320519] = 20, 		-- Jagged Spines (Blighted Spinebreaker)
-	[328501] = 20,		-- Plagued Bomb (Environement)
+	[328501] = 20,		-- Plagued Bomb (Environment)
 	[324667] = 20,		-- Slime Wave (Globgrog)
 	[626242] = 20,		-- Slime Wave (Globgrog)
 	[333808] = 20,		-- Oozing Outbreak (Doctor Ickus)
 	[329217] = 20,		-- Slime Lunge (Doctor Ickus)
-	[322475] = 20,		-- Plague Crash (Environement Margrave Stradama)
+	[322475] = 20,		-- Plague Crash (Environment Margrave Stradama)
 	
 	-- Theater of Pain
 	[337037] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
@@ -184,19 +182,21 @@ local Spells = {
 	[325885] = 20,      -- Anguished Cries (Z'rali)
 	[334615] = 20,		-- Sweeping Slash (Head Custodian Javlin)
 	[322212] = 20,		-- Growing Mistrust (Vestige of Doubt)
-	[328494] = 20, 		-- Sintouched Anima (Environement)
+	[328494] = 20, 		-- Sintouched Anima (Environment)
 	[323810] = 20,		-- Piercing Blur (General Kaal)
 	
-	-- Hall of Atonement 
+	-- Halls of Atonement 
 	[325523] = 20,		-- Deadly Thrust (Depraved Darkblade)
 	[325799] = 20,		-- Rapid Fire (Depraved Houndmaster)
 	[326440] = 20,		-- Sin Quake (Shard of Halkias)
 	[326997] = 20,		-- Powerful Swipe (Stoneborn Slasher)
+	[326891] = 20,		-- Anguish (Inquisitor Sigar)
 	
 	[322945] = 20,		-- Heave Debris (Halkias)
 	[324044] = 20,		-- Refracted Sinlight (Halkias)
 	[319702] = 20,		-- Blood Torrent (Echelon)
 	[329340] = 20, 		-- Anima Fountain (High Adjudicator Aleez)
+	[338013] = 20, 		-- Anima Fountain (High Adjudicator Aleez)
 	[323126] = 20, 		-- Telekinetic Collision (Lord Chamberlain)
     [329113] = 20,		-- Telekinteic Onslaught (Lord Chamberlain)
 	[327885] = 20,		-- Erupting Torment (Lord Chamberlain)
@@ -214,6 +214,7 @@ local SpellsNoTank = {
 	
 	-- The Necrotic Wake
 	[324323] = 20,		-- Gruesome Cleave (Skeletal Marauder)
+    [323489] = 20,      -- Throw Cleaver (Flesh Crafter, Stitching Assistant)
 
 	-- Plaguefall
 	
@@ -221,7 +222,7 @@ local SpellsNoTank = {
 	
 	-- Sanguine Depths
 	
-	-- Hall of Atonement 
+	-- Halls of Atonement 
 	--[323001] = 20,      -- Glass Shards (Halkias) This is always unavoidable for tanks but sometimes unavoidable for everyone
 	[322936] = 20,      -- Crumbling Slam (Halkias)
 	[346866] = 20, 		-- Stone Breath (Loyal Stoneborn)
@@ -247,7 +248,7 @@ local Auras = {
 	
 	-- Sanguine Depths
 	
-	-- Hall of Atonement
+	-- Halls of Atonement
 
 	-- Affixes
 	[358973] = 20,        -- Wave of Terror (Season 2 Affix - Varruth)
@@ -257,7 +258,7 @@ local AurasNoTank = {
 }
 
 local MeleeHitters = {
-	[161917] = 20,		-- DEBUG
+	--[161917] = 20,		-- DEBUG
 	[174773] = 20,		-- Spiteful Shade
 }
 
