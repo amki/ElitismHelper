@@ -63,7 +63,10 @@ local Spells = {
 	[323250] = 20,		-- Anima Puddle (Droman Oulfarran)
 	[321834] = 20,		-- Dodge Ball (Mistcaller)
 	[336759] = 20,		-- Dodge Ball (Mistcaller)
+	[321893] = 20,		-- Freezing Burst (Mistcaller)
 	[322655] = 20,		-- Acid Expulsion (Tred'ova)
+	[326309] = 20,		-- Decomposing Acid (Tred'ova)
+	[326263] = 20,		-- Anima Shedding (Tred'ova)
 
 
 	-- De Other Side
@@ -201,8 +204,8 @@ local Spells = {
 	[323573] = 20,		-- Residue (Fleeting Manifestation)
 	[334615] = 20,		-- Sweeping Slash (Head Custodian Javlin)
 	[322212] = 20,		-- Growing Mistrust (Vestige of Doubt)
-	[328494] = 20,		-- Sintouched Anima (Environment)
 
+	[328494] = 20,		-- Sintouched Anima (Executor Tarvold)
 	[325885] = 20,		-- Anguished Cries (Z'rali)
 	[323810] = 20,		-- Piercing Blur (General Kaal)
 
@@ -255,8 +258,6 @@ local SpellsNoTank = {
 
 local Auras = {
 	-- Mists of Tirna Scithe
-	[323137] = true,	--- Bewildering Pollen (Drohman Oulfarran)
-	[321893] = true,	--- Freezing Burst (Illusionary Vulpin)
 	
 	-- De Other Side
 	[331381] = 20,		-- Slipped (Lubricator)
