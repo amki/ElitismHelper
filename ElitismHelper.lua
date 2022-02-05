@@ -87,7 +87,7 @@ local Spells = {
 	[340026] = 20,		-- Wailing Grief (Mythresh, Sky's Talons)
 	[332729] = 20,		-- Malefic Blast (Environment - Dealer's Hallway)
 
-	[323992] = 20,		-- Echo Finger Laser X-treme (Millificent Manastorm)
+	[324010] = 20,		-- Eruption (Millificent Manastorm)
 	[320723] = 20,		-- Displaced Blastwave (Dealer Xy'exa)
 	[320727] = 20,		-- Displaced Blastwave (Dealer Xy'exa)
 	[320232] = 20,		-- Explosive Contrivance (Dealer Xy'exa)
@@ -619,16 +619,16 @@ end
 function ElitismFrame:ADDON_LOADED(event,addon)
 	if addon == "ElitismHelper" then	
 		ElitismFrame:RebuildTable()
-	end
-	
-	if not ElitismHelperDB then
-		ElitismHelperDB = defaultElitismHelperDBValues
-	end
 
-	-- Backwards compatibility to make sure that DB values will always be set, even when updating from previous versions
-	for key, defaultValue in pairs(defaultElitismHelperDBValues) do
-		if ElitismHelperDB[key] == nil then
-			ElitismHelperDB[key] = defaultValue
+		if not ElitismHelperDB then
+			ElitismHelperDB = defaultElitismHelperDBValues
+		end
+
+		-- Backwards compatibility to make sure that DB values will always be set, even when updating from previous versions
+		for key, defaultValue in pairs(defaultElitismHelperDBValues) do
+			if ElitismHelperDB[key] == nil then
+				ElitismHelperDB[key] = defaultValue
+			end
 		end
 	end
 end
