@@ -49,7 +49,6 @@ local Spells = {
 	-- Mists of Tirna Scithe
 	[321968] = 20,		-- Bewildering Pollen (Tirnenn Villager)
 	[323137] = 20,		-- Bewildering Pollen (Tirnenn Villager)
-	[323250] = 20,		-- Anima Puddle (Droman Oulfarran)
 	[325027] = 20,		-- Bramble Burst (Drust Boughbreaker)
 	[326022] = 20,		-- Acid Globule (Spinemaw Gorger)
 	[340300] = 20,		-- Tongue Lashing (Mistveil Gorgegullet)
