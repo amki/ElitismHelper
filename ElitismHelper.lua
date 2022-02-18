@@ -63,6 +63,7 @@ local Spells = {
 	[321834] = 20,		-- Dodge Ball (Mistcaller)
 	[336759] = 20,		-- Dodge Ball (Mistcaller)
 	[321893] = 20,		-- Freezing Burst (Mistcaller)
+	[321828] = 20,		-- Patty Cake (Mistcaller)
 	[322655] = 20,		-- Acid Expulsion (Tred'ova)
 	[326309] = 20,		-- Decomposing Acid (Tred'ova)
 	[326263] = 20,		-- Anima Shedding (Tred'ova)
