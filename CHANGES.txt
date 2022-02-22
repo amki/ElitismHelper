@@ -1,0 +1,30 @@
+tag 42ccf4aac02226c1802d9ecedfaa7382b4fc79b4 0.12.5release
+Author:	amki <amki@amki.eu>
+Date:	Wed Mar 31 04:43:04 2021 +0200
+
+new release so curse stops bugging
+
+commit 93f2ebd982fa9afacabc764fe2ecce5783ed7a41
+Author: Benn Linger <benn@bennlinger.com>
+Date:   Fri Mar 19 17:52:59 2021 -0400
+
+    Fix for Melee spell cast by Spiteful Shades
+
+commit 93f2ebd982fa9afacabc764fe2ecce5783ed7a41
+Author: Benn Linger <benn@bennlinger.com>
+Date:   Fri Mar 19 17:52:59 2021 -0400
+
+    Fix for Melee spell cast by Spiteful Shades
+
+commit 6bcb04359961d3e7b6426da72893bd6cdd619149
+Author: Markaronin <jmarkroylance@gmail.com>
+Date:   Sun Feb 14 14:02:52 2021 -0700
+
+    Add option to disable end-of-dungeon stats
+
+commit 6bcb04359961d3e7b6426da72893bd6cdd619149
+Author: Markaronin <jmarkroylance@gmail.com>
+Date:   Sun Feb 14 14:02:52 2021 -0700
+
+    Add option to disable end-of-dungeon stats
+

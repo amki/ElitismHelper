@@ -4,3 +4,4 @@
 ## Notes: Helps with being an elitist by calling out fails
 ## SavedVariables: ElitismHelperDB
 ElitismHelper.lua
+ElitismHelperGUI.lua
