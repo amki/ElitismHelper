@@ -210,13 +210,13 @@ local Spells = {
 	[323810] = 20,		-- Piercing Blur (General Kaal)
 
 
-	-- Halls of Atonement 
+	-- Halls of Atonement
 	[325523] = 20,		-- Deadly Thrust (Depraved Darkblade)
 	[325799] = 20,		-- Rapid Fire (Depraved Houndmaster)
 	[326440] = 20,		-- Sin Quake (Shard of Halkias)
 	[326997] = 20,		-- Powerful Swipe (Stoneborn Slasher)
 	[326891] = 20,		-- Anguish (Inquisitor Sigar)
-	
+
 	[322945] = 20,		-- Heave Debris (Halkias)
 	[324044] = 20,		-- Refracted Sinlight (Halkias)
 	[319702] = 20,		-- Blood Torrent (Echelon)
@@ -227,60 +227,66 @@ local Spells = {
 	[329113] = 20,		-- Telekinteic Onslaught (Lord Chamberlain)
 	[327885] = 20,		-- Erupting Torment (Lord Chamberlain)
 	[323236] = 20,		-- Unleashed Suffering (Lord Chamberlain)
+
+
+	-- Tazavesh: So'leah's Gambit
+	-- Tazavesh: Streets of Wonder
 }
 
 local SpellsNoTank = {
 	-- Mists of Tirna Scithe
 	[331721] = 20,		-- Spear Flurry (Mistveil Defender)
-	
+
 	-- De Other Side
 	[332157] = 20,		-- Spinning Up (Headless Client)
-	
+
 	-- Spires of Ascension
 	[317943] = 20,		-- Sweeping Blow (Frostsworn Vanguard)
 	[324608] = 20,		-- Charged Stomp (Oryphrion)
-	
+
 	-- The Necrotic Wake
 	[324323] = 20,		-- Gruesome Cleave (Skeletal Marauder)
 	[323489] = 20,		-- Throw Cleaver (Flesh Crafter, Stitching Assistant)
 
 	-- Plaguefall
-	
 	-- Theater of Pain
-	
 	-- Sanguine Depths
-	
-	-- Halls of Atonement 
+
+	-- Halls of Atonement
 	--[323001] = 20,		-- Glass Shards (Halkias) This is always unavoidable for tanks but sometimes unavoidable for everyone
 	[322936] = 20,		-- Crumbling Slam (Halkias)
 	[346866] = 20,		-- Stone Breath (Loyal Stoneborn)
+
+	-- Tazavesh: So'leah's Gambit
+	-- Tazavesh: Streets of Wonder
 }
 
 local Auras = {
 	-- Mists of Tirna Scithe
-	
+
 	-- De Other Side
 	[331381] = 20,		-- Slipped (Lubricator)
 	[334505] = 20,		-- Shimmerdust Sleep (Weald Shimmermoth)
-	
+
 	-- Spires of Ascension
 	[324205] = 20,		-- Blinding Flash (Ventunax)
-	
+
 	-- The Necrotic Wake
 	[324293] = 20,		-- Rasping Scream (Skeletal Marauder)
-	
+
 	-- Plaguefall
 	[330092] = 20,		-- Plaguefallen (Environment)
 	[336301] = 20,		-- Web Wrap (Domina Venomblade)
-	
+
 	-- Theater of Pain
-	
 	-- Sanguine Depths
-	
 	-- Halls of Atonement
 
 	-- Affixes
 	[358973] = 20,		-- Wave of Terror (Season 2 Affix - Varruth)
+
+	-- Tazavesh: So'leah's Gambit
+	-- Tazavesh: Streets of Wonder
 }
 
 local AurasNoTank = {
@@ -507,15 +513,15 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 		end,
 		["threshold"] = function(args)
 			thresholdNumber = tonumber(args, 10)
-				if thresholdNumber == nil then
-					print("Sets threshold of health lost to notify on (as percentage): `/eh threshold 100` will show notifications for one-shot damage (> 100%)")
-					print(" Current Threshold: " .. ElitismHelperDB.Threshold)
-				elseif (thresholdNumber > 100 or thresholdNumber < 0) then
-					print("Error: Threshold value over 100 or under 0: " .. args)
-				else
-					ElitismHelperDB.Threshold = thresholdNumber
-					print("Threshold Set to " .. thresholdNumber .. "%")
-				end		
+			if thresholdNumber == nil then
+				print("Sets threshold of health lost to notify on (as percentage): `/eh threshold 100` will show notifications for one-shot damage (> 100%)")
+				print(" Current Threshold: " .. ElitismHelperDB.Threshold)
+			elseif (thresholdNumber > 100 or thresholdNumber < 0) then
+				print("Error: Threshold value over 100 or under 0: " .. args)
+			else
+				ElitismHelperDB.Threshold = thresholdNumber
+				print("Threshold Set to " .. thresholdNumber .. "%")
+			end
 		end,
 		["messageTest"] = function()
 			print("Testing output for "..ElitismHelperDB.OutputMode)
@@ -523,15 +529,15 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 		end,
 		["list"] = function(args)
 			local name = args
-						
+
 			if FailByAbility[name] == nil then
 				name = GetUnitName(args, true)
 			end
-						
+
 			if name == nil or FailByAbility[name] == nil then
 				name = GetUnitName(args)
 			end
-				
+
 			if name == nil or FailByAbility[name] == nil then
 				for player,fails in pairs(FailByAbility) do
 					print("Hits for "..player)
@@ -542,9 +548,9 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			else
 				--print("hits for " .. name)
 				maybeSendChatMessage("Hits for "..name)
-				
+
 				local delay = 0;
-				
+
 				for k,v in pairs(FailByAbility[name]) do
 					--print(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k; " .. delay)
 					--maybeSendChatMessage(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k")
@@ -617,7 +623,7 @@ function ElitismFrame:RebuildTable()
 end
 
 function ElitismFrame:ADDON_LOADED(event,addon)
-	if addon == "ElitismHelper" then	
+	if addon == "ElitismHelper" then
 		ElitismFrame:RebuildTable()
 
 		if not ElitismHelperDB then
@@ -732,7 +738,7 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 		if CombinedFails[dstName] == nil then
 			CombinedFails[dstName] = 0
 		end
-		
+
 		-- Add this event to TimerData / CombinedFails
 		CombinedFails[dstName] = CombinedFails[dstName] + aAmount
 		if TimerData[dstName][spellId] == nil then
@@ -740,25 +746,25 @@ function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFla
 		else
 			TimerData[dstName][spellId] = TimerData[dstName][spellId] + aAmount
 		end
-		
+
 		-- If there is no timer yet, start one with this event
 		if Timers[dstName] == nil then
 			Timers[dstName] = true
 			C_Timer.After(4,generateMaybeOutput(dstName))
 		end
-		
+
 		-- Add hit and damage to table
 		if FailByAbility[dstName] == nil then
 			FailByAbility[dstName] = {}
 		end
-		
+
 		if FailByAbility[dstName][spellId] == nil then
 			FailByAbility[dstName][spellId] = {
 				cnt = 0,
 				sum = 0
 			}
 		end
-		
+
 		FailByAbility[dstName][spellId].cnt = FailByAbility[dstName][spellId].cnt + 1
 		FailByAbility[dstName][spellId].sum = FailByAbility[dstName][spellId].sum + aAmount
 	end
@@ -773,24 +779,24 @@ function ElitismFrame:SwingDamage(timestamp, eventType, srcGUID, srcName, srcFla
 	--print(dstName.." got hit by "..srcName.." ("..srcGUID..") for "..aAmount.." srcID:"..srcID)
 	if(MeleeHitters[srcID] and UnitIsPlayer(dstName)) then
 		--print("I should track this")
-	
+
 		-- Initialize TimerMeleeData for Timer shot
 		if TimerMeleeData[dstName] == nil then
 			TimerMeleeData[dstName] = {}
 		end
-		
+
 		if CombinedFails[dstName] == nil then
 			CombinedFails[dstName] = 0
 		end
-		
+
 		CombinedFails[dstName] = CombinedFails[dstName] + aAmount
-		
+
 		if TimerMeleeData[dstName][srcID] == nil then
 			TimerMeleeData[dstName][srcID] = {name=srcName, amount=aAmount}
 		else
 			TimerMeleeData[dstName][srcID].amount = TimerMeleeData[dstName][srcID].amount + aAmount
 		end
-		
+
 		-- If there is no timer yet, start one with this event
 		if TimersMelee[dstName] == nil then
 			TimersMelee[dstName] = true
