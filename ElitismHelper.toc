@@ -1,6 +1,7 @@
-## Interface: 90005
+## Interface: 90200
 ## Title: ElitismHelper
-## Version: 0.10.0
+## Version: 0.11.0
 ## Notes: Helps with being an elitist by calling out fails
 ## SavedVariables: ElitismHelperDB
+
 ElitismHelper.lua
