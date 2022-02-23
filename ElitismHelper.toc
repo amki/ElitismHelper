@@ -1,4 +1,4 @@
-## Interface: 90105
+## Interface: 90200
 ## Title: ElitismHelper
 ## Version: 0.11.0
 ## Notes: Helps with being an elitist by calling out fails
