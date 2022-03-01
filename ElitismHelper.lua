@@ -177,8 +177,8 @@ local Spells = {
 	[333297] = 20,		-- Death Winds (Nefarious Darkspeaker)
 	[331243] = 20,		-- Bone Spikes (Soulforged Bonereaver)
 	[331224] = 20,		-- Bonestorm (Soulforged Bonereaver)
-	[330608] = 20,		-- Vile Eruption (Rancid Gasbag) ?? TODO: Which one is correct?
-	[330614] = 20,		-- Vile Eruption (Rancid Gasbag) ?? TODO: Which one is correct?
+	[330592] = 20,		-- Vile Eruption (back) (Rancid Gasbag)
+	[330608] = 20,		-- Vile Eruption (front) (Rancid Gasbag)
 	[321039] = 20,		-- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)
 	[321041] = 20,		-- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)
 
