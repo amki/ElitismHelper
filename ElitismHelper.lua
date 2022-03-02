@@ -44,6 +44,8 @@ local Spells = {
 	[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
 	[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
 	[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
+	[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
+	[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
 
 
 	-- Mists of Tirna Scithe
