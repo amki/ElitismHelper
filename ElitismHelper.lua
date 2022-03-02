@@ -231,8 +231,17 @@ local Spells = {
 	[323236] = 20,		-- Unleashed Suffering (Lord Chamberlain)
 
 
-	-- Tazavesh: So'leah's Gambit
 	-- Tazavesh: Streets of Wonder
+	[355903] = 20,		-- Disruption Grenade (Customs Security) TODO verify, could be 355900
+	[356011] = 20,		-- Beam Splicer (Armored Overseer)
+	[352393] = 20,		-- Rift Blasts (Portalmancer Zo'honn) TODO verify, could be 352390
+	[357019] = 20,		-- Lightshard Retreat (Cartel Wiseguy)
+
+	[346204] = 20,		-- Armed Security (Zo'phex) TODO verify, could be 348366
+
+
+	-- Tazavesh: So'leah's Gambit
+
 }
 
 local SpellsNoTank = {
@@ -259,8 +268,8 @@ local SpellsNoTank = {
 	[322936] = 20,		-- Crumbling Slam (Halkias)
 	[346866] = 20,		-- Stone Breath (Loyal Stoneborn)
 
-	-- Tazavesh: So'leah's Gambit
 	-- Tazavesh: Streets of Wonder
+	-- Tazavesh: So'leah's Gambit
 }
 
 local Auras = {
@@ -287,8 +296,8 @@ local Auras = {
 	-- Affixes
 	[358973] = 20,		-- Wave of Terror (Season 2 Affix - Varruth)
 
-	-- Tazavesh: So'leah's Gambit
 	-- Tazavesh: Streets of Wonder
+	-- Tazavesh: So'leah's Gambit
 }
 
 local AurasNoTank = {
