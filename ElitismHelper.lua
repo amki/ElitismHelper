@@ -263,8 +263,10 @@ local Spells = {
 	[368661] = 20,		-- Sword Toss (Corsair Officer)
 	[357228] = 20,		-- Drifting Star (Adorned Starseer)
 
-	[346828] = 20,		-- Sanitizing Field (Hylbrande)
+	--[346828] = 20,	-- Sanitizing Field (Hylbrande) - more like a wipe mechanic
+	[356796] = 20,		-- Runic Feedback (Hylbrande)
 	[346960] = 20,		-- Purged by Fire (Hylbrande)
+	[346961] = 20,		-- Purging Field (Hylbrande)
 	[347094] = 20,		-- Titanic Crash (Hylbrande)
 	[347149] = 20,		-- Infinite Breath (Timecap'n Hooktail)
 	[347370] = 20,		-- Cannon Barrage (Timecap'n Hooktail)
