@@ -255,7 +255,25 @@ local Spells = {
 
 
 	-- Tazavesh: So'leah's Gambit
+	[355234] = 20,		-- Volatile Pufferfish (Murkbrine Fishmancer) TODO verify
+	[355465] = 20,		-- Boulder Throw (Coastwalker Goliath)
+	[355581] = 20,		-- Crackle (Stormforged Guardian)
+	[355584] = 20,		-- Charged Pulse (Stormforged Guardian)
+	[356260] = 20,		-- Tidal Burst (Hourglass Tidesage)
+	[368661] = 20,		-- Sword Toss (Corsair Officer)
+	[357228] = 20,		-- Drifting Star (Adorned Starseer)
 
+	[346828] = 20,		-- Sanitizing Field (Hylbrande)
+	[346960] = 20,		-- Purged by Fire (Hylbrande)
+	[347094] = 20,		-- Titanic Crash (Hylbrande)
+	[347149] = 20,		-- Infinite Breath (Timecap'n Hooktail)
+	[347370] = 20,		-- Cannon Barrage (Timecap'n Hooktail)
+	[358947] = 20,		-- Burning Tar (Timecap'n Hooktail)
+	[347151] = 20,		-- Hook Swipe (Timecap'n Hooktail)
+	[354334] = 20,		-- Hook'd! (Timecap'n Hooktail)
+	--[?] = 20,			-- Deadly Seas (Timecap'n Hooktail) (oneshot from going in water, debuff?)
+	[351101] = 20,		-- Energy Fragmentation (So'leah)
+	[351646] = 20,		-- Hyperlight Nova (So'leah)
 }
 
 local SpellsNoTank = {
