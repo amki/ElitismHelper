@@ -233,11 +233,25 @@ local Spells = {
 
 	-- Tazavesh: Streets of Wonder
 	[355903] = 20,		-- Disruption Grenade (Customs Security) TODO verify, could be 355900
-	[356011] = 20,		-- Beam Splicer (Armored Overseer)
+	[356011] = 20,		-- Beam Splicer (Armored Overseer / Tracker Zo'Korss)
 	[352393] = 20,		-- Rift Blasts (Portalmancer Zo'honn) TODO verify, could be 352390
 	[357019] = 20,		-- Lightshard Retreat (Cartel Wiseguy)
+	[355502] = 20,		-- Shocklight Barrier (Environment)
+	[355476] = 20,		-- Shock Mines (Commander Zo'far)
+	[355479] = 20,		-- Lethal Force (Commander Zo'far) TODO verify
 
 	[346204] = 20,		-- Armed Security (Zo'phex) TODO verify, could be 348366
+	[357799] = 20,		-- Bounced! (Zo'gron)
+	[350921] = 20,		-- Crowd Control (Zo'gron)
+	[355438] = 20,		-- Suppression Spark (Zo'gron) TODO verify - this is for the slam if you don't run away
+	[356482] = 20,		-- Rotten Food (Zo'gron)
+	[346329] = 20,		-- Spilled Liquids (P.O.S.T. Master)
+	[349801] = 20,		-- Grand Consumption (Alcruux)
+	[349663] = 20,		-- Grip of Hunger (Alcruux)
+	[349999] = 20,		-- Anima Detonation (Achillite) TODO avoidable?
+	[349989] = 20,		-- Volatile Anima TODO verify
+	[350090] = 20,		-- Whirling Annihilation (Venza Goldfuse)
+	[347481] = 20,		-- Shuri (So'azmi)
 
 
 	-- Tazavesh: So'leah's Gambit
