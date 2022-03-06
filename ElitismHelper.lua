@@ -503,6 +503,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 	local _, _, cmd, args = string.find(msg, "%s?(%w+)%s?(.*)")
 	local commandFunction = actions[cmd]
 	if not commandFunction then
+		InterfaceOptionsFrame_OpenToCategory("ElitismHelperGUI");
 		commandFunction = actions["help"]
 	end
 	commandFunction(args)
