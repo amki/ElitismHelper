@@ -112,6 +112,8 @@ local Spells = {
 	[324662] = 20,		-- Ionized Plasma (Multiple) Can this be avoided?
 	[324370] = 20,		-- Attenuated Barrage (Kin-Tara)
 	[324141] = 20,		-- Dark Bolt (Ventunax)
+	[323372] = 20,		-- Empyreal Ordnance (Oryphrion)
+	[323792] = 20,		-- Anima Field (Oryphrion)
 	[323943] = 20,		-- Run Through (Devos)
 	-- [] = 20,		-- Seed of the Abyss (Devos) ???
 
