@@ -6,7 +6,7 @@ local TimerMeleeData = {}
 local CombinedFails = {}
 local FailByAbility = {}
 local activeUser = nil
-local AddonVersion = 0.2
+local AddonVersion = 0.21
 local playerUser = GetUnitName("player", true).."-"..GetRealmName():gsub(" ", "")
 local defaultElitismHelperDBValues = {
 	Loud = true,
@@ -703,17 +703,33 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 
 		Users[sender] = msg
 		activeUser = nil
+		local activeUserObject = nil
+
 		for k,v in pairs(Users) do
 			-- Ignore users that only report to self. ==nil is legacy for old versions, accept them, delete this later and require AddonVersion>=0.2
 			if(v[3] == nil or v[3] ~= "self") then
-				if activeUser == nil then
-					activeUser = k
+				if activeUserObject == nil then
+					activeUserObject = {k, v}
 				end
-				if k < activeUser then
-					activeUser = k
+
+
+				--If the request sender has a higher version make them active
+				if(activeUserObject[2][2] < v[2]) then
+					activeUserObject = {k, v}
 				end
+				
+				--Use alphabet as tie breaker
+				if(activeUserObject[2][2] == v[2]) then
+					if k < activeUserObject[1] then
+						activeUserObject = {k, v}
+					end
+				end
+
 			end
 		end
+
+		activeUser = activeUserObject[1]
+
 		-- We are in a group but nobody is eligible...
 		if(activeUser == nil) then
 			activeUser = playerUser
