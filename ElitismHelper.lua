@@ -262,7 +262,6 @@ local Spells = {
 	[355581] = 20,		-- Crackle (Stormforged Guardian)
 	[355584] = 20,		-- Charged Pulse (Stormforged Guardian)
 	[356260] = 20,		-- Tidal Burst (Hourglass Tidesage)
-	[368661] = 20,		-- Sword Toss (Corsair Officer)
 	[357228] = 20,		-- Drifting Star (Adorned Starseer)
 
 	--[346828] = 20,	-- Sanitizing Field (Hylbrande) - more like a wipe mechanic
