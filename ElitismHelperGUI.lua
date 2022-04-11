@@ -74,7 +74,7 @@ function createDropDownMenu(parent, x_loc, y_loc, id, options, width, default_va
         for key, val in pairs (options) do
             info.text = key;
             info.value = val;
-            info.tooltipTitle = 'Test';
+            --info.tooltipTitle = 'Test';
             info.checked = false;
             info.hasArrow = false;
             info.tooltipOnButton = 'Test ' .. key;
