@@ -172,6 +172,7 @@ local Spells = {
 
 
 	-- Theater of Pain
+	[342126] = 20,		-- Brutal Leap (Dokigg the Brutalizer)
 	[337037] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
 	[336996] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
 	[317605] = 20,		-- Whirlwind (Nekthara the Mangler and Rek the Hardened)
