@@ -194,6 +194,7 @@ local Spells = {
 	[323406] = 20,		-- Jagged Gash (Gorechop)
 	-- id ?[323542] = 20,		-- Oozing (Gorechop)
 	[317367] = 20,		-- Necrotic Volley (Kul'tharok)
+	[319639] = 20,		-- Grasping Hands (Kul'tharok)
 	[323681] = 20,		-- Dark Devastation (Mordretha)
 	[339550] = 20,		-- Echo of Battle (Mordretha)
 	[323831] = 20,		-- Death Grasp (Mordretha)
