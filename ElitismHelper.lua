@@ -45,6 +45,7 @@ local Spells = {
 	[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
 	[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
 	[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
+	[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
 	[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
 	[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
 
@@ -153,7 +154,6 @@ local Spells = {
 	-- id ?[335882] = 20,		-- Clinging Infestation (Fen Hatchling)
 	[330404] = 20,		-- Wing Buffet (Plagueroc)
 	-- id ?[320040] = 20,		-- Plagued Carrion (Decaying Flesh Giant)
-	[320072] = 20,		-- Toxic Pool (Decaying Flesh Giant)
 	[344001] = 20,		-- Slime Trail (Environment)
 	[318949] = 20,		-- Festering Belch (Blighted Spinebreaker)
 	[320576] = 20,		-- Obliterating Ooze (Virulax Blightweaver)
