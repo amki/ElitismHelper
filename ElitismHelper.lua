@@ -45,7 +45,8 @@ local Spells = {
 	[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
 	[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
 	[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
-	[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
+	[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
+	[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
 
 
 	-- Mists of Tirna Scithe
@@ -332,6 +333,7 @@ local Auras = {
 
 	-- Affixes
 	[358973] = 20,		-- Wave of Terror (Season 2 Affix - Varruth)
+	[373391] = 20,		-- Nightmare (Season 4 Affix - Nightmare Cloud)
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
