@@ -280,6 +280,24 @@ local Spells = {
 	--[?] = 20,			-- Deadly Seas (Timecap'n Hooktail) (oneshot from going in water, debuff?)
 	[351101] = 20,		-- Energy Fragmentation (So'leah)
 	[351646] = 20,		-- Hyperlight Nova (So'leah)
+
+
+	-- Iron Docks
+
+
+	-- Grimrail Depot
+
+
+	-- Return to Karazhan: Lower
+
+
+	-- Return to Karazhan: Upper
+
+
+	-- Mechagon Junkyard
+
+
+	-- Mechagon Workshop
 }
 
 local SpellsNoTank = {
@@ -308,6 +326,12 @@ local SpellsNoTank = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
+	-- Iron Docks
+	-- Grimrail Depot
+	-- Return to Karazhan: Lower
+	-- Return to Karazhan: Upper
+	-- Mechagon Junkyard
+	-- Mechagon Workshop
 }
 
 local Auras = {
@@ -337,6 +361,12 @@ local Auras = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
+	-- Iron Docks
+	-- Grimrail Depot
+	-- Return to Karazhan: Lower
+	-- Return to Karazhan: Upper
+	-- Mechagon Junkyard
+	-- Mechagon Workshop
 }
 
 local AurasNoTank = {
