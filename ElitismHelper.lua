@@ -447,44 +447,44 @@ local Auras = {
 	-- Mists of Tirna Scithe
 
 	-- De Other Side
-	[331381] = true,		-- Slipped (Lubricator)
-	[334505] = true,		-- Shimmerdust Sleep (Weald Shimmermoth)
+	[331381] = true,	-- Slipped (Lubricator)
+	[334505] = true,	-- Shimmerdust Sleep (Weald Shimmermoth)
 
 	-- Spires of Ascension
-	[324205] = true,		-- Blinding Flash (Ventunax)
+	[324205] = true,	-- Blinding Flash (Ventunax)
 
 	-- The Necrotic Wake
-	[324293] = true,		-- Rasping Scream (Skeletal Marauder)
+	[324293] = true,	-- Rasping Scream (Skeletal Marauder)
 
 	-- Plaguefall
-	[330092] = true,		-- Plaguefallen (Environment)
-	[336301] = true,		-- Web Wrap (Domina Venomblade)
+	[330092] = true,	-- Plaguefallen (Environment)
+	[336301] = true,	-- Web Wrap (Domina Venomblade)
 
 	-- Theater of Pain
 	-- Sanguine Depths
 	-- Halls of Atonement
 
 	-- Affixes
-	[358973] = true,		-- Wave of Terror (Season 2 Affix - Varruth)
-	[373391] = true,		-- Nightmare (Season 4 Affix - Nightmare Cloud)
+	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
+	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
 
 	-- Iron Docks
-	[164504] = true,		-- Intimidated (Fleshrender Nok'gar)
-	[172631] = true,		-- Knocked Down (Slippery Grease)
+	[164504] = true,	-- Intimidated (Fleshrender Nok'gar)
+	[172631] = true,	-- Knocked Down (Slippery Grease)
 
 	-- Grimrail Depot
 	-- Return to Karazhan: Lower
 	-- Return to Karazhan: Upper
 
 	-- Operation: Mechagon - Junkyard
-	[398529] = true,		-- Gooped (Gunker)
-	[300659] = true,		-- Consuming Slime (Toxic Monstrosity)
+	[398529] = true,	-- Gooped (Gunker)
+	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
 
 	-- Operation: Mechagon - Workshop
-	[293986] = true,		--- Sonic Pulse (Blastatron X-80)
+	[293986] = true,	-- Sonic Pulse (Blastatron X-80)
 }
 
 local AurasNoTank = {
