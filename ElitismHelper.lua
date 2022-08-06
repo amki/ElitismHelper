@@ -328,7 +328,7 @@ local Spells = {
 	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
 	[228625] = 20,		-- Banshee Wail (Wholesome Host / Wholesome Hostess)
 	[227977] = 20,		-- Flashlight (Skeletal Usher)
-	--[241774] = 20,      -- Shield Smash (Phantom Guardsman) TODO avoidable?
+	--[241774] = 20,		-- Shield Smash (Phantom Guardsman) TODO avoidable?
 	[228603] = 20,		-- Charge (Spectral Charger)
 
 	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westside Story)
