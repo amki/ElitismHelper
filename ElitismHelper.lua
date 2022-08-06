@@ -326,10 +326,38 @@ local Spells = {
 	-- Return to Karazhan: Upper
 
 
-	-- Mechagon Junkyard
+	-- Operation: Mechagon - Junkyard
+	[300816] = 20,		-- Slimewave (Slime Elemental)
+	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
+	[300427] = 20,		-- Shockwave (Scrapbone Bully)
+	[294890] = 20,		-- Gryro-Scrap (Malfunctioning Scrapbot)
+	[300129] = 20,		-- Self-Destruct Protocol (Malfunctioning Scrapbot)
+	[300561] = 20,		-- Explosion (Scrapbone Trashtosser)
+	[299475] = 20,		-- B.O.R.K (Scraphound)
+	[299535] = 20,		-- Scrap Blast (Pistonhead Blaster)
+	[301680] = 20,		-- Rapid Fire (Mechagon Cavalry)
+
+	[297283] = 20,		-- Cave In (King Gobbamak)
+	[298940] = 20,		-- Bolt Buster (Naeno Megacrash)
+	[295552] = 20,		-- Cannon Blast (HK-8 Aerial Oppression Unit)
+	[296150] = 20,		-- Vent Blast (HK-8 Aerial Oppression Unit - Environment)
 
 
-	-- Mechagon Workshop
+	-- Operation: Mechagon - Workshop
+	[294128] = 20,		-- Rocket Barrage (Rocket Tonk)
+	[293861] = 20,		-- Anti-Personnel Squirrel (Anti-Personnel Squirrel)
+	[294324] = 20,		-- Mega Drill (Waste Processing Unit)
+	[295168] = 20,		-- Capacitor Discharge (Blastatron X-80)
+
+	[285020] = 20,		-- Whirling Edge (The Platinum Pummeler)
+	[282943] = 20,		-- Piston Smasher (Tussle Tonks - Environmnet)
+	[283422] = 20,		-- Maximum Thrust (Gnomercy 4.U.)
+	[291930] = 20,		-- Air Drop (K.U-J.0)
+	[294954] = 20,		-- Self-Trimming Hedge (Machinist's Garden)
+	[285443] = 20,		-- "Hidden" Flame Cannon (Machinist's Garden)
+	[285460] = 20,		-- Discom-BOMB-ulator (Machinist's Garden)
+	[294869] = 20,		-- Roaring Flame (Machinist's Garden)
+	[291915] = 20,		-- Plasma Orb (King Mechagon)
 }
 
 local SpellsNoTank = {
@@ -369,34 +397,35 @@ local SpellsNoTank = {
 	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
 
 	-- Return to Karazhan: Upper
-	-- Mechagon Junkyard
-	-- Mechagon Workshop
+	-- Operation: Mechagon - Junkyard
+	-- Operation: Mechagon - Workshop
+	[294291] = 20,		-- Process Waste ()
 }
 
 local Auras = {
 	-- Mists of Tirna Scithe
 
 	-- De Other Side
-	[331381] = 20,		-- Slipped (Lubricator)
-	[334505] = 20,		-- Shimmerdust Sleep (Weald Shimmermoth)
+	[331381] = true,		-- Slipped (Lubricator)
+	[334505] = true,		-- Shimmerdust Sleep (Weald Shimmermoth)
 
 	-- Spires of Ascension
-	[324205] = 20,		-- Blinding Flash (Ventunax)
+	[324205] = true,		-- Blinding Flash (Ventunax)
 
 	-- The Necrotic Wake
-	[324293] = 20,		-- Rasping Scream (Skeletal Marauder)
+	[324293] = true,		-- Rasping Scream (Skeletal Marauder)
 
 	-- Plaguefall
-	[330092] = 20,		-- Plaguefallen (Environment)
-	[336301] = 20,		-- Web Wrap (Domina Venomblade)
+	[330092] = true,		-- Plaguefallen (Environment)
+	[336301] = true,		-- Web Wrap (Domina Venomblade)
 
 	-- Theater of Pain
 	-- Sanguine Depths
 	-- Halls of Atonement
 
 	-- Affixes
-	[358973] = 20,		-- Wave of Terror (Season 2 Affix - Varruth)
-	[373391] = 20,		-- Nightmare (Season 4 Affix - Nightmare Cloud)
+	[358973] = true,		-- Wave of Terror (Season 2 Affix - Varruth)
+	[373391] = true,		-- Nightmare (Season 4 Affix - Nightmare Cloud)
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
@@ -404,8 +433,13 @@ local Auras = {
 	-- Grimrail Depot
 	-- Return to Karazhan: Lower
 	-- Return to Karazhan: Upper
-	-- Mechagon Junkyard
-	-- Mechagon Workshop
+
+	-- Operation: Mechagon - Junkyard
+	[398529] = true,		-- Gooped (Gunker)
+	[300659] = true,		-- Consuming Slime (Toxic Monstrosity)
+
+	-- Operation: Mechagon - Workshop
+	[293986] = true,		--- Sonic Pulse (Blastatron X-80)
 }
 
 local AurasNoTank = {
