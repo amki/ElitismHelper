@@ -289,6 +289,21 @@ local Spells = {
 
 
 	-- Return to Karazhan: Lower
+	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
+	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
+	[227925] = 20,		-- Final Curtain (Ghostly Understudy)
+	[228625] = 20,		-- Banshee Wail (Wholesome Host / Wholesome Hostess)
+	[227977] = 20,		-- Flashlight (Skeletal Usher)
+	[228603] = 20,		-- Charge (Spectral Charger)
+
+	[227568] = 20,		-- Burning Leg Sweep (Toe Knee)
+	[227480] = 20,		-- Flame Gale (Toe Knee)
+	[227799] = 20,		-- Wash Away (Mrrgria)
+	[227645] = 20,		-- Spectral Charge (Midnight)
+	[227339] = 20,		-- Mezair (Midnight)
+	[227651] = 20,		-- Iron Whirlwind (Baron Rafe Dreuger)
+	[227473] = 20,		-- Whirling Edge (Lord Robin Daris)
+	[227672] = 20,		-- Will Breaker (Lord Crispin Ference)
 
 
 	-- Return to Karazhan: Upper
@@ -328,7 +343,10 @@ local SpellsNoTank = {
 	-- Tazavesh: So'leah's Gambit
 	-- Iron Docks
 	-- Grimrail Depot
+
 	-- Return to Karazhan: Lower
+	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
+
 	-- Return to Karazhan: Upper
 	-- Mechagon Junkyard
 	-- Mechagon Workshop
