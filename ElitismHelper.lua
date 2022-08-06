@@ -325,13 +325,16 @@ local Spells = {
 	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
 	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
 	[227925] = 20,		-- Final Curtain (Ghostly Understudy)
+	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
 	[228625] = 20,		-- Banshee Wail (Wholesome Host / Wholesome Hostess)
 	[227977] = 20,		-- Flashlight (Skeletal Usher)
+	--[241774] = 10,      -- Shield Smash (Phantom Guardsman) TODO avoidable?
 	[228603] = 20,		-- Charge (Spectral Charger)
 
-	[227568] = 20,		-- Burning Leg Sweep (Toe Knee)
-	[227480] = 20,		-- Flame Gale (Toe Knee)
-	[227799] = 20,		-- Wash Away (Mrrgria)
+	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westside Story)
+	[227480] = 20,		-- Flame Gale (Toe Knee, Opera Hall: Westside Story)
+	[227799] = 20,		-- Wash Away (Mrrgria, Opera Hall: Westside Story)
+	[228221] = 20,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
 	[227645] = 20,		-- Spectral Charge (Midnight)
 	[227339] = 20,		-- Mezair (Midnight)
 	[227651] = 20,		-- Iron Whirlwind (Baron Rafe Dreuger)
@@ -340,7 +343,22 @@ local Spells = {
 
 
 	-- Return to Karazhan: Upper
-
+	[229563] = 20,		-- Knight Move (Knight)
+	[229298] = 20,		-- Knight Move (Knight)
+	[229559] = 20,		-- Bishop Move (Bishop)
+	[229384] = 20,		-- Queen Move (Queen)
+	[229568] = 20,		-- Rook Move (Rook)
+	[229427] = 20,		-- Royal Slash (King)
+	[242894] = 20,		-- Unstable Energy (Damaged Golem)
+	[227806] = 25,		-- Ceaseless Winter (Shade of Medivh)
+	[227620] = 20,		-- Arcane Bomb (Mana Devourer)
+	[229248] = 20,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
+	[229285] = 20,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
+	[229151] = 20,		-- Disintegrate (Viz'aduum the Watcher)
+	[229161] = 20,		-- Explosive Shadows (Viz'aduum the Watcher)
+	[227465] = 20,		-- Power Discharge (The Curator)
+	[227285] = 20,		-- Power Discharge (The Curator)
+	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
 
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
@@ -417,9 +435,12 @@ local SpellsNoTank = {
 	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
 
 	-- Return to Karazhan: Upper
+	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
+
 	-- Operation: Mechagon - Junkyard
+
 	-- Operation: Mechagon - Workshop
-	[294291] = 20,		-- Process Waste ()
+	[294291] = 20,		-- Process Waste (Waste Processing Unit)
 }
 
 local Auras = {
