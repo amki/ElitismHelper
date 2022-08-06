@@ -360,6 +360,7 @@ local Spells = {
 	[227285] = 20,		-- Power Discharge (The Curator)
 	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
 
+
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
 	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
