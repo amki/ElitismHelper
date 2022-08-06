@@ -286,6 +286,23 @@ local Spells = {
 
 
 	-- Grimrail Depot
+	[176131] = 20,		-- Cannon Barrage (Grom'kar Boomer)
+	[166676] = 20,		-- Shrapnel Blast (Grom'kar Gunner)
+	[176147] = 20,		-- Ignite (Grom'kar Gunner)
+	[176033] = 20,		-- Flametongue (Grom'kar Cinderseer)
+	[167038] = 20,		-- Slag Tanker (Environmnet)
+	[166404] = 20,		-- Arcane Blitz (Grimrail Scout)
+	[166340] = 20,		-- Thunder Zone (Grom'kar Far Seer) TODO some ticks not avoidable?
+	--[166336] = 20,		-- Storm Shield (Grom'kar Far Seer) TODO damage reflect that chains... avoidable?
+
+	[162513] = 20,		-- VX18-B Target Eliminator (Railmaster Rocketspark)
+	[163741] = 20,		-- Blackrock Mortar (Nitrogg Thundertower)
+	[161220] = 20,		-- Suppressive Fire (Nitrogg Thundertower)
+	[166570] = 20,		-- Slag Blast (Nitrogg Thundertower)
+	[156303] = 20,		-- Shrapnel Blast (Grom'kar Gunner)
+	[162065] = 20,		-- Freezing Snare (Skylord Tovra)
+	--[161588] = 20,		-- Diffused Energy (Skylord Tovra) TODO some ticks not avoidable?
+	[162057] = 20,		-- Spinning Spear (Skylord Tovra)
 
 
 	-- Return to Karazhan: Lower
@@ -342,7 +359,11 @@ local SpellsNoTank = {
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
 	-- Iron Docks
+
 	-- Grimrail Depot
+	[166380] = 20,		-- Reckless Slash (Grom'kar Captain) TODO always targets tank? avoidable by tank?
+	[161089] = 20,		-- Mad Dash (Borka the Brute) TODO avoidable by tank?
+	[164163] = 20,		-- Hewing Swipe (Grimrail Overseer)
 
 	-- Return to Karazhan: Lower
 	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
