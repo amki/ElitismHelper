@@ -328,7 +328,7 @@ local Spells = {
 	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
 	[228625] = 20,		-- Banshee Wail (Wholesome Host / Wholesome Hostess)
 	[227977] = 20,		-- Flashlight (Skeletal Usher)
-	--[241774] = 10,      -- Shield Smash (Phantom Guardsman) TODO avoidable?
+	--[241774] = 20,      -- Shield Smash (Phantom Guardsman) TODO avoidable?
 	[228603] = 20,		-- Charge (Spectral Charger)
 
 	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westside Story)
@@ -350,7 +350,7 @@ local Spells = {
 	[229568] = 20,		-- Rook Move (Rook)
 	[229427] = 20,		-- Royal Slash (King)
 	[242894] = 20,		-- Unstable Energy (Damaged Golem)
-	[227806] = 25,		-- Ceaseless Winter (Shade of Medivh)
+	[227806] = 20,		-- Ceaseless Winter (Shade of Medivh)
 	[227620] = 20,		-- Arcane Bomb (Mana Devourer)
 	[229248] = 20,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
 	[229285] = 20,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
