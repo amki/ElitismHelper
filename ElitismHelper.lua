@@ -283,6 +283,22 @@ local Spells = {
 
 
 	-- Iron Docks
+	[172963] = 20,		-- Gatecrasher (Siegemaster Olugar, Siegemaster Rokra)
+	[167516] = 20,		-- Shrapnel Blast (Grom'kar Incinerator) TODO avoidable?
+	[164632] = 20,		-- Burning Arrows (Grom'kar Flameslinger) TODO first tick avoidable?
+	[168514] = 20,		-- Cannon Barrage (Environment)
+	[168540] = 20,		-- Cannon Barrage (Environment)
+	[173324] = 20,		-- Jagged Caltrops (Thunderlord Wrangler)
+	[173517] = 20,		-- Lava Blast (Ironwing Flamespitter)
+
+	[164734] = 20,		-- Shredding Swipes (Dreadfang) TODO always avoidable?
+	[163276] = 20,		-- Shredded Tendons (Grimrail Enforcers)
+	[163668] = 20,		-- Flaming Slash (Grimrail Enforcers - Makogg Emberblade)
+	[165152] = 20,		-- Lava Sweep (Grimrail Enforcers - Makogg Emberblade)
+	[161256] = 20,		-- Primal Assault (Oshir)
+	[168148] = 20,		-- Cannon Barrage (Skulloc)
+	[168390] = 20,		-- Cannon Barrage (Skulloc)
+	[169129] = 20,		-- Backdraft (Skulloc)
 
 
 	-- Grimrail Depot
@@ -386,7 +402,11 @@ local SpellsNoTank = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
+
 	-- Iron Docks
+	[167233] = 20,		-- Bladestorm (Grom'kar Battlemaster, Pitwarden Gwarnok)
+	[167815] = 20,		-- Rending Cleave (Thunderlord Wrangler)
+	[168401] = 20,		-- Bladestorm (Koramar)
 
 	-- Grimrail Depot
 	[166380] = 20,		-- Reckless Slash (Grom'kar Captain) TODO always targets tank? avoidable by tank?
@@ -429,7 +449,11 @@ local Auras = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
+
 	-- Iron Docks
+	[164504] = true,		-- Intimidated (Fleshrender Nok'gar)
+	[172631] = true,		-- Knocked Down (Slippery Grease)
+
 	-- Grimrail Depot
 	-- Return to Karazhan: Lower
 	-- Return to Karazhan: Upper
