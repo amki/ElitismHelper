@@ -302,6 +302,7 @@ local Spells = {
 
 
 	-- Grimrail Depot
+	[164188] = 20,		-- Blackrock Bomb (Grimrail Bombardier)
 	[176131] = 20,		-- Cannon Barrage (Grom'kar Boomer)
 	[166676] = 20,		-- Shrapnel Blast (Grom'kar Gunner)
 	[176147] = 20,		-- Ignite (Grom'kar Gunner)
