@@ -383,11 +383,13 @@ local Spells = {
 	[293861] = 20,		-- Anti-Personnel Squirrel (Anti-Personnel Squirrel)
 	[294324] = 20,		-- Mega Drill (Waste Processing Unit)
 	[295168] = 20,		-- Capacitor Discharge (Blastatron X-80)
+	[293986] = 20,		-- Sonic Pulse (Blastatron X-80)
 
 	[285020] = 20,		-- Whirling Edge (The Platinum Pummeler)
 	[282943] = 20,		-- Piston Smasher (Tussle Tonks - Environmnet)
 	[283422] = 20,		-- Maximum Thrust (Gnomercy 4.U.)
 	[291930] = 20,		-- Air Drop (K.U-J.0)
+	[291949] = 20,		-- Venting Flames (K.U-J.0)
 	[294954] = 20,		-- Self-Trimming Hedge (Machinist's Garden)
 	[285443] = 20,		-- "Hidden" Flame Cannon (Machinist's Garden)
 	[285460] = 20,		-- Discom-BOMB-ulator (Machinist's Garden)
@@ -485,7 +487,6 @@ local Auras = {
 	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
 
 	-- Operation: Mechagon - Workshop
-	[293986] = true,	-- Sonic Pulse (Blastatron X-80)
 }
 
 local AurasNoTank = {
