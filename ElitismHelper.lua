@@ -285,7 +285,8 @@ local Spells = {
 	-- Iron Docks
 	[172963] = 20,		-- Gatecrasher (Siegemaster Olugar, Siegemaster Rokra)
 	[167516] = 20,		-- Shrapnel Blast (Grom'kar Incinerator) TODO avoidable?
-	[164632] = 20,		-- Burning Arrows (Grom'kar Flameslinger) TODO first tick avoidable?
+	[164632] = 20,		-- Burning Arrows (Grom'kar Flameslinger)
+	[173105] = 20,		-- Whirling Chains (Grom'kar Chainmaster)
 	[168514] = 20,		-- Cannon Barrage (Environment)
 	[168540] = 20,		-- Cannon Barrage (Environment)
 	[173324] = 20,		-- Jagged Caltrops (Thunderlord Wrangler)
