@@ -318,7 +318,7 @@ local Spells = {
 	[351646] = 20,		-- Hyperlight Nova (So'leah)
 	
 	-- [**Legion**] 
-	--Court of Stars
+	-- Court of Stars
 	[219498] = 20,		-- Streetsweeper (Patrol Captain Gerdo)
 	[206574] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
 	[206580] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
@@ -335,6 +335,17 @@ local Spells = {
 	[193234] = 20,		-- Dancing Blade (Hymdall)
 	[193260] = 20,		-- Static Field (Storm Drake, Hymdall)
 	[188395] = 20,		-- Ball Lightning (Static Field, Hymdall)
+
+	
+	-- [**Mist of Pandaria**] 
+	-- Temple of the Jade Serpent
+	[115167] = 20, 		-- Corrupted Waters (Wise Mari)
+	[106334] = 20, 		-- Wash Away (Wise Mari)
+	[106938] = 20, 		-- Serpent Wave (Liu FlameHeart)
+	[107053] = 20, 		-- Jade Serpent Wave (Liu FlameHeart)
+	[107045] = 20, 		-- Jade Fire (Liu FlameHeart)
+	
+	
 		
 }
 
