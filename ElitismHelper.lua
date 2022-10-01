@@ -37,17 +37,53 @@ local Spells = {
 	[343520] = 20,		-- Storming (Environment)
 	[350163] = 20,		-- Melee (Spiteful Shade)
 
-	[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
-	[356414] = 20,		-- Frost Lance (Season 2 Oros)
-	[358894] = 20,		-- Cold Snap (Season 2 Oros)
-	[358897] = 20,		-- Cold Snap (Season 2 Oros)
-	[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
-	[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
-	[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
-	[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
-	[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
+	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
+	--[356414] = 20,		-- Frost Lance (Season 2 Oros)
+	--[358894] = 20,		-- Cold Snap (Season 2 Oros)
+	--[358897] = 20,		-- Cold Snap (Season 2 Oros)
+	--[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
+	--[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
+	--[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
+	--[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
+	--[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
+	
 	[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
 	[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
+
+	-- [**Dragonflight**]
+	
+	-- Algeh'ar Academy S1
+	[386201] = 20,		-- Corruped Mana (Vexamus)
+	[388796] = 20,		-- Germinate (Overgrown Ancient)
+	[374361] = 20,		-- Astral Breath (Echo of Doragosa)
+	
+	-- Brackenhide Hollow
+	
+	-- Hall Of Infusion
+	
+	-- Neltharus 
+	[374854] = 20, 		-- Erupted Ground (Chargath, bane of Scales)
+	[373767] = 20,		-- Magma Wave (Chargath, bane of Scales)
+	[377995] = 20,		-- Forgestorm (Forgemaster Gorek)
+	[377204] = 20,		-- Berserk Barrage (Warlord Sargha)
+	
+	-- Ruby Life Pools 
+	[372107] = 20,		-- Molten Boulder (Kokia Blazehoof)
+	
+	-- The Azure Vault 
+	[385578] = 20,		-- Arcane Orb (AzureBlade)
+	[372222] = 20,		-- Arcane Slicer (AzureBlade)
+
+	-- The Nokhud Offensive
+	[384186] = 20,		-- Lighting Strike (The Raging Tempest)
+	[385339] = 20,		-- Earthsplitter (Teera and Maruuk)
+	[382670] = 20,		-- Gale Arrow (Teera and Maruuk)
+	[376683] = 20,		-- Iron Stampede (Balakar Khan)
+	[393421] = 20,		-- Quake (Balakar Khan)
+	-- Uldaman : Legacy of Tyr
+	
+	
+	-- [**Shadowlands**]
 
 
 	-- Mists of Tirna Scithe
@@ -71,8 +107,7 @@ local Spells = {
 	[322655] = 20,		-- Acid Expulsion (Tred'ova)
 	[326309] = 20,		-- Decomposing Acid (Tred'ova)
 	[326263] = 20,		-- Anima Shedding (Tred'ova)
-
-
+	
 	-- De Other Side
 	[334051] = 20,		-- Erupting Darkness (Death Speaker)
 	[328729] = 20,		-- Dark Lotus (Risen Cultist)
