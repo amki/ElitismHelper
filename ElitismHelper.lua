@@ -73,6 +73,7 @@ local Spells = {
 	-- The Azure Vault 
 	[385578] = 20,		-- Arcane Orb (AzureBlade)
 	[372222] = 20,		-- Arcane Slicer (AzureBlade)
+	[384699] = 20,		-- Crystalline Roar (Umbrelskul)
 
 	-- The Nokhud Offensive
 	[384186] = 20,		-- Lighting Strike (The Raging Tempest)
