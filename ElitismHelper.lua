@@ -335,7 +335,11 @@ local Spells = {
 	[193234] = 20,		-- Dancing Blade (Hymdall)
 	[193260] = 20,		-- Static Field (Storm Drake, Hymdall)
 	[188395] = 20,		-- Ball Lightning (Static Field, Hymdall)
-
+	
+	-- [**Warlords of Draenor**] 
+	-- Shadowmoon Burial Grounds
+	[153395] = 20,		-- Body Slam (Bonemaw)
+	[154442] = 20,		-- %amevpme,ce (Ner'zhul)
 	
 	-- [**Mist of Pandaria**] 
 	-- Temple of the Jade Serpent
