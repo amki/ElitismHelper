@@ -51,15 +51,19 @@ local Spells = {
 	[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
 
 	-- [**Dragonflight**]
-	
 	-- Algeh'ar Academy S1
 	[386201] = 20,		-- Corruped Mana (Vexamus)
 	[388796] = 20,		-- Germinate (Overgrown Ancient)
 	[374361] = 20,		-- Astral Breath (Echo of Doragosa)
 	
 	-- Brackenhide Hollow
+	[376811] = 20,		-- Decay spray (Treemouth)	
+	[376170] = 20,		-- Choking Rotcloud (Decatriarch Wratheye)
 	
 	-- Hall Of Infusion
+	[375215] = 20,		-- Cave in (Gulping Goliath)
+	[390006] = 20,		-- Frost Cyclone (Khajin the Unyielding)
+	[388786] = 20,		-- Rogue Waves (Primal Tsunami)
 	
 	-- Neltharus 
 	[374854] = 20, 		-- Erupted Ground (Chargath, bane of Scales)
@@ -81,12 +85,11 @@ local Spells = {
 	[382670] = 20,		-- Gale Arrow (Teera and Maruuk)
 	[376683] = 20,		-- Iron Stampede (Balakar Khan)
 	[393421] = 20,		-- Quake (Balakar Khan)
+	
 	-- Uldaman : Legacy of Tyr
 	
 	
 	-- [**Shadowlands**]
-
-
 	-- Mists of Tirna Scithe
 	[321968] = 20,		-- Bewildering Pollen (Tirnenn Villager)
 	[323137] = 20,		-- Bewildering Pollen (Tirnenn Villager)
@@ -348,12 +351,8 @@ local Spells = {
 	[106938] = 20, 		-- Serpent Wave (Liu FlameHeart)
 	[107053] = 20, 		-- Jade Serpent Wave (Liu FlameHeart)
 	[107045] = 20, 		-- Jade Fire (Liu FlameHeart)
-	
-	
 		
 }
-
-
 
 local SpellsNoTank = {
 	-- Mists of Tirna Scithe
