@@ -316,7 +316,29 @@ local Spells = {
 	--[?] = 20,			-- Deadly Seas (Timecap'n Hooktail) (oneshot from going in water, debuff?)
 	[351101] = 20,		-- Energy Fragmentation (So'leah)
 	[351646] = 20,		-- Hyperlight Nova (So'leah)
+	
+	-- [**Legion**] 
+	--Court of Stars
+	[219498] = 20,		-- Streetsweeper (Patrol Captain Gerdo)
+	[206574] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
+	[206580] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
+	[209477] = 20,		-- Wild Detonation (Mana Wyrm)
+	[211457] = 20,		-- Infernal Eruption (Talixae Flamewreath)
+	[209630] = 20,		-- Piercing Gale (Images of Advisor Melandrus)
+	[209628] = 20,		-- Piercing Gale (Advisor Melandrus)
+	[214688] = 20,		-- Carrion Swarm (Gerenth the Vile)
+	
+	-- Halls of Valor
+	[192206] = 20,		-- Sanctify (Olmyr & Hyrja)
+	[199210] = 20,		-- Penetrating Shot (Valarjar Marksman)
+	[210875] = 20,		-- Charged Pulse (Stormforged Sentinel)
+	[193234] = 20,		-- Dancing Blade (Hymdall)
+	[193260] = 20,		-- Static Field (Storm Drake, Hymdall)
+	[188395] = 20,		-- Ball Lightning (Static Field, Hymdall)
+		
 }
+
+
 
 local SpellsNoTank = {
 	-- Mists of Tirna Scithe
