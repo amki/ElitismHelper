@@ -37,20 +37,10 @@ local Spells = {
 	[343520] = 20,		-- Storming (Environment)
 	[350163] = 20,		-- Melee (Spiteful Shade)
 
-	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
-	--[356414] = 20,		-- Frost Lance (Season 2 Oros)
-	--[358894] = 20,		-- Cold Snap (Season 2 Oros)
-	--[358897] = 20,		-- Cold Snap (Season 2 Oros)
-	--[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
-	--[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
-	--[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
-	--[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
-	--[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
 	
-	[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
-	[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
 
 	-- [**Dragonflight**]
+	-- Affixes seasons
 	
 	-- Algeh'ar Academy S1
 	[386201] = 20,		-- Corruped Mana (Vexamus)
@@ -85,7 +75,20 @@ local Spells = {
 	
 	
 	-- [**Shadowlands**]
-
+	-- Affixes seasons
+	
+	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
+	--[356414] = 20,		-- Frost Lance (Season 2 Oros)
+	--[358894] = 20,		-- Cold Snap (Season 2 Oros)
+	--[358897] = 20,		-- Cold Snap (Season 2 Oros)
+	--[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
+	--[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
+	--[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
+	--[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
+	--[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
+	
+	[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
+	[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
 
 	-- Mists of Tirna Scithe
 	[321968] = 20,		-- Bewildering Pollen (Tirnenn Villager)
@@ -98,7 +101,7 @@ local Spells = {
 	[331743] = 20,		-- Bucking Rampage (Mistveil Guardian)
 	[331748] = 20,		-- Back Kick (Mistveil Guardian)
 	[340160] = 20,		-- Radiant Breath (Mistveil Matriarch)
-
+	
 	--id ? [323177] = 20,		-- Tears of the Forest (Ingra Maloch)
 	[323250] = 20,		-- Anima Puddle (Droman Oulfarran)
 	[321834] = 20,		-- Dodge Ball (Mistcaller)
@@ -318,6 +321,88 @@ local Spells = {
 	[351646] = 20,		-- Hyperlight Nova (So'leah)
 
 
+
+
+	-- [**Battle for Azeroth**] 
+	-- Operation: Mechagon - Junkyard
+	[300816] = 20,		-- Slimewave (Slime Elemental)
+	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
+	[300427] = 20,		-- Shockwave (Scrapbone Bully)
+	[294890] = 20,		-- Gryro-Scrap (Malfunctioning Scrapbot)
+	[300129] = 20,		-- Self-Destruct Protocol (Malfunctioning Scrapbot)
+	[300561] = 20,		-- Explosion (Scrapbone Trashtosser)
+	[299475] = 20,		-- B.O.R.K (Scraphound)
+	[299535] = 20,		-- Scrap Blast (Pistonhead Blaster)
+	[301680] = 20,		-- Rapid Fire (Mechagon Cavalry)
+
+	[297283] = 20,		-- Cave In (King Gobbamak)
+	[298940] = 20,		-- Bolt Buster (Naeno Megacrash)
+	[295552] = 20,		-- Cannon Blast (HK-8 Aerial Oppression Unit)
+	[296150] = 20,		-- Vent Blast (HK-8 Aerial Oppression Unit - Environment)
+
+
+	-- Operation: Mechagon - Workshop
+	[294128] = 20,		-- Rocket Barrage (Rocket Tonk)
+	[293861] = 20,		-- Anti-Personnel Squirrel (Anti-Personnel Squirrel)
+	[294324] = 20,		-- Mega Drill (Waste Processing Unit)
+	[295168] = 20,		-- Capacitor Discharge (Blastatron X-80)
+	[293986] = 20,		-- Sonic Pulse (Blastatron X-80)
+
+	[285020] = 20,		-- Whirling Edge (The Platinum Pummeler)
+	[282943] = 20,		-- Piston Smasher (Tussle Tonks - Environmnet)
+	[283422] = 20,		-- Maximum Thrust (Gnomercy 4.U.)
+	[291930] = 20,		-- Air Drop (K.U-J.0)
+	[291949] = 20,		-- Venting Flames (K.U-J.0)
+	[294954] = 20,		-- Self-Trimming Hedge (Machinist's Garden)
+	[285443] = 20,		-- "Hidden" Flame Cannon (Machinist's Garden)
+	[285460] = 20,		-- Discom-BOMB-ulator (Machinist's Garden)
+	[294869] = 20,		-- Roaring Flame (Machinist's Garden)
+	[291915] = 20,		-- Plasma Orb (King Mechagon)
+
+
+	-- [**Legion**] 
+	-- Return to Karazhan: Lower
+	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
+	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
+	[227925] = 20,		-- Final Curtain (Ghostly Understudy)
+	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
+	[228625] = 20,		-- Banshee Wail (Wholesome Host / Wholesome Hostess)
+	[227977] = 20,		-- Flashlight (Skeletal Usher)
+	--[241774] = 20,		-- Shield Smash (Phantom Guardsman) TODO avoidable?
+	[228603] = 20,		-- Charge (Spectral Charger)
+
+	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westside Story)
+	[227480] = 20,		-- Flame Gale (Toe Knee, Opera Hall: Westside Story)
+	[227799] = 20,		-- Wash Away (Mrrgria, Opera Hall: Westside Story)
+	[228221] = 20,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
+	[227645] = 20,		-- Spectral Charge (Midnight)
+	[227339] = 20,		-- Mezair (Midnight)
+	[227651] = 20,		-- Iron Whirlwind (Baron Rafe Dreuger)
+	[227473] = 20,		-- Whirling Edge (Lord Robin Daris)
+	[227672] = 20,		-- Will Breaker (Lord Crispin Ference)
+
+
+	-- Return to Karazhan: Upper
+	[229563] = 20,		-- Knight Move (Knight)
+	[229298] = 20,		-- Knight Move (Knight)
+	[229559] = 20,		-- Bishop Move (Bishop)
+	[229384] = 20,		-- Queen Move (Queen)
+	[229568] = 20,		-- Rook Move (Rook)
+	[229427] = 20,		-- Royal Slash (King)
+	[242894] = 20,		-- Unstable Energy (Damaged Golem)
+	[227806] = 20,		-- Ceaseless Winter (Shade of Medivh)
+	[227620] = 20,		-- Arcane Bomb (Mana Devourer)
+	[229248] = 20,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
+	[229285] = 20,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
+	[229151] = 20,		-- Disintegrate (Viz'aduum the Watcher)
+	[229161] = 20,		-- Explosive Shadows (Viz'aduum the Watcher)
+	[227465] = 20,		-- Power Discharge (The Curator)
+	[227285] = 20,		-- Power Discharge (The Curator)
+	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
+	
+	-- [**Mist of Pandaria**] 
+	
+	-- [**Warlords of Draenor**] 
 	-- Iron Docks
 	[172963] = 20,		-- Gatecrasher (Siegemaster Olugar, Siegemaster Rokra)
 	[167516] = 20,		-- Shrapnel Blast (Grom'kar Incinerator) TODO avoidable?
@@ -360,83 +445,11 @@ local Spells = {
 	[162057] = 20,		-- Spinning Spear (Skylord Tovra)
 
 
-	-- Return to Karazhan: Lower
-	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
-	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
-	[227925] = 20,		-- Final Curtain (Ghostly Understudy)
-	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
-	[228625] = 20,		-- Banshee Wail (Wholesome Host / Wholesome Hostess)
-	[227977] = 20,		-- Flashlight (Skeletal Usher)
-	--[241774] = 20,		-- Shield Smash (Phantom Guardsman) TODO avoidable?
-	[228603] = 20,		-- Charge (Spectral Charger)
-
-	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westside Story)
-	[227480] = 20,		-- Flame Gale (Toe Knee, Opera Hall: Westside Story)
-	[227799] = 20,		-- Wash Away (Mrrgria, Opera Hall: Westside Story)
-	[228221] = 20,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
-	[227645] = 20,		-- Spectral Charge (Midnight)
-	[227339] = 20,		-- Mezair (Midnight)
-	[227651] = 20,		-- Iron Whirlwind (Baron Rafe Dreuger)
-	[227473] = 20,		-- Whirling Edge (Lord Robin Daris)
-	[227672] = 20,		-- Will Breaker (Lord Crispin Ference)
-
-
-	-- Return to Karazhan: Upper
-	[229563] = 20,		-- Knight Move (Knight)
-	[229298] = 20,		-- Knight Move (Knight)
-	[229559] = 20,		-- Bishop Move (Bishop)
-	[229384] = 20,		-- Queen Move (Queen)
-	[229568] = 20,		-- Rook Move (Rook)
-	[229427] = 20,		-- Royal Slash (King)
-	[242894] = 20,		-- Unstable Energy (Damaged Golem)
-	[227806] = 20,		-- Ceaseless Winter (Shade of Medivh)
-	[227620] = 20,		-- Arcane Bomb (Mana Devourer)
-	[229248] = 20,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
-	[229285] = 20,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
-	[229151] = 20,		-- Disintegrate (Viz'aduum the Watcher)
-	[229161] = 20,		-- Explosive Shadows (Viz'aduum the Watcher)
-	[227465] = 20,		-- Power Discharge (The Curator)
-	[227285] = 20,		-- Power Discharge (The Curator)
-	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
-
-
-	-- Operation: Mechagon - Junkyard
-	[300816] = 20,		-- Slimewave (Slime Elemental)
-	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
-	[300427] = 20,		-- Shockwave (Scrapbone Bully)
-	[294890] = 20,		-- Gryro-Scrap (Malfunctioning Scrapbot)
-	[300129] = 20,		-- Self-Destruct Protocol (Malfunctioning Scrapbot)
-	[300561] = 20,		-- Explosion (Scrapbone Trashtosser)
-	[299475] = 20,		-- B.O.R.K (Scraphound)
-	[299535] = 20,		-- Scrap Blast (Pistonhead Blaster)
-	[301680] = 20,		-- Rapid Fire (Mechagon Cavalry)
-
-	[297283] = 20,		-- Cave In (King Gobbamak)
-	[298940] = 20,		-- Bolt Buster (Naeno Megacrash)
-	[295552] = 20,		-- Cannon Blast (HK-8 Aerial Oppression Unit)
-	[296150] = 20,		-- Vent Blast (HK-8 Aerial Oppression Unit - Environment)
-
-
-	-- Operation: Mechagon - Workshop
-	[294128] = 20,		-- Rocket Barrage (Rocket Tonk)
-	[293861] = 20,		-- Anti-Personnel Squirrel (Anti-Personnel Squirrel)
-	[294324] = 20,		-- Mega Drill (Waste Processing Unit)
-	[295168] = 20,		-- Capacitor Discharge (Blastatron X-80)
-	[293986] = 20,		-- Sonic Pulse (Blastatron X-80)
-
-	[285020] = 20,		-- Whirling Edge (The Platinum Pummeler)
-	[282943] = 20,		-- Piston Smasher (Tussle Tonks - Environmnet)
-	[283422] = 20,		-- Maximum Thrust (Gnomercy 4.U.)
-	[291930] = 20,		-- Air Drop (K.U-J.0)
-	[291949] = 20,		-- Venting Flames (K.U-J.0)
-	[294954] = 20,		-- Self-Trimming Hedge (Machinist's Garden)
-	[285443] = 20,		-- "Hidden" Flame Cannon (Machinist's Garden)
-	[285460] = 20,		-- Discom-BOMB-ulator (Machinist's Garden)
-	[294869] = 20,		-- Roaring Flame (Machinist's Garden)
-	[291915] = 20,		-- Plasma Orb (King Mechagon)
 }
 
 local SpellsNoTank = {
+
+	-- [**Shadowlands**]
 	-- Mists of Tirna Scithe
 	[331721] = 20,		-- Spear Flurry (Mistveil Defender)
 
@@ -462,7 +475,22 @@ local SpellsNoTank = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
+	
+	-- [**Battle for Azeroth**] 
+	-- Operation: Mechagon - Junkyard
+	-- Operation: Mechagon - Workshop
+	[294291] = 20,		-- Process Waste (Waste Processing Unit)
+	
+	-- [**Legion**] 
+	-- Return to Karazhan: Lower
+	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
+	-- Return to Karazhan: Upper
+	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
 
+	-- [**Mist of Pandaria**] 
+	
+	
+	-- [**Warlords of Draenor**] 
 	-- Iron Docks
 	[167233] = 20,		-- Bladestorm (Grom'kar Battlemaster, Pitwarden Gwarnok)
 	[167815] = 20,		-- Rending Cleave (Thunderlord Wrangler)
@@ -472,20 +500,14 @@ local SpellsNoTank = {
 	[166380] = 20,		-- Reckless Slash (Grom'kar Captain) TODO always targets tank? avoidable by tank?
 	[161089] = 20,		-- Mad Dash (Borka the Brute) TODO avoidable by tank?
 	[164163] = 20,		-- Hewing Swipe (Grimrail Overseer)
+	
 
-	-- Return to Karazhan: Lower
-	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
-
-	-- Return to Karazhan: Upper
-	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
-
-	-- Operation: Mechagon - Junkyard
-
-	-- Operation: Mechagon - Workshop
-	[294291] = 20,		-- Process Waste (Waste Processing Unit)
 }
 
 local Auras = {
+
+	-- [**Shadowlands**]
+
 	-- Mists of Tirna Scithe
 
 	-- De Other Side
@@ -506,26 +528,35 @@ local Auras = {
 	-- Sanguine Depths
 	-- Halls of Atonement
 
-	-- Affixes
+	-- Affixes seasons
 	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
 	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
 
 	-- Tazavesh: Streets of Wonder
-	-- Tazavesh: So'leah's Gambit
-
-	-- Iron Docks
-	[164504] = true,	-- Intimidated (Fleshrender Nok'gar)
-	[172631] = true,	-- Knocked Down (Slippery Grease)
-
-	-- Grimrail Depot
-	-- Return to Karazhan: Lower
-	-- Return to Karazhan: Upper
-
+	-- Tazavesh: So'leah's Gambit 
+	
+	-- [**Battle for Azeroth**] 
 	-- Operation: Mechagon - Junkyard
 	[398529] = true,	-- Gooped (Gunker)
 	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
 
 	-- Operation: Mechagon - Workshop
+	
+	-- [**Legion**] 	
+	-- Return to Karazhan: Lower
+	-- Return to Karazhan: Upper
+	
+	-- [**Mist of Pandaria**] 
+	
+	
+	-- [**Warlords of Draenor**] 
+	-- Iron Docks
+	[164504] = true,	-- Intimidated (Fleshrender Nok'gar)
+	[172631] = true,	-- Knocked Down (Slippery Grease)
+	-- Grimrail Depot
+	
+
+
 }
 
 local AurasNoTank = {
