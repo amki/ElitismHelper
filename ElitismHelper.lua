@@ -37,7 +37,6 @@ local Spells = {
 	[343520] = 20,		-- Storming (Environment)
 	[350163] = 20,		-- Melee (Spiteful Shade)
 
-	
 
 	-- [**Dragonflight**]
 	-- Affixes seasons
@@ -361,6 +360,24 @@ local Spells = {
 
 
 	-- [**Legion**] 
+	-- Court of Stars
+	[219498] = 20,		-- Streetsweeper (Patrol Captain Gerdo)
+	[206574] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
+	[206580] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
+	[209477] = 20,		-- Wild Detonation (Mana Wyrm)
+	[211457] = 20,		-- Infernal Eruption (Talixae Flamewreath)
+	[209630] = 20,		-- Piercing Gale (Images of Advisor Melandrus)
+	[209628] = 20,		-- Piercing Gale (Advisor Melandrus)
+	[214688] = 20,		-- Carrion Swarm (Gerenth the Vile)
+	
+	-- Halls of Valor
+	[192206] = 20,		-- Sanctify (Olmyr & Hyrja)
+	[199210] = 20,		-- Penetrating Shot (Valarjar Marksman)
+	[210875] = 20,		-- Charged Pulse (Stormforged Sentinel)
+	[193234] = 20,		-- Dancing Blade (Hymdall)
+	[193260] = 20,		-- Static Field (Storm Drake, Hymdall)
+	[188395] = 20,		-- Ball Lightning (Static Field, Hymdall)
+	
 	-- Return to Karazhan: Lower
 	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
 	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
@@ -381,7 +398,6 @@ local Spells = {
 	[227473] = 20,		-- Whirling Edge (Lord Robin Daris)
 	[227672] = 20,		-- Will Breaker (Lord Crispin Ference)
 
-
 	-- Return to Karazhan: Upper
 	[229563] = 20,		-- Knight Move (Knight)
 	[229298] = 20,		-- Knight Move (Knight)
@@ -401,6 +417,16 @@ local Spells = {
 	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
 	
 	-- [**Mist of Pandaria**] 
+	-- Shadowmoon Burial Grounds
+	[153395] = 20,		-- Body Slam (Bonemaw)
+	[154442] = 20,		-- %amevpme,ce (Ner'zhul)
+	
+	-- Temple of the Jade Serpent
+	[115167] = 20, 		-- Corrupted Waters (Wise Mari)
+	[106334] = 20, 		-- Wash Away (Wise Mari)
+	[106938] = 20, 		-- Serpent Wave (Liu FlameHeart)
+	[107053] = 20, 		-- Jade Serpent Wave (Liu FlameHeart)
+	[107045] = 20, 		-- Jade Fire (Liu FlameHeart)
 	
 	-- [**Warlords of Draenor**] 
 	-- Iron Docks
@@ -507,7 +533,10 @@ local SpellsNoTank = {
 local Auras = {
 
 	-- [**Shadowlands**]
-
+	-- Affixes seasons
+	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
+	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
+	
 	-- Mists of Tirna Scithe
 
 	-- De Other Side
@@ -528,9 +557,7 @@ local Auras = {
 	-- Sanguine Depths
 	-- Halls of Atonement
 
-	-- Affixes seasons
-	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
-	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
+
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit 
