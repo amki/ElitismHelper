@@ -23,8 +23,11 @@ local OutputModes = {
 }
 
 local Spells = {
+
 	-- Debug
 	--[] = 20,		-- ()
+	--[=====[ --]=====] -- Currently disabled for this seasons / Don't remove, possibly used in a future rotation
+	
 	--[252144] = 1,
 	--[190984] = 1,		 -- DEBUG Druid Wrath
 	--[285452] = 1,		 -- DEBUG Shaman Lava Burst
@@ -74,6 +77,7 @@ local Spells = {
 	
 	
 	-- [**Shadowlands**]
+	--[=====[ 
 	-- Affixes seasons
 	
 	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
@@ -318,11 +322,12 @@ local Spells = {
 	--[?] = 20,			-- Deadly Seas (Timecap'n Hooktail) (oneshot from going in water, debuff?)
 	[351101] = 20,		-- Energy Fragmentation (So'leah)
 	[351646] = 20,		-- Hyperlight Nova (So'leah)
-
+	--]=====]
 
 
 
 	-- [**Battle for Azeroth**] 
+	--[=====[
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
 	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
@@ -357,7 +362,7 @@ local Spells = {
 	[285460] = 20,		-- Discom-BOMB-ulator (Machinist's Garden)
 	[294869] = 20,		-- Roaring Flame (Machinist's Garden)
 	[291915] = 20,		-- Plasma Orb (King Mechagon)
-
+	--]=====]
 
 	-- [**Legion**] 
 	-- Court of Stars
@@ -378,6 +383,7 @@ local Spells = {
 	[193260] = 20,		-- Static Field (Storm Drake, Hymdall)
 	[188395] = 20,		-- Ball Lightning (Static Field, Hymdall)
 	
+	--[=====[
 	-- Return to Karazhan: Lower
 	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
 	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
@@ -415,11 +421,9 @@ local Spells = {
 	[227465] = 20,		-- Power Discharge (The Curator)
 	[227285] = 20,		-- Power Discharge (The Curator)
 	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
+	--]=====]
 	
 	-- [**Mist of Pandaria**] 
-	-- Shadowmoon Burial Grounds
-	[153395] = 20,		-- Body Slam (Bonemaw)
-	[154442] = 20,		-- %amevpme,ce (Ner'zhul)
 	
 	-- Temple of the Jade Serpent
 	[115167] = 20, 		-- Corrupted Waters (Wise Mari)
@@ -429,6 +433,11 @@ local Spells = {
 	[107045] = 20, 		-- Jade Fire (Liu FlameHeart)
 	
 	-- [**Warlords of Draenor**] 
+	-- Shadowmoon Burial Grounds
+	[153395] = 20,		-- Body Slam (Bonemaw)
+	[154442] = 20,		-- %amevpme,ce (Ner'zhul)
+	
+	--[=====[
 	-- Iron Docks
 	[172963] = 20,		-- Gatecrasher (Siegemaster Olugar, Siegemaster Rokra)
 	[167516] = 20,		-- Shrapnel Blast (Grom'kar Incinerator) TODO avoidable?
@@ -447,7 +456,6 @@ local Spells = {
 	[168148] = 20,		-- Cannon Barrage (Skulloc)
 	[168390] = 20,		-- Cannon Barrage (Skulloc)
 	[169129] = 20,		-- Backdraft (Skulloc)
-
 
 	-- Grimrail Depot
 	[164188] = 20,		-- Blackrock Bomb (Grimrail Bombardier)
@@ -469,13 +477,16 @@ local Spells = {
 	[162065] = 20,		-- Freezing Snare (Skylord Tovra)
 	--[161588] = 20,		-- Diffused Energy (Skylord Tovra) TODO some ticks not avoidable?
 	[162057] = 20,		-- Spinning Spear (Skylord Tovra)
-
+	--]=====]
 
 }
 
 local SpellsNoTank = {
 
+	-- [**Dragonflight**]
+
 	-- [**Shadowlands**]
+	--[=====[
 	-- Mists of Tirna Scithe
 	[331721] = 20,		-- Spear Flurry (Mistveil Defender)
 
@@ -501,22 +512,34 @@ local SpellsNoTank = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
+	--]=====]
 	
 	-- [**Battle for Azeroth**] 
+	
+	--[=====[
 	-- Operation: Mechagon - Junkyard
 	-- Operation: Mechagon - Workshop
 	[294291] = 20,		-- Process Waste (Waste Processing Unit)
+	--]=====]
 	
-	-- [**Legion**] 
+	-- [**Legion**]
+	-- Court of Stars	
+	-- Halls of Valor
+	
+	--[=====[ 
 	-- Return to Karazhan: Lower
 	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
 	-- Return to Karazhan: Upper
 	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
-
-	-- [**Mist of Pandaria**] 
+	--]=====]
 	
+	-- [**Mist of Pandaria**] 
+	-- Temple of the Jade Serpent
 	
 	-- [**Warlords of Draenor**] 
+	-- Shadowmoon Burial Grounds
+	
+	--[=====[
 	-- Iron Docks
 	[167233] = 20,		-- Bladestorm (Grom'kar Battlemaster, Pitwarden Gwarnok)
 	[167815] = 20,		-- Rending Cleave (Thunderlord Wrangler)
@@ -526,13 +549,17 @@ local SpellsNoTank = {
 	[166380] = 20,		-- Reckless Slash (Grom'kar Captain) TODO always targets tank? avoidable by tank?
 	[161089] = 20,		-- Mad Dash (Borka the Brute) TODO avoidable by tank?
 	[164163] = 20,		-- Hewing Swipe (Grimrail Overseer)
+	--]=====]
 	
 
 }
 
 local Auras = {
-
+	-- [**Dragonflight**]
+	
+	
 	-- [**Shadowlands**]
+	--[=====[ 
 	-- Affixes seasons
 	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
 	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
@@ -561,11 +588,14 @@ local Auras = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit 
+	--]=====]
 	
 	-- [**Battle for Azeroth**] 
+	--[=====[ 
 	-- Operation: Mechagon - Junkyard
 	[398529] = true,	-- Gooped (Gunker)
 	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
+	--]=====]
 
 	-- Operation: Mechagon - Workshop
 	
@@ -576,12 +606,13 @@ local Auras = {
 	-- [**Mist of Pandaria**] 
 	
 	
-	-- [**Warlords of Draenor**] 
+	-- [**Warlords of Draenor**]
+	--[=====[ 	
 	-- Iron Docks
 	[164504] = true,	-- Intimidated (Fleshrender Nok'gar)
 	[172631] = true,	-- Knocked Down (Slippery Grease)
 	-- Grimrail Depot
-	
+	--]=====]
 
 
 }
