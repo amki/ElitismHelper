@@ -23,8 +23,11 @@ local OutputModes = {
 }
 
 local Spells = {
+
 	-- Debug
 	--[] = 20,		-- ()
+	--[=====[ --]=====] -- Currently disabled for this seasons / Don't remove, possibly used in a future rotation
+	
 	--[252144] = 1,
 	--[190984] = 1,		 -- DEBUG Druid Wrath
 	--[285452] = 1,		 -- DEBUG Shaman Lava Burst
@@ -37,18 +40,58 @@ local Spells = {
 	[343520] = 20,		-- Storming (Environment)
 	[350163] = 20,		-- Melee (Spiteful Shade)
 
-	[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
-	[356414] = 20,		-- Frost Lance (Season 2 Oros)
-	[358894] = 20,		-- Cold Snap (Season 2 Oros)
-	[358897] = 20,		-- Cold Snap (Season 2 Oros)
-	[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
-	[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
-	[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
-	[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
-	[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
+
+	-- [**Dragonflight**]
+	-- Affixes seasons
+	
+	-- Algeh'ar Academy S1
+	[386201] = 20,		-- Corruped Mana (Vexamus)
+	[388796] = 20,		-- Germinate (Overgrown Ancient)
+	[374361] = 20,		-- Astral Breath (Echo of Doragosa)
+	
+	-- Brackenhide Hollow
+	
+	-- Hall Of Infusion
+	
+	-- Neltharus 
+	[374854] = 20, 		-- Erupted Ground (Chargath, bane of Scales)
+	[373767] = 20,		-- Magma Wave (Chargath, bane of Scales)
+	[377995] = 20,		-- Forgestorm (Forgemaster Gorek)
+	[377204] = 20,		-- Berserk Barrage (Warlord Sargha)
+	
+	-- Ruby Life Pools 
+	[372107] = 20,		-- Molten Boulder (Kokia Blazehoof)
+	
+	-- The Azure Vault 
+	[385578] = 20,		-- Arcane Orb (AzureBlade)
+	[372222] = 20,		-- Arcane Slicer (AzureBlade)
+	[384699] = 20,		-- Crystalline Roar (Umbrelskul)
+
+	-- The Nokhud Offensive
+	[384186] = 20,		-- Lighting Strike (The Raging Tempest)
+	[385339] = 20,		-- Earthsplitter (Teera and Maruuk)
+	[382670] = 20,		-- Gale Arrow (Teera and Maruuk)
+	[376683] = 20,		-- Iron Stampede (Balakar Khan)
+	[393421] = 20,		-- Quake (Balakar Khan)
+	-- Uldaman : Legacy of Tyr
+	
+	
+	-- [**Shadowlands**]
+	--[=====[ 
+	-- Affixes seasons
+	
+	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
+	--[356414] = 20,		-- Frost Lance (Season 2 Oros)
+	--[358894] = 20,		-- Cold Snap (Season 2 Oros)
+	--[358897] = 20,		-- Cold Snap (Season 2 Oros)
+	--[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
+	--[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
+	--[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
+	--[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
+	--[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
+	
 	[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
 	[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
-
 
 	-- Mists of Tirna Scithe
 	[321968] = 20,		-- Bewildering Pollen (Tirnenn Villager)
@@ -61,7 +104,7 @@ local Spells = {
 	[331743] = 20,		-- Bucking Rampage (Mistveil Guardian)
 	[331748] = 20,		-- Back Kick (Mistveil Guardian)
 	[340160] = 20,		-- Radiant Breath (Mistveil Matriarch)
-
+	
 	--id ? [323177] = 20,		-- Tears of the Forest (Ingra Maloch)
 	[323250] = 20,		-- Anima Puddle (Droman Oulfarran)
 	[321834] = 20,		-- Dodge Ball (Mistcaller)
@@ -71,8 +114,7 @@ local Spells = {
 	[322655] = 20,		-- Acid Expulsion (Tred'ova)
 	[326309] = 20,		-- Decomposing Acid (Tred'ova)
 	[326263] = 20,		-- Anima Shedding (Tred'ova)
-
-
+	
 	-- De Other Side
 	[334051] = 20,		-- Erupting Darkness (Death Speaker)
 	[328729] = 20,		-- Dark Lotus (Risen Cultist)
@@ -280,90 +322,12 @@ local Spells = {
 	--[?] = 20,			-- Deadly Seas (Timecap'n Hooktail) (oneshot from going in water, debuff?)
 	[351101] = 20,		-- Energy Fragmentation (So'leah)
 	[351646] = 20,		-- Hyperlight Nova (So'leah)
+	--]=====]
 
 
-	-- Iron Docks
-	[172963] = 20,		-- Gatecrasher (Siegemaster Olugar, Siegemaster Rokra)
-	[167516] = 20,		-- Shrapnel Blast (Grom'kar Incinerator) TODO avoidable?
-	[164632] = 20,		-- Burning Arrows (Grom'kar Flameslinger)
-	[173105] = 20,		-- Whirling Chains (Grom'kar Chainmaster)
-	[168514] = 20,		-- Cannon Barrage (Environment)
-	[168540] = 20,		-- Cannon Barrage (Environment)
-	[173324] = 20,		-- Jagged Caltrops (Thunderlord Wrangler)
-	[173517] = 20,		-- Lava Blast (Ironwing Flamespitter)
 
-	[164734] = 20,		-- Shredding Swipes (Dreadfang) TODO always avoidable?
-	[163276] = 20,		-- Shredded Tendons (Grimrail Enforcers)
-	[163668] = 20,		-- Flaming Slash (Grimrail Enforcers - Makogg Emberblade)
-	[165152] = 20,		-- Lava Sweep (Grimrail Enforcers - Makogg Emberblade)
-	[161256] = 20,		-- Primal Assault (Oshir)
-	[168148] = 20,		-- Cannon Barrage (Skulloc)
-	[168390] = 20,		-- Cannon Barrage (Skulloc)
-	[169129] = 20,		-- Backdraft (Skulloc)
-
-
-	-- Grimrail Depot
-	[164188] = 20,		-- Blackrock Bomb (Grimrail Bombardier)
-	[176131] = 20,		-- Cannon Barrage (Grom'kar Boomer)
-	[160963] = 20,		-- Blackrock Mortar (Grom'kar Boomer)
-	[166676] = 20,		-- Shrapnel Blast (Grom'kar Gunner)
-	[176147] = 20,		-- Ignite (Grom'kar Gunner)
-	[176033] = 20,		-- Flametongue (Grom'kar Cinderseer)
-	[167038] = 20,		-- Slag Tanker (Environmnet)
-	[166404] = 20,		-- Arcane Blitz (Grimrail Scout)
-	[166340] = 20,		-- Thunder Zone (Grom'kar Far Seer) TODO some ticks not avoidable?
-	--[166336] = 20,		-- Storm Shield (Grom'kar Far Seer) TODO damage reflect that chains... avoidable?
-
-	[162513] = 20,		-- VX18-B Target Eliminator (Railmaster Rocketspark)
-	[163741] = 20,		-- Blackrock Mortar (Nitrogg Thundertower)
-	[161220] = 20,		-- Suppressive Fire (Nitrogg Thundertower)
-	[166570] = 20,		-- Slag Blast (Nitrogg Thundertower)
-	[156303] = 20,		-- Shrapnel Blast (Grom'kar Gunner)
-	[162065] = 20,		-- Freezing Snare (Skylord Tovra)
-	--[161588] = 20,		-- Diffused Energy (Skylord Tovra) TODO some ticks not avoidable?
-	[162057] = 20,		-- Spinning Spear (Skylord Tovra)
-
-
-	-- Return to Karazhan: Lower
-	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
-	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
-	[227925] = 20,		-- Final Curtain (Ghostly Understudy)
-	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
-	[228625] = 20,		-- Banshee Wail (Wholesome Host / Wholesome Hostess)
-	[227977] = 20,		-- Flashlight (Skeletal Usher)
-	--[241774] = 20,		-- Shield Smash (Phantom Guardsman) TODO avoidable?
-	[228603] = 20,		-- Charge (Spectral Charger)
-
-	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westside Story)
-	[227480] = 20,		-- Flame Gale (Toe Knee, Opera Hall: Westside Story)
-	[227799] = 20,		-- Wash Away (Mrrgria, Opera Hall: Westside Story)
-	[228221] = 20,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
-	[227645] = 20,		-- Spectral Charge (Midnight)
-	[227339] = 20,		-- Mezair (Midnight)
-	[227651] = 20,		-- Iron Whirlwind (Baron Rafe Dreuger)
-	[227473] = 20,		-- Whirling Edge (Lord Robin Daris)
-	[227672] = 20,		-- Will Breaker (Lord Crispin Ference)
-
-
-	-- Return to Karazhan: Upper
-	[229563] = 20,		-- Knight Move (Knight)
-	[229298] = 20,		-- Knight Move (Knight)
-	[229559] = 20,		-- Bishop Move (Bishop)
-	[229384] = 20,		-- Queen Move (Queen)
-	[229568] = 20,		-- Rook Move (Rook)
-	[229427] = 20,		-- Royal Slash (King)
-	[242894] = 20,		-- Unstable Energy (Damaged Golem)
-	[227806] = 20,		-- Ceaseless Winter (Shade of Medivh)
-	[227620] = 20,		-- Arcane Bomb (Mana Devourer)
-	[229248] = 20,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
-	[229285] = 20,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
-	[229151] = 20,		-- Disintegrate (Viz'aduum the Watcher)
-	[229161] = 20,		-- Explosive Shadows (Viz'aduum the Watcher)
-	[227465] = 20,		-- Power Discharge (The Curator)
-	[227285] = 20,		-- Power Discharge (The Curator)
-	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
-
-
+	-- [**Battle for Azeroth**] 
+	--[=====[
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
 	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
@@ -398,9 +362,131 @@ local Spells = {
 	[285460] = 20,		-- Discom-BOMB-ulator (Machinist's Garden)
 	[294869] = 20,		-- Roaring Flame (Machinist's Garden)
 	[291915] = 20,		-- Plasma Orb (King Mechagon)
+	--]=====]
+
+	-- [**Legion**] 
+	-- Court of Stars
+	[219498] = 20,		-- Streetsweeper (Patrol Captain Gerdo)
+	[206574] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
+	[206580] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
+	[209477] = 20,		-- Wild Detonation (Mana Wyrm)
+	[211457] = 20,		-- Infernal Eruption (Talixae Flamewreath)
+	[209630] = 20,		-- Piercing Gale (Images of Advisor Melandrus)
+	[209628] = 20,		-- Piercing Gale (Advisor Melandrus)
+	[214688] = 20,		-- Carrion Swarm (Gerenth the Vile)
+	
+	-- Halls of Valor
+	[192206] = 20,		-- Sanctify (Olmyr & Hyrja)
+	[199210] = 20,		-- Penetrating Shot (Valarjar Marksman)
+	[210875] = 20,		-- Charged Pulse (Stormforged Sentinel)
+	[193234] = 20,		-- Dancing Blade (Hymdall)
+	[193260] = 20,		-- Static Field (Storm Drake, Hymdall)
+	[188395] = 20,		-- Ball Lightning (Static Field, Hymdall)
+	
+	--[=====[
+	-- Return to Karazhan: Lower
+	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
+	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
+	[227925] = 20,		-- Final Curtain (Ghostly Understudy)
+	[238606] = 20,		-- Arcane Eruption (Arcane Warden)
+	[228625] = 20,		-- Banshee Wail (Wholesome Host / Wholesome Hostess)
+	[227977] = 20,		-- Flashlight (Skeletal Usher)
+	--[241774] = 20,		-- Shield Smash (Phantom Guardsman) TODO avoidable?
+	[228603] = 20,		-- Charge (Spectral Charger)
+
+	[227568] = 20,		-- Burning Leg Sweep (Toe Knee, Opera Hall: Westside Story)
+	[227480] = 20,		-- Flame Gale (Toe Knee, Opera Hall: Westside Story)
+	[227799] = 20,		-- Wash Away (Mrrgria, Opera Hall: Westside Story)
+	[228221] = 20,		-- Severe Dusting (Babblet, Opera Hall: Beautiful Beast)
+	[227645] = 20,		-- Spectral Charge (Midnight)
+	[227339] = 20,		-- Mezair (Midnight)
+	[227651] = 20,		-- Iron Whirlwind (Baron Rafe Dreuger)
+	[227473] = 20,		-- Whirling Edge (Lord Robin Daris)
+	[227672] = 20,		-- Will Breaker (Lord Crispin Ference)
+
+	-- Return to Karazhan: Upper
+	[229563] = 20,		-- Knight Move (Knight)
+	[229298] = 20,		-- Knight Move (Knight)
+	[229559] = 20,		-- Bishop Move (Bishop)
+	[229384] = 20,		-- Queen Move (Queen)
+	[229568] = 20,		-- Rook Move (Rook)
+	[229427] = 20,		-- Royal Slash (King)
+	[242894] = 20,		-- Unstable Energy (Damaged Golem)
+	[227806] = 20,		-- Ceaseless Winter (Shade of Medivh)
+	[227620] = 20,		-- Arcane Bomb (Mana Devourer)
+	[229248] = 20,		-- Fel Beam (Command Ship, Viz'aduum the Watcher)
+	[229285] = 20,		-- Bombardment (Command Ship, Viz'aduum the Watcher)
+	[229151] = 20,		-- Disintegrate (Viz'aduum the Watcher)
+	[229161] = 20,		-- Explosive Shadows (Viz'aduum the Watcher)
+	[227465] = 20,		-- Power Discharge (The Curator)
+	[227285] = 20,		-- Power Discharge (The Curator)
+	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
+	--]=====]
+	
+	-- [**Mist of Pandaria**] 
+	
+	-- Temple of the Jade Serpent
+	[115167] = 20, 		-- Corrupted Waters (Wise Mari)
+	[106334] = 20, 		-- Wash Away (Wise Mari)
+	[106938] = 20, 		-- Serpent Wave (Liu FlameHeart)
+	[107053] = 20, 		-- Jade Serpent Wave (Liu FlameHeart)
+	[107045] = 20, 		-- Jade Fire (Liu FlameHeart)
+	
+	-- [**Warlords of Draenor**] 
+	-- Shadowmoon Burial Grounds
+	[153395] = 20,		-- Body Slam (Bonemaw)
+	[154442] = 20,		-- %amevpme,ce (Ner'zhul)
+	
+	--[=====[
+	-- Iron Docks
+	[172963] = 20,		-- Gatecrasher (Siegemaster Olugar, Siegemaster Rokra)
+	[167516] = 20,		-- Shrapnel Blast (Grom'kar Incinerator) TODO avoidable?
+	[164632] = 20,		-- Burning Arrows (Grom'kar Flameslinger)
+	[173105] = 20,		-- Whirling Chains (Grom'kar Chainmaster)
+	[168514] = 20,		-- Cannon Barrage (Environment)
+	[168540] = 20,		-- Cannon Barrage (Environment)
+	[173324] = 20,		-- Jagged Caltrops (Thunderlord Wrangler)
+	[173517] = 20,		-- Lava Blast (Ironwing Flamespitter)
+
+	[164734] = 20,		-- Shredding Swipes (Dreadfang) TODO always avoidable?
+	[163276] = 20,		-- Shredded Tendons (Grimrail Enforcers)
+	[163668] = 20,		-- Flaming Slash (Grimrail Enforcers - Makogg Emberblade)
+	[165152] = 20,		-- Lava Sweep (Grimrail Enforcers - Makogg Emberblade)
+	[161256] = 20,		-- Primal Assault (Oshir)
+	[168148] = 20,		-- Cannon Barrage (Skulloc)
+	[168390] = 20,		-- Cannon Barrage (Skulloc)
+	[169129] = 20,		-- Backdraft (Skulloc)
+
+	-- Grimrail Depot
+	[164188] = 20,		-- Blackrock Bomb (Grimrail Bombardier)
+	[176131] = 20,		-- Cannon Barrage (Grom'kar Boomer)
+	[160963] = 20,		-- Blackrock Mortar (Grom'kar Boomer)
+	[166676] = 20,		-- Shrapnel Blast (Grom'kar Gunner)
+	[176147] = 20,		-- Ignite (Grom'kar Gunner)
+	[176033] = 20,		-- Flametongue (Grom'kar Cinderseer)
+	[167038] = 20,		-- Slag Tanker (Environmnet)
+	[166404] = 20,		-- Arcane Blitz (Grimrail Scout)
+	[166340] = 20,		-- Thunder Zone (Grom'kar Far Seer) TODO some ticks not avoidable?
+	--[166336] = 20,		-- Storm Shield (Grom'kar Far Seer) TODO damage reflect that chains... avoidable?
+
+	[162513] = 20,		-- VX18-B Target Eliminator (Railmaster Rocketspark)
+	[163741] = 20,		-- Blackrock Mortar (Nitrogg Thundertower)
+	[161220] = 20,		-- Suppressive Fire (Nitrogg Thundertower)
+	[166570] = 20,		-- Slag Blast (Nitrogg Thundertower)
+	[156303] = 20,		-- Shrapnel Blast (Grom'kar Gunner)
+	[162065] = 20,		-- Freezing Snare (Skylord Tovra)
+	--[161588] = 20,		-- Diffused Energy (Skylord Tovra) TODO some ticks not avoidable?
+	[162057] = 20,		-- Spinning Spear (Skylord Tovra)
+	--]=====]
+
 }
 
 local SpellsNoTank = {
+
+	-- [**Dragonflight**]
+
+	-- [**Shadowlands**]
+	--[=====[
 	-- Mists of Tirna Scithe
 	[331721] = 20,		-- Spear Flurry (Mistveil Defender)
 
@@ -426,7 +512,34 @@ local SpellsNoTank = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
-
+	--]=====]
+	
+	-- [**Battle for Azeroth**] 
+	
+	--[=====[
+	-- Operation: Mechagon - Junkyard
+	-- Operation: Mechagon - Workshop
+	[294291] = 20,		-- Process Waste (Waste Processing Unit)
+	--]=====]
+	
+	-- [**Legion**]
+	-- Court of Stars	
+	-- Halls of Valor
+	
+	--[=====[ 
+	-- Return to Karazhan: Lower
+	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
+	-- Return to Karazhan: Upper
+	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
+	--]=====]
+	
+	-- [**Mist of Pandaria**] 
+	-- Temple of the Jade Serpent
+	
+	-- [**Warlords of Draenor**] 
+	-- Shadowmoon Burial Grounds
+	
+	--[=====[
 	-- Iron Docks
 	[167233] = 20,		-- Bladestorm (Grom'kar Battlemaster, Pitwarden Gwarnok)
 	[167815] = 20,		-- Rending Cleave (Thunderlord Wrangler)
@@ -436,20 +549,21 @@ local SpellsNoTank = {
 	[166380] = 20,		-- Reckless Slash (Grom'kar Captain) TODO always targets tank? avoidable by tank?
 	[161089] = 20,		-- Mad Dash (Borka the Brute) TODO avoidable by tank?
 	[164163] = 20,		-- Hewing Swipe (Grimrail Overseer)
+	--]=====]
+	
 
-	-- Return to Karazhan: Lower
-	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
-
-	-- Return to Karazhan: Upper
-	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
-
-	-- Operation: Mechagon - Junkyard
-
-	-- Operation: Mechagon - Workshop
-	[294291] = 20,		-- Process Waste (Waste Processing Unit)
 }
 
 local Auras = {
+	-- [**Dragonflight**]
+	
+	
+	-- [**Shadowlands**]
+	--[=====[ 
+	-- Affixes seasons
+	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
+	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
+	
 	-- Mists of Tirna Scithe
 
 	-- De Other Side
@@ -470,26 +584,37 @@ local Auras = {
 	-- Sanguine Depths
 	-- Halls of Atonement
 
-	-- Affixes
-	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
-	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
+
 
 	-- Tazavesh: Streets of Wonder
-	-- Tazavesh: So'leah's Gambit
-
-	-- Iron Docks
-	[164504] = true,	-- Intimidated (Fleshrender Nok'gar)
-	[172631] = true,	-- Knocked Down (Slippery Grease)
-
-	-- Grimrail Depot
-	-- Return to Karazhan: Lower
-	-- Return to Karazhan: Upper
-
+	-- Tazavesh: So'leah's Gambit 
+	--]=====]
+	
+	-- [**Battle for Azeroth**] 
+	--[=====[ 
 	-- Operation: Mechagon - Junkyard
 	[398529] = true,	-- Gooped (Gunker)
 	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
+	--]=====]
 
 	-- Operation: Mechagon - Workshop
+	
+	-- [**Legion**] 	
+	-- Return to Karazhan: Lower
+	-- Return to Karazhan: Upper
+	
+	-- [**Mist of Pandaria**] 
+	
+	
+	-- [**Warlords of Draenor**]
+	--[=====[ 	
+	-- Iron Docks
+	[164504] = true,	-- Intimidated (Fleshrender Nok'gar)
+	[172631] = true,	-- Knocked Down (Slippery Grease)
+	-- Grimrail Depot
+	--]=====]
+
+
 }
 
 local AurasNoTank = {
