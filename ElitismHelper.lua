@@ -1062,11 +1062,11 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 			end
 		end
 
-		activeUser = activeUserObject[1]
-
 		-- We are in a group but nobody is eligible...
 		if(activeUser == nil) then
 			activeUser = playerUser
+		else
+			activeUser = activeUserObject[1]
 		end
 	else
 		-- print("Unknown message: "..message)
