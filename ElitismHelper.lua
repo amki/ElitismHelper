@@ -264,15 +264,15 @@ local Spells = {
 	--[=====[ 
 	-- Affixes seasons
 
-	[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
-	[356414] = 20,		-- Frost Lance (Season 2 Oros)
-	[358894] = 20,		-- Cold Snap (Season 2 Oros)
-	[358897] = 20,		-- Cold Snap (Season 2 Oros)
-	[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
-	[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
-	[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
-	[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
-	[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
+	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
+	--[356414] = 20,		-- Frost Lance (Season 2 Oros)
+	--[358894] = 20,		-- Cold Snap (Season 2 Oros)
+	--[358897] = 20,		-- Cold Snap (Season 2 Oros)
+	--[355806] = 20,		-- Massive Smash (Season 2 Soggodon)
+	--[355737] = 20,		-- Scorching Blast (Season 2 Arkolath)
+	--[355738] = 20,		-- Scorching Blast DoT (Season 2 Arkolath)
+	--[366288] = 20,		-- Force Slam (Season 3 Urh Dismantler)
+	--[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
 	--[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
 	--[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
 
