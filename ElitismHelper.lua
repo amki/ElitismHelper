@@ -43,11 +43,16 @@ local Spells = {
 
 	-- [**Dragonflight**]
 	-- Affixes seasons
+	[394873] = 20,		-- Lightning Strike 
 	
 	-- Algeh'ar Academy S1
 	[386201] = 20,		-- Corruped Mana (Vexamus)
+	[388531] = 20,		-- Arcane fissure (Vexamus)
 	[388796] = 20,		-- Germinate (Overgrown Ancient)
 	[374361] = 20,		-- Astral Breath (Echo of Doragosa)
+	
+	[378011] = 20,		-- Deadly Winds (Guardian Sentry)
+	
 	
 	-- Brackenhide Hollow
 	
@@ -61,7 +66,15 @@ local Spells = {
 	
 	-- Ruby Life Pools 
 	[372107] = 20,		-- Molten Boulder (Kokia Blazehoof)
+	[372819] = 20,		-- Molten Boulder (Kokia Blazehoof)
 	
+	[396042] = 20,		-- Hailboms (Melidrussa chillworn)
+	
+	[384823] = 20,		-- Inferno (Blazebound Firestorm)
+	
+	
+	
+		
 	-- The Azure Vault 
 	[385578] = 20,		-- Arcane Orb (AzureBlade)
 	[372222] = 20,		-- Arcane Slicer (AzureBlade)
