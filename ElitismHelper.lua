@@ -6,7 +6,7 @@ local TimerMeleeData = {}
 local CombinedFails = {}
 local FailByAbility = {}
 local activeUser = nil
-local AddonVersion = 0.13
+local AddonVersion = 0.13.2
 local playerUser = GetUnitName("player", true).."-"..GetRealmName():gsub(" ", "")
 local defaultElitismHelperDBValues = {
 	Loud = true,
@@ -43,6 +43,7 @@ local Spells = {
 
 	-- [**Dragonflight**]
 	-- Affixes seasons
+
 	[394873] = 20, -- Lightning Strike (Season 1 Thundering)
         [396411] = 20, -- Primal Overload (Season 1 Thundering)
 
@@ -258,6 +259,7 @@ local Spells = {
         [374361] = 20, -- Astral Breath (Echo of Doragosa)
         [388902] = 20, -- Arcane Rift (Echo of Doragosa) - TODO is first tick avoidable?
         [388996] = 20, -- Energy Eruption (Echo of Doragosa)
+
 
 
 	-- [**Shadowlands**]
@@ -550,6 +552,7 @@ local Spells = {
 
 	-- [**Legion**] 
 	-- Court of Stars
+
         [209027] = 20, -- Quelling Strike (Duskwatch Guard)
         [209477] = 20, -- Wild Detonation (Mana Wyrm)
         [212031] = 20, -- Charged Blast (Bound Energy)
@@ -567,6 +570,7 @@ local Spells = {
         [209628] = 20, -- Piercing Gale (Advisor Melandrus)
         [209630] = 20, -- Piercing Gale (Image of Advisor Melandrus, Advisor Melandrus)
         [209667] = 20, -- Blade Surge (Advisor Melandrus)
+
 
 
 	-- Halls of Valor
