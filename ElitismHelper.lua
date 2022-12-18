@@ -6,7 +6,7 @@ local TimerMeleeData = {}
 local CombinedFails = {}
 local FailByAbility = {}
 local activeUser = nil
-local AddonVersion = 0.13
+local AddonVersion = 0.13.2
 local playerUser = GetUnitName("player", true).."-"..GetRealmName():gsub(" ", "")
 local defaultElitismHelperDBValues = {
 	Loud = true,
@@ -43,11 +43,16 @@ local Spells = {
 
 	-- [**Dragonflight**]
 	-- Affixes seasons
+	[394873] = 20,		-- Lightning Strike 
 	
 	-- Algeh'ar Academy S1
 	[386201] = 20,		-- Corruped Mana (Vexamus)
+	[388531] = 20,		-- Arcane fissure (Vexamus)
 	[388796] = 20,		-- Germinate (Overgrown Ancient)
 	[374361] = 20,		-- Astral Breath (Echo of Doragosa)
+	
+	[378011] = 20,		-- Deadly Winds (Guardian Sentry)
+	
 	
 	-- Brackenhide Hollow
 	
@@ -61,7 +66,17 @@ local Spells = {
 	
 	-- Ruby Life Pools 
 	[372107] = 20,		-- Molten Boulder (Kokia Blazehoof)
+	[372819] = 20,		-- Molten Boulder (Kokia Blazehoof)	
+	[384024] = 20,		-- Hailboms (Melidrussa chillworn)	
 	
+	[384823] = 20,		-- Inferno (Blazebound Firestorm)
+	
+	[372796] = 20, 		-- Blazing rush (Defier Draghar)
+	[372696] = 20, 		-- Excavating blast (Primal Juggernaut)
+	
+	
+	
+		
 	-- The Azure Vault 
 	[385578] = 20,		-- Arcane Orb (AzureBlade)
 	[372222] = 20,		-- Arcane Slicer (AzureBlade)
@@ -366,9 +381,11 @@ local Spells = {
 
 	-- [**Legion**] 
 	-- Court of Stars
+
+	[207979] = 20,		-- Shockwave (Jazshariu)
+	
+	[207261] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
 	[219498] = 20,		-- Streetsweeper (Patrol Captain Gerdo)
-	[206574] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
-	[206580] = 20,		-- Resonant Slash (Patrol Captain Gerdo)
 	[209477] = 20,		-- Wild Detonation (Mana Wyrm)
 	[211457] = 20,		-- Infernal Eruption (Talixae Flamewreath)
 	[209630] = 20,		-- Piercing Gale (Images of Advisor Melandrus)
