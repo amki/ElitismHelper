@@ -84,7 +84,7 @@ local Spells = {
 	[384024] = 20, -- Hailbombs, Projectiles (Melidrussa Chillworm)
 	[372863] = 20, -- Ritual of Blazebinding (Kokia Blazehoof)
 	[372811] = 20, -- Molten Boulder, Projectile (Kokia Blazehoof)
-	[872819] = 20, -- Molten Boulder, Explosion (Kokia Blazehoof)
+	[372819] = 20, -- Molten Boulder, Explosion (Kokia Blazehoof)
 	[372820] = 20, -- Scorched Earth (Kokia Blazehoof)
 	[373087] = 20, -- Burnout (Blazebound Firestorm, Kokia Blazehoof)
 	[381526] = 20, -- Roaring Firebreath (Kyrakka)
@@ -205,6 +205,7 @@ local Spells = {
 	[385579] = 20, -- Ancient Orb (Azureblade)
 	[390462] = 20, -- Ancient Orb Fragment (Azureblade)
 	[389855] = 20, -- Unstable Magic (Draconic Image / Draconic Illusion, Azureblade)
+	[387150] = 20, -- Frozen Ground (Telash Greywing)
 	[384699] = 20, -- Crystalline Roar (Umbrelskul)
 	[385078] = 20, -- Arcane Eruption (Umbrelskul)
 	[385267] = 20, -- Crackling Vortex (Umbrelskul)
@@ -248,7 +249,7 @@ local Spells = {
 
 	[385970] = 20, -- Arcane Orb, Spawn (Vexamus)
 	[386201] = 20, -- Corrupted Mana (Vexamus) - TODO is first tick avoidable?
-	[388537] = 20, -- Arcane Fissure, Swirly (Vexamus)
+	[388546] = 20, -- Arcane Fissure, Swirly (Vexamus)
 	[377034] = 20, -- Overpowering Gust (Crawth)
 	[376449] = 20, -- Firestorm (Crawth)
 	[393122] = 20, -- Roving Cyclone (Crawth)
@@ -256,7 +257,7 @@ local Spells = {
 	[388625] = 20, -- Branch Out (Overgrown Ancient)
 	[388822] = 20, -- Power Vacuum (Echo of Doragosa)
 	[374361] = 20, -- Astral Breath (Echo of Doragosa)
-	[388902] = 20, -- Arcane Rift (Echo of Doragosa) - TODO is first tick avoidable?
+	[389007] = 20, -- Arcane Rift / Wild Energy (Echo of Doragosa)
 	[388996] = 20, -- Energy Eruption (Echo of Doragosa)
 
 
