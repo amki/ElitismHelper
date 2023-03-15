@@ -1271,8 +1271,16 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 		local u = { }
 		for k, v in pairs(CombinedFails) do table.insert(u, { key = k, value = v }) end
 		table.sort(u, compareDamage)
+		
+		local imBad = false
+		if #u > 1 && u[1]["value"] != UnitName("player") then
+			imBad = true
+		end
+			
 		for k,v in pairs(u) do
+			if !imBad || v["key"] == UnitName("player") then
 				maybeSendChatMessage(k..". "..v["key"].." "..round(v["value"] / 1000, 1).."k")
+			end
 		end
 	end
 end
