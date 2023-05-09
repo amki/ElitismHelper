@@ -65,31 +65,59 @@ local Spells = {
     [377561] = 20, -- Time Eruption (Chrono-Lord Deios)
 
 
-    -- Ruby Life Pools
-    [372696] = 20, -- Excavating Blast (Primal Juggernaut)
-    [372697] = 20, -- Jagged Earth (Primal Juggernaut)
-    [373458] = 20, -- Stone Missile (Primal Terrasentry)
-    [372088] = 20, -- Blazing Rush, Hit (Defier Draghar)
-    [372796] = 20, -- Blazing Rush, DoT (Defier Draghar)
-    [385292] = 20, -- Molten Steel (Defier Draghar)
-    [378968] = 20, -- Flame Patch (Scorchling)
-    [373973] = 20, -- Blaze of Glory, AoE (Primalist Flamedancer)
-    [373977] = 20, -- Blaze of Glory, Projectile (Primalist Flamedancer)
-    [391727] = 20, -- Storm Breath (Thunderhead)
-    [391724] = 20, -- Flame Breath (Flamegullet)
-    [373614] = 20, -- Burnout (Blazebound Destroyer)
-    --[385311] = 20, -- Thunderstorm (Primalist Shockcaster) - no indicator
-    --[392406] = 20, -- Thunderclap (Storm Warrior) - TODO probably not avoidable for melee
-    [392399] = 20, -- Crackling Detonation (Primal Thundercloud)
+    -- Brackenhide Hollow
+    [368297] = 20, -- Toxic Trap, Trigger (Bonebolt Hunter)
+    [368299] = 20, -- Toxic Trap, Area (Bonebolt Hunter)
+    [382556] = 20, -- Ragestorm (Bracken Warscourge)
+    [384673] = 20, -- Spreading Rot (Decay Ritual, Environment)
+    --[381770] = 20, -- Gushing Ooze (Decaying Slime) - TODO probably not avoidable for melee
+    [378055] = 20, -- Burst (Decaying Slime)
+    [378054] = 20, -- Withering Away! (Decaying Slime)
+    --[373872] = 20, -- Gushing Ooze (Monstrous Decay) - TODO probably not avoidable for melee
+    [374569] = 20, -- Burst (Monstrous Decay)
+    [373943] = 20, -- Stomp (Wilted Oak)
+    [385303] = 20, -- Teeth Trap (Environment)
+    [385524] = 20, -- Sentry Fire (Environment)
+    [385805] = 20, -- Violent Whirlwind (Stinkbreath)
+    --[385186] = 20, -- Stink Breath (Stinkbreath) - TODO can targeted player outrange?
+    [379425] = 20, -- Rotting Creek (Environment)
+    [383392] = 20, -- Rotting Surge, Impact (Filth Caller)
+    [383399] = 20, -- Rotting Surge, periodic (Filth Caller)
 
-    [384024] = 20, -- Hailbombs, Projectiles (Melidrussa Chillworm)
-    [372863] = 20, -- Ritual of Blazebinding (Kokia Blazehoof)
-    [372811] = 20, -- Molten Boulder, Projectile (Kokia Blazehoof)
-    [872819] = 20, -- Molten Boulder, Explosion (Kokia Blazehoof)
-    [372820] = 20, -- Scorched Earth (Kokia Blazehoof)
-    [373087] = 20, -- Burnout (Blazebound Firestorm, Kokia Blazehoof)
-    [381526] = 20, -- Roaring Firebreath (Kyrakka)
-    [384773] = 20, -- Flaming Embers (Kyrakka)
+    [377830] = 20, -- Bladestorm (Rira Hackclaw)
+    [384148] = 20, -- Ensnaring Trap (Gutshot)
+    [384558] = 20, -- Bounding Leap (Rotfang Hyena, Gutshot)
+    [376797] = 20, -- Decay Spray (Treemouth)
+    [373944] = 20, -- Rotburst Totem, Spawn (Decatriarch Wratheye)
+    [376170] = 20, -- Choking Rotcloud, Frontal (Decatriarch Wratheye)
+    [376149] = 20, -- Choking Rotcloud, Area (Decatriarch Wratheye)
+    [379425] = 20, -- Decaying Fog (Environment, Decatriarch Wratheye)
+	
+	
+	 -- Halls of Infusion
+    [374075] = 20, -- Seismic Slam (Primalist Geomancer)
+    [393444] = 20, -- Spear Flurry / Gushing Wound (Refti Defender)
+    --[374045] = 20, -- Expulse (Containment Apparatus) - no indicator
+    [375215] = 20, -- Cave In (Curious Swoglet)
+    [374563] = 20, -- Dazzle (Dazzling Dragonfly)
+    [374741] = 20, -- Magma Crush (Flamecaller Aymi)
+    [375080] = 20, -- Whirling Fury (Squallbringer Cyraz)
+    [385168] = 20, -- Thunderstorm (Primalist Galesinger) - TODO is first tick avoidable?
+    [375384] = 20, -- Rumbling Earth (Primalist Earthshaker)
+    [383204] = 20, -- Crashing Tsunami (Environment)
+    [390290] = 20, -- Flash Flood (Infuser Sariya)
+
+    [383935] = 20, -- Spark Volley (Watcher Irideus)
+    [389446] = 20, -- Nullifying Pulse (Nullification Device, Watcher Irideus)
+    [385691] = 20, -- Belly Slam (Gulping Goliath)
+    [386757] = 20, -- Hailstorm (Khajin the Unyielding)
+    [386562] = 20, -- Glacial Surge (Khajin the Unyielding)
+    [386295] = 20, -- Avalanche (Khajin the Unyielding)
+    [390118] = 20, -- Frost Cyclone (Khajin the Unyielding)
+    [387474] = 20, -- Infused Globule, Impact (Primal Tsunami)
+    [387359] = 20, -- Waterlogged (Primal Tsunami)
+    [387363] = 20, -- Infused Globule, Explosion (Primal Tsunami)
+    [388786] = 20, -- Rogue Waves (Primal Tsunami)
 
 
     -- Neltharus
@@ -159,35 +187,32 @@ local Spells = {
     [376737] = 20, -- Lightning (Balakar Khan)
     [376892] = 20, -- Crackling Upheaval (Balakar Khan)
     [376899] = 20, -- Crackling Cloud (Balakar Khan) - TODO is first tick avoidable?
+	--[=====[ 
+	-- Ruby Life Pools
+    [372696] = 20, -- Excavating Blast (Primal Juggernaut)
+    [372697] = 20, -- Jagged Earth (Primal Juggernaut)
+    [373458] = 20, -- Stone Missile (Primal Terrasentry)
+    [372088] = 20, -- Blazing Rush, Hit (Defier Draghar)
+    [372796] = 20, -- Blazing Rush, DoT (Defier Draghar)
+    [385292] = 20, -- Molten Steel (Defier Draghar)
+    [378968] = 20, -- Flame Patch (Scorchling)
+    [373973] = 20, -- Blaze of Glory, AoE (Primalist Flamedancer)
+    [373977] = 20, -- Blaze of Glory, Projectile (Primalist Flamedancer)
+    [391727] = 20, -- Storm Breath (Thunderhead)
+    [391724] = 20, -- Flame Breath (Flamegullet)
+    [373614] = 20, -- Burnout (Blazebound Destroyer)
+    --[385311] = 20, -- Thunderstorm (Primalist Shockcaster) - no indicator
+    --[392406] = 20, -- Thunderclap (Storm Warrior) - TODO probably not avoidable for melee
+    [392399] = 20, -- Crackling Detonation (Primal Thundercloud)
 
-
-    -- Brackenhide Hollow
-    [368297] = 20, -- Toxic Trap, Trigger (Bonebolt Hunter)
-    [368299] = 20, -- Toxic Trap, Area (Bonebolt Hunter)
-    [382556] = 20, -- Ragestorm (Bracken Warscourge)
-    [384673] = 20, -- Spreading Rot (Decay Ritual, Environment)
-    --[381770] = 20, -- Gushing Ooze (Decaying Slime) - TODO probably not avoidable for melee
-    [378055] = 20, -- Burst (Decaying Slime)
-    [378054] = 20, -- Withering Away! (Decaying Slime)
-    --[373872] = 20, -- Gushing Ooze (Monstrous Decay) - TODO probably not avoidable for melee
-    [374569] = 20, -- Burst (Monstrous Decay)
-    [373943] = 20, -- Stomp (Wilted Oak)
-    [385303] = 20, -- Teeth Trap (Environment)
-    [385524] = 20, -- Sentry Fire (Environment)
-    [385805] = 20, -- Violent Whirlwind (Stinkbreath)
-    --[385186] = 20, -- Stink Breath (Stinkbreath) - TODO can targeted player outrange?
-    [379425] = 20, -- Rotting Creek (Environment)
-    [383392] = 20, -- Rotting Surge, Impact (Filth Caller)
-    [383399] = 20, -- Rotting Surge, periodic (Filth Caller)
-
-    [377830] = 20, -- Bladestorm (Rira Hackclaw)
-    [384148] = 20, -- Ensnaring Trap (Gutshot)
-    [384558] = 20, -- Bounding Leap (Rotfang Hyena, Gutshot)
-    [376797] = 20, -- Decay Spray (Treemouth)
-    [373944] = 20, -- Rotburst Totem, Spawn (Decatriarch Wratheye)
-    [376170] = 20, -- Choking Rotcloud, Frontal (Decatriarch Wratheye)
-    [376149] = 20, -- Choking Rotcloud, Area (Decatriarch Wratheye)
-    [379425] = 20, -- Decaying Fog (Environment, Decatriarch Wratheye)
+    [384024] = 20, -- Hailbombs, Projectiles (Melidrussa Chillworm)
+    [372863] = 20, -- Ritual of Blazebinding (Kokia Blazehoof)
+    [372811] = 20, -- Molten Boulder, Projectile (Kokia Blazehoof)
+    [872819] = 20, -- Molten Boulder, Explosion (Kokia Blazehoof)
+    [372820] = 20, -- Scorched Earth (Kokia Blazehoof)
+    [373087] = 20, -- Burnout (Blazebound Firestorm, Kokia Blazehoof)
+    [381526] = 20, -- Roaring Firebreath (Kyrakka)
+    [384773] = 20, -- Flaming Embers (Kyrakka)
 
 
     -- The Azure Vault
@@ -210,33 +235,6 @@ local Spells = {
     [385078] = 20, -- Arcane Eruption (Umbrelskul)
     [385267] = 20, -- Crackling Vortex (Umbrelskul)
 
-
-    -- Halls of Infusion
-    [374075] = 20, -- Seismic Slam (Primalist Geomancer)
-    [393444] = 20, -- Spear Flurry / Gushing Wound (Refti Defender)
-    --[374045] = 20, -- Expulse (Containment Apparatus) - no indicator
-    [375215] = 20, -- Cave In (Curious Swoglet)
-    [374563] = 20, -- Dazzle (Dazzling Dragonfly)
-    [374741] = 20, -- Magma Crush (Flamecaller Aymi)
-    [375080] = 20, -- Whirling Fury (Squallbringer Cyraz)
-    [385168] = 20, -- Thunderstorm (Primalist Galesinger) - TODO is first tick avoidable?
-    [375384] = 20, -- Rumbling Earth (Primalist Earthshaker)
-    [383204] = 20, -- Crashing Tsunami (Environment)
-    [390290] = 20, -- Flash Flood (Infuser Sariya)
-
-    [383935] = 20, -- Spark Volley (Watcher Irideus)
-    [389446] = 20, -- Nullifying Pulse (Nullification Device, Watcher Irideus)
-    [385691] = 20, -- Belly Slam (Gulping Goliath)
-    [386757] = 20, -- Hailstorm (Khajin the Unyielding)
-    [386562] = 20, -- Glacial Surge (Khajin the Unyielding)
-    [386295] = 20, -- Avalanche (Khajin the Unyielding)
-    [390118] = 20, -- Frost Cyclone (Khajin the Unyielding)
-    [387474] = 20, -- Infused Globule, Impact (Primal Tsunami)
-    [387359] = 20, -- Waterlogged (Primal Tsunami)
-    [387363] = 20, -- Infused Globule, Explosion (Primal Tsunami)
-    [388786] = 20, -- Rogue Waves (Primal Tsunami)
-
-
     -- Algeth'ar Academy
     [388884] = 20, -- Arcane Rain (Spellbound Scepter)
     [388957] = 20, -- Riftbreath (Arcane Ravager)
@@ -245,7 +243,11 @@ local Spells = {
     [377524] = 20, -- Dive Bomb (Alpha Eagle)
     [377383] = 20, -- Gust (Alpha Eagle)
     [390918] = 20, -- Seed Detonation (Vile Lasher)
-    [387932] = 20, -- Astral Whirlwind (Algeth'ar Echoknight)
+ --   [387932] = 20, -- Astral Whirlwind (Algeth'ar Echoknight) TODO 
+    [387910] = 20, -- Astral Whirlwind (Algeth'ar Echoknight)
+
+
+
 
     [385970] = 20, -- Arcane Orb, Spawn (Vexamus)
     [386201] = 20, -- Corrupted Mana (Vexamus) - TODO is first tick avoidable?
@@ -263,7 +265,7 @@ local Spells = {
 
 
 	-- [**Shadowlands**]
-	--[=====[ 
+
 	-- Affixes seasons
 
 	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
@@ -512,6 +514,40 @@ local Spells = {
 
 
 	-- [**Battle for Azeroth**] 
+	
+	-- Freehold
+	[272046] = 20,		--- Dive Bomb (Sharkbait)
+	[257426] = 20,		--- Brutal Backhand (Irontide Enforcer)
+	[258352] = 20,		--- Grapeshot (Captain Eudora)
+	[256594] = 20,		--- Barrel Smash (Captain Raoul)
+	[272374] = 20,		--- Whirlpool of Blades (Captain Jolly)
+	[256546] = 20,		--- Shark Tornado (Trothak)
+	[257310] = 20,		--- Cannon Barrage (Harlan Sweete)
+	[257784] = 20,		--- Frost Blast (Bilge Rat Brinescale)
+	[257902] = 20,		--- Shell Bounce (Ludwig Von Tortollan)
+	[258199] = 20,		--- Ground Shatter (Irontide Crusher)
+	[276061] = 20,		--- Boulder Throw (Irontide Crusher)
+	[258779] = 20,		--- Sea Spout (Irontide Oarsman)
+	[274400] = 20,		--- Duelist Dash (Cutwater Duelist)
+	[257274] = 20,		--- Vile Coating (Environment)
+	[258673] = 20,		--- Azerite Grenade (Irontide Crackshot)
+	[274389] = 20,		--- Rat Traps (Vermin Trapper)
+	[257460] = 20,		--- Fiery Debris (Harlan Sweete)
+	
+	-- Underrot
+	[265542] = 20,		--- Rotten Bile (Fetid Maggot)
+	[265019] = 20,		--- Savage Cleave (Chosen Blood Matron)
+	[261498] = 20,		--- Creeping Rot (Elder Leaxa)
+	[264757] = 20,		--- Sanguine Feast (Elder Leaxa)
+	[265665] = 20,		--- Foul Sludge (Living Rot)
+	[260312] = 20,		--- Charge (Cragmaw the Infested)
+	[265511] = 20,		--- Spirit Drain (Spirit Drain Totem)
+	[259720] = 20,		--- Upheaval (Sporecaller Zancha)
+	[270108] = 20,		--- Rotting Spore (Unbound Abomination)
+	[272609] = 20,		--- Maddenin Gaze (Faceless Corruptor)
+	[272469] = 20,		--- Abyssal Slam (Faceless Corruptor)
+	[270108] = 20,		--- Rotting Spore (Unbound Abomination)
+	
 	--[=====[
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
@@ -551,8 +587,17 @@ local Spells = {
 
 
 	-- [**Legion**] 
+	
+	-- Neltharion's Lair
+	[198028] = 30,      -- Crystalline Ground (Rokmora)
+	[192800] = 20,      -- Choking Dust (Rokmora Skitter AoE Cloud)
+	[183100] = 20,		-- Avalanche (Mightstone Breaker)
+	[198475] = 20,		-- Strike of the Mountain (Ularogg Cragshaper)
+	[200723] = 20,		-- Molten Crash (Active Mitigation fail, Dargrul)
+	[217090] = 20,      -- Magma Wave (Dargrul)
+	
 	-- Court of Stars
-
+	--[=====[
     [209027] = 20, -- Quelling Strike (Duskwatch Guard)
     [209477] = 20, -- Wild Detonation (Mana Wyrm)
     [212031] = 20, -- Charged Blast (Bound Energy)
@@ -594,8 +639,7 @@ local Spells = {
     [198263] = 20, -- Radiant Tempest (Odyn)
     [198088] = 20, -- Glowing Fragment (Odyn)
     [198412] = 20, -- Feedback (Odyn)
-	
-	--[=====[
+
 	-- Return to Karazhan: Lower
 	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
 	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
@@ -637,11 +681,12 @@ local Spells = {
 	
 	
 	-- [**Warlords of Draenor**] 
+	--[=====[
 	-- Shadowmoon Burial Grounds
 	[153395] = 20,		-- Body Slam (Bonemaw)
 	[154442] = 20,		-- Malevolence (Ner'zhul)
 	
-	--[=====[
+
 	-- Iron Docks
 	[172963] = 20,		-- Gatecrasher (Siegemaster Olugar, Siegemaster Rokra)
 	[167516] = 20,		-- Shrapnel Blast (Grom'kar Incinerator) TODO avoidable?
@@ -681,11 +726,12 @@ local Spells = {
 	[162065] = 20,		-- Freezing Snare (Skylord Tovra)
 	--[161588] = 20,		-- Diffused Energy (Skylord Tovra) TODO some ticks not avoidable?
 	[162057] = 20,		-- Spinning Spear (Skylord Tovra)
-	--]=====]
+	
 
 
 
 	-- [**Mist of Pandaria**] 
+	--[=====[
 	-- Temple of the Jade Serpent
     [397881] = 20, -- Surging Deluge (Corrupt Living Water)
     [396003] = 20, -- Territorial Display (The Songbird Queen)
@@ -704,12 +750,13 @@ local Spells = {
     [396907] = 20, -- Jade Fire Breath (Yu'lon, Liu Flameheart)
     [107103] = 20, -- Jade Fire, Impact (Yu'lon, Liu Flameheart)
     [107110] = 20 -- Jade Fire, Area (Yu'lon, Liu Flameheart)
+	--]=====]
 }
 
 local SpellsNoTank = {
 
 	-- [**Dragonflight**]
-    -- Uldaman: Legacy of Tyr
+	-- Uldaman: Legacy of Tyr
     [369409] = 20, -- Cleave (Earthen Custodian)
     [369563] = 20, -- Wild Cleave (Baelog, The Lost Dwarves)
     [369061] = 20, -- Searing Clap (Emberon)
@@ -717,36 +764,42 @@ local SpellsNoTank = {
 
     -- Neltharus
     [384019] = 20, -- Fiery Focus (Chargath, Bane of Scales)
-
-    -- The Nokhud Offensive
-    [384512] = 20, -- Cleaving Strikes (Nokhud Lancemaster / Nokhud Defender)
-    [387135] = 20, -- Arcing Strike (Primalist Arcblade)
-
-    -- Brackenhide Hollow
+	
+	   -- Halls of Infusion
+    [375349] = 20, -- Gusting Breath (Gusting Proto-Drake)
+    [375341] = 20, -- Tectonic Breath (Subterranean Proto-Drake)
+    [375353] = 20, -- Oceanic Breath (Glacial Proto-Drake)
+    [384524] = 20, -- Titanic Fist (Watcher Irideus)
+    --[388245] = 20, -- Gulp (Gulping Goliath) - TODO how to handle this properly?
+	
+	    -- Brackenhide Hollow
     [382712] = 20, -- Necrotic Breath, Initial (Wilted Oak)
     [382805] = 20, -- Necrotic Breath, DoT (Wilted Oak)
     [377807] = 20, -- Cleave (Rira Hackclaw)
     [381419] = 20, -- Savage Charge (Rira Hackclaw)
     [377559] = 20, -- Vine Whip (Treemouth)
+	--[=====[
+    
+
+    -- The Nokhud Offensive
+    [384512] = 20, -- Cleaving Strikes (Nokhud Lancemaster / Nokhud Defender)
+    [387135] = 20, -- Arcing Strike (Primalist Arcblade)
+
+
 
     -- The Azure Vault
     [370764] = 20, -- Piercing Shards (Crystal Fury)
     [391120] = 20, -- Spellfrost Breath (Scalebane Lieutenant)
     [372222] = 20, -- Arcane Cleave (Azureblade)
 
-    -- Halls of Infusion
-    [375349] = 20, -- Gusting Breath (Gusting Proto-Drake)
-    [375341] = 20, -- Tectonic Breath (Subterranean Proto-Drake)
-    [375353] = 20, -- Oceanic Breath (Glacial Proto-Drake)
-    [384524] = 20, -- Titanic Fist (Watcher Irideus)
-    --[388245] = 20, -- Gulp (Gulping Goliath) - TODO how to handle this properly?
+
 
     -- Algeth'ar Academy
     [385958] = 20, -- Arcane Expulsion (Vexamus)
 
 
 	-- [**Shadowlands**]
-	--[=====[
+
 	-- Mists of Tirna Scithe
 	[331721] = 20,		-- Spear Flurry (Mistveil Defender)
 
@@ -776,14 +829,19 @@ local SpellsNoTank = {
 	
 	-- [**Battle for Azeroth**] 
 	
-	--[=====[
+
+	
+	-- [**Legion**]
+	-- Neltharion's Lair
+	[226406] = 20,      -- Ember Swip (Emberhusk Dominator)
+	[193505] = 20,      -- Fracture (Vileshard Hulk)
+
+	--[=====[ 
 	-- Operation: Mechagon - Junkyard
 	-- Operation: Mechagon - Workshop
 	[294291] = 20,		-- Process Waste (Waste Processing Unit)
-	--]=====]
 	
-	-- [**Legion**]
-	-- Court of Stars	
+		-- Court of Stars	
      [209036] = 20, -- Throw Torch (Duskwatch Sentry)
      [209495] = 20, -- Charged Smash (Guardian Construct)
      [209512] = 20, -- Disrupting Energy (Guardian Construct)
@@ -792,10 +850,12 @@ local SpellsNoTank = {
     [198888] = 20, -- Lightning Breath (Storm Drake) - TODO is this avoidable by tank?
     [199050] = 20, -- Mortal Hew (Valarjar Shieldmaiden)
     [192018] = 20, -- Shield of Light (Hyrja)
-
-	--[=====[ 
+	
+	
 	-- Return to Karazhan: Lower
 	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
+	
+	
 	-- Return to Karazhan: Upper
 	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
 	--]=====]
@@ -827,13 +887,14 @@ local Auras = {
 	-- Uldaman: Legacy of Tyr
     [369411] = true, -- Sonic Burst (Cavern Seeker)
     [372652] = true, -- Resonating Orb (Sentinel Talondras)
-
+	
+	--[=====[ 
     -- The Azure Vault
     [386368] = true, -- Polymorphed (Polymorphic Rune, Environment)
     [396722] = true, -- Absolute Zero, Root (Telash Greywing)
 	
 	-- [**Shadowlands**]
-	--[=====[ 
+
 	-- Affixes seasons
 	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
 	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
@@ -865,6 +926,12 @@ local Auras = {
 	--]=====]
 	
 	-- [**Battle for Azeroth**] 
+	
+	-- Underrot
+	[272609] = true,		-- Maddening Gaze (Faceless Corrupter)
+	-- Return to Karazhan (Lower)
+
+
 	--[=====[ 
 	-- Operation: Mechagon - Junkyard
 	[398529] = true,	-- Gooped (Gunker)
