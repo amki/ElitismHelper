@@ -44,6 +44,7 @@ local Spells = {
 	-- [**Dragonflight**]
 	-- Affixes seasons
 	[394873] = 20, -- Lightning Strike (Season 1 Thundering)
+
 	[396411] = 20, -- Primal Overload (Season 1 Thundering)
 
 
@@ -257,8 +258,9 @@ local Spells = {
 
 
 
+
 	-- [**Shadowlands**]
-	--[=====[ 
+
 	-- Affixes seasons
 
 	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
@@ -562,7 +564,6 @@ local Spells = {
 	[257293] = 20, -- Swiftwind Saber (Harlan Sweete) - TODO ID?
 	[257315] = 20, -- Black Powder Bomb (Irontide Grenadier, Harlan Sweete)
 
-
 	--[=====[
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
@@ -602,6 +603,7 @@ local Spells = {
 
 
 	-- [**Legion**] 
+
 	-- Neltharion's Lair
 	[183407] = 20, -- Acid Splatter (Vileshard Crawler)
 	[183465] = 20, -- Viscid Bile (Tarspitter Lurker)
@@ -627,6 +629,7 @@ local Spells = {
 	[216407] = 20, -- Lava Geyser (Dargrul)
 
 
+
 	--[=====[
 	-- Court of Stars
 	[209027] = 20, -- Quelling Strike (Duskwatch Guard)
@@ -649,6 +652,7 @@ local Spells = {
 
 
 	-- Halls of Valor
+
 	[198903] = 20, -- Crackling Storm (Storm Drake)
 	[210875] = 20, -- Charged Pulse (Stormforged Sentinel)
 	[199818] = 20, -- Crackle (Stormforged Sentinel)
@@ -670,7 +674,7 @@ local Spells = {
 	[198088] = 20, -- Glowing Fragment (Odyn)
 	[198412] = 20, -- Feedback (Odyn)
 	
-	
+
 	-- Return to Karazhan: Lower
 	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
 	[227917] = 20,		-- Poetry Slam (Ghostly Understudy)
@@ -776,7 +780,7 @@ local Spells = {
 	[162065] = 20,		-- Freezing Snare (Skylord Tovra)
 	--[161588] = 20,		-- Diffused Energy (Skylord Tovra) TODO some ticks not avoidable?
 	[162057] = 20,		-- Spinning Spear (Skylord Tovra)
-	--]=====]
+	
 
 
 
@@ -819,48 +823,57 @@ local Spells = {
 	[413275] = 20, -- Cold Front (Environment, Altairus)
 	[87553] = 20, -- Supremacy of the Storm (Asaad)
 	[87618] = 20 -- Static Cling (Asaad)
+
 }
 
 local SpellsNoTank = {
 	-- [**Dragonflight**]
 	-- Uldaman: Legacy of Tyr
-	[369409] = 20, -- Cleave (Earthen Custodian)
-	[369563] = 20, -- Wild Cleave (Baelog, The Lost Dwarves)
-	[369061] = 20, -- Searing Clap (Emberon)
-	[375727] = 20, -- Sand Breath (Chrono-Lord Deios)
+    [369409] = 20, -- Cleave (Earthen Custodian)
+    [369563] = 20, -- Wild Cleave (Baelog, The Lost Dwarves)
+    [369061] = 20, -- Searing Clap (Emberon)
+    [375727] = 20, -- Sand Breath (Chrono-Lord Deios)
 
-	-- Neltharus
-	[384019] = 20, -- Fiery Focus (Chargath, Bane of Scales)
+    -- Neltharus
+    [384019] = 20, -- Fiery Focus (Chargath, Bane of Scales)
+	
+	   -- Halls of Infusion
+    [375349] = 20, -- Gusting Breath (Gusting Proto-Drake)
+    [375341] = 20, -- Tectonic Breath (Subterranean Proto-Drake)
+    [375353] = 20, -- Oceanic Breath (Glacial Proto-Drake)
+    [384524] = 20, -- Titanic Fist (Watcher Irideus)
+    --[388245] = 20, -- Gulp (Gulping Goliath) - TODO how to handle this properly?
+	
+	    -- Brackenhide Hollow
+    [382712] = 20, -- Necrotic Breath, Initial (Wilted Oak)
+    [382805] = 20, -- Necrotic Breath, DoT (Wilted Oak)
+  	--[374544] = 20, -- Burst of Decay (Fetid Rotsinger) - TODO does this only target tank?
+    [377807] = 20, -- Cleave (Rira Hackclaw)
+    [381419] = 20, -- Savage Charge (Rira Hackclaw)
+    [377559] = 20, -- Vine Whip (Treemouth)
+	--[=====[
+    
 
-	-- The Nokhud Offensive
-	[384512] = 20, -- Cleaving Strikes (Nokhud Lancemaster / Nokhud Defender)
-	[387135] = 20, -- Arcing Strike (Primalist Arcblade)
+    -- The Nokhud Offensive
+    [384512] = 20, -- Cleaving Strikes (Nokhud Lancemaster / Nokhud Defender)
+    [387135] = 20, -- Arcing Strike (Primalist Arcblade)
 
-	-- Brackenhide Hollow
-	[382712] = 20, -- Necrotic Breath, Initial (Wilted Oak)
-	[382805] = 20, -- Necrotic Breath, DoT (Wilted Oak)
-	--[374544] = 20, -- Burst of Decay (Fetid Rotsinger) - TODO does this only target tank?
-	[377807] = 20, -- Cleave (Rira Hackclaw)
-	[381419] = 20, -- Savage Charge (Rira Hackclaw)
-	[377559] = 20, -- Vine Whip (Treemouth)
 
-	-- The Azure Vault
-	[370764] = 20, -- Piercing Shards (Crystal Fury)
-	[391120] = 20, -- Spellfrost Breath (Scalebane Lieutenant)
-	[372222] = 20, -- Arcane Cleave (Azureblade)
 
-	-- Halls of Infusion
-	[375349] = 20, -- Gusting Breath (Gusting Proto-Drake)
-	[375341] = 20, -- Tectonic Breath (Subterranean Proto-Drake)
-	[375353] = 20, -- Oceanic Breath (Glacial Proto-Drake)
-	[384524] = 20, -- Titanic Fist (Watcher Irideus)
+    -- The Azure Vault
+    [370764] = 20, -- Piercing Shards (Crystal Fury)
+    [391120] = 20, -- Spellfrost Breath (Scalebane Lieutenant)
+    [372222] = 20, -- Arcane Cleave (Azureblade)
 
-	-- Algeth'ar Academy
-	[385958] = 20, -- Arcane Expulsion (Vexamus)
+
+
+    -- Algeth'ar Academy
+ [385958] = 20, -- Arcane Expulsion (Vexamus)
+
 
 
 	-- [**Shadowlands**]
-	--[=====[
+
 	-- Mists of Tirna Scithe
 	[331721] = 20,		-- Spear Flurry (Mistveil Defender)
 
@@ -889,39 +902,45 @@ local SpellsNoTank = {
 	--]=====]
 	
 	-- [**Battle for Azeroth**] 
-	-- The Underrot
+	  
+  -- The Underrot
 	[260793] = 20, -- Indigestion (Cragmaw the Infested)
 	[272457] = 20, -- Shockwave (Sporecaller Zancha)
-
-	--[=====[
-	-- Operation: Mechagon - Junkyard
-	-- Operation: Mechagon - Workshop
-	[294291] = 20,		-- Process Waste (Waste Processing Unit)
-	--]=====]
-
+  
 	-- [**Legion**]
+
+
 	-- Neltharion's Lair
-	[193505] = 20, -- Fracture (Vileshard Hulk)
+  [193505] = 20, -- Fracture (Vileshard Hulk)
 	[226296] = 20, -- Piercing Shards (Vileshard Hulk)
 	[226304] = 20, -- Piercing Shards (Vileshard Hulk)
 	[226406] = 20, -- Ember Swipe (Emberhusk Dominator)
 	[188494] = 20, -- Rancid Maw (Naraxas)
 	[205609] = 20, -- Rancid Maw (Naraxas) - TODO ID?
 	[200721] = 20, -- Landslide (Dargrul)
+	[226406] = 20, -- Ember Swip (Emberhusk Dominator)
+	[193505] = 20, -- Fracture (Vileshard Hulk)
 
 	--[=====[ 
-	-- Court of Stars
-	[209036] = 20, -- Throw Torch (Duskwatch Sentry)
-	[209495] = 20, -- Charged Smash (Guardian Construct)
-	[209512] = 20, -- Disrupting Energy (Guardian Construct)
+	-- Operation: Mechagon - Junkyard
+	-- Operation: Mechagon - Workshop
+	[294291] = 20,		-- Process Waste (Waste Processing Unit)
+	
+	-- Court of Stars	
+  [209036] = 20, -- Throw Torch (Duskwatch Sentry)
+  [209495] = 20, -- Charged Smash (Guardian Construct)
+  [209512] = 20, -- Disrupting Energy (Guardian Construct)
 
 	-- Halls of Valor
-	[198888] = 20, -- Lightning Breath (Storm Drake) - TODO is this avoidable by tank?
-	[199050] = 20, -- Mortal Hew (Valarjar Shieldmaiden)
-	[192018] = 20, -- Shield of Light (Hyrja)
-
+  [198888] = 20, -- Lightning Breath (Storm Drake) - TODO is this avoidable by tank?
+  [199050] = 20, -- Mortal Hew (Valarjar Shieldmaiden)
+  [192018] = 20, -- Shield of Light (Hyrja)
+	
+	
 	-- Return to Karazhan: Lower
 	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
+	
+	
 	-- Return to Karazhan: Upper
 	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
 	--]=====]
@@ -954,14 +973,17 @@ local Auras = {
 
 	-- [**Dragonflight**]
 	-- Uldaman: Legacy of Tyr
-	[372652] = true, -- Resonating Orb (Sentinel Talondras)
-
-	-- The Azure Vault
-	[386368] = true, -- Polymorphed (Polymorphic Rune, Environment)
-	[396722] = true, -- Absolute Zero, Root (Telash Greywing)
+    [369411] = true, -- Sonic Burst (Cavern Seeker)
+    [372652] = true, -- Resonating Orb (Sentinel Talondras)
+	
+	--[=====[ 
+    -- The Azure Vault
+    [386368] = true, -- Polymorphed (Polymorphic Rune, Environment)
+    [396722] = true, -- Absolute Zero, Root (Telash Greywing)
+  
 	
 	-- [**Shadowlands**]
-	--[=====[ 
+
 	-- Affixes seasons
 	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
 	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
@@ -997,6 +1019,7 @@ local Auras = {
 	[274516] = true, -- Slippery Suds (Bilge Rat Swabby)
 	[272554] = true, -- Bloody Mess (Trothak, Ring of Booty)
 	[268283] = true, -- Obscured Vision (Booty Fanatic, Ring of Booty)
+
 
 	--[=====[ 
 	-- Operation: Mechagon - Junkyard
