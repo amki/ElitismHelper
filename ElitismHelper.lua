@@ -1053,6 +1053,24 @@ local MeleeHitters = {
 	[174773] = 20,		-- Spiteful Shade
 }
 
+local function compareSemver(ver1, ver2)
+	local ver1Segments = {strsplit(".", ver1)}
+	local ver2Segments = {strsplit(".", ver2)}
+
+	local maxSegments = math.max(#ver1Segments, #ver2Segments)
+	for i = 1, maxSegments do
+		local ver1Segment = tonumber(ver1Segments[i]) or 0
+		local ver2Segment = tonumber(ver2Segments[i]) or 0
+
+		if ver1Segment > ver2Segment then
+			return 1
+		elseif ver1Segment < ver2Segment then
+			return -1
+		end
+	end
+	return 0
+end
+
 function round(number, decimals)
 	return (("%%.%df"):format(decimals)):format(number)
 end
@@ -1474,9 +1492,9 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 					activeUserObject = {k, v}
 				end
 
-
-				--If the request sender has a higher version make them active
-				if(activeUserObject[2][2] < v[2]) then
+				local incomingVersion = v[2]
+				local activeVersion = activeUserObject[2][2]
+				if compareSemver(incomingVersion, activeVersion) > 0 then
 					activeUserObject = {k, v}
 				end
 				
@@ -1491,7 +1509,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 		end
 
 		-- We are in a group but nobody is eligible...
-		if(activeUser == nil) then
+		if(activeUserObject == nil) then
 			activeUser = playerUser
 		else
 			activeUser = activeUserObject[1]
