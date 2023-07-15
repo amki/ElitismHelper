@@ -251,11 +251,12 @@ local Spells = {
 	--]=====]
 
 	-- Dawn of the Infinite: Galakrond's Fall
-	[419380] = 20, -- Timeline Conflux, small Swirlies (Environment) TODO Swirlies before door, this is a guess
-	[419383] = 20, -- Timeline Conflux, big Swirlies (Environment) TODO Swirlies before door, this is a guess
+	[419447] = 20, -- Bronze Radiance (Environment)
+	[419380] = 20, -- Timeline Conflux, small Swirlies (Environment)
+	[419383] = 20, -- Timeline Conflux, big Swirlies (Environment)
 	[412065] = 20, -- Timerip (Epoch Ripper)
-	[414032] = 20, -- Errant Time (Environment) - TODO Swirlies before Timeways, this is a guess
-	[413332] = 20, -- Sand Zone (Environment) - TODO Area before Timeways, this is a guess
+	[414032] = 20, -- Errant Time (Environment)
+	[413332] = 20, -- Sand Zone (Environment)
 	[415773] = 20, -- Temporal Detonation (Interval)
 	[413536] = 20, -- Untwist, Swirly (Timestream Anomaly)
 	[413618] = 20, -- Timeless Curse (Infinite Infiltrator)
@@ -284,9 +285,8 @@ local Spells = {
 	[419328] = 20, -- Infinite Schism, Swirlies (Timeline Marauder)
 	[409038] = 20, -- Displacement (Infinite Protector / Infinite Warder, Bronze Temple Run)
 	[413536] = 20, -- Untwist, Swirly (Timestream Anomaly)
-	[412378] = 20, -- Dizzying Sands (Infinite Timebender) - TODO is this a frontal?
 	[411610] = 20, -- Bubbly Barrage (Time-Lost Waveshaper)
-	[412225] = 20, -- Electro-Juiced Gigablast (Time-Lost Aerobot) - TODO is this avoidable for tanks?
+	[412225] = 20, -- Electro-Juiced Gigablast (Time-Lost Aerobot)
 	[412181] = 20, -- Bombing Run (Time-Lost Aerobot)
 	[413428] = 20, -- Time Beam, Swirlies (Pendule)
 	[419517] = 20, -- Chronal Eruption (Chronaxie)
@@ -307,6 +307,8 @@ local Spells = {
 	[413208] = 20, -- Sand Buffeted (Morchie)
 	[412769] = 20, -- Anachronistic Decay (Familiar Face, Morchie)
 	[410238] = 20, -- Bladestorm (Anduin Lothar / Grommash Hellscream, Time-Lost Battlefield)
+	[418056] = 20, -- Shockwave (Anduin Lothar, Time-Lost Battlefield)
+	[408228] = 20, -- Shockwave (Grommash Hellscream, Time-Lost Battlefield)
 	[417026] = 20, -- Blizzard (Alliance Conjuror, Time-Lost Battlefield)
 	[407123] = 20, -- Rain of Fire (Horde Warlock, Time-Lost Battlefield)
 	[416265] = 20, -- Infinite Corruption, small Swirlies (Chrono-Lord Deios)
@@ -666,7 +668,6 @@ local Spells = {
 	[226287] = 20, -- Crush (Vileshard Chunk)
 	[183088] = 20, -- Avalanche, Frontal (Mightstone Breaker)
 	[183100] = 20, -- Avalanche, Rocks (Mightstone Breaker)
-	--[226347] = 20, -- Stone Shatter (Stoneclaw Hunter / Stoneclaw Grubmaster) - TODO probably not avoidable for melee
 	[186576] = 20, -- Petrifying Cloud (Petrifying Totem, Blightshard Shaper)
 	[202089] = 20, -- Scorch (Burning Geode)
 	--[183566] = 20, -- Rancid Pool (Rotdrool Grabber, Stoneclaw Grubmaster) - not really avoidable
@@ -931,14 +932,12 @@ local SpellsNoTank = {
 
 	-- Dawn of the Infinite: Murozond's Rise
 	[412505] = 20, -- Rending Cleave (Tyr's Vanguard)
-	[419351] = 20, -- Bronze Exhalation (Infinite Saboteur)
+	[419351] = 20, -- Bronze Exhalation (Infinite Saboteur / Infinite Slayer)
 	[418092] = 20, -- Twisted Timeways (Environment) - TODO is this reasonable?
 	[413532] = 20, -- Untwist, Frontal (Timestream Anomaly)
 	[412029] = 20, -- Millennium Aid (Infinite Timebender)
 	[417339] = 20, -- Titanic Blow (Tyr, the Infinite Keeper)
 	[404917] = 20, -- Sand Blast (Morchie)
-	[418056] = 20, -- Shockwave (Anduin Lothar, Time-Lost Battlefield)
-	[408228] = 20, -- Shockwave (Grommash Hellscream, Time-Lost Battlefield)
 	[416139] = 20, -- Temporal Breath (Chrono-Lord Deios)
 
 
@@ -984,6 +983,7 @@ local SpellsNoTank = {
 	[193505] = 20, -- Fracture (Vileshard Hulk)
 	[226296] = 20, -- Piercing Shards (Vileshard Hulk)
 	[226304] = 20, -- Piercing Shards (Vileshard Hulk)
+	[226347] = 20, -- Stone Shatter (Stoneclaw Hunter / Stoneclaw Grubmaster)
 	[226406] = 20, -- Ember Swipe (Emberhusk Dominator)
 	[188494] = 20, -- Rancid Maw (Naraxas)
 	[205609] = 20, -- Rancid Maw (Naraxas) - TODO ID?
