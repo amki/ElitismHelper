@@ -600,7 +600,7 @@ local Spells = {
 	[253654] = 20, -- Fiery Enchant (Dazar'ai Augur)
 	[253666] = 20, -- Fiery Bolt (Dazar'ai Augur)
 	[257692] = 20, -- Tiki Blaze (Environment)
-	[256884] = 20, -- Wild Thrash (Monzumi)
+	[255567] = 20, -- Frenzied Charge (T'lonja)
 	[258723] = 20, -- Grotesque Pool (Reanimated Honor Guard)
 	[255620] = 20, -- Festering Eruption (Reanimated Honor Guard)
 
@@ -737,12 +737,13 @@ local Spells = {
 
 	-- Darkheart Thicket
 	[218759] = 20, -- Corruption Pool (Nightmare Abomination, Festerhide Grizzly / Archdruid Glaidalis) - TODO check ID of boss version
+	[200771] = 20, -- Propelling Charge (Crazed Razorbeak)
 	[204402] = 20, -- Star Shower (Dreadsoul Ruiner)
 	[201123] = 20, -- Root Burst (Vilethorn Blossom)
 	[198916] = 20, -- Vile Burst (Rotheart Keeper)
 	[212797] = 20, -- Hatespawn Detonation (Hatespawn Whelpling) - TODO removed?
 	[201273] = 20, -- Blood Bomb (Bloodtainted Fury)
-	[201227] = 20, -- Blood Assault (Bloodtainted Fury) - TODO is this avoidable for tanks?
+	[201227] = 20, -- Blood Assault (Bloodtainted Fury)
 	[201842] = 20, -- Curse of Isolation (Taintheart Summoner)
 
 	[198408] = 20, -- Nightfall (Archdruid Glaidalis)
@@ -980,7 +981,7 @@ local Spells = {
 	-- Throne of the Tides
 	[426685] = 20, -- Volatile Bolt (Naz'jar Ravager)
 	[426688] = 20, -- Volatile Acid (Naz'jar Ravager)
-	[426681] = 20, -- Electric Jaws (Environment) - TODO ID?
+	[426681] = 20, -- Electric Jaws (Environment)
 	[76590] = 20, -- Shadow Smash (Faceless Watcher)
 	[426808] = 20, -- Null Blast (Faceless Seer)
 
@@ -1127,7 +1128,6 @@ local SpellsNoTank = {
 
 	-- Darkheart Thicket
 	[200589] = 20, -- Festering Swipe (Festerhide Grizzly) - TODO removed?
-	[200771] = 20, -- Propelling Charge (Crazed Razorbeak) - TODO is this avoidable for tanks?
 	[198376] = 20, -- Primal Rampage, Frontal (Archdruid Glaidalis)
 	[204667] = 20, -- Nightmare Breath (Oakheart)
 
@@ -1192,8 +1192,6 @@ local SpellsNoTank = {
 	-- [**Cataclysm**]
 
 	-- Throne of the Tides
-	[426645] = 20, -- Acid Barrage, Hit (Naz'jar Ravager)
-	[426727] = 20, -- Acid Barrage, DoT (Naz'jar Ravager)
 	[428530] = 20, -- Murk Spew (Ink of Ozumat, Ozumat)
 }
 
