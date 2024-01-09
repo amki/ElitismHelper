@@ -876,7 +876,7 @@ local Spells = {
 	[426991] = 20, -- Blazing Cinders (Archmage Sol)
 	[428084] = 20, -- Glacial Fusion (Archmage Sol)
 	[428148] = 20, -- Spatial Compression (Archmage Sol)
-	[169179] = 20, -- Colossal Blow (Yalnu) - always does damage to party as well
+	--[169179] = 20, -- Colossal Blow (Yalnu) - always does damage to party as well
 	[428834] = 20, -- Verdant Eruption (Yalnu)
 	[169930] = 20, -- Lumbering Swipe (Flourishing Ancient, Yalnu)
 
@@ -1286,6 +1286,9 @@ local Auras = {
 	--]=====]
 	
 	-- [**Warlords of Draenor**]
+	-- The Everbloom
+	[169179] = true, -- Colossal Blow (Yalnu)
+
 	--[=====[ 	
 	-- Iron Docks
 	[164504] = true,	-- Intimidated (Fleshrender Nok'gar)
