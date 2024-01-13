@@ -577,6 +577,7 @@ local Spells = {
 	-- [**Battle for Azeroth**] 
 	
 	-- Waycrest Manor
+	[265372] = 20, -- Shadow Cleave (Enthralled Guard)
 	--[278849] = 20, -- Uproot (Coven Thornshaper) - TODO probably not avoidable
 	[264040] = 20, -- Uprooted Thorns (Coven Thornshaper)
 	[264150] = 20, -- Shatter (Thornguard)
@@ -1106,10 +1107,6 @@ local SpellsNoTank = {
 	
 	
 	-- [**Battle for Azeroth**]  
-
-	-- Waycrest Manor
-	[265372] = 20, -- Shadow Cleave (Enthralled Guard)
-
 	--[=====[
 	-- The Underrot
 	[260793] = 20, -- Indigestion (Cragmaw the Infested)
