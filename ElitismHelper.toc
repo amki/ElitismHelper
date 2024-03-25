@@ -1,6 +1,6 @@
-## Interface: 100105
+## Interface: 100200
 ## Title: ElitismHelper
-## Version: 0.13.33
+## Version: 0.13.40
 ## Notes: Helps with being an elitist by calling out fails
 ## SavedVariables: ElitismHelperDB
 

@@ -6,7 +6,7 @@ local TimerMeleeData = {}
 local CombinedFails = {}
 local FailByAbility = {}
 local activeUser = nil
-local AddonVersion = "0.13.33"
+local AddonVersion = "0.13.40"
 local playerUser = GetUnitName("player", true).."-"..GetRealmName():gsub(" ", "")
 local defaultElitismHelperDBValues = {
 	Loud = true,
@@ -45,11 +45,11 @@ local Spells = {
 
 	-- [**Dragonflight**]
 	-- Affixes seasons
-	
+
 	[394873] = 20, -- Lightning Strike (Season 1 Thundering)
 	[396411] = 20, -- Primal Overload (Season 1 Thundering)
 
-
+	--[=====[
 	-- Uldaman: Legacy of Tyr
 	[369811] = 20, -- Brutal Slam (Hulking Berserker)
 	[369854] = 20, -- Throw Rock (Burly Rock-Thrower)
@@ -568,6 +568,33 @@ local Spells = {
 
 
 	-- [**Battle for Azeroth**] 
+	
+	-- Waycrest Manor
+	[264531] = 20,		--- Shrapnel Trap (Maddened Survivalist)
+	[264476] = 20,		--- Tracking Explosive (Crazed Marksman)
+	[260569] = 20,		--- Wildfire (Soulbound Goliath)
+	[265407] = 20,		--- Dinner Bell (Banquet Steward)
+	[264923] = 20,		--- Tenderize (Raal the Gluttonous)
+	[264712] = 20,		--- Rotten Expulsion (Raal the Gluttonous)
+	[272669] = 20,		--- Burning Fists (Soulbound Goliath)
+	[278849] = 20,		--- Uproot (Coven Thornshaper)
+	[264040] = 20,		--- Uprooted Thorns (Coven Thornshaper)
+	[265757] = 20,		--- Splinter Spike (Matron Bryndle)
+	[264150] = 20,		--- Shatter (Thornguard)
+	[268387] = 20,		--- Contagious Remnants (Lord Waycrest)
+	[268308] = 20,		--- Discordant Cadenza (Lady Waycrest
+
+	-- Atal'Dazar
+	[253666] = 20,		--- Fiery Bolt (Dazar'ai Juggernaught)
+	[257692] = 20,		--- Tiki Blaze (Environment)
+	[255620] = 20,		--- Festering Eruption (Reanimated Honor Guard)
+	[258723] = 20,		--- Grotesque Pool (Renaimated Honor Guard)
+	[250259] = 20,		--- Toxic Leap (Vol'kaal)
+	[250022] = 20,		--- Echoes of Shadra (Yazma)
+	[250585] = 20, 		--- Toxic Pool (Vol'kaal)
+	[250036] = 20,		--- Shadowy Remains (Echoes of Shadra)
+	[255567] = 20,		--- Frenzied Charge (T'lonja)
+	--[=====[
 	-- The Underrot
 	[265540] = 20, -- Rotten Bile (Fetid Maggot)
 	[265542] = 20, -- Rotten Bile (Fetid Maggot)
@@ -623,7 +650,6 @@ local Spells = {
 	[257293] = 20, -- Swiftwind Saber (Harlan Sweete) - TODO ID?
 	[257315] = 20, -- Black Powder Bomb (Irontide Grenadier, Harlan Sweete)
 
-	--[=====[
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
 	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
@@ -663,6 +689,33 @@ local Spells = {
 
 	-- [**Legion**] 
 
+	-- Black Rook Hold
+	[197821] = 20,		-- Felblazed Ground (Illysanna Ravencrest, AoE Ground from Eye Beams)
+	[197521] = 20,		-- Blazing Trail (Illysanna Ravencrest)
+	[198820] = 20,		-- Dark Blast (Latosius)
+	[199567] = 20,		-- Dark Obliteration (Image of Latosius)
+	[200256] = 20,		-- Phased Explosion (Arcane Minion)
+	[198781] = 20,		-- Whirling Blade (Lord Kur'talos Ravencrest)
+	[196517] = 20,		-- Swirling Scythe (Amalgam of Souls)
+	[222397] = 20,		-- Boulder Crush (Environment)
+	[198501] = 20,		-- Fel Vomitus (Smashspite the Hateful)
+	[201062] = 20,		-- Bowled Over! (Wyrmtonge Scavanger)
+	[200914] = 50,		-- Indigestion (Wyrmtonge Scavanger)
+	
+	
+	-- Darkheart Thicket
+	[204402] = 20,		-- Star Shower (Dreadsoul Ruiner)
+	[201273] = 10,		-- Blood Bomb (Bloodtainted Fury)
+	[201227] = 20,		-- Blood Assault (Bloodtainted Fury)
+	[201123] = 20,		-- Root Burst (Vilethorn Blossom)
+	[198386] = 20,		-- Primal Rampage (Archdruid Glaidalis)
+	[201191] = 20,      -- Dreadburst (Red Blood Blobs)
+	[191326] = 20,		-- Breath of Corruption (Dresaron)
+	[198408] = 20,		-- Nightfall (Archdruid Glaidalis)
+	[218759] = 20,		-- Corruption Pool (Festerhide Grizzly)
+	[200771] = 20,		-- Propelling Charge (Crazed Razorbeak)
+	[198916] = 20,		-- Vile Burst (Vile Mushroom)
+		--[=====[
 	-- Neltharion's Lair
 	[183407] = 20, -- Acid Splatter (Vileshard Crawler)
 	[183465] = 20, -- Viscid Bile (Tarspitter Lurker)
@@ -686,8 +739,6 @@ local Spells = {
 	[216407] = 20, -- Lava Geyser (Dargrul)
 
 
-
-	--[=====[
 	-- Court of Stars
 	[209027] = 20, -- Quelling Strike (Duskwatch Guard)
 	[209477] = 20, -- Wild Detonation (Mana Wyrm)
@@ -865,6 +916,7 @@ local Spells = {
 
 
 	-- [**Cataclysm**] 
+	--[=====[
 	-- Vortex Pinnacle
 	[410999] = 20, -- Pressurized Blast (Armored Mistral)
 	--[411001] = 20, -- Lethal Current (Lurking Tempest) - should this be considered avoidable?
@@ -880,11 +932,14 @@ local Spells = {
 	[413275] = 20, -- Cold Front (Environment, Altairus)
 	[87553] = 20, -- Supremacy of the Storm (Asaad)
 	[87618] = 20 -- Static Cling (Asaad)
+		--]=====]
 
 }
 
 local SpellsNoTank = {
 	-- [**Dragonflight**]
+	
+	--[=====[
 	-- Uldaman: Legacy of Tyr
     [369409] = 20, -- Cleave (Earthen Custodian)
     [369563] = 20, -- Wild Cleave (Baelog, The Lost Dwarves)
@@ -909,7 +964,6 @@ local SpellsNoTank = {
     [377559] = 20, -- Vine Whip (Treemouth)
 	
 	
-	--[=====[
     -- The Nokhud Offensive
     [384512] = 20, -- Cleaving Strikes (Nokhud Lancemaster / Nokhud Defender)
     [387135] = 20, -- Arcing Strike (Primalist Arcblade)
@@ -971,16 +1025,24 @@ local SpellsNoTank = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
+
+	
+	
+	-- [**Battle for Azeroth**]  
 	--]=====]
-	
-	
-	-- [**Battle for Azeroth**]   
+		-- Waycrest Manor
+	[263905] = 20,		--- Marking Cleave (Heartsbane Runeweaver)
+	[265372] = 20,		---	Shadow Cleave (Enthralled Guard)
+	[271174] = 20,		--- Retch (Pallid Gorger)
+	--[=====[ 
 	-- The Underrot
 	[260793] = 20, -- Indigestion (Cragmaw the Infested)
 	[272457] = 20, -- Shockwave (Sporecaller Zancha)
   
   
 	-- [**Legion**]
+	
+
 	-- Neltharion's Lair
 	[193505] = 20, -- Fracture (Vileshard Hulk)
 	[226296] = 20, -- Piercing Shards (Vileshard Hulk)
@@ -990,8 +1052,8 @@ local SpellsNoTank = {
 	[188494] = 20, -- Rancid Maw (Naraxas)
 	[205609] = 20, -- Rancid Maw (Naraxas) - TODO ID?
 	[200721] = 20, -- Landslide (Dargrul)
+	
 
-	--[=====[ 
 	-- Operation: Mechagon - Junkyard
 	-- Operation: Mechagon - Workshop
 	[294291] = 20,		-- Process Waste (Waste Processing Unit)
@@ -1042,10 +1104,11 @@ local Auras = {
 	[408777] = true, -- Entangled, Stun (Environment)
 
 	-- [**Dragonflight**]
+	--[=====[ 
 	-- Uldaman: Legacy of Tyr
     [372652] = true, -- Resonating Orb (Sentinel Talondras)
 	
-	--[=====[ 
+
     -- The Azure Vault
     [386368] = true, -- Polymorphed (Polymorphic Rune, Environment)
     [396722] = true, -- Absolute Zero, Root (Telash Greywing)
@@ -1091,12 +1154,20 @@ local Auras = {
 	--]=====]
 	
 	-- [**Battle for Azeroth**] 
+	
+		-- Waycrest Manor
+	[265352] = true,		-- Toad Blight (Toad)
+	[278468] = true,		-- Freezing Trap
+	
+	-- Atal'Dazar
+	[255371] = true,		-- Terrifying Visage (Rezan)
+	
+	--[=====[ 
 	-- Freehold
 	[274516] = true, -- Slippery Suds (Bilge Rat Swabby)
 	[272554] = true, -- Bloody Mess (Trothak, Ring of Booty)
 
 
-	--[=====[ 
 	-- Operation: Mechagon - Junkyard
 	[398529] = true,	-- Gooped (Gunker)
 	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
