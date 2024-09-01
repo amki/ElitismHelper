@@ -43,7 +43,7 @@ local Spells = {
 	-- [**The War Within**]
 
 	-- The Rookery
-	--[427331] = 20, -- Charged Bombardment, Dash (Voidrider) - TODO is this avoidable?
+	[427331] = 20, -- Charged Bombardment, Dash (Voidrider)
 	[432605] = 20, -- Charged Bombardment, Swirlies (Voidrider)
 	[426968] = 20, -- Bounding Void (Quartermaster Koratite)
 	[430013] = 20, -- Thunderstrike (Unruly Stormrook)
@@ -51,7 +51,7 @@ local Spells = {
 	[430186] = 20, -- Seeping Corruption (Corrupted Oracle)
 	[423981] = 20, -- Implosion, Explosion (Void Cursed Crusher)
 	[443847] = 20, -- Instability (Inflicted Civilian)
-	--[xxxx] = 20, -- void swirlies (Environment) - TODO ID? same as Embrace the Void?
+	[442192] = 20, -- Oppressive Void (Environment)
 	[430288] = 20, -- Crushing Darkness (Void Fragment)
 	[438848] = 20, -- Embrace the Void, Swirly (Radiating Voidstone)
 
@@ -62,7 +62,6 @@ local Spells = {
 	[424966] = 20, -- Lingering Void (Stormguard Gorren)
 	[426136] = 20, -- Reality Tear (Stormguard Gorren)
 	[425052] = 20, -- Dark Gravity, Explosion (Stormguard Gorren)
-	[426171] = 20, -- Chaotic Explosion (Stormguard Gorren) - TODO check
 	[423356] = 20, -- Null Upheaval, Swirlies (Voidstone Monstrosity)
 	--[433067] = 20, -- Seeping Fragment (Voidstone Monstrosity) - unavoidable to destroy Seeping Fragment with Stormrider's Charge
 
@@ -85,8 +84,8 @@ local Spells = {
 	[440087] = 20, -- Oozing Honey (Brew Drop, I'pa)
 	[438651] = 20, -- Snack Time (Benk Buzzbee)
 	[440141] = 20, -- Honey Marinade, Area (Benk Buzzbee)
-	[438933] = 20, -- Sticky Situation (Benk Buzzbee) - TODO check ID
-	[438931] = 20, -- Sticky Situation (Benk Buzzbee) - TODO check ID
+	[438933] = 20, -- Sticky Situation (Benk Buzzbee)
+	[438931] = 20, -- Sticky Situation (Benk Buzzbee)
 	[435788] = 20, -- Cinder-BOOM!, Waves (Goldie Baronbottom)
 
 
@@ -141,10 +140,8 @@ local Spells = {
 	[427472] = 20, -- Flamestrike, Swirly (Fanatical Conjuror)
 	[427473] = 20, -- Flamestrike, Area (Fanatical Conjuror)
 	[427601] = 20, -- Burst of Light (Lightspawn)
-	[448492] = 20, -- Thunderclap (Guard Captain Suleyman) - TODO is this reasonable?
-	[428151] = 20, -- Reflective Shield (High Priest Aemya) - is this reasonable?
+	--[448492] = 20, -- Thunderclap (Guard Captain Suleyman) - unreasonable
 	[427900] = 20, -- Molten Pool (Forge Master Damian)
-	[444705] = 20, -- Divine Storm (Zealous Templar) - TODO is this reasonable?
 	[424430] = 20, -- Consecration (Ardent Paladin)
 
 	[424621] = 20, -- Brutal Smash (Sergeant Shaynemail, Captain Dailcry)
@@ -158,7 +155,7 @@ local Spells = {
 	[425554] = 20, -- Purify (Prioress Murrpray)
 	[425556] = 20, -- Sanctified Ground (Prioress Murrpray)
 	[428170] = 20, -- Blinding Light, Disorient (Prioress Murrpray)
-	--[xxxx] = 20, -- ongoing dmg after Stoke the Flame (Prioress Murrpray) - TODO ID?
+	[425556] = 20, -- Sanctified Ground (Prioress Murrpray)
 
 
 	-- The Dawnbreaker
@@ -194,11 +191,9 @@ local Spells = {
 	[450783] = 20, -- Perfume Toss (Xeph'itik)
 	[451543] = 20, -- Null Slam (Eye of the Queen)
 	[448047] = 20, -- Web Wrap (Pale Priest)
-	[441792] = 20, -- Dark Slam (Reposing Knight)
-	-- TODO additional mob types around High Hollows Market (Loyal Attendant, Royal Acolyte, etc)
+	[446084] = 20, -- Toxic Fumes (Environment)
 	[434133] = 20, -- Venomous Spray, Swirlies (Royal Venomshell)
 	[445838] = 20, -- Dark Barrage (Unstable Test Subject)
-	[453841] = 20, -- Awakening Calling (Sureki Unnaturaler) - TODO removed?
 	--[447271] = 20, -- Tremor Slam (Hulking Warshell) - always does damage to party as well
 
 	[434710] = 20, -- Chains of Oppression (Orator Krix'vizk)
@@ -210,9 +205,10 @@ local Spells = {
 	[439687] = 20, -- Shade Slash, Shadow (Nx, Fangs of the Queen)
 	[439696] = 20, -- Duskbringer, Area (Nx, Fangs of the Queen)
 	[458741] = 20, -- Frozen Solid (Vx, Fangs of the Queen)
-	[443311] = 20, -- Black Blood (The Coaglamation) - TODO check ID
-	[462439] = 20, -- Black Blood (The Coaglamation) - TODO check ID
-	[461825] = 20, -- Black Blood (The Coaglamation) - TODO check ID
+	[443311] = 20, -- Black Blood, Arena (The Coaglamation)
+	[462439] = 20, -- Black Blood, Arena (The Coaglamation)
+	[438601] = 20, -- Black Blood, Mechanic (The Coaglamation)
+	[461825] = 20, -- Black Blood, Mechanic (The Coaglamation)
 	[461880] = 20, -- Blood Surge, Area (The Coaglamation)
 	[439481] = 20, -- Shifting Anomalies (Izo the Grand Splicer)
 	--[437700] = 20, -- Tremor Slam (Izo the Grand Splicer) - always does damage to party as well
@@ -1273,7 +1269,7 @@ local SpellsNoTank = {
 	-- [**The War Within**]
 	-- The Rookery
 	[427616] = 20, -- Energized Barrage (Unruly Stormrook)
-	[433078] = 20, -- Implosion, Impact (Void Cursed Crusher) - TODO check
+	[433078] = 20, -- Implosion, Impact (Void Cursed Crusher)
 	[445537] = 20, -- Oblivion Wave (Voidstone Monstrosity)
 
 	-- Cinderbrew Meadery
@@ -1282,6 +1278,9 @@ local SpellsNoTank = {
 
 	-- Darkflame Cleft
 	[421282] = 20, -- Darkflame Pickaxe (The Candle King)
+
+	-- Priory of the Sacred Flame
+	[444705] = 20, -- Divine Storm (Zealous Templar) - potentially still unreasonable
 
 	-- City of Threads
 	[439764] = 20, -- Process of Elimination, Physical (Izo the Grand Splicer)
