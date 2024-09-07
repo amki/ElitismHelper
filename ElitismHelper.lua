@@ -1409,11 +1409,19 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			elseif argsFunc == "emote" then
 				ElitismHelperDB.OutputMode = "emote"
 				print("Output set to emote always")
+			elseif argsFunc:find('^channel') ~= nil then
+				local args = ElitismFrame:SplitString(argsFunc," ")
+				if(args[2] == nil) then
+					print("You must set a channel number e.g. /eh output channel 1")
+					return
+				end
+				ElitismHelperDB.OutputMode = "channel "..args[2]
+				print("Output set to channel ".. args[2] .." always")
 			elseif argsFunc == "self" then
 				ElitismHelperDB.OutputMode = "self"
 				print("Output set to self only always")
 			else
-				print("Valid targets are default | party | raid | yell | emote | self")
+				print("Valid targets are default | party | raid | yell | emote | channel | self")
 				print("Current target is "..ElitismHelperDB.OutputMode)
 			end
 			ElitismFrame:RebuildTable()
@@ -1502,9 +1510,11 @@ function maybeSendAddonMessage(prefix, message)
 end
 
 function maybeSendChatMessage(message)
+	print("Try message")
 	if activeUser ~= playerUser then
 		return
 	end
+	print("Still there.")
 	if ElitismHelperDB.OutputMode == "self" then
 		print(message)
 	elseif ElitismHelperDB.OutputMode == "party" and IsInGroup() and not IsInGroup(2) then
@@ -1515,6 +1525,13 @@ function maybeSendChatMessage(message)
 		SendChatMessage(message,"YELL")
 	elseif ElitismHelperDB.OutputMode == "emote" then
 		SendChatMessage(message,"EMOTE")
+	elseif ElitismHelperDB.OutputMode:find('^channel') ~= nil then
+		local args = ElitismFrame:SplitString(ElitismHelperDB.OutputMode," ")
+		if(args[2] == nil) then
+			print("ERROR: Invalid channel string in ElitismHelperDB!")
+			return
+		end
+		SendChatMessage(message,"CHANNEL",GetDefaultLanguage(),args[2])
 	elseif ElitismHelperDB.OutputMode == "default" then
 		if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
 			SendChatMessage(message,"PARTY")
