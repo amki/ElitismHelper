@@ -34,18 +34,213 @@ local Spells = {
 	--[188389] = 1,		 -- DEBUG Shaman Flame Shock
 
 	-- Affixes
-	[209862] = 20, -- Volcanic Plume (Environment)
-	[226512] = 20, -- Sanguine Ichor (Environment)
-	[240448] = 20, -- Quaking (Environment)
-	[343520] = 20, -- Storming (Environment)
-	[350163] = 20, -- Melee (Spiteful Shade)
+	--[209862] = 20, -- Volcanic Plume (Environment)
+	--[226512] = 20, -- Sanguine Ichor (Environment)
+	--[240448] = 20, -- Quaking (Environment)
+	--[343520] = 20, -- Storming (Environment)
+	--[350163] = 20, -- Melee (Spiteful Shade)
+
+	-- [**The War Within**]
+
+	-- The Rookery
+	[427331] = 20, -- Charged Bombardment, Dash (Voidrider)
+	[432605] = 20, -- Charged Bombardment, Swirlies (Voidrider)
+	[426968] = 20, -- Bounding Void (Quartermaster Koratite)
+	[430013] = 20, -- Thunderstrike (Unruly Stormrook)
+	[452932] = 20, -- Attracting Shadows, Explosion (Coalescing Void Diffuser)
+	[430186] = 20, -- Seeping Corruption (Corrupted Oracle)
+	[423981] = 20, -- Implosion, Explosion (Void Cursed Crusher)
+	[443847] = 20, -- Instability (Inflicted Civilian)
+	[442192] = 20, -- Oppressive Void (Environment)
+	[430288] = 20, -- Crushing Darkness (Void Fragment)
+	[438848] = 20, -- Embrace the Void, Swirly (Radiating Voidstone)
+
+	[419871] = 20, -- Lightning Dash (Kyrioss)
+	[444411] = 20, -- Stormheart (Kyrioss)
+	[444250] = 20, -- Lightning Torrent (Kyrioss)
+	[425113] = 20, -- Crush Reality (Stormguard Gorren)
+	[424966] = 20, -- Lingering Void (Stormguard Gorren)
+	[426136] = 20, -- Reality Tear (Stormguard Gorren)
+	[425052] = 20, -- Dark Gravity, Explosion (Stormguard Gorren)
+	[423356] = 20, -- Null Upheaval, Swirlies (Voidstone Monstrosity)
+	--[433067] = 20, -- Seeping Fragment (Voidstone Monstrosity) - unavoidable to destroy Seeping Fragment with Stormrider's Charge
+
+
+	-- Cinderbrew Meadery
+	[437965] = 20, -- Pulsing Flames (Venture Co. Pyromaniac)
+	[434707] = 20, -- Cinderbrew Toss (Tasting Room Attendant)
+	[435000] = 20, -- High Steaks (Chef Chewie)
+	[448920] = 20, -- Reckless Delivery, Charge (Careless Hopgoblin)
+	[441179] = 20, -- Oozing Honey (Brew Drop)
+	[442589] = 20, -- Beeswax (Venture Co. Honey Harvester)
+	[440887] = 20, -- Rain of Honey (Royal Jelly Purveyor)
+	[448855] = 20, -- Drop Shipment (Environment)
+	[439468] = 20, -- Downward Trend (Yes Man / Assent Bloke / Agree Gentleman / Concur Sir)
+
+	[432196] = 20, -- Hot Honey (Brew Master Aldryr)
+	[432198] = 20, -- Blazing Belch (Brew Master Aldryr)
+	[445180] = 20, -- Crawling Brawl (Brew Master Aldryr)
+	[439991] = 20, -- Spouting Stout, Swirly (I'pa)
+	[440087] = 20, -- Oozing Honey (Brew Drop, I'pa)
+	[438651] = 20, -- Snack Time (Benk Buzzbee)
+	[440141] = 20, -- Honey Marinade, Area (Benk Buzzbee)
+	[438933] = 20, -- Sticky Situation (Benk Buzzbee)
+	[438931] = 20, -- Sticky Situation (Benk Buzzbee)
+	[435788] = 20, -- Cinder-BOOM!, Waves (Goldie Baronbottom)
+
+
+	-- The Stonevault
+	[425027] = 20, -- Seismic Wave (Earth Infused Golem)
+	[447145] = 20, -- Pulverizing Pounce (Repurposed Loaderbot)
+	[449070] = 20, -- Crystal Salvo (Void Touched Elemental)
+	[449129] = 20, -- Lava Cannon (Forge Loader)
+	[448975] = 20, -- Shield Stampede (Cursedforge Honor Guard)
+	[428709] = 20, -- Granite Eruption (Rock Smasher)
+
+	[422261] = 20, -- Crystal Shard, Impact (Skarmorak)
+	[423538] = 20, -- Unstable Crash (Skarmorak)
+	[443405] = 20, -- Unstable Fragments, Impact (Skarmorak)
+	[428547] = 20, -- Scrap Cube (Speaker Brokk, Forge Speakers)
+	[428819] = 20, -- Exhaust Vents, Vents (Speaker Brokk, Forge Speakers)
+	[429999] = 20, -- Flaming Scrap (Speaker Brokk, Forge Speakers)
+	[449169] = 20, -- Lava Cannon (Speaker Dorlita, Forge Speakers)
+	[464392] = 20, -- Blazing Shrapnel (Speaker Dorlita, Forge Speakers)
+	[463145] = 20, -- Magma Wave (Speaker Dorlita, Forge Speakers)
+	[427869] = 20, -- Unbridled Void (Void Speaker Eirich)
+	[457465] = 20, -- Entropy (Void Speaker Eirich)
+
+
+	-- Darkflame Cleft
+	[423501] = 20, -- Wild Wallop (Rank Overseer)
+	[426883] = 20, -- Bonk! (Kobold Taskworker)
+	[426779] = 20, -- Explosive Flame (Blazing Fiend)
+	[440652] = 20, -- Surging Wax, Impact (Wandering Candle)
+	[440653] = 20, -- Surging Wax, Area (Wandering Candle)
+	[428650] = 20, -- Burning Backlash (Environment)
+	[426265] = 20, -- Ceaseless Flame (Sootsnout) - TODO always towards One-Hand Headlock stunned player?
+	[426259] = 20, -- Pyro-Pummel (Torchsnarl)
+	[422393] = 20, -- Suffocating Darkness (Skittering Darkness)
+	[422414] = 20, -- Shadow Smash (Shuffling Horror)
+
+	[422125] = 20, -- Reckless Charge (Ol' Waxbeard)
+	[422274] = 20, -- Cave-In (Ol' Waxbeard)
+	[424821] = 20, -- High Speed Collision (Ol' Waxbeard)
+	[429093] = 20, -- Underhanded Track-tics, Explosion (Ol' Waxbeard)
+	[421638] = 20, -- Wicklighter Barrage (Blazikon)
+	[424223] = 20, -- Incite Flames (Blazikon)
+	[422700] = 20, -- Extinguishing Gust (Blazikon)
+	[443969] = 20, -- Enkindling Inferno (Blazikon)
+	[421067] = 20, -- Molten Wax (The Candle King)
+	[427100] = 20, -- Umbral Slash (The Darkness)
+	[426943] = 20, -- Rising Gloom (The Darkness) - is this reasonable?
+
+
+	-- Priory of the Sacred Flame
+	[453461] = 20, -- Caltrops (Fervent Sharpshooter)
+	[427472] = 20, -- Flamestrike, Swirly (Fanatical Conjuror)
+	[427473] = 20, -- Flamestrike, Area (Fanatical Conjuror)
+	[427601] = 20, -- Burst of Light (Lightspawn)
+	--[448492] = 20, -- Thunderclap (Guard Captain Suleyman) - unreasonable
+	[427900] = 20, -- Molten Pool (Forge Master Damian)
+	[424430] = 20, -- Consecration (Ardent Paladin)
+
+	[424621] = 20, -- Brutal Smash (Sergeant Shaynemail, Captain Dailcry)
+	[424460] = 20, -- Ember Storm (Taener Duelmal, Captain Dailcry)
+	[447272] = 20, -- Hurl Spear (Captain Dailcry)
+	[423076] = 20, -- Hammer of Purity, Swirly (Baron Braunpyke)
+	[423121] = 20, -- Hammer of Purity, Hammer (Baron Braunpyke)
+	[423019] = 20, -- Castigator's Detonation (Baron Braunpyke)
+	--[xxxx] = 20, -- Sacrificial Pyre (Baron Braunpyke) - check Mythic-only mechanic
+	[451606] = 20, -- Holy Flame (Prioress Murrpray)
+	[425554] = 20, -- Purify (Prioress Murrpray)
+	[425556] = 20, -- Sanctified Ground (Prioress Murrpray)
+	[428170] = 20, -- Blinding Light, Disorient (Prioress Murrpray)
+	[425556] = 20, -- Sanctified Ground (Prioress Murrpray)
+
+
+	-- The Dawnbreaker
+	[432454] = 20, -- Stygian Seed, Explosion (Nightfall Ritualist)
+	[430655] = 20, -- Arathi Ariship Cannon (Environment)
+	[451093] = 20, -- Arathi Bomb (Environment)
+	[431494] = 20, -- Black Edge (Nightfall Tactician)
+	[432606] = 20, -- Black Hail (Manifested Shadow)
+	[451098] = 20, -- Tacky Nova (Sureki Militant)
+	[451115] = 20, -- Terrifying Slam, Area (Ixkreten the Unbreakable)
+	[460135] = 20, -- Dark Scars (Deathscreamer Iken'tak)
+	[431352] = 20, -- Tormenting Eruption, Splash (Nightfall Dark Architect)
+
+	[453214] = 20, -- Obsidian Beam, Beams (Speaker Shadowcrown)
+	[453173] = 20, -- Collapsing Night, Area (Speaker Shadowcrown)
+	[451032] = 20, -- Darkness Comes (Speaker Shadowcrown)
+	[427007] = 20, -- Terrifying Slam, Area (Anub'ikkaj)
+	[427378] = 20, -- Dark Scars (Anub'ikkaj)
+	[434655] = 20, -- Arathi Bomb, Explosion (Rasha'nan)
+	[448215] = 20, -- Expel Webs (Rasha'nan)
+	[434579] = 20, -- Rolling Acid, Corrosion (Rasha'nan)
+	[449335] = 20, -- Encroaching Shadows (Environment)
+	[434096] = 20, -- Sticky Web (Rasha'nan)
+	[438956] = 20, -- Acid Pools (Rasha'nan)
+	[438957] = 20, -- Acid Pools (Rasha'nan)
+
+
+	-- City of Threads
+	[443500] = 20, -- Earthshatter (Royal Swarmguard / Royal Venomshell / Retired Lord Vul'azak)
+	[443438] = 20, -- Doubt (Herald of Ansurek)
+	[443435] = 20, -- Twist Thoughts, Area (Herald of Ansurek)
+	[451426] = 20, -- Gossamer Barrage (Xeph'itik)
+	[450783] = 20, -- Perfume Toss (Xeph'itik)
+	[451543] = 20, -- Null Slam (Eye of the Queen)
+	[448047] = 20, -- Web Wrap (Pale Priest)
+	[446084] = 20, -- Toxic Fumes (Environment)
+	[434133] = 20, -- Venomous Spray, Swirlies (Royal Venomshell)
+	[445838] = 20, -- Dark Barrage (Unstable Test Subject)
+	--[447271] = 20, -- Tremor Slam (Hulking Warshell) - always does damage to party as well
+
+	[434710] = 20, -- Chains of Oppression (Orator Krix'vizk)
+	[434779] = 20, -- Terrorize (Orator Krix'vizk)
+	[448562] = 20, -- Doubt (Orator Krix'vizk)
+	[434926] = 20, -- Lingering Influence (Orator Krix'vizk)
+	[440049] = 20, -- Synergic Step (Nx / Vx, Fangs of the Queen)
+	[439686] = 20, -- Shade Slash, Physical (Nx, Fangs of the Queen)
+	[439687] = 20, -- Shade Slash, Shadow (Nx, Fangs of the Queen)
+	[439696] = 20, -- Duskbringer, Area (Nx, Fangs of the Queen)
+	[458741] = 20, -- Frozen Solid (Vx, Fangs of the Queen)
+	[443311] = 20, -- Black Blood, Arena (The Coaglamation)
+	[462439] = 20, -- Black Blood, Arena (The Coaglamation)
+	[438601] = 20, -- Black Blood, Mechanic (The Coaglamation)
+	[461825] = 20, -- Black Blood, Mechanic (The Coaglamation)
+	[461880] = 20, -- Blood Surge, Area (The Coaglamation)
+	[439481] = 20, -- Shifting Anomalies (Izo the Grand Splicer)
+	--[437700] = 20, -- Tremor Slam (Izo the Grand Splicer) - always does damage to party as well
+
+
+	-- Ara-Kara, City of Echoes
+	[438623] = 20, -- Toxic Rupture (Engorged Crawler)
+	[434830] = 20, -- Vile Webbing (Environment / Ixin / Nakt / Atik / Avanoxx)
+	[434824] = 20, -- Web Spray, Cone (Ixin / Nakt / Atik)
+	[439469] = 20, -- Web Spray, Swirly (Ixin / Nakt / Atik)
+	[438832] = 20, -- Poisonous Cloud, Impact (Atik)
+	[438825] = 20, -- Poisonous Cloud, Area (Atik)
+	[453160] = 20, -- Impale (Hulking Bloodguard)
+	[433843] = 20, -- Erupting Webs (Blood Overseer)
+	[432031] = 20, -- Grasping Blood (Black Blood) - TODO necessary for Ki'katal Cosmic Singularity?
+
+	[438966] = 20, -- Gossamer Onslaught, Swirly (Avanoxx)
+	[433443] = 20, -- Impale (Anub'zekt)
+	[433781] = 20, -- Ceaseless Swarm (Anub'zekt)
+	[434284] = 20, -- Burrow Charge, Dash (Anub'zekt) - TODO difficult for target to avoid, impossible without dash?
+	[433731] = 20, -- Burrow Charge, End (Anub'zekt)
+	[432132] = 20, -- Erupting Webs (Ki'katal the Harvester)
+	[461507] = 20, -- Cultivated Poisons, Wave (Ki'katal the Harvester)
+	[432117] = 20, -- Cosmic Singularity (Ki'katal the Harvester)
+
 
 
 	-- [**Dragonflight**]
-	-- Affixes seasons
 
-	[394873] = 20, -- Lightning Strike (Season 1 Thundering)
-	[396411] = 20, -- Primal Overload (Season 1 Thundering)
+	-- Affixes seasons
+	--[394873] = 20, -- Lightning Strike (Season 1 Thundering)
+	--[396411] = 20, -- Primal Overload (Season 1 Thundering)
 
 	--[=====[
 	-- Uldaman: Legacy of Tyr
@@ -64,6 +259,7 @@ local Spells = {
 	[376325] = 20, -- Eternity Zone (Chrono-Lord Deios)
 	[377561] = 20, -- Time Eruption (Chrono-Lord Deios)
 
+
 	-- Neltharus
 	[372459] = 20, -- Burning (Environment)
 	[382708] = 20, -- Volcanic Guard (Qalashi Warden)
@@ -80,11 +276,12 @@ local Spells = {
 	[378831] = 20, -- Explosive Concoction (Qalashi Plunderer)
 
 	[373756] = 20, -- Magma Wave (Chargath, Bane of Scales)
+	[374854] = 20, -- Erupted Ground (Chargath, Bane of Scales)
 	[375397] = 20, -- Lava Splash (Chargath, Bane of Scales)
 	[375061] = 20, -- Blazing Eruption (Forgemaster Gorek)
 	[375241] = 20, -- Forgestorm (Forgemaster Gorek)
-	[374397] = 20, -- Heated Swings, Jump (Forgemaster Gorek) - TODO which one is correct?
-	[374517] = 20, -- Heated Swings, Jump (Forgemaster Gorek) - TODO which one is correct?
+	[374397] = 20, -- Heated Swings, Jump (Forgemaster Gorek)
+	[374517] = 20, -- Heated Swings, Jump (Forgemaster Gorek)
 	[381482] = 20, -- Forgefire (Forgemaster Gorek)
 	[375071] = 20, -- Magma Lob (Magmatusk)
 	[375204] = 20, -- Liquid Hot Magma (Magmatusk)
@@ -94,6 +291,7 @@ local Spells = {
 	[377477] = 20, -- Burning Ember (Warlord Sargha)
 	[377542] = 20, -- Burning Ground (Warlord Sargha)
 	[391773] = 20, -- The Dragon's Eruption (Warlord Sargha)
+
 
 	-- Brackenhide Hollow
 	[368297] = 20, -- Toxic Trap, Trigger (Bonebolt Hunter)
@@ -107,6 +305,7 @@ local Spells = {
 	[385303] = 20, -- Teeth Trap (Environment)
 	[385524] = 20, -- Sentry Fire (Environment)
 	[385805] = 20, -- Violent Whirlwind (Stinkbreath)
+	[385186] = 20, -- Stink Breath (Stinkbreath)
 	[379425] = 20, -- Rotting Creek (Environment)
 	[383392] = 20, -- Rotting Surge, Impact (Filth Caller)
 	[383399] = 20, -- Rotting Surge, periodic (Filth Caller)
@@ -120,6 +319,7 @@ local Spells = {
 	[376149] = 20, -- Choking Rotcloud, Area (Decatriarch Wratheye)
 	[379425] = 20, -- Decaying Fog (Environment, Decatriarch Wratheye)
 
+
 	-- Halls of Infusion
 	[374075] = 20, -- Seismic Slam (Primalist Geomancer)
 	[393444] = 20, -- Spear Flurry / Gushing Wound (Refti Defender)
@@ -128,7 +328,6 @@ local Spells = {
 	[374563] = 20, -- Dazzle (Dazzling Dragonfly)
 	[374741] = 20, -- Magma Crush (Flamecaller Aymi)
 	[375080] = 20, -- Whirling Fury (Squallbringer Cyraz)
-	[385168] = 20, -- Thunderstorm (Primalist Galesinger) - TODO is first tick avoidable?
 	[375384] = 20, -- Rumbling Earth (Primalist Earthshaker)
 	[383204] = 20, -- Crashing Tsunami (Environment)
 	[390290] = 20, -- Flash Flood (Infuser Sariya)
@@ -145,9 +344,8 @@ local Spells = {
 	[387363] = 20, -- Infused Globule, Explosion (Primal Tsunami)
 	[388786] = 20, -- Rogue Waves (Primal Tsunami)
 
-	--[=====[ 
+
 	-- Algeth'ar Academy
-	[388884] = 20, -- Arcane Rain (Spellbound Scepter)
 	[388957] = 20, -- Riftbreath (Arcane Ravager)
 	[378011] = 20, -- Deadly Winds (Guardian Sentry)
 	[377516] = 20, -- Dive Bomb (Territorial Eagle)
@@ -157,7 +355,7 @@ local Spells = {
 	[387932] = 20, -- Astral Whirlwind (Algeth'ar Echoknight)
 
 	[385970] = 20, -- Arcane Orb, Spawn (Vexamus)
-	[386201] = 20, -- Corrupted Mana (Vexamus) - TODO is first tick avoidable?
+	[386201] = 20, -- Corrupted Mana (Vexamus)
 	[388546] = 20, -- Arcane Fissure, Swirly (Vexamus)
 	[377034] = 20, -- Overpowering Gust (Crawth)
 	[376449] = 20, -- Firestorm (Crawth)
@@ -168,8 +366,9 @@ local Spells = {
 	[374361] = 20, -- Astral Breath (Echo of Doragosa)
 	[389007] = 20, -- Arcane Rift / Wild Energy (Echo of Doragosa)
 	[388996] = 20, -- Energy Eruption (Echo of Doragosa)
-	
-		-- The Azure Vault
+
+
+	-- The Azure Vault
 	[370766] = 20, -- Crystalline Rupture (Crystal Thrasher)
 	[371021] = 20, -- Splintering Shards, Aura (Crystal Thrasher)
 	[375649] = 20, -- Infused Ground (Arcane Tender)
@@ -180,7 +379,6 @@ local Spells = {
 	[386536] = 20, -- Null Stomp (Nullmagic Hornswog)
 
 	[374523] = 20, -- Stinging Sap (Leymor)
-	[386660] = 20, -- Erupting Fissure (Leymor)
 	[374582] = 20, -- Explosive Brand, Area (Leymor)
 	[385579] = 20, -- Ancient Orb (Azureblade)
 	[390462] = 20, -- Ancient Orb Fragment (Azureblade)
@@ -189,11 +387,11 @@ local Spells = {
 	[384699] = 20, -- Crystalline Roar (Umbrelskul)
 	[385078] = 20, -- Arcane Eruption (Umbrelskul)
 	[385267] = 20, -- Crackling Vortex (Umbrelskul)
-	
-		-- Ruby Life Pools
+
+
+	-- Ruby Life Pools
 	[372696] = 20, -- Excavating Blast (Primal Juggernaut)
 	[372697] = 20, -- Jagged Earth (Primal Juggernaut)
-	[373458] = 20, -- Stone Missile (Primal Terrasentry)
 	[372088] = 20, -- Blazing Rush, Hit (Defier Draghar)
 	[372796] = 20, -- Blazing Rush, DoT (Defier Draghar)
 	[385292] = 20, -- Molten Steel (Defier Draghar)
@@ -215,9 +413,9 @@ local Spells = {
 	[373087] = 20, -- Burnout (Blazebound Firestorm, Kokia Blazehoof)
 	[381526] = 20, -- Roaring Firebreath (Kyrakka)
 	[384773] = 20, -- Flaming Embers (Kyrakka)
-	
-		-- The Nokhud Offensive
-	[384868] = 20, -- Multi-Shot (Nokhud Longbow)
+
+
+	-- The Nokhud Offensive
 	[384479] = 20, -- Rain of Arrows (Nokhud Longbow)
 	[384336] = 20, -- War Stomp (Nokhud Plainstomper / Nokhud Lancemaster / Nokhud Defender)
 	[386028] = 20, -- Thunder Clap (Primalist Thunderbeast)
@@ -226,7 +424,6 @@ local Spells = {
 	[386912] = 20, -- Stormsurge Cloud (Stormsurge Totem)
 	[396376] = 20, -- Chant of the Dead (Ukhel Deathspeaker)
 	[387611] = 20, -- Necrotic Eruption (Ukhel Corruptor)
-	[387629] = 20, -- Rotting Wind (Desecrated Ohuna)
 	[388451] = 20, -- Stormcaller's Fury (Environment)
 	[382233] = 20, -- Broad Stomp (Nokhud Defender / Batak)
 	[382274] = 20, -- Vehement Charge (Nokhud Defender / Balara)
@@ -248,7 +445,7 @@ local Spells = {
 	[376737] = 20, -- Lightning (Balakar Khan)
 	[376892] = 20, -- Crackling Upheaval (Balakar Khan)
 	[376899] = 20, -- Crackling Cloud (Balakar Khan) - TODO is first tick avoidable?
-	--]=====]
+
 
 	-- Dawn of the Infinite: Galakrond's Fall
 	[419447] = 20, -- Bronze Radiance (Environment)
@@ -276,6 +473,7 @@ local Spells = {
 	[414376] = 20, -- Punctured Ground (Iridikron)
 	[409642] = 20, -- Pulverizing Exhalation (Iridikron)
 	[409969] = 20, -- Stone Dispersion (Iridikron)
+
 
 	-- Dawn of the Infinite: Murozond's Rise
 	[412137] = 20, -- Temporal Strike (Valow, Timesworn Keeper)
@@ -314,12 +512,12 @@ local Spells = {
 	[416265] = 20, -- Infinite Corruption, small Swirlies (Chrono-Lord Deios)
 	[416266] = 20, -- Infinite Corruption, big Swirlies (Chrono-Lord Deios)
 	[417413] = 20, -- Temporal Scar (Chrono-Lord Deios)
+	--]=====]
 
 
 	-- [**Shadowlands**]
 
 	-- Affixes seasons
-
 	--[342494] = 20,		-- Belligerent Boast (Season 1 Prideful)
 	--[356414] = 20,		-- Frost Lance (Season 2 Oros)
 	--[358894] = 20,		-- Cold Snap (Season 2 Oros)
@@ -332,29 +530,61 @@ local Spells = {
 	--[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
 	--[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
 	
-	--[=====[ 
+
+	-- The Necrotic Wake
+	[323957] = 20, -- Animate Dead, Warrior (Zolramus Necromancer)
+	[324026] = 20, -- Animate Dead, Crossbowman (Zolramus Necromancer)
+	[324027] = 20, -- Animate Dead, Mage (Zolramus Necromancer)
+	[320574] = 20, -- Shadow Well (Zolramus Sorcerer)
+	[345625] = 20, -- Death Burst (Nar'zudah)
+	[324391] = 20, -- Frigid Spikes (Skeletal Monstrosity)
+	[324381] = 20, -- Reaping Winds / Chill Scythe (Skeletal Monstrosity)
+	[327240] = 20, -- Spine Crush (Loyal Creation)
+	[333477] = 20, -- Gut Slice (Goregrind)
+
+	[320646] = 20, -- Fetid Gas (Blightbone)
+	[319897] = 20, -- Land of the Dead, Crossbowman (Amarth)
+	[319902] = 20, -- Land of the Dead, Warrior (Amarth)
+	[333627] = 20, -- Land of the Dead, Mage (Amarth)
+	[321253] = 20, -- Final Harvest, Swirly (Amarth)
+	[333489] = 20, -- Necrotic Breath (Amarth)
+	[333492] = 20, -- Necrotic Ichor (Amarth)
+	[320365] = 20, -- Embalming Ichor, Swirly (Surgeon Stitchflesh)
+	[320366] = 20, -- Embalming Ichor, Area (Surgeon Stitchflesh)
+	[327952] = 20, -- Meat Hook (Stitchflesh's Creation, Surgeon Stitchflesh)
+	[327100] = 20, -- Noxious Fog (Environment, Surgeon Stitchflesh)
+	[320784] = 20, -- Comet Storm (Nalthor the Rimebinder)
+	[321956] = 20, -- Comet Storm, Dark Exile (Nalthor the Rimebinder)
+	[322793] = 20, -- Blizzard, Dark Exile (Nalthor the Rimebinder)
+	[327875] = 20, -- Blizzard, Dark Exile (Nalthor the Rimebinder)
+	[328212] = 20, -- Razorshard Ice (Nalthor the Rimebinder)
+
+
 	-- Mists of Tirna Scithe
-	[321968] = 20,		-- Bewildering Pollen (Tirnenn Villager)
-	[323137] = 20,		-- Bewildering Pollen (Tirnenn Villager)
-	[325027] = 20,		-- Bramble Burst (Drust Boughbreaker)
-	[326022] = 20,		-- Acid Globule (Spinemaw Gorger)
-	[340300] = 20,		-- Tongue Lashing (Mistveil Gorgegullet)
-	[340304] = 20,		-- Poisonous Secretions (Mistveil Gorgegullet)
-	[340311] = 20,		-- Crushing Leap (Mistveil Gorgegullet)
-	[331743] = 20,		-- Bucking Rampage (Mistveil Guardian)
-	[331748] = 20,		-- Back Kick (Mistveil Guardian)
-	[340160] = 20,		-- Radiant Breath (Mistveil Matriarch)
-	
-	--id ? [323177] = 20,		-- Tears of the Forest (Ingra Maloch)
-	[323250] = 20,		-- Anima Puddle (Droman Oulfarran)
-	[321834] = 20,		-- Dodge Ball (Mistcaller)
-	[336759] = 20,		-- Dodge Ball (Mistcaller)
-	[321893] = 20,		-- Freezing Burst (Mistcaller)
-	[321828] = 20,		-- Patty Cake (Mistcaller)
-	[322655] = 20,		-- Acid Expulsion (Tred'ova)
-	[326309] = 20,		-- Decomposing Acid (Tred'ova)
-	[326263] = 20,		-- Anima Shedding (Tred'ova)
-	
+	[321968] = 20, -- Bewildering Pollen (Tirnenn Villager)
+	[325027] = 20, -- Bramble Burst (Drust Boughbreaker)
+	[463257] = 20, -- Mist Ward (Mistveil Defender)
+	[340300] = 20, -- Tongue Lashing (Mistveil Gorgegullet)
+	[340304] = 20, -- Poisonous Secretions (Mistveil Gorgegullet)
+	[340311] = 20, -- Crushing Leap (Mistveil Gorgegullet)
+	[340160] = 20, -- Radiant Breath (Mistveil Matriarch)
+	[340283] = 20, -- Poisonous Discharge (Mistveil Nightblossom)
+	[326022] = 20, -- Acid Globule (Spinemaw Gorger)
+	[326017] = 20, -- Decomposing Acid (Spinemaw Larva)
+
+	[323263] = 20, -- Tears of the Forest (Droman Oulfarran, Ingra Maloch)
+	[323250] = 20, -- Anima Puddle (Droman Oulfarran, Ingra Maloch)
+	[323137] = 20, -- Bewildering Pollen (Droman Oulfarran, Ingra Maloch)
+	[321834] = 20, -- Dodge Ball (Mistcaller)
+	[336759] = 20, -- Dodge Ball (Mistcaller)
+	[321893] = 20, -- Freezing Burst (Mistcaller)
+	[321828] = 20, -- Patty Cake (Mistcaller)
+	[322655] = 20, -- Acid Expulsion (Tred'ova)
+	[326309] = 20, -- Decomposing Acid (Tred'ova)
+	[463603] = 20, -- Coalescing Poison (Tred'ova)
+	[326263] = 20, -- Anima Shedding (Tred'ova)
+
+	--[=====[ 
 	-- De Other Side
 	[334051] = 20,		-- Erupting Darkness (Death Speaker)
 	[328729] = 20,		-- Dark Lotus (Risen Cultist)
@@ -400,33 +630,6 @@ local Spells = {
 	[323792] = 20,		-- Anima Field (Oryphrion)
 	[323943] = 20,		-- Run Through (Devos)
 	-- [] = 20,		-- Seed of the Abyss (Devos) ???
-
-
-	-- The Necrotic Wake
-	[324391] = 20,		-- Frigid Spikes (Skeletal Monstrosity)
-	[324381] = 20,		-- Chill Scythe / Reaping Winds (Skeletal Monstrosity)
-	[323957] = 20,		-- Animate Dead (Zolramus Necromancer - summons Warrior)
-	[324026] = 20,		-- Animate Dead (Zolramus Necromancer - summons Crossbowman)
-	[324027] = 20,		-- Animate Dead (Zolramus Necromancer - summons Mage)
-	[320574] = 20,		-- Shadow Well (Zolramus Sorcerer)
-	[333477] = 20,		-- Gut Slice (Goregrind)
-	[345625] = 20,		-- Death Burst (Nar'zudah)
-	[327240] = 20,		-- Spine Crush (Loyal Creation)
-
-	-- id ?[320637] = 20,		-- Fetid Gas (Blightbone)
-	[319897] = 20,		-- Land of the Dead (Amarth - summons Crossbowman)
-	[319902] = 20,		-- Land of the Dead (Amarth - summons Warrior)
-	[333627] = 20,		-- Land of the Dead (Amarth - summons Mage)
-	[321253] = 20,		-- Final Harvest (Amarth)
-	[333489] = 20,		-- Necrotic Breath (Amarth)
-	[333492] = 20,		-- Necrotic Ichor (Amarth apply by Necrotic Breath)
-	[320365] = 20,		-- Embalming Ichor (Surgeon Stitchflesh)
-	[320366] = 20,		-- Embalming Ichor (Surgeon Stitchflesh)
-	[327952] = 20,		-- Meat Hook (Stitchflesh)
-	[327100] = 20,		-- Noxious Fog (Stitchflesh)
-	[328212] = 20,		-- Razorshard Ice (Nalthor the Rimebinder)
-	[320784] = 20,		-- Comet Storm (Nalthor the Rimebinder)
-	[321956] = 20,		-- Comet Storm (Nalthor the Rimebinder) (this one is for Dark Exiled players)
 
 
 	-- Plaguefall
@@ -566,33 +769,82 @@ local Spells = {
 
 
 	-- [**Battle for Azeroth**] 
-	
+
+	-- Siege of Boralus
+	[256627] = 20, -- Slobber Knocker (Scrimshaw Enforcer)
+	[275775] = 20, -- Savage Tempest (Irontide Raider)
+	[257069] = 20, -- Watertight Shell, Explosion (Irontide Waveshaper)
+	[256660] = 20, -- Burning Tar, Impact (Blacktar Bomber)
+	[256663] = 20, -- Burning Tar, Area (Blacktar Bomber)
+	[272140] = 20, -- Iron Volley (Irontide Powdershot, Gauntlet)
+	[272426] = 20, -- Sighted Artillery (Ashvane Spotter / Dread Captain Lockwood)
+	[280679] = 20, -- Cannon Barrage (Environment)
+	[268260] = 20, -- Broadside (Ashvane Canoneer)
+	[277432] = 20, -- Iron Volley (Ashvane Sniper, Gauntlet)
+	[272546] = 20, -- Banana Rampage (Bilge Rat Buccaneer)
+	[277535] = 20, -- Viq'Goth's Wrath (Environment)
+
+	[273681] = 20, -- Heavy Hitter (Chopper Redhook) - is this reasonable?
+	[257585] = 20, -- Cannon Barrage (Chopper Redhook)
+	[273716] = 20, -- Heavy Ordnance, Impact (Chopper Redhook)
+	[273718] = 20, -- Heavy Ordnance, Explosion (Chopper Redhook) - is this reasonable?
+	--[257326] = 20, -- Gore Crash (Chopper Redhook) - always does damage to party as well
+	[257292] = 20, -- Heavy Slash (Irontide Cleaver, Chopper Redhook)
+	[269029] = 20, -- Clear the Deck (Dread Captain Lockwood)
+	[268443] = 20, -- Dread Volley (Dread Captain Lockwood)
+	[261565] = 20, -- Crashing Tide (Hadal Darkfathom)
+	[257886] = 20, -- Brine Pool (Hadal Darkfathom)
+	--[257883] = 20, -- Break Water (Hadal Darkfathom) - always does damage to party as well
+	[276042] = 20, -- Tidal Surge (Hadal Darkfathom)
+	[270187] = 20, -- Call of the Deep (Viq'Goth)
+	[270484] = 20, -- Call of the Deep (Viq'Goth)
+	[275051] = 20, -- Putrid Waters, Dispel (Viq'Goth)
+	[280485] = 20, -- Terror from Below / Crushing Embrace (Viq'Goth)
+	[269484] = 20, -- Eradication (Viq'Goth)
+
+	--[=====[
 	-- Waycrest Manor
-	[264531] = 20,		--- Shrapnel Trap (Maddened Survivalist)
-	[264476] = 20,		--- Tracking Explosive (Crazed Marksman)
-	[260569] = 20,		--- Wildfire (Soulbound Goliath)
-	[265407] = 20,		--- Dinner Bell (Banquet Steward)
-	[264923] = 20,		--- Tenderize (Raal the Gluttonous)
-	[264712] = 20,		--- Rotten Expulsion (Raal the Gluttonous)
-	[272669] = 20,		--- Burning Fists (Soulbound Goliath)
-	[278849] = 20,		--- Uproot (Coven Thornshaper)
-	[264040] = 20,		--- Uprooted Thorns (Coven Thornshaper)
-	[265757] = 20,		--- Splinter Spike (Matron Bryndle)
-	[264150] = 20,		--- Shatter (Thornguard)
-	[268387] = 20,		--- Contagious Remnants (Lord Waycrest)
-	[268308] = 20,		--- Discordant Cadenza (Lady Waycrest
+	[265372] = 20, -- Shadow Cleave (Enthralled Guard)
+	--[278849] = 20, -- Uproot (Coven Thornshaper) - TODO probably not avoidable
+	[264040] = 20, -- Uprooted Thorns (Coven Thornshaper)
+	[264150] = 20, -- Shatter (Thornguard)
+	[265757] = 20, -- Splinter Spike (Matron Bryndle)
+	[264531] = 20, -- Shrapnel Trap (Maddened Survivalist)
+	[271174] = 20, -- Retch (Pallid Gorger)
+	[265407] = 20, -- Dinner Bell (Banquet Steward)
+
+	[260570] = 20, -- Wildfire, Swirly (Soulbound Goliath)
+	[260569] = 20, -- Wildfire, Area (Soulbound Goliath)
+	[272669] = 20, -- Burning Fists (Burning Soul, Soulbound Goliath)
+	[264923] = 20, -- Tenderize (Raal the Gluttonous)
+	[264698] = 20, -- Rotten Expulsion, Impact (Raal the Gluttonous)
+	[264712] = 20, -- Rotten Expulsion, Area (Raal the Gluttonous)
+	[268234] = 20, -- Bile Explosion (Bile Oozeling, Raal the Gluttonous)
+	[268387] = 20, -- Contagious Remnants (Lord Waycrest)
+	[268308] = 20, -- Discordant Cadenza (Lady Waycrest)
+
 
 	-- Atal'Dazar
-	[253666] = 20,		--- Fiery Bolt (Dazar'ai Juggernaught)
-	[257692] = 20,		--- Tiki Blaze (Environment)
-	[255620] = 20,		--- Festering Eruption (Reanimated Honor Guard)
-	[258723] = 20,		--- Grotesque Pool (Renaimated Honor Guard)
-	[250259] = 20,		--- Toxic Leap (Vol'kaal)
-	[250022] = 20,		--- Echoes of Shadra (Yazma)
-	[250585] = 20, 		--- Toxic Pool (Vol'kaal)
-	[250036] = 20,		--- Shadowy Remains (Echoes of Shadra)
-	[255567] = 20,		--- Frenzied Charge (T'lonja)
-	--[=====[
+	[253654] = 20, -- Fiery Enchant (Dazar'ai Augur)
+	[253666] = 20, -- Fiery Bolt (Dazar'ai Augur)
+	[257692] = 20, -- Tiki Blaze (Environment)
+	[255567] = 20, -- Frenzied Charge (T'lonja)
+	[258723] = 20, -- Grotesque Pool (Reanimated Honor Guard)
+	[255620] = 20, -- Festering Eruption (Reanimated Honor Guard)
+
+	[258709] = 20, -- Corrupted Gold (Priestess Alun'za)
+	[255373] = 20, -- Tail (Rezan)
+	[255445] = 20, -- Devour (Rezan)
+	[250259] = 20, -- Toxic Leap (Vol'kaal)
+	[250585] = 20, -- Toxic Pool (Vol'kaal)
+	[250028] = 20, -- Echoes of Shadra, Swirly (Yazma)
+	[263093] = 20, -- Echoes of Shadra, Swirly (Yazma)
+	[250022] = 20, -- Echoes of Shadra, Explosion (Echoes of Shadra, Yazma)
+	[263096] = 20, -- Echoes of Shadra, Explosion (Echoes of Shadra, Yazma)
+	[250036] = 20, -- Shadowy Remains (Echoes of Shadra, Yazma)
+	[263098] = 20, -- Shadowy Remains (Echoes of Shadra, Yazma)
+
+
 	-- The Underrot
 	[265540] = 20, -- Rotten Bile (Fetid Maggot)
 	[265542] = 20, -- Rotten Bile (Fetid Maggot)
@@ -648,6 +900,7 @@ local Spells = {
 	[257293] = 20, -- Swiftwind Saber (Harlan Sweete) - TODO ID?
 	[257315] = 20, -- Black Powder Bomb (Irontide Grenadier, Harlan Sweete)
 
+
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
 	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
@@ -686,34 +939,49 @@ local Spells = {
 
 
 	-- [**Legion**] 
-
+	--[=====[
 	-- Black Rook Hold
-	[197821] = 20,		-- Felblazed Ground (Illysanna Ravencrest, AoE Ground from Eye Beams)
-	[197521] = 20,		-- Blazing Trail (Illysanna Ravencrest)
-	[198820] = 20,		-- Dark Blast (Latosius)
-	[199567] = 20,		-- Dark Obliteration (Image of Latosius)
-	[200256] = 20,		-- Phased Explosion (Arcane Minion)
-	[198781] = 20,		-- Whirling Blade (Lord Kur'talos Ravencrest)
-	[196517] = 20,		-- Swirling Scythe (Amalgam of Souls)
-	[222397] = 20,		-- Boulder Crush (Environment)
-	[198501] = 20,		-- Fel Vomitus (Smashspite the Hateful)
-	[201062] = 20,		-- Bowled Over! (Wyrmtonge Scavanger)
-	[200914] = 50,		-- Indigestion (Wyrmtonge Scavanger)
-	
-	
+	[200261] = 20, -- Bonebreaking Strike (Soul-Torn Champion / Commander Shendah'sohn)
+	[200344] = 20, -- Arrow Barrage (Risen Archer)
+	[200256] = 20, -- Phased Explosion (Arcane Minion)
+	[222397] = 20, -- Boulder Crush (Environment)
+	[201175] = 20, -- Throw Priceless Artifact (Wyrmtongue Scavenger)
+	[200914] = 20, -- Indigestion (Wyrmtongue Scavenger)
+	[201062] = 20, -- Bowled Over! (Wyrmtongue Scavenger)
+	[214002] = 20, -- Raven's Dive (Risen Lancer)
+
+	[196517] = 20, -- Swirling Scythe (Amalgam of Souls)
+	[194960] = 20, -- Soul Echoes, Explosion (Lord Etheldrin Ravencrest / Amalgam of Souls)
+	[194956] = 20, -- Reap Soul (Amalgam of Souls)
+	[197521] = 20, -- Blazing Trail (Illysanna Ravencrest)
+	[197821] = 20, -- Felblazed Ground (Illysanna Ravencrest)
+	[197974] = 20, -- Bonecrushing Strike (Soul-Torn Vanguard, Illysanna Ravencrest)
+	[198501] = 20, -- Fel Vomitus (Fel Bat, Smashspite the Hateful)
+	[198781] = 20, -- Whirling Blade (Lord Kur'talos Ravencrest)
+	[198820] = 20, -- Dark Blast (Latosius, Lord Kur'talos Ravencrest)
+	[199567] = 20, -- Dark Obliteration (Image of Latosius, Lord Kur'talos Ravencrest)
+
+
 	-- Darkheart Thicket
-	[204402] = 20,		-- Star Shower (Dreadsoul Ruiner)
-	[201273] = 10,		-- Blood Bomb (Bloodtainted Fury)
-	[201227] = 20,		-- Blood Assault (Bloodtainted Fury)
-	[201123] = 20,		-- Root Burst (Vilethorn Blossom)
-	[198386] = 20,		-- Primal Rampage (Archdruid Glaidalis)
-	[201191] = 20,      -- Dreadburst (Red Blood Blobs)
-	[191326] = 20,		-- Breath of Corruption (Dresaron)
-	[198408] = 20,		-- Nightfall (Archdruid Glaidalis)
-	[218759] = 20,		-- Corruption Pool (Festerhide Grizzly)
-	[200771] = 20,		-- Propelling Charge (Crazed Razorbeak)
-	[198916] = 20,		-- Vile Burst (Vile Mushroom)
-		--[=====[
+	[218759] = 20, -- Corruption Pool (Nightmare Abomination, Festerhide Grizzly / Archdruid Glaidalis) - TODO check ID of boss version
+	[200771] = 20, -- Propelling Charge (Crazed Razorbeak)
+	[204402] = 20, -- Star Shower (Dreadsoul Ruiner)
+	[201123] = 20, -- Root Burst (Vilethorn Blossom)
+	[198916] = 20, -- Vile Burst (Rotheart Keeper)
+	[212797] = 20, -- Hatespawn Detonation (Hatespawn Whelpling) - TODO removed?
+	[201273] = 20, -- Blood Bomb (Bloodtainted Fury)
+	[201227] = 20, -- Blood Assault (Bloodtainted Fury)
+	[201842] = 20, -- Curse of Isolation (Taintheart Summoner)
+
+	[198408] = 20, -- Nightfall (Archdruid Glaidalis)
+	[198386] = 20, -- Primal Rampage, Dash (Archdruid Glaidalis)
+	[199063] = 20, -- Strangling Roots (Oakheart)
+	[191326] = 20, -- Breath of Corruption (Dresaron)
+	[199460] = 20, -- Falling Rocks (Dresaron) - TODO is first tick avoidable?
+	[200329] = 20, -- Overwhelming Terror (Shade of Xavius)
+	[200111] = 20, -- Apocalyptic Fire (Shade of Xavius)
+
+
 	-- Neltharion's Lair
 	[183407] = 20, -- Acid Splatter (Vileshard Crawler)
 	[183465] = 20, -- Viscid Bile (Tarspitter Lurker)
@@ -758,7 +1026,6 @@ local Spells = {
 
 
 	-- Halls of Valor
-
 	[198903] = 20, -- Crackling Storm (Storm Drake)
 	[210875] = 20, -- Charged Pulse (Stormforged Sentinel)
 	[199818] = 20, -- Crackle (Stormforged Sentinel)
@@ -819,10 +1086,31 @@ local Spells = {
 	[227285] = 20,		-- Power Discharge (The Curator)
 	[229988] = 20,		-- Burning Tile (Wrathguard Flamebringer)
 	--]=====]
-	
-	
-	-- [**Warlords of Draenor**] 
+
+
+	-- [**Warlords of Draenor**]
 	--[=====[
+	-- The Everbloom
+	[172579] = 20, -- Bounding Whirl (Melded Berserker)
+	[169495] = 20, -- Living Leaves (Gnarlroot)
+	[426849] = 20, -- Cold Fusion (Infested Icecaller)
+	[426982] = 20, -- Spatial Disruption (Addled Arcanomancer)
+
+	[177734] = 20, -- Agitated Water (Witherbark)
+	[164294] = 20, -- Unchecked Growth, Area (Witherbark)
+	[427922] = 20, -- Cinderbolt Storm, Swirlies (Archmage Sol)
+	[426991] = 20, -- Blazing Cinders (Archmage Sol)
+	[428084] = 20, -- Glacial Fusion (Archmage Sol)
+	[428148] = 20, -- Spatial Compression (Archmage Sol)
+	--[169179] = 20, -- Colossal Blow (Yalnu) - always does damage to party as well
+	[428834] = 20, -- Verdant Eruption (Yalnu)
+	[169930] = 20, -- Lumbering Swipe (Flourishing Ancient, Yalnu)
+
+	[172643] = 20, -- Descend (Xeri'tac) - not part of M+
+	[173081] = 20, -- Burst (Gorged Burster, Xeri'tac) - not part of M+
+	[169223] = 20, -- Toxic Gas (Xeri'tac / Toxic Spiderling, Xeri'tac) - not part of M+
+
+
 	-- Shadowmoon Burial Grounds
 	[152688] = 20, -- Shadow Rune (Environment)
 	[152690] = 20, -- Shadow Rune (Environment)
@@ -844,7 +1132,7 @@ local Spells = {
 	[154442] = 20, -- Malevolence (Ner'zhul)
 	[154468] = 20, -- Ritual of Bones, Area (Ner'zhul)
 	[154469] = 20, -- Ritual of Bones, Debuff (Ner'zhul)
-	
+
 
 	-- Iron Docks
 	[172963] = 20,		-- Gatecrasher (Siegemaster Olugar, Siegemaster Rokra)
@@ -886,8 +1174,7 @@ local Spells = {
 	[162065] = 20,		-- Freezing Snare (Skylord Tovra)
 	--[161588] = 20,		-- Diffused Energy (Skylord Tovra) TODO some ticks not avoidable?
 	[162057] = 20,		-- Spinning Spear (Skylord Tovra)
-	
-
+	--]=====]
 
 
 	-- [**Mist of Pandaria**] 
@@ -913,8 +1200,52 @@ local Spells = {
 	--]=====]
 
 
-	-- [**Cataclysm**] 
+
+	-- [**Cataclysm**]
+
+	-- Grim Batol
+	[456701] = 20, -- Obsidian Stomp (Twilight Brute)
+	[451614] = 20, -- Twilight Ember (Twilight Destroyer)
+	[454216] = 20, -- Boiling Lava (Environment)
+	[462219] = 20, -- Blazing Shadowflame, Frontal (Twilight Flamerender)
+	[462220] = 20, -- Blazing Shadowflame, Area (Twilight Flamerender)
+	[456711] = 20, -- Shadowlava Blast (Twilight Lavabender)
+	[451389] = 20, -- Ascension, Swirly (Twilight Lavabender)
+	[451394] = 20, -- Mind Piercer (Faceless Corruptor)
+
+	[448566] = 20, -- Shadowflame Breath (Twilight Drake, General Umbriss)
+	[448953] = 20, -- Rumbling Earth (General Umbriss)
+	[449536] = 20, -- Molten Pool (Forgemaster Throngus)
+	[447395] = 20, -- Fiery Cleave (Forgemaster Throngus)
+	[448028] = 20, -- Invocation of Shadowflame, Swirly (Drahga Shadowburner)
+	[75238] = 20, -- Shadowflame Nova (Invoked Shadowflame Spirit, Drahga Shadowburner) - is this reasonable?
+	[448105] = 20, -- Devouring Flame (Valiona, Drahga Shadowburner)
+	[456773] = 20, -- Twilight Wind (Valiona, Drahga Shadowburner)
+	[450087] = 20, -- Depth's Grasp (Void Tendril, Erudax)
+	[461513] = 20, -- Shadow Gale, shrinking (Erudax)
+	[449985] = 20, -- Shadow Gale, formed (Erudax)
+
 	--[=====[
+	-- Throne of the Tides
+	[426685] = 20, -- Volatile Bolt (Naz'jar Ravager)
+	[426688] = 20, -- Volatile Acid (Naz'jar Ravager)
+	[426681] = 20, -- Electric Jaws (Environment)
+	[76590] = 20, -- Shadow Smash (Faceless Watcher)
+	[426808] = 20, -- Null Blast (Faceless Seer)
+
+	[427769] = 20, -- Geyser (Lady Naz'jar)
+	[428048] = 20, -- Shock Orb (Lady Naz'jar)
+	[428294] = 20, -- Trident Flurry (Naz'jar Honor Guard, Lady Naz'jar)
+	[427565] = 20, -- Bubbling Fissure (Commander Ulthok)
+	[427559] = 20, -- Bubbling Ooze (Commander Ulthok)
+	[429057] = 20, -- Earthfury (Erunak Stonespeaker, Mindbender Ghur'sha)
+	[429172] = 20, -- Terrifying Vision (Mindbender Ghur'sha)
+	[428404] = 20, -- Blotting Darkness (Ink of Ozumat / Sludge, Ozumat)
+	[428616] = 20, -- Deluge of Filth (Ozumat)
+	[428618] = 20, -- Deluge of Filth (Ozumat)
+	[428809] = 20, -- Gushing Ink (Sludge, Ozumat)
+
+
 	-- Vortex Pinnacle
 	[410999] = 20, -- Pressurized Blast (Armored Mistral)
 	--[411001] = 20, -- Lethal Current (Lurking Tempest) - should this be considered avoidable?
@@ -930,54 +1261,66 @@ local Spells = {
 	[413275] = 20, -- Cold Front (Environment, Altairus)
 	[87553] = 20, -- Supremacy of the Storm (Asaad)
 	[87618] = 20 -- Static Cling (Asaad)
-		--]=====]
+	--]=====]
 
 }
 
 local SpellsNoTank = {
+	-- [**The War Within**]
+	-- The Rookery
+	[427616] = 20, -- Energized Barrage (Unruly Stormrook)
+	[433078] = 20, -- Implosion, Impact (Void Cursed Crusher)
+	[445537] = 20, -- Oblivion Wave (Voidstone Monstrosity)
+
+	-- Cinderbrew Meadery
+	[440138] = 20, -- Honey Marinade, Explosion (Benk Buzzbee)
+	[436592] = 20, -- Cash Cannon (Goldie Baronbottom)
+
+	-- Darkflame Cleft
+	[421282] = 20, -- Darkflame Pickaxe (The Candle King)
+
+	-- Priory of the Sacred Flame
+	[444705] = 20, -- Divine Storm (Zealous Templar) - potentially still unreasonable
+
+	-- City of Threads
+	[439764] = 20, -- Process of Elimination, Physical (Izo the Grand Splicer)
+	[439763] = 20, -- Process of Elimination, Shadow (Izo the Grand Splicer)
+	[450055] = 20, -- Gutburst (Ravenous Scarab, Izo the Grand Splicer) - is this reasonable?
+
 	-- [**Dragonflight**]
-	
-	--[=====[
+	--[=====[	
 	-- Uldaman: Legacy of Tyr
-    [369409] = 20, -- Cleave (Earthen Custodian)
-    [369563] = 20, -- Wild Cleave (Baelog, The Lost Dwarves)
-    [369061] = 20, -- Searing Clap (Emberon)
-    [375727] = 20, -- Sand Breath (Chrono-Lord Deios)
+	[369409] = 20, -- Cleave (Earthen Custodian)
+	[369563] = 20, -- Wild Cleave (Baelog, The Lost Dwarves)
+	[369061] = 20, -- Searing Clap (Emberon)
+	[375727] = 20, -- Sand Breath (Chrono-Lord Deios)
 
-    -- Neltharus
-    [384019] = 20, -- Fiery Focus (Chargath, Bane of Scales)
-	
-	   -- Halls of Infusion
-    [375349] = 20, -- Gusting Breath (Gusting Proto-Drake)
-    [375341] = 20, -- Tectonic Breath (Subterranean Proto-Drake)
-    [375353] = 20, -- Oceanic Breath (Glacial Proto-Drake)
-    [384524] = 20, -- Titanic Fist (Watcher Irideus)
-	
-	    -- Brackenhide Hollow
-    [382712] = 20, -- Necrotic Breath, Initial (Wilted Oak)
-    [382805] = 20, -- Necrotic Breath, DoT (Wilted Oak)
+	-- Halls of Infusion
+	[375349] = 20, -- Gusting Breath (Gusting Proto-Drake)
+	[375341] = 20, -- Tectonic Breath (Subterranean Proto-Drake)
+	[375353] = 20, -- Oceanic Breath (Glacial Proto-Drake)
+	[384524] = 20, -- Titanic Fist (Watcher Irideus)
+
+	-- Brackenhide Hollow
+	[382712] = 20, -- Necrotic Breath, Initial (Wilted Oak)
+	[382805] = 20, -- Necrotic Breath, DoT (Wilted Oak)
   	--[374544] = 20, -- Burst of Decay (Fetid Rotsinger) - TODO does this only target tank?
-    [377807] = 20, -- Cleave (Rira Hackclaw)
-    [381419] = 20, -- Savage Charge (Rira Hackclaw)
-    [377559] = 20, -- Vine Whip (Treemouth)
-	
-	
-    -- The Nokhud Offensive
-    [384512] = 20, -- Cleaving Strikes (Nokhud Lancemaster / Nokhud Defender)
-    [387135] = 20, -- Arcing Strike (Primalist Arcblade)
+	[377807] = 20, -- Cleave (Rira Hackclaw)
+	[381419] = 20, -- Savage Charge (Rira Hackclaw)
+	[377559] = 20, -- Vine Whip (Treemouth)
 
+	-- The Nokhud Offensive
+	[384512] = 20, -- Cleaving Strikes (Nokhud Lancemaster / Nokhud Defender)
+	[387135] = 20, -- Arcing Strike (Primalist Arcblade)
 
+	-- The Azure Vault
+	[370764] = 20, -- Piercing Shards (Crystal Fury)
+	[391120] = 20, -- Spellfrost Breath (Scalebane Lieutenant)
+	[372222] = 20, -- Arcane Cleave (Azureblade)
+	[386660] = 20, -- Erupting Fissure (Leymor)
 
-    -- The Azure Vault
-    [370764] = 20, -- Piercing Shards (Crystal Fury)
-    [391120] = 20, -- Spellfrost Breath (Scalebane Lieutenant)
-    [372222] = 20, -- Arcane Cleave (Azureblade)
-
-
-
-    -- Algeth'ar Academy
+	-- Algeth'ar Academy
 	[385958] = 20, -- Arcane Expulsion (Vexamus)
-	--]=====]
 
 	-- Dawn of the Infinite: Galakrond's Fall
 	[413532] = 20, -- Untwist, Frontal (Timestream Anomaly)
@@ -993,24 +1336,22 @@ local SpellsNoTank = {
 	[417339] = 20, -- Titanic Blow (Tyr, the Infinite Keeper)
 	[404917] = 20, -- Sand Blast (Morchie)
 	[416139] = 20, -- Temporal Breath (Chrono-Lord Deios)
+	--]=====]
 
+
+
+	-- [**Shadowlands**]
+	-- The Necrotic Wake
+	[324323] = 20, -- Gruesome Cleave (Skeletal Marauder)
+	[323489] = 20, -- Throw Cleaver (Flesh Crafter / Stitching Assistant)
 
 	--[=====[
-	-- [**Shadowlands**]
-
-	-- Mists of Tirna Scithe
-	[331721] = 20,		-- Spear Flurry (Mistveil Defender)
-
 	-- De Other Side
 	[332157] = 20,		-- Spinning Up (Headless Client)
 
 	-- Spires of Ascension
 	[317943] = 20,		-- Sweeping Blow (Frostsworn Vanguard)
 	[324608] = 20,		-- Charged Stomp (Oryphrion)
-
-	-- The Necrotic Wake
-	[324323] = 20,		-- Gruesome Cleave (Skeletal Marauder)
-	[323489] = 20,		-- Throw Cleaver (Flesh Crafter, Stitching Assistant)
 
 	-- Plaguefall
 	-- Theater of Pain
@@ -1023,23 +1364,33 @@ local SpellsNoTank = {
 
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
-
-	
-	
-	-- [**Battle for Azeroth**]  
 	--]=====]
-		-- Waycrest Manor
-	[263905] = 20,		--- Marking Cleave (Heartsbane Runeweaver)
-	[265372] = 20,		---	Shadow Cleave (Enthralled Guard)
-	[271174] = 20,		--- Retch (Pallid Gorger)
-	--[=====[ 
+	
+	
+	-- [**Battle for Azeroth**]
+	-- Siege of Boralus
+	[273720] = 20, -- Heavy Ordnance, Contact (Chopper Redhook) - is this reasonable?
+
+	--[=====[
 	-- The Underrot
 	[260793] = 20, -- Indigestion (Cragmaw the Infested)
 	[272457] = 20, -- Shockwave (Sporecaller Zancha)
-  
+
+	-- Operation: Mechagon - Junkyard
+	-- Operation: Mechagon - Workshop
+	[294291] = 20,		-- Process Waste (Waste Processing Unit)
+  	--]=====]
+
   
 	-- [**Legion**]
-	
+	--[=====[
+	-- Black Rook Hold
+	[225909] = 20, -- Soul Venom (Rook Spiderling)
+
+	-- Darkheart Thicket
+	[200589] = 20, -- Festering Swipe (Festerhide Grizzly) - TODO removed?
+	[198376] = 20, -- Primal Rampage, Frontal (Archdruid Glaidalis)
+	[204667] = 20, -- Nightmare Breath (Oakheart)
 
 	-- Neltharion's Lair
 	[193505] = 20, -- Fracture (Vileshard Hulk)
@@ -1050,12 +1401,7 @@ local SpellsNoTank = {
 	[188494] = 20, -- Rancid Maw (Naraxas)
 	[205609] = 20, -- Rancid Maw (Naraxas) - TODO ID?
 	[200721] = 20, -- Landslide (Dargrul)
-	
 
-	-- Operation: Mechagon - Junkyard
-	-- Operation: Mechagon - Workshop
-	[294291] = 20,		-- Process Waste (Waste Processing Unit)
-	
 	-- Court of Stars	
 	[209036] = 20, -- Throw Torch (Duskwatch Sentry)
 	[209495] = 20, -- Charged Smash (Guardian Construct)
@@ -1065,12 +1411,10 @@ local SpellsNoTank = {
 	[198888] = 20, -- Lightning Breath (Storm Drake) - TODO is this avoidable by tank?
 	[199050] = 20, -- Mortal Hew (Valarjar Shieldmaiden)
 	[192018] = 20, -- Shield of Light (Hyrja)
-	
-	
+
 	-- Return to Karazhan: Lower
 	[227493] = 20,		-- Mortal Strike (Attumen the Huntsman)
-	
-	
+
 	-- Return to Karazhan: Upper
 	[229608] = 20,		-- Mighty Swing (Erudite Slayer)
 	--]=====]
@@ -1078,6 +1422,14 @@ local SpellsNoTank = {
 
 	-- [**Warlords of Draenor**] 
 	--[=====[
+	-- The Everbloom
+	[164357] = 20, -- Parched Gasp (Witherbark)
+	[427512] = 20, -- Noxious Charge (Dulhu, Ancient Protectors)
+	[427513] = 20, -- Noxious Discharge (Dulhu, Ancient Protectors)
+	[170411] = 20, -- Spore Breath (Infested Venomfang) - not part of M+
+	[169371] = 20, -- Swipe (Venom-Crazed Pale One, Xeri'tac) - not part of M+
+	[169267] = 20, -- Toxic Blood (Toxic Spiderling, Xeri'tac) - not part of M+
+
 	-- Shadowmoon Burial Grounds
 	[153501] = 20 -- Void Blast (Nhallish)
 
@@ -1095,47 +1447,64 @@ local SpellsNoTank = {
 	-- [**Mist of Pandaria**] 
 	-- Temple of the Jade Serpent
 
+
+	-- [**Cataclysm**]
+	--[=====[
+	-- Throne of the Tides
+	[428530] = 20, -- Murk Spew (Ink of Ozumat, Ozumat)
+	--]=====]
 }
 
 local Auras = {
 	-- Affixes
-	[408777] = true, -- Entangled, Stun (Environment)
+	--[408777] = true, -- Entangled, Stun (Environment)
+
+	-- [**The War Within**]
+	-- Darkflame Cleft
+	[421653] = true, -- Cursed Wax (The Candle King)
+
+	-- The Dawnbreaker
+	[451104] = true, -- Bursting Cocoon, Explosion (Sureki Webmage)
+
+	-- Ara-Kara, City of Echoes
+	[436614] = true, -- Web Wrap (Environment / Ixin / Nakt / Atik / Avanoxx)
 
 	-- [**Dragonflight**]
-	--[=====[ 
+	--[=====[
 	-- Uldaman: Legacy of Tyr
-    [372652] = true, -- Resonating Orb (Sentinel Talondras)
-	
+  	[372652] = true, -- Resonating Orb (Sentinel Talondras)
 
-    -- The Azure Vault
-    [386368] = true, -- Polymorphed (Polymorphic Rune, Environment)
-    [396722] = true, -- Absolute Zero, Root (Telash Greywing)
-  	--]=====]
+  	-- The Azure Vault
+  	[386368] = true, -- Polymorphed (Polymorphic Rune, Environment)
+  	[396722] = true, -- Absolute Zero, Root (Telash Greywing)
 
   	-- Dawn of the Infinite: Galakrond's Fall
   	[418346] = true, -- Corrupted Mind (Blight of Galakrond)
 
   	-- Dawn of the Infinite: Murozond's Rise
   	[401667] = true, -- Time Stasis (Morchie)
+	--]=====]
 
-	--[=====[ 
+
 	-- [**Shadowlands**]
 
 	-- Affixes seasons
-	[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
-	[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
+	--[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
+	--[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
 	
-	-- Mists of Tirna Scithe
+	-- The Necrotic Wake
+	[324293] = true, -- Rasping Scream (Skeletal Marauder)
 
+	-- Mists of Tirna Scithe
+	[322968] = true, -- Dying Breath (Drust Spiteclaw)
+
+	--[=====[
 	-- De Other Side
 	[331381] = true,	-- Slipped (Lubricator)
 	[334505] = true,	-- Shimmerdust Sleep (Weald Shimmermoth)
 
 	-- Spires of Ascension
 	[324205] = true,	-- Blinding Flash (Ventunax)
-
-	-- The Necrotic Wake
-	[324293] = true,	-- Rasping Scream (Skeletal Marauder)
 
 	-- Plaguefall
 	[330092] = true,	-- Plaguefallen (Environment)
@@ -1152,29 +1521,38 @@ local Auras = {
 	--]=====]
 	
 	-- [**Battle for Azeroth**] 
-	
-		-- Waycrest Manor
-	[265352] = true,		-- Toad Blight (Toad)
-	[278468] = true,		-- Freezing Trap
+	-- Siege of Boralus
+	[257169] = true, -- Terrifying Roar (Bilge Rat Demolisher)
+	[274942] = true, -- Banana Rampage (Bilge Rat Buccaneer)
+
+	--[=====[ 
+	-- Waycrest Manor
+	[265352] = true, -- Toad Blight (Blight Toad)
+	[278468] = true, -- Freezing Trap (Maddened Survivalist)
 	
 	-- Atal'Dazar
-	[255371] = true,		-- Terrifying Visage (Rezan)
+	[257483] = true, -- Pile of Bones (Environment, Rezan)
+	[255371] = true, -- Terrifying Visage (Rezan)
 	
-	--[=====[ 
 	-- Freehold
 	[274516] = true, -- Slippery Suds (Bilge Rat Swabby)
 	[272554] = true, -- Bloody Mess (Trothak, Ring of Booty)
 
-
 	-- Operation: Mechagon - Junkyard
 	[398529] = true,	-- Gooped (Gunker)
 	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
-	--]=====]
 
 	-- Operation: Mechagon - Workshop
-	
-	-- [**Legion**] 
+	--]=====]
+
+	-- [**Legion**]
 	--[=====[
+	-- Black Rook Hold
+	[199097] = true, -- Cloud of Hypnosis (Dantalionax, Lord Kur'talos Ravencrest)
+
+	-- Darkheart Thicket
+	[200273] = true, -- Cowardice (Shade of Xavius)
+
 	-- Return to Karazhan: Lower
 	-- Return to Karazhan: Upper
 	-- Court of Stars
@@ -1183,7 +1561,10 @@ local Auras = {
 	--]=====]
 	
 	-- [**Warlords of Draenor**]
-	--[=====[ 	
+	--[=====[ 
+	-- The Everbloom
+	[169179] = true, -- Colossal Blow (Yalnu)
+
 	-- Iron Docks
 	[164504] = true,	-- Intimidated (Fleshrender Nok'gar)
 	[172631] = true,	-- Knocked Down (Slippery Grease)
@@ -1200,7 +1581,7 @@ local AurasNoTank = {
 
 local MeleeHitters = {
 	--[161917] = 20,		-- DEBUG
-	[174773] = 20,		-- Spiteful Shade
+	--[174773] = 20,		-- Spiteful Shade
 }
 
 local function compareSemver(ver1, ver2)
