@@ -165,14 +165,12 @@ local Spells = {
 	[431494] = 20, -- Black Edge (Nightfall Tactician)
 	[432606] = 20, -- Black Hail (Manifested Shadow)
 	[451098] = 20, -- Tacky Nova (Sureki Militant)
-	[451115] = 20, -- Terrifying Slam, Area (Ixkreten the Unbreakable)
 	[460135] = 20, -- Dark Scars (Deathscreamer Iken'tak)
 	[431352] = 20, -- Tormenting Eruption, Splash (Nightfall Dark Architect)
 
 	[453214] = 20, -- Obsidian Beam, Beams (Speaker Shadowcrown)
 	[453173] = 20, -- Collapsing Night, Area (Speaker Shadowcrown)
 	[451032] = 20, -- Darkness Comes (Speaker Shadowcrown)
-	[427007] = 20, -- Terrifying Slam, Area (Anub'ikkaj)
 	[427378] = 20, -- Dark Scars (Anub'ikkaj)
 	[434655] = 20, -- Arathi Bomb, Explosion (Rasha'nan)
 	[448215] = 20, -- Expel Webs (Rasha'nan)
@@ -223,7 +221,7 @@ local Spells = {
 	[438825] = 20, -- Poisonous Cloud, Area (Atik)
 	[453160] = 20, -- Impale (Hulking Bloodguard)
 	[433843] = 20, -- Erupting Webs (Blood Overseer)
-	[432031] = 20, -- Grasping Blood (Black Blood) - TODO necessary for Ki'katal Cosmic Singularity?
+	--[432031] = 20, -- Grasping Blood (Black Blood) - necessary for Ki'katal Cosmic Singularity
 
 	[438966] = 20, -- Gossamer Onslaught, Swirly (Avanoxx)
 	[433443] = 20, -- Impale (Anub'zekt)
@@ -784,7 +782,7 @@ local Spells = {
 	[272546] = 20, -- Banana Rampage (Bilge Rat Buccaneer)
 	[277535] = 20, -- Viq'Goth's Wrath (Environment)
 
-	[273681] = 20, -- Heavy Hitter (Chopper Redhook) - is this reasonable?
+	[273681] = 20, -- Heavy Hitter (Chopper Redhook)
 	[257585] = 20, -- Cannon Barrage (Chopper Redhook)
 	[273716] = 20, -- Heavy Ordnance, Impact (Chopper Redhook)
 	[273718] = 20, -- Heavy Ordnance, Explosion (Chopper Redhook) - is this reasonable?
@@ -1282,6 +1280,10 @@ local SpellsNoTank = {
 	-- Priory of the Sacred Flame
 	[444705] = 20, -- Divine Storm (Zealous Templar) - potentially still unreasonable
 
+	-- The Dawnbreaker
+	[451115] = 20, -- Terrifying Slam, Area (Ixkreten the Unbreakable)
+	[427007] = 20, -- Terrifying Slam, Area (Anub'ikkaj)
+
 	-- City of Threads
 	[439764] = 20, -- Process of Elimination, Physical (Izo the Grand Splicer)
 	[439763] = 20, -- Process of Elimination, Shadow (Izo the Grand Splicer)
@@ -1369,7 +1371,7 @@ local SpellsNoTank = {
 	
 	-- [**Battle for Azeroth**]
 	-- Siege of Boralus
-	[273720] = 20, -- Heavy Ordnance, Contact (Chopper Redhook) - is this reasonable?
+	--[273720] = 20, -- Heavy Ordnance, Contact (Chopper Redhook) - is this reasonable?
 
 	--[=====[
 	-- The Underrot
