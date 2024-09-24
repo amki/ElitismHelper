@@ -1657,7 +1657,7 @@ function generateMaybeOutput(user)
 					local spellNames = " "
 					for spellId,amount in pairs(TimerData[user]) do
 						print("Getting spellId "..spellId)
-						local spellLink = spellId
+						local spellLink = C_Spell.GetSpellLink(spellId)
 						spellNames = spellNames..spellLink.." "
 					end
 					print("<EH> Error: Could not find spells"..spellNames.."in Spells or SpellsNoTank but got Timer for them. wtf")
@@ -1667,7 +1667,7 @@ function generateMaybeOutput(user)
 				local pct = Round(amount / userMaxHealth * 100)
 				if pct >= ElitismHelperDB.Threshold and pct >= minPct and ElitismHelperDB.Loud then
 					print("Getting spellId "..spellId)
-					local spellLink = spellId
+					local spellLink = C_Spell.GetSpellLink(spellId)
 					if _i > 0 then
 						msg = msg.." and "..spellLink.." "
 					else
@@ -1861,7 +1861,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				for player,fails in pairs(FailByAbility) do
 					print("Hits for "..player)
 					for k,v in pairs(fails) do
-						local spellLink = spellId
+						local spellLink = C_Spell.GetSpellLink(spellId)
 						print(" " .. v.cnt .. "x" .. spellLink .. " = " .. round(v.sum / 1000, 1) .. "k")
 					end
 				end
@@ -1874,7 +1874,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				for k,v in pairs(FailByAbility[name]) do
 					--print(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k; " .. delay)
 					--maybeSendChatMessage(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k")
-					local spellLink = spellId
+					local spellLink = C_Spell.GetSpellLink(spellId)
 					delayMaybeSendChatMessage(v.cnt .. "x" .. spellLink .. " = " .. round(v.sum / 1000, 1) .. "k", delay * 0.1)
 					delay = delay + 1
 				end
@@ -2075,7 +2075,6 @@ end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
 	if (Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName) then
-		print("Got one of our ids "..spellId.. " name "..spellName)
 		-- Initialize TimerData and CombinedFails for Timer shot
 		if TimerData[dstName] == nil then
 			TimerData[dstName] = {}
@@ -2152,7 +2151,7 @@ end
 
 function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	if (Auras[spellId] or (AurasNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName) then
-		local spellLink = spellId
+		local spellLink = C_Spell.GetSpellLink(spellId)
 		if auraAmount and ElitismHelperDB.Loud then
 			maybeSendChatMessage("<EH> "..dstName.." got hit by "..spellLink..". "..auraAmount.." Stacks.")
 		elseif ElitismHelperDB.Loud then
