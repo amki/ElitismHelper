@@ -1642,21 +1642,23 @@ function generateMaybeOutput(user)
 			local msg = "<EH> "..user.." got hit by "
 			local sending = false
 			local _i = 0
-			for spellID,amount in pairs(TimerData[user]) do
+			for spellId,amount in pairs(TimerData[user]) do
 				local minPct = math.huge
 				local spellMinPct = nil
-				if Spells[spellID] then
-					spellMinPct = Spells[spellID]
-				elseif SpellsNoTank[spellID] then
-					spellMinPct = SpellsNoTank[spellID]
+				if Spells[spellId] then
+					spellMinPct = Spells[spellId]
+				elseif SpellsNoTank[spellId] then
+					spellMinPct = SpellsNoTank[spellId]
 				end
 				if spellMinPct ~= nil and spellMinPct < minPct then
 					minPct = spellMinPct
 				end
 				if minPct == math.huge then
 					local spellNames = " "
-					for spellID,amount in pairs(TimerData[user]) do
-						spellNames = spellNames..GetSpellLink(spellID).." "
+					for spellId,amount in pairs(TimerData[user]) do
+						print("Getting spellId "..spellId)
+						local spellLink = spellId
+						spellNames = spellNames..spellLink.." "
 					end
 					print("<EH> Error: Could not find spells"..spellNames.."in Spells or SpellsNoTank but got Timer for them. wtf")
 				end
@@ -1664,10 +1666,12 @@ function generateMaybeOutput(user)
 				local msgAmount = round(amount / 1000, 1)
 				local pct = Round(amount / userMaxHealth * 100)
 				if pct >= ElitismHelperDB.Threshold and pct >= minPct and ElitismHelperDB.Loud then
+					print("Getting spellId "..spellId)
+					local spellLink = spellId
 					if _i > 0 then
-						msg = msg.." and "..GetSpellLink(spellID).." "
+						msg = msg.." and "..spellLink.." "
 					else
-						msg = msg..GetSpellLink(spellID).." "
+						msg = msg..spellLink.." "
 					end
 					msg = msg.."for "..msgAmount.."k ("..pct.."%)"
 					sending = true
@@ -1857,7 +1861,8 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				for player,fails in pairs(FailByAbility) do
 					print("Hits for "..player)
 					for k,v in pairs(fails) do
-						print(" " .. v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k")
+						local spellLink = spellId
+						print(" " .. v.cnt .. "x" .. spellLink .. " = " .. round(v.sum / 1000, 1) .. "k")
 					end
 				end
 			else
@@ -1869,7 +1874,8 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				for k,v in pairs(FailByAbility[name]) do
 					--print(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k; " .. delay)
 					--maybeSendChatMessage(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k")
-					delayMaybeSendChatMessage(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k", delay * 0.1)
+					local spellLink = spellId
+					delayMaybeSendChatMessage(v.cnt .. "x" .. spellLink .. " = " .. round(v.sum / 1000, 1) .. "k", delay * 0.1)
 					delay = delay + 1
 				end
 			end
@@ -1893,11 +1899,9 @@ function maybeSendAddonMessage(prefix, message)
 end
 
 function maybeSendChatMessage(message)
-	print("Try message")
 	if activeUser ~= playerUser then
 		return
 	end
-	print("Still there.")
 	if ElitismHelperDB.OutputMode == "self" then
 		print(message)
 	elseif ElitismHelperDB.OutputMode == "party" and IsInGroup() and not IsInGroup(2) then
@@ -2071,6 +2075,7 @@ end
 
 function ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, aAmount)
 	if (Spells[spellId] or (SpellsNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName) then
+		print("Got one of our ids "..spellId.. " name "..spellName)
 		-- Initialize TimerData and CombinedFails for Timer shot
 		if TimerData[dstName] == nil then
 			TimerData[dstName] = {}
@@ -2147,10 +2152,11 @@ end
 
 function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, auraType, auraAmount)
 	if (Auras[spellId] or (AurasNoTank[spellId] and UnitGroupRolesAssigned(dstName) ~= "TANK")) and UnitIsPlayer(dstName) then
+		local spellLink = spellId
 		if auraAmount and ElitismHelperDB.Loud then
-			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..". "..auraAmount.." Stacks.")
+			maybeSendChatMessage("<EH> "..dstName.." got hit by "..spellLink..". "..auraAmount.." Stacks.")
 		elseif ElitismHelperDB.Loud then
-			maybeSendChatMessage("<EH> "..dstName.." got hit by "..GetSpellLink(spellId)..".")
+			maybeSendChatMessage("<EH> "..dstName.." got hit by "..spellLink..".")
 		end
 	end
 end
