@@ -1903,7 +1903,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				for player,fails in pairs(FailByAbility) do
 					print("Hits for "..player)
 					for k,v in pairs(fails) do
-						local spellLink = C_Spell.GetSpellLink(spellId)
+						local spellLink = C_Spell.GetSpellLink(k)
 						print(" " .. v.cnt .. "x" .. spellLink .. " = " .. round(v.sum / 1000, 1) .. "k")
 					end
 				end
@@ -1916,7 +1916,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				for k,v in pairs(FailByAbility[name]) do
 					--print(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k; " .. delay)
 					--maybeSendChatMessage(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k")
-					local spellLink = C_Spell.GetSpellLink(spellId)
+					local spellLink = C_Spell.GetSpellLink(k)
 					delayMaybeSendChatMessage(v.cnt .. "x" .. spellLink .. " = " .. round(v.sum / 1000, 1) .. "k", delay * 0.1)
 					delay = delay + 1
 				end
