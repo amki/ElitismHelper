@@ -527,7 +527,7 @@ local Spells = {
 	--[366409] = 20,		-- Fusion Beam (Season 3 Vy Interceptor)
 	--[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
 	--[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
-	
+
 
 	-- The Necrotic Wake
 	[323957] = 20, -- Animate Dead, Warrior (Zolramus Necromancer)
@@ -582,7 +582,7 @@ local Spells = {
 	[463603] = 20, -- Coalescing Poison (Tred'ova)
 	[326263] = 20, -- Anima Shedding (Tred'ova)
 
-	--[=====[ 
+	--[=====[
 	-- De Other Side
 	[334051] = 20,		-- Erupting Darkness (Death Speaker)
 	[328729] = 20,		-- Dark Lotus (Risen Cultist)
@@ -766,7 +766,7 @@ local Spells = {
 	--]=====]
 
 
-	-- [**Battle for Azeroth**] 
+	-- [**Battle for Azeroth**]
 
 	-- Siege of Boralus
 	[256627] = 20, -- Slobber Knocker (Scrimshaw Enforcer)
@@ -936,7 +936,7 @@ local Spells = {
 	--]=====]
 
 
-	-- [**Legion**] 
+	-- [**Legion**]
 	--[=====[
 	-- Black Rook Hold
 	[200261] = 20, -- Bonebreaking Strike (Soul-Torn Champion / Commander Shendah'sohn)
@@ -1044,7 +1044,7 @@ local Spells = {
 	[198263] = 20, -- Radiant Tempest (Odyn)
 	[198088] = 20, -- Glowing Fragment (Odyn)
 	[198412] = 20, -- Feedback (Odyn)
-	
+
 
 	-- Return to Karazhan: Lower
 	[228001] = 20,		-- Pennies From Heaven (Ghostly Philanthropist)
@@ -1175,7 +1175,7 @@ local Spells = {
 	--]=====]
 
 
-	-- [**Mist of Pandaria**] 
+	-- [**Mist of Pandaria**]
 	--[=====[
 	-- Temple of the Jade Serpent
 	[397881] = 20, -- Surging Deluge (Corrupt Living Water)
@@ -1290,7 +1290,7 @@ local SpellsNoTank = {
 	[450055] = 20, -- Gutburst (Ravenous Scarab, Izo the Grand Splicer) - is this reasonable?
 
 	-- [**Dragonflight**]
-	--[=====[	
+	--[=====[
 	-- Uldaman: Legacy of Tyr
 	[369409] = 20, -- Cleave (Earthen Custodian)
 	[369563] = 20, -- Wild Cleave (Baelog, The Lost Dwarves)
@@ -1306,7 +1306,7 @@ local SpellsNoTank = {
 	-- Brackenhide Hollow
 	[382712] = 20, -- Necrotic Breath, Initial (Wilted Oak)
 	[382805] = 20, -- Necrotic Breath, DoT (Wilted Oak)
-  	--[374544] = 20, -- Burst of Decay (Fetid Rotsinger) - TODO does this only target tank?
+	--[374544] = 20, -- Burst of Decay (Fetid Rotsinger) - TODO does this only target tank?
 	[377807] = 20, -- Cleave (Rira Hackclaw)
 	[381419] = 20, -- Savage Charge (Rira Hackclaw)
 	[377559] = 20, -- Vine Whip (Treemouth)
@@ -1367,8 +1367,8 @@ local SpellsNoTank = {
 	-- Tazavesh: Streets of Wonder
 	-- Tazavesh: So'leah's Gambit
 	--]=====]
-	
-	
+
+
 	-- [**Battle for Azeroth**]
 	-- Siege of Boralus
 	--[273720] = 20, -- Heavy Ordnance, Contact (Chopper Redhook) - is this reasonable?
@@ -1381,9 +1381,9 @@ local SpellsNoTank = {
 	-- Operation: Mechagon - Junkyard
 	-- Operation: Mechagon - Workshop
 	[294291] = 20,		-- Process Waste (Waste Processing Unit)
-  	--]=====]
+	--]=====]
 
-  
+
 	-- [**Legion**]
 	--[=====[
 	-- Black Rook Hold
@@ -1404,7 +1404,7 @@ local SpellsNoTank = {
 	[205609] = 20, -- Rancid Maw (Naraxas) - TODO ID?
 	[200721] = 20, -- Landslide (Dargrul)
 
-	-- Court of Stars	
+	-- Court of Stars
 	[209036] = 20, -- Throw Torch (Duskwatch Sentry)
 	[209495] = 20, -- Charged Smash (Guardian Construct)
 	[209512] = 20, -- Disrupting Energy (Guardian Construct)
@@ -1422,7 +1422,7 @@ local SpellsNoTank = {
 	--]=====]
 
 
-	-- [**Warlords of Draenor**] 
+	-- [**Warlords of Draenor**]
 	--[=====[
 	-- The Everbloom
 	[164357] = 20, -- Parched Gasp (Witherbark)
@@ -1446,7 +1446,7 @@ local SpellsNoTank = {
 	[164163] = 20,		-- Hewing Swipe (Grimrail Overseer)
 	--]=====]
 
-	-- [**Mist of Pandaria**] 
+	-- [**Mist of Pandaria**]
 	-- Temple of the Jade Serpent
 
 
@@ -1474,17 +1474,17 @@ local Auras = {
 	-- [**Dragonflight**]
 	--[=====[
 	-- Uldaman: Legacy of Tyr
-  	[372652] = true, -- Resonating Orb (Sentinel Talondras)
+	[372652] = true, -- Resonating Orb (Sentinel Talondras)
 
-  	-- The Azure Vault
-  	[386368] = true, -- Polymorphed (Polymorphic Rune, Environment)
-  	[396722] = true, -- Absolute Zero, Root (Telash Greywing)
+	-- The Azure Vault
+	[386368] = true, -- Polymorphed (Polymorphic Rune, Environment)
+	[396722] = true, -- Absolute Zero, Root (Telash Greywing)
 
-  	-- Dawn of the Infinite: Galakrond's Fall
-  	[418346] = true, -- Corrupted Mind (Blight of Galakrond)
+	-- Dawn of the Infinite: Galakrond's Fall
+	[418346] = true, -- Corrupted Mind (Blight of Galakrond)
 
-  	-- Dawn of the Infinite: Murozond's Rise
-  	[401667] = true, -- Time Stasis (Morchie)
+	-- Dawn of the Infinite: Murozond's Rise
+	[401667] = true, -- Time Stasis (Morchie)
 	--]=====]
 
 
@@ -1493,7 +1493,7 @@ local Auras = {
 	-- Affixes seasons
 	--[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
 	--[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
-	
+
 	-- The Necrotic Wake
 	[324293] = true, -- Rasping Scream (Skeletal Marauder)
 
@@ -1519,23 +1519,23 @@ local Auras = {
 
 
 	-- Tazavesh: Streets of Wonder
-	-- Tazavesh: So'leah's Gambit 
+	-- Tazavesh: So'leah's Gambit
 	--]=====]
-	
-	-- [**Battle for Azeroth**] 
+
+	-- [**Battle for Azeroth**]
 	-- Siege of Boralus
 	[257169] = true, -- Terrifying Roar (Bilge Rat Demolisher)
 	[274942] = true, -- Banana Rampage (Bilge Rat Buccaneer)
 
-	--[=====[ 
+	--[=====[
 	-- Waycrest Manor
 	[265352] = true, -- Toad Blight (Blight Toad)
 	[278468] = true, -- Freezing Trap (Maddened Survivalist)
-	
+
 	-- Atal'Dazar
 	[257483] = true, -- Pile of Bones (Environment, Rezan)
 	[255371] = true, -- Terrifying Visage (Rezan)
-	
+
 	-- Freehold
 	[274516] = true, -- Slippery Suds (Bilge Rat Swabby)
 	[272554] = true, -- Bloody Mess (Trothak, Ring of Booty)
@@ -1561,9 +1561,9 @@ local Auras = {
 	[214987] = true, -- Righteous Indignation (Suspicious Noble) - TODO find ID for stun
 	[224333] = true, -- Enveloping Winds (Advisor Melandrus)
 	--]=====]
-	
+
 	-- [**Warlords of Draenor**]
-	--[=====[ 
+	--[=====[
 	-- The Everbloom
 	[169179] = true, -- Colossal Blow (Yalnu)
 
@@ -1574,7 +1574,7 @@ local Auras = {
 	--]=====]
 
 
-	-- [**Mist of Pandaria**] 
+	-- [**Mist of Pandaria**]
 
 }
 
@@ -1627,10 +1627,6 @@ ElitismFrame.text:SetAllPoints()
 ElitismFrame.text:SetTextHeight(13)
 ElitismFrame:SetAlpha(1)
 
-function table.pack(...)
-	return { n = select("#", ...), ... }
-end
-
 ElitismFrame:SetScript("OnEvent", function(self, event_name, ...)
 	if self[event_name] then
 		return self[event_name](self, event_name, ...)
@@ -1655,7 +1651,7 @@ function generateMaybeOutput(user)
 				end
 				if minPct == math.huge then
 					local spellNames = " "
-					for spellId,amount in pairs(TimerData[user]) do
+					for spellId in pairs(TimerData[user]) do
 						print("Getting spellId "..spellId)
 						local spellLink = C_Spell.GetSpellLink(spellId)
 						spellNames = spellNames..spellLink.." "
@@ -1751,7 +1747,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			for k,v in pairs(Users) do
 				local out = ""
 				out = out..k
-				for i, m in ipairs(v) do
+				for _, m in ipairs(v) do
 					out = out..";;;"..m
 				end
 				print(out)
@@ -1869,7 +1865,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 				--print("hits for " .. name)
 				maybeSendChatMessage("Hits for "..name)
 
-				local delay = 0;
+				local delay = 0
 
 				for k,v in pairs(FailByAbility[name]) do
 					--print(v.cnt .. "x" .. GetSpellLink(k) .. " = " .. round(v.sum / 1000, 1) .. "k; " .. delay)
@@ -1950,7 +1946,7 @@ function ElitismFrame:RebuildTable()
 	end
 end
 
-function ElitismFrame:ADDON_LOADED(event,addon)
+function ElitismFrame:ADDON_LOADED(_, addon)
 	if addon == "ElitismHelper" then
 		ElitismFrame:RebuildTable()
 
@@ -1967,12 +1963,12 @@ function ElitismFrame:ADDON_LOADED(event,addon)
 	end
 end
 
-function ElitismFrame:GROUP_ROSTER_UPDATE(event,...)
+function ElitismFrame:GROUP_ROSTER_UPDATE()
 	-- print("GROUP_ROSTER_UPDATE")
 	ElitismFrame:RebuildTable()
 end
 
-function ElitismFrame:ZONE_CHANGED_NEW_AREA(event,...)
+function ElitismFrame:ZONE_CHANGED_NEW_AREA()
 	-- print("ZONE_CHANGED_NEW_AREA")
 	ElitismFrame:RebuildTable()
 end
@@ -1981,12 +1977,12 @@ function compareDamage(a,b)
 	return a["value"] < b["value"]
 end
 
-function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
+function ElitismFrame:CHALLENGE_MODE_COMPLETED()
 	if ElitismHelperDB.EndOfDungeonMessage then
 		local count = 0
 		for _ in pairs(CombinedFails) do count = count + 1 end
 		if count == 0 then
-			print("No Damage?");
+			print("No Damage?")
 			--maybeSendChatMessage("Thank you for travelling with ElitismHelper.)
 			--maybeSendChatMessage("<EH> No avoidable damage was taken this run.")
 			return
@@ -2003,7 +1999,7 @@ function ElitismFrame:CHALLENGE_MODE_COMPLETED(event,...)
 	end
 end
 
-function ElitismFrame:CHALLENGE_MODE_START(event,...)
+function ElitismFrame:CHALLENGE_MODE_START()
 	CombinedFails = {}
 	FailByAbility = {}
 	print("Avoidable damage now being recorded.")
@@ -2051,7 +2047,7 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 				if compareSemver(incomingVersion, activeVersion) > 0 then
 					activeUserObject = {k, v}
 				end
-				
+
 				--Use alphabet as tie breaker
 				if(activeUserObject[2][2] == v[2]) then
 					if k < activeUserObject[1] then
@@ -2068,8 +2064,6 @@ function ElitismFrame:CHAT_MSG_ADDON(event,...)
 		else
 			activeUser = activeUserObject[1]
 		end
-	else
-		-- print("Unknown message: "..message)
 	end
 end
 
@@ -2160,11 +2154,11 @@ function ElitismFrame:AuraApply(timestamp, eventType, srcGUID, srcName, srcFlags
 	end
 end
 
-function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED(event,...)
-	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = CombatLogGetCurrentEventInfo(); -- Those arguments appear for all combat event variants.
-	local eventPrefix, eventSuffix = eventType:match("^(.-)_?([^_]*)$");
+function ElitismFrame:COMBAT_LOG_EVENT_UNFILTERED()
+	local timestamp, eventType, hideCaster, srcGUID, srcName, srcFlags, srcFlags2, dstGUID, dstName, dstFlags, dstFlags2 = CombatLogGetCurrentEventInfo() -- Those arguments appear for all combat event variants.
+	local eventPrefix, eventSuffix = eventType:match("^(.-)_?([^_]*)$")
 	if (eventPrefix:match("^SPELL") or eventPrefix:match("^RANGE")) and eventSuffix == "DAMAGE" then
-		local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand, _ = select(12, CombatLogGetCurrentEventInfo())
+		local spellId, spellName, spellSchool, sAmount, aOverkill, sSchool, sResisted, sBlocked, sAbsorbed, sCritical, sGlancing, sCrushing, sOffhand = select(12, CombatLogGetCurrentEventInfo())
 		ElitismFrame:SpellDamage(timestamp, eventType, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, sAmount)
 	elseif eventPrefix:match("^SWING") and eventSuffix == "DAMAGE" then
 		local aAmount, aOverkill, aSchool, aResisted, aBlocked, aAbsorbed, aCritical, aGlancing, aCrushing, aOffhand, _ = select(12, CombatLogGetCurrentEventInfo())
