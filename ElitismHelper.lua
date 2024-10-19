@@ -155,7 +155,6 @@ local Spells = {
 	[425554] = 20, -- Purify (Prioress Murrpray)
 	[425556] = 20, -- Sanctified Ground (Prioress Murrpray)
 	[428170] = 20, -- Blinding Light, Disorient (Prioress Murrpray)
-	[425556] = 20, -- Sanctified Ground (Prioress Murrpray)
 
 
 	-- The Dawnbreaker
