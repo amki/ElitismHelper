@@ -1604,7 +1604,7 @@ local function compareSemver(ver1, ver2)
 	return 0
 end
 
-function round(number, decimals)
+local function round(number, decimals)
 	return (("%%.%df"):format(decimals)):format(number)
 end
 
@@ -1633,7 +1633,54 @@ ElitismFrame:SetScript("OnEvent", function(self, event_name, ...)
 	end
 end)
 
-function generateMaybeOutput(user)
+local function maybeSendAddonMessage(prefix, message)
+	if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
+		C_ChatInfo.SendAddonMessage(prefix,message,"PARTY")
+	elseif IsInGroup() and not IsInGroup(2) and IsInRaid() then
+		C_ChatInfo.SendAddonMessage(prefix,message,"RAID")
+	end
+end
+
+local function maybeSendChatMessage(message)
+	if activeUser ~= playerUser then
+		return
+	end
+	if ElitismHelperDB.OutputMode == "self" then
+		print(message)
+	elseif ElitismHelperDB.OutputMode == "party" and IsInGroup() and not IsInGroup(2) then
+		SendChatMessage(message,"PARTY")
+	elseif ElitismHelperDB.OutputMode == "raid" and IsInGroup() and not IsInGroup(2) and IsInRaid() then
+		SendChatMessage(message,"RAID")
+	elseif ElitismHelperDB.OutputMode == "yell" then
+		SendChatMessage(message,"YELL")
+	elseif ElitismHelperDB.OutputMode == "emote" then
+		SendChatMessage(message,"EMOTE")
+	elseif ElitismHelperDB.OutputMode:find('^channel') ~= nil then
+		local args = ElitismFrame:SplitString(ElitismHelperDB.OutputMode," ")
+		if(args[2] == nil) then
+			print("ERROR: Invalid channel string in ElitismHelperDB!")
+			return
+		end
+		SendChatMessage(message,"CHANNEL",GetDefaultLanguage(),args[2])
+	elseif ElitismHelperDB.OutputMode == "default" then
+		if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
+			SendChatMessage(message,"PARTY")
+		elseif IsInGroup() and not IsInGroup(2) and IsInRaid() then
+			SendChatMessage(message,"RAID")
+		end
+	end
+end
+
+local function delayMaybeSendChatMessage(message, delay)
+	C_Timer.After(
+		delay,
+		function()
+			maybeSendChatMessage(message)
+		end
+	)
+end
+
+local function generateMaybeOutput(user)
 	local func = function()
 			local msg = "<EH> "..user.." got hit by "
 			local sending = false
@@ -1684,7 +1731,7 @@ function generateMaybeOutput(user)
 	return func
 end
 
-function generateMaybeMeleeOutput(user)
+local function generateMaybeMeleeOutput(user)
 	local func = function()
 			local msg = "<EH> "..user.." got hit by "
 			local sending = false
@@ -1712,7 +1759,7 @@ end
 SLASH_ELITISMHELPER1 = "/eh"
 
 SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
-	function enableElitismHelper()
+	local function enableElitismHelper()
 		if ElitismHelperDB.Loud then
 			print("ElitismHelper: Damage notifications are already enabled.")
 		else
@@ -1720,7 +1767,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print("ElitismHelper: All damage notifications enabled.")
 		end
 	end
-	function disableElisitmHelper()
+	local function disableElitismHelper()
 		if not ElitismHelperDB.Loud then
 			print("ElitismHelper: Damage notifications are already disabled.")
 		else
@@ -1733,7 +1780,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 		end
 	end
 
-	actions = {
+	local actions = {
 		["activeUser"] = function()
 			print("activeUser is "..activeUser)
 			if activeUser == playerUser then
@@ -1777,8 +1824,8 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 		end,
 		["on"] = enableElitismHelper,
 		["enable"] = enableElitismHelper,
-		["off"] = disableElisitmHelper,
-		["disable"] = disableElisitmHelper,
+		["off"] = disableElitismHelper,
+		["disable"] = disableElitismHelper,
 		["output"] = function(argsFunc)
 			if argsFunc == "default" then
 				ElitismHelperDB.OutputMode = "default"
@@ -1827,7 +1874,7 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 			print(" messageTest : Testing output")
 		end,
 		["threshold"] = function(args)
-			thresholdNumber = tonumber(args, 10)
+			local thresholdNumber = tonumber(args, 10)
 			if thresholdNumber == nil then
 				print("Sets threshold of health lost to notify on (as percentage): `/eh threshold 100` will show notifications for one-shot damage (> 100%)")
 				print(" Current Threshold: " .. ElitismHelperDB.Threshold)
@@ -1886,53 +1933,6 @@ SlashCmdList["ELITISMHELPER"] = function(msg,editBox)
 	commandFunction(args)
 end
 
-function maybeSendAddonMessage(prefix, message)
-	if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
-		C_ChatInfo.SendAddonMessage(prefix,message,"PARTY")
-	elseif IsInGroup() and not IsInGroup(2) and IsInRaid() then
-		C_ChatInfo.SendAddonMessage(prefix,message,"RAID")
-	end
-end
-
-function maybeSendChatMessage(message)
-	if activeUser ~= playerUser then
-		return
-	end
-	if ElitismHelperDB.OutputMode == "self" then
-		print(message)
-	elseif ElitismHelperDB.OutputMode == "party" and IsInGroup() and not IsInGroup(2) then
-		SendChatMessage(message,"PARTY")
-	elseif ElitismHelperDB.OutputMode == "raid" and IsInGroup() and not IsInGroup(2) and IsInRaid() then
-		SendChatMessage(message,"RAID")
-	elseif ElitismHelperDB.OutputMode == "yell" then
-		SendChatMessage(message,"YELL")
-	elseif ElitismHelperDB.OutputMode == "emote" then
-		SendChatMessage(message,"EMOTE")
-	elseif ElitismHelperDB.OutputMode:find('^channel') ~= nil then
-		local args = ElitismFrame:SplitString(ElitismHelperDB.OutputMode," ")
-		if(args[2] == nil) then
-			print("ERROR: Invalid channel string in ElitismHelperDB!")
-			return
-		end
-		SendChatMessage(message,"CHANNEL",GetDefaultLanguage(),args[2])
-	elseif ElitismHelperDB.OutputMode == "default" then
-		if IsInGroup() and not IsInGroup(2) and not IsInRaid() then
-			SendChatMessage(message,"PARTY")
-		elseif IsInGroup() and not IsInGroup(2) and IsInRaid() then
-			SendChatMessage(message,"RAID")
-		end
-	end
-end
-
-function delayMaybeSendChatMessage(message, delay)
-	C_Timer.After(
-		delay,
-		function()
-			maybeSendChatMessage(message)
-		end
-	)
-end
-
 function ElitismFrame:RebuildTable()
 	Users = {}
 	activeUser = nil
@@ -1940,7 +1940,7 @@ function ElitismFrame:RebuildTable()
 	if IsInGroup() then
 		maybeSendAddonMessage(MSG_PREFIX,"VREQ")
 	else
-		name = GetUnitName("player",true)
+		local name = GetUnitName("player", true)
 		activeUser = name.."-"..GetRealmName()
 		-- print("We are alone, activeUser: "..activeUser)
 	end
@@ -1973,7 +1973,7 @@ function ElitismFrame:ZONE_CHANGED_NEW_AREA()
 	ElitismFrame:RebuildTable()
 end
 
-function compareDamage(a,b)
+local function compareDamage(a,b)
 	return a["value"] < b["value"]
 end
 
