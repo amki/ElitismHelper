@@ -958,7 +958,7 @@ local Spells = {
 	[276234] = 20, -- Micro Missiles (B.O.O.M.B.A., Mogul Razdunk)
 	[270277] = 20, -- Big Red Rocket (Mogul Razdunk)
 	[270926] = 20, -- Drill Smash, Swirly (Mogul Razdunk)
-	
+
 	--[=====[
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
