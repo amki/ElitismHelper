@@ -43,27 +43,24 @@ local Spells = {
 	-- [**The War Within**]
 
 	-- The Rookery
-	[427331] = 20, -- Charged Bombardment, Dash (Voidrider)
-	[432605] = 20, -- Charged Bombardment, Swirlies (Voidrider)
+	[474017] = 20, -- Wild Lightning (Voidrider / Kyrioss)
 	[426968] = 20, -- Bounding Void (Quartermaster Koratite)
-	[430013] = 20, -- Thunderstrike (Unruly Stormrook)
+	[420679] = 20, -- Tornado Winds (Environment)
 	[452932] = 20, -- Attracting Shadows, Explosion (Coalescing Void Diffuser)
-	[430186] = 20, -- Seeping Corruption (Corrupted Oracle)
-	[423981] = 20, -- Implosion, Explosion (Void Cursed Crusher)
-	[443847] = 20, -- Instability (Inflicted Civilian)
+	[430186] = 20, -- Seeping Corruption, Area (Corrupted Oracle)
+	[443847] = 20, -- Instability (Afflicted Civilian)
 	[442192] = 20, -- Oppressive Void (Environment)
-	[430288] = 20, -- Crushing Darkness (Void Fragment)
-	[438848] = 20, -- Embrace the Void, Swirly (Radiating Voidstone)
+	[1214550] = 20, -- Umbral Wave (Void Ascendant)
+	[1214645] = 20, -- Erupting Darkness (Consuming Voidstone)
 
+	[444250] = 20, -- Lightning Torrent, Beams (Kyrioss)
+	[1214318] = 20, -- Grounding Bolt (Kyrioss)
 	[419871] = 20, -- Lightning Dash (Kyrioss)
-	[444411] = 20, -- Stormheart (Kyrioss)
-	[444250] = 20, -- Lightning Torrent (Kyrioss)
-	[425113] = 20, -- Crush Reality (Stormguard Gorren)
-	[424966] = 20, -- Lingering Void (Stormguard Gorren)
 	[426136] = 20, -- Reality Tear (Stormguard Gorren)
+	[424966] = 20, -- Lingering Void (Stormguard Gorren)
 	[425052] = 20, -- Dark Gravity, Explosion (Stormguard Gorren)
 	[423356] = 20, -- Null Upheaval, Swirlies (Voidstone Monstrosity)
-	--[433067] = 20, -- Seeping Fragment (Voidstone Monstrosity) - unavoidable to destroy Seeping Fragment with Stormrider's Charge
+	[433067] = 20, -- Seeping Corruption (Voidstone Monstrosity)
 
 
 	-- Cinderbrew Meadery
@@ -84,8 +81,8 @@ local Spells = {
 	[440087] = 20, -- Oozing Honey (Brew Drop, I'pa)
 	[438651] = 20, -- Snack Time (Benk Buzzbee)
 	[440141] = 20, -- Honey Marinade, Area (Benk Buzzbee)
-	[438933] = 20, -- Sticky Situation (Benk Buzzbee)
-	[438931] = 20, -- Sticky Situation (Benk Buzzbee)
+	[438933] = 20, -- Sticky Situation (Benk Buzzbee) - TODO check
+	[438931] = 20, -- Sticky Situation (Benk Buzzbee) - TODO check
 	[435788] = 20, -- Cinder-BOOM!, Waves (Goldie Baronbottom)
 
 
@@ -113,26 +110,25 @@ local Spells = {
 	-- Darkflame Cleft
 	[423501] = 20, -- Wild Wallop (Rank Overseer)
 	[426883] = 20, -- Bonk! (Kobold Taskworker)
-	[426779] = 20, -- Explosive Flame (Blazing Fiend)
-	[440652] = 20, -- Surging Wax, Impact (Wandering Candle)
-	[440653] = 20, -- Surging Wax, Area (Wandering Candle)
+	[440652] = 20, -- Surging Flame, Impact (Wandering Candle)
+	[440653] = 20, -- Surging Flame, Area (Wandering Candle)
 	[428650] = 20, -- Burning Backlash (Environment)
-	[426265] = 20, -- Ceaseless Flame (Sootsnout) - TODO always towards One-Hand Headlock stunned player?
-	[426259] = 20, -- Pyro-Pummel (Torchsnarl)
+	--[426265] = 20, -- Ceaseless Flame (Sootsnout) - TODO is this reasonable?
+	[1218133] = 20, -- Burning Candles (Sootsnout)
 	[422393] = 20, -- Suffocating Darkness (Skittering Darkness)
-	[422414] = 20, -- Shadow Smash (Shuffling Horror)
 
 	[422125] = 20, -- Reckless Charge (Ol' Waxbeard)
 	[422274] = 20, -- Cave-In (Ol' Waxbeard)
 	[424821] = 20, -- High Speed Collision (Ol' Waxbeard)
-	[429093] = 20, -- Underhanded Track-tics, Explosion (Ol' Waxbeard)
+	[429093] = 20, -- Underhanded Track-tics, Explosion (Ol' Waxbeard) - TODO is this reasonable?
 	[421638] = 20, -- Wicklighter Barrage (Blazikon)
-	[424223] = 20, -- Incite Flames (Blazikon)
-	[422700] = 20, -- Extinguishing Gust (Blazikon)
 	[443969] = 20, -- Enkindling Inferno (Blazikon)
+	[422700] = 20, -- Extinguishing Gust (Blazikon)
+	[424223] = 20, -- Incite Flames (Blazikon)
+	[421282] = 20, -- Darkflame Pickaxe (The Candle King)
 	[421067] = 20, -- Molten Wax (The Candle King)
 	[427100] = 20, -- Umbral Slash (The Darkness)
-	[426943] = 20, -- Rising Gloom (The Darkness) - is this reasonable?
+	[426943] = 20, -- Rising Gloom (The Darkness)
 
 
 	-- Priory of the Sacred Flame
@@ -140,7 +136,6 @@ local Spells = {
 	[427472] = 20, -- Flamestrike, Swirly (Fanatical Conjuror)
 	[427473] = 20, -- Flamestrike, Area (Fanatical Conjuror)
 	[427601] = 20, -- Burst of Light (Lightspawn)
-	--[448492] = 20, -- Thunderclap (Guard Captain Suleyman) - unreasonable
 	[427900] = 20, -- Molten Pool (Forge Master Damian)
 	[424430] = 20, -- Consecration (Ardent Paladin)
 
@@ -150,7 +145,6 @@ local Spells = {
 	[423076] = 20, -- Hammer of Purity, Swirly (Baron Braunpyke)
 	[423121] = 20, -- Hammer of Purity, Hammer (Baron Braunpyke)
 	[423019] = 20, -- Castigator's Detonation (Baron Braunpyke)
-	--[xxxx] = 20, -- Sacrificial Pyre (Baron Braunpyke) - check Mythic-only mechanic
 	[451606] = 20, -- Holy Flame (Prioress Murrpray)
 	[425554] = 20, -- Purify (Prioress Murrpray)
 	[425556] = 20, -- Sanctified Ground (Prioress Murrpray)
@@ -225,11 +219,47 @@ local Spells = {
 	[438966] = 20, -- Gossamer Onslaught, Swirly (Avanoxx)
 	[433443] = 20, -- Impale (Anub'zekt)
 	[433781] = 20, -- Ceaseless Swarm (Anub'zekt)
-	[434284] = 20, -- Burrow Charge, Dash (Anub'zekt) - TODO difficult for target to avoid, impossible without dash?
+	[434284] = 20, -- Burrow Charge, Dash (Anub'zekt)
 	[433731] = 20, -- Burrow Charge, End (Anub'zekt)
 	[432132] = 20, -- Erupting Webs (Ki'katal the Harvester)
 	[461507] = 20, -- Cultivated Poisons, Wave (Ki'katal the Harvester)
 	[432117] = 20, -- Cosmic Singularity (Ki'katal the Harvester)
+
+
+	-- Operation: Floodgate
+	[464294] = 20, -- Weapons Stockpile Explosion (Environment)
+	[465682] = 20, -- Surprise Inspection (Darkfuse Inspector)
+	[465128] = 20, -- Wind Up (Loaderbot)
+	[461793] = 20, -- R.P.G.G. (Darkfuse Demolitionist)
+	[1215071] = 20, -- Electrified Water (Environment)
+	[472338] = 20, -- Surveyed Ground (Venture Co. Surveyor)
+	[474350] = 20, -- Shreddation Sawblade (Shreddinator 3000)
+	[474388] = 20, -- Flamethrower (Shreddinator 3000)
+	[468727] = 20, -- Seaforium Charge (Venture Co. Diver)
+	[1213790] = 20, -- Zeppelin Barrage, Swirly (Environment)
+	[1214341] = 20, -- Bomb Pile Explosion (Environment)
+	[465487] = 20, -- Bubbles Smash (Bubbles)
+	[469819] = 20, -- Bubble (Bubbles)
+	[1217496] = 20, -- Splish Splash (Bubbles)
+	[465604] = 20, -- Battery Bolt (Darkfuse Jumpstarter)
+
+	[473224] = 20, -- Sonic Boom, Wave (Big M.O.M.M.A.)
+	[473240] = 20, -- Sonic Boom, Explosion (Big M.O.M.M.A.)
+	[473287] = 20, -- Excessive Electrification (Big M.O.M.M.A.)
+	[472454] = 20, -- Doom Storm (Darkfuse Mechadrone, Big M.O.M.M.A.)
+	[473526] = 20, -- Big Bada BOOM! (Keeza Quickfuse, Demolition Duo)
+	[460787] = 20, -- Deflagration (Keeza Quickfuse, Demolition Duo) - TODO is this reasonable?
+	[472755] = 20, -- Shrapnel (Keeza Quickfuse, Demolition Duo)
+	[1217751] = 20, -- B.B.B.F.G. (Keeza Quickfuse, Demolition Duo)
+	[460965] = 20, -- Barreling Charge (Bront, Demolition Duo)
+	[473126] = 20, -- Mudslide (Swampface)
+	[473046] = 20, -- Skewering Root (Swampface)
+	[473051] = 20, -- Rushing Tide (Swampface)
+	[465982] = 20, -- Turbo Bolt (Geezle Gigazap)
+	[468604] = 20, -- Dam Rubble (Geezle Gigazap)
+	[468741] = 20, -- Shock Water, Impact (Geezle Gigazap)
+	[468723] = 20, -- Shock Water, Area (Geezle Gigazap)
+	[468647] = 20, -- Leaping Spark (Geezle Gigazap)
 
 
 
@@ -527,7 +557,7 @@ local Spells = {
 	--[373513] = 20,		-- Shadow Eruption (Season 4 Zul'gamux)
 	--[373429] = 20,		-- Carrion Swarm (Season 4 Nathrezim Infiltrator)
 
-
+	--[=====[
 	-- The Necrotic Wake
 	[323957] = 20, -- Animate Dead, Warrior (Zolramus Necromancer)
 	[324026] = 20, -- Animate Dead, Crossbowman (Zolramus Necromancer)
@@ -581,7 +611,7 @@ local Spells = {
 	[463603] = 20, -- Coalescing Poison (Tred'ova)
 	[326263] = 20, -- Anima Shedding (Tred'ova)
 
-	--[=====[
+
 	-- De Other Side
 	[334051] = 20,		-- Erupting Darkness (Death Speaker)
 	[328729] = 20,		-- Dark Lotus (Risen Cultist)
@@ -652,38 +682,42 @@ local Spells = {
 	[329217] = 20,		-- Slime Lunge (Doctor Ickus)
 	[330026] = 20,		-- Slime Lunge (Doctor Ickus)
 	[322475] = 20,		-- Plague Crash (Environment Margrave Stradama)
-
+	--]=====]
 
 	-- Theater of Pain
-	[342126] = 20,		-- Brutal Leap (Dokigg the Brutalizer)
-	[337037] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
-	[336996] = 20,		-- Whirling Blade (Nekthara the Mangler) ?? TODO: Which one is correct?
-	[317605] = 20,		-- Whirlwind (Nekthara the Mangler and Rek the Hardened)
-	[332708] = 20,		-- Ground Smash (Heavin the Breaker)
-	[334025] = 20,		-- Bloodthirsty Charge (Haruga the Bloodthirsty)
-	[333301] = 20,		-- Curse of Desolation (Nefarious Darkspeaker)
-	[333297] = 20,		-- Death Winds (Nefarious Darkspeaker)
-	[331243] = 20,		-- Bone Spikes (Soulforged Bonereaver)
-	[331224] = 20,		-- Bonestorm (Soulforged Bonereaver)
-	[330592] = 20,		-- Vile Eruption (back) (Rancid Gasbag)
-	[330608] = 20,		-- Vile Eruption (front) (Rancid Gasbag)
-	[321039] = 20,		-- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)
-	[321041] = 20,		-- Disgusting Burst (Disgusting Refuse and Blighted Sludge-Spewer)
+	[317605] = 20, -- Whirlwind (Dokigg the Brutalizer / Nekthara the Mangler / Rek the Hardened) - Champions in Halls of Might have had their abilities redistributed
+	[1213695] = 20, -- Earthcrusher, Swirlies (Dokigg the Brutalizer) - Champions in Halls of Might have had their abilities redistributed
+	[337037] = 20, -- Whirling Blade (Nekthara the Mangler) - Champions in Halls of Might have had their abilities redistributed
+	[332708] = 20, -- Ground Smash (Heavin the Breaker) - Champions in Halls of Might have had their abilities redistributed
+	[334025] = 20, -- Bloodthirsty Charge (Haruga the Bloodthirsty) - Champions in Halls of Might have had their abilities redistributed
+	[317367] = 20, -- Necrotic Volley (Environment)
+	[333301] = 20, -- Curse of Desolation (Nefarious Darkspeaker)
+	[333297] = 20, -- Death Winds (Nefarious Darkspeaker)
+	[331243] = 20, -- Bone Spikes (Soulforged Bonereaver)
+	[331224] = 20, -- Bonestorm (Soulforged Bonereaver)
+	[321041] = 20, -- Disgusting Burst (Disgusting Refuse / Blighted Sludge-Spewer)
+	[330592] = 20, -- Vile Eruption (Rancid Gasbag)
+	[330608] = 20, -- Vile Eruption (Rancid Gasbag)
+	[342103] = 20, -- Rancid Bile (Rancid Gasbag)
 
-	[317231] = 20,		-- Crushing Slam (Xav the Unfallen)
-	[339415] = 20,		-- Deafening Crash (Xav the Unfallen)
-	[320729] = 20,		-- Massive Cleave (Xav the Unfallen)
-	[318406] = 20,		-- Tenderizing Smash (Gorechop)
-	[323406] = 20,		-- Jagged Gash (Gorechop)
-	-- id ?[323542] = 20,		-- Oozing (Gorechop)
-	[317367] = 20,		-- Necrotic Volley (Kul'tharok)
-	[319639] = 20,		-- Grasping Hands (Kul'tharok)
-	[323681] = 20,		-- Dark Devastation (Mordretha)
-	[339550] = 20,		-- Echo of Battle (Mordretha)
-	[323831] = 20,		-- Death Grasp (Mordretha)
-	[339751] = 20,		-- Ghostly Charge (Mordretha)
+	[1215738] = 20, -- Decaying Breath (Paceran the Virulent, An Affront of Challengers)
+	[1215636] = 20, -- Necrotic Spores, Swirlies (Paceran the Virulent, An Affront of Challengers)
+	[320180] = 20, -- Necrotic Spores, Area (Paceran the Virulent, An Affront of Challengers)
+	[317231] = 20, -- Crushing Slam (Xav the Unfallen)
+	[339415] = 20, -- Deafening Crash (Xav the Unfallen)
+	[320729] = 20, -- Massive Cleave (Xav the Unfallen)
+	[473519] = 20, -- Death Spiral, Orb (Kul'tharok)
+	[1223240] = 20, -- Death Spiral, Area (Kul'tharok)
+	[318406] = 20, -- Tenderizing Smash (Gorechop)
+	[323406] = 20, -- Jagged Gash (Gorechop)
+	[323750] = 20, -- Vile Gas (Gorechop)
+	[323130] = 20, -- Coagulating Ooze (Oozing Leftover, Gorechop)
+	[323681] = 20, -- Dark Devastation (Mordretha)
+	[323831] = 20, -- Death Grasp (Mordretha)
+	[339550] = 20, -- Echo of Battle (Mordretha)
+	[339751] = 20, -- Ghostly Charge (Mordretha)
 
-
+	--[=====[
 	-- Sanguine Depths
 	[334563] = 20,		-- Volatile Trap (Dreadful Huntmaster)
 	[320991] = 20,		-- Echoing Thrust (Regal Mistdancer)
@@ -766,7 +800,7 @@ local Spells = {
 
 
 	-- [**Battle for Azeroth**]
-
+	--[=====[
 	-- Siege of Boralus
 	[256627] = 20, -- Slobber Knocker (Scrimshaw Enforcer)
 	[275775] = 20, -- Savage Tempest (Irontide Raider)
@@ -799,7 +833,7 @@ local Spells = {
 	[280485] = 20, -- Terror from Below / Crushing Embrace (Viq'Goth)
 	[269484] = 20, -- Eradication (Viq'Goth)
 
-	--[=====[
+
 	-- Waycrest Manor
 	[265372] = 20, -- Shadow Cleave (Enthralled Guard)
 	--[278849] = 20, -- Uproot (Coven Thornshaper) - TODO probably not avoidable
@@ -896,8 +930,36 @@ local Spells = {
 	[413146] = 20, -- Swiftwind Saber (Harlan Sweete)
 	[257293] = 20, -- Swiftwind Saber (Harlan Sweete) - TODO ID?
 	[257315] = 20, -- Black Powder Bomb (Irontide Grenadier, Harlan Sweete)
+	--]=====]
 
+	-- The MOTHERLODE!!
+	[257371] = 20, -- Tear Gas, Swirly (Mechanized Peacekeeper)
+	[1217283] = 20, -- Tear Gas, Area (Mechanized Peacekeeper)
+	[269831] = 20, -- Toxic Sludge (Environment)
+	[473198] = 20, -- Azerite Eruption (Azerite Extractor)
+	[269313] = 20, -- Final Blast (Wanton Sapper)
+	[268365] = 20, -- Mining Charge (Wanton Sapper)
+	[1214754] = 20, -- Massive Slam (Taskmaster Askari)
+	[271583] = 20, -- Black Powder Special (Environment)
+	[1215424] = 20, -- Brainstorm, Swirly (Venture Co. Mastermind)
+	[1214748] = 20, -- Brainstorm, Tornado (Venture Co. Mastermind)
+	[271432] = 20, -- Test Missile (Environment)
+	[262348] = 20, -- Mine Blast (Crawler Mine)
+	[269092] = 20, -- Artillery Barrage (Ordnance Specialist)
 
+	[1217286] = 20, -- Throw Coins (Footbomb Hooligan, Coin-Operated Crowd Pummeler)
+	[256137] = 20, -- Timed Detonation (Coin-Operated Crowd Pummeler)
+	[1217296] = 20, -- Shocking Claw (Coin-Operated Crowd Pummeler)
+	[275907] = 20, -- Tectonic Smash (Azerokk)
+	[258628] = 20, -- Resonant Quake, Area (Azerokk)
+	[1214673] = 20, -- Azerite Aftershock (Azerokk) - TODO is this reasonable?
+	[259533] = 20, -- Azerite Catalyst (Rixxa Fluxflame)
+	[260279] = 20, -- Gatling Gun (Mogul Razdunk)
+	[276234] = 20, -- Micro Missiles (B.O.O.M.B.A., Mogul Razdunk)
+	[270277] = 20, -- Big Red Rocket (Mogul Razdunk)
+	[270926] = 20, -- Drill Smash, Swirly (Mogul Razdunk)
+	
+	--[=====[
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
 	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
@@ -913,26 +975,33 @@ local Spells = {
 	[298940] = 20,		-- Bolt Buster (Naeno Megacrash)
 	[295552] = 20,		-- Cannon Blast (HK-8 Aerial Oppression Unit)
 	[296150] = 20,		-- Vent Blast (HK-8 Aerial Oppression Unit - Environment)
-
+	--]=====]
 
 	-- Operation: Mechagon - Workshop
-	[294128] = 20,		-- Rocket Barrage (Rocket Tonk)
-	[293861] = 20,		-- Anti-Personnel Squirrel (Anti-Personnel Squirrel)
-	[294324] = 20,		-- Mega Drill (Waste Processing Unit)
-	[295168] = 20,		-- Capacitor Discharge (Blastatron X-80)
-	[293986] = 20,		-- Sonic Pulse (Blastatron X-80)
+	[282943] = 20, -- Piston Smasher (Environment)
+	[282945] = 20, -- Buzz Saw (Environment)
+	[294128] = 20, -- Rocket Barrage (Rocket Tonk)
+	[301299] = 20, -- Furnace Flames (Environment)
+	[294549] = 20, -- Furnace Flames (Environment)
+	[293861] = 20, -- Anti-Personnel Squirrel (Anti-Personnel Squirrel)
+	[295168] = 20, -- Capacitor Discharge (Blastatron X-80)
+	[293986] = 20, -- Sonic Pulse (Spider Tank / Blastatron X-80)
+	[1213154] = 20, -- Electrified Floor (Environment)
 
-	[285020] = 20,		-- Whirling Edge (The Platinum Pummeler)
-	[282943] = 20,		-- Piston Smasher (Tussle Tonks - Environmnet)
-	[283422] = 20,		-- Maximum Thrust (Gnomercy 4.U.)
-	[291930] = 20,		-- Air Drop (K.U-J.0)
-	[291949] = 20,		-- Venting Flames (K.U-J.0)
-	[294954] = 20,		-- Self-Trimming Hedge (Machinist's Garden)
-	[285443] = 20,		-- "Hidden" Flame Cannon (Machinist's Garden)
-	[285460] = 20,		-- Discom-BOMB-ulator (Machinist's Garden)
-	[294869] = 20,		-- Roaring Flame (Machinist's Garden)
-	[291915] = 20,		-- Plasma Orb (King Mechagon)
-	--]=====]
+	[1215039] = 20, -- B.4.T.T.L.3. Mine, Swirly (Gnomercy 4.U., Tussle Tonks)
+	[285377] = 20, -- B.4.T.T.L.3. Mine, Mine (Gnomercy 4.U., Tussle Tonks)
+	[283422] = 20, -- Maximum Thrust (Gnomercy 4.U., Tussle Tonks)
+	[291930] = 20, -- Air Drop (K.U-J.0.)
+	[291953] = 20, -- Junk Bomb (K.U.-J.0.)
+	[291949] = 20, -- Venting Flames (K.U-J.0.)
+	[294954] = 20, -- Self-Trimming Hedge (Head Machinist Sparkflux, Machinist's Garden)
+	[285443] = 20, -- "Hidden" Flame Cannon (Head Machinist Sparkflux, Machinist's Garden)
+	[285460] = 20, -- Discom-BOMB-ulator (Head Machinist Sparkflux, Machinist's Garden)
+	[294869] = 20, -- Roaring Flame (Inconspicuous Plant, Machinist's Garden)
+	[291915] = 20, -- Plasma Orb (King Mechagon)
+	[291856] = 20, -- Recalibrate (King Mechagon)
+	[291613] = 20, -- Take Off! (Aerial Unit R-21/X, King Mechagon)
+	[291914] = 20, -- Cutting Beam, Beam (Aerial Unit R-21/X, King Mechagon)
 
 
 	-- [**Legion**]
@@ -1199,7 +1268,7 @@ local Spells = {
 
 
 	-- [**Cataclysm**]
-
+	--[=====[
 	-- Grim Batol
 	[456701] = 20, -- Obsidian Stomp (Twilight Brute)
 	[451614] = 20, -- Twilight Ember (Twilight Destroyer)
@@ -1222,7 +1291,7 @@ local Spells = {
 	[461513] = 20, -- Shadow Gale, shrinking (Erudax)
 	[449985] = 20, -- Shadow Gale, formed (Erudax)
 
-	--[=====[
+
 	-- Throne of the Tides
 	[426685] = 20, -- Volatile Bolt (Naz'jar Ravager)
 	[426688] = 20, -- Volatile Acid (Naz'jar Ravager)
@@ -1265,19 +1334,12 @@ local Spells = {
 local SpellsNoTank = {
 	-- [**The War Within**]
 	-- The Rookery
-	[427616] = 20, -- Energized Barrage (Unruly Stormrook)
-	[433078] = 20, -- Implosion, Impact (Void Cursed Crusher)
+	[472549] = 20, -- Volatile Void (Consuming Voidstone)
 	[445537] = 20, -- Oblivion Wave (Voidstone Monstrosity)
 
 	-- Cinderbrew Meadery
 	[440138] = 20, -- Honey Marinade, Explosion (Benk Buzzbee)
 	[436592] = 20, -- Cash Cannon (Goldie Baronbottom)
-
-	-- Darkflame Cleft
-	[421282] = 20, -- Darkflame Pickaxe (The Candle King)
-
-	-- Priory of the Sacred Flame
-	[444705] = 20, -- Divine Storm (Zealous Templar) - potentially still unreasonable
 
 	-- The Dawnbreaker
 	[451115] = 20, -- Terrifying Slam, Area (Ixkreten the Unbreakable)
@@ -1286,7 +1348,7 @@ local SpellsNoTank = {
 	-- City of Threads
 	[439764] = 20, -- Process of Elimination, Physical (Izo the Grand Splicer)
 	[439763] = 20, -- Process of Elimination, Shadow (Izo the Grand Splicer)
-	[450055] = 20, -- Gutburst (Ravenous Scarab, Izo the Grand Splicer) - is this reasonable?
+	[450055] = 20, -- Gutburst (Ravenous Scarab, Izo the Grand Splicer)
 
 	-- [**Dragonflight**]
 	--[=====[
@@ -1342,11 +1404,11 @@ local SpellsNoTank = {
 
 
 	-- [**Shadowlands**]
+	--[=====[
 	-- The Necrotic Wake
 	[324323] = 20, -- Gruesome Cleave (Skeletal Marauder)
 	[323489] = 20, -- Throw Cleaver (Flesh Crafter / Stitching Assistant)
 
-	--[=====[
 	-- De Other Side
 	[332157] = 20,		-- Spinning Up (Headless Client)
 
@@ -1355,7 +1417,12 @@ local SpellsNoTank = {
 	[324608] = 20,		-- Charged Stomp (Oryphrion)
 
 	-- Plaguefall
+
+	--]=====]
 	-- Theater of Pain
+	[474084] = 20, -- Necrotic Eruption (Kul'tharok)
+
+	--[=====[
 	-- Sanguine Depths
 
 	-- Halls of Atonement
@@ -1369,18 +1436,22 @@ local SpellsNoTank = {
 
 
 	-- [**Battle for Azeroth**]
+	--[=====[
 	-- Siege of Boralus
 	--[273720] = 20, -- Heavy Ordnance, Contact (Chopper Redhook) - is this reasonable?
 
-	--[=====[
 	-- The Underrot
 	[260793] = 20, -- Indigestion (Cragmaw the Infested)
 	[272457] = 20, -- Shockwave (Sporecaller Zancha)
-
-	-- Operation: Mechagon - Junkyard
-	-- Operation: Mechagon - Workshop
-	[294291] = 20,		-- Process Waste (Waste Processing Unit)
 	--]=====]
+
+	-- The MOTHERLODE!!
+	[258674] = 20, -- Throw Wrench (Off-Duty Laborer) - TODO is this reasonable?
+	[257544] = 20, -- Jagged Cut (Earthrager, Azerokk) - TODO is this reasonable?
+
+	-- Operation: Mechagon - Workshop
+	[1215065] = 20, -- Platinum Pummel (The Platinum Pummeler, Tussle Tonks)
+
 
 
 	-- [**Legion**]
@@ -1462,6 +1533,7 @@ local Auras = {
 
 	-- [**The War Within**]
 	-- Darkflame Cleft
+	--[426277] = true, -- One-Hand Headlock (Sootsnout) - TODO is this avoidable?
 	[421653] = true, -- Cursed Wax (The Candle King)
 
 	-- The Dawnbreaker
@@ -1469,6 +1541,10 @@ local Auras = {
 
 	-- Ara-Kara, City of Echoes
 	[436614] = true, -- Web Wrap (Environment / Ixin / Nakt / Atik / Avanoxx)
+
+	-- Operation: Floodgate
+	[1215089] = true, -- Electrified Water (Environment)
+	[1213704] = true, -- Zeppelin Barrage, Spotlight (Environment)
 
 	-- [**Dragonflight**]
 	--[=====[
@@ -1493,13 +1569,13 @@ local Auras = {
 	--[358973] = true,	-- Wave of Terror (Season 2 Affix - Varruth)
 	--[373391] = true,	-- Nightmare (Season 4 Affix - Nightmare Cloud)
 
+	--[=====[
 	-- The Necrotic Wake
 	[324293] = true, -- Rasping Scream (Skeletal Marauder)
 
 	-- Mists of Tirna Scithe
 	[322968] = true, -- Dying Breath (Drust Spiteclaw)
 
-	--[=====[
 	-- De Other Side
 	[331381] = true,	-- Slipped (Lubricator)
 	[334505] = true,	-- Shimmerdust Sleep (Weald Shimmermoth)
@@ -1522,11 +1598,11 @@ local Auras = {
 	--]=====]
 
 	-- [**Battle for Azeroth**]
+	--[=====[
 	-- Siege of Boralus
 	[257169] = true, -- Terrifying Roar (Bilge Rat Demolisher)
 	[274942] = true, -- Banana Rampage (Bilge Rat Buccaneer)
 
-	--[=====[
 	-- Waycrest Manor
 	[265352] = true, -- Toad Blight (Blight Toad)
 	[278468] = true, -- Freezing Trap (Maddened Survivalist)
@@ -1542,9 +1618,11 @@ local Auras = {
 	-- Operation: Mechagon - Junkyard
 	[398529] = true,	-- Gooped (Gunker)
 	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
+	--]=====]
 
 	-- Operation: Mechagon - Workshop
-	--]=====]
+	[295130] = true, -- Neutralize Threat (Detect-o-bot)
+
 
 	-- [**Legion**]
 	--[=====[
