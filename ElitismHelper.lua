@@ -52,6 +52,7 @@ local Spells = {
 	[442192] = 20, -- Oppressive Void (Environment)
 	[1214550] = 20, -- Umbral Wave (Void Ascendant)
 	[1214645] = 20, -- Erupting Darkness (Consuming Voidstone)
+	[455220] = 20, -- Tainted Waters (Environment)
 
 	[444250] = 20, -- Lightning Torrent, Beams (Kyrioss)
 	[1214318] = 20, -- Grounding Bolt (Kyrioss)
@@ -113,14 +114,14 @@ local Spells = {
 	[440652] = 20, -- Surging Flame, Impact (Wandering Candle)
 	[440653] = 20, -- Surging Flame, Area (Wandering Candle)
 	[428650] = 20, -- Burning Backlash (Environment)
-	--[426265] = 20, -- Ceaseless Flame (Sootsnout) - TODO is this reasonable?
+	--[426259] = 20, -- Pyro-pummel (Torchsnarl) - requires avoiding Flaming Tether
+	--[426265] = 20, -- Ceaseless Flame (Sootsnout) - requires avoiding One-Hand Headlock
 	[1218133] = 20, -- Burning Candles (Sootsnout)
 	[422393] = 20, -- Suffocating Darkness (Skittering Darkness)
 
 	[422125] = 20, -- Reckless Charge (Ol' Waxbeard)
 	[422274] = 20, -- Cave-In (Ol' Waxbeard)
 	[424821] = 20, -- High Speed Collision (Ol' Waxbeard)
-	[429093] = 20, -- Underhanded Track-tics, Explosion (Ol' Waxbeard) - TODO is this reasonable?
 	[421638] = 20, -- Wicklighter Barrage (Blazikon)
 	[443969] = 20, -- Enkindling Inferno (Blazikon)
 	[422700] = 20, -- Extinguishing Gust (Blazikon)
@@ -248,7 +249,6 @@ local Spells = {
 	[473287] = 20, -- Excessive Electrification (Big M.O.M.M.A.)
 	[472454] = 20, -- Doom Storm (Darkfuse Mechadrone, Big M.O.M.M.A.)
 	[473526] = 20, -- Big Bada BOOM! (Keeza Quickfuse, Demolition Duo)
-	[460787] = 20, -- Deflagration (Keeza Quickfuse, Demolition Duo) - TODO is this reasonable?
 	[472755] = 20, -- Shrapnel (Keeza Quickfuse, Demolition Duo)
 	[1217751] = 20, -- B.B.B.F.G. (Keeza Quickfuse, Demolition Duo)
 	[460965] = 20, -- Barreling Charge (Bront, Demolition Duo)
@@ -685,13 +685,12 @@ local Spells = {
 	--]=====]
 
 	-- Theater of Pain
-	[317605] = 20, -- Whirlwind (Dokigg the Brutalizer / Nekthara the Mangler / Rek the Hardened) - Champions in Halls of Might have had their abilities redistributed
-	[1213695] = 20, -- Earthcrusher, Swirlies (Dokigg the Brutalizer) - Champions in Halls of Might have had their abilities redistributed
-	[337037] = 20, -- Whirling Blade (Nekthara the Mangler) - Champions in Halls of Might have had their abilities redistributed
-	[332708] = 20, -- Ground Smash (Heavin the Breaker) - Champions in Halls of Might have had their abilities redistributed
-	[334025] = 20, -- Bloodthirsty Charge (Haruga the Bloodthirsty) - Champions in Halls of Might have had their abilities redistributed
+	[317605] = 20, -- Whirlwind (Dokigg the Brutalizer / Nekthara the Mangler / Heavin the Breaker / Rek the Hardened)
+	[1213695] = 20, -- Earthcrusher, Swirlies (Dokigg the Brutalizer)
+	[337037] = 20, -- Whirling Blade (Nekthara the Mangler / Advent Nevermore)
+	[334025] = 20, -- Bloodthirsty Charge (Haruga the Bloodthirsty)
 	[317367] = 20, -- Necrotic Volley (Environment)
-	[333301] = 20, -- Curse of Desolation (Nefarious Darkspeaker)
+	[333301] = 20, -- Curse of Desolation, Area (Nefarious Darkspeaker)
 	[333297] = 20, -- Death Winds (Nefarious Darkspeaker)
 	[331243] = 20, -- Bone Spikes (Soulforged Bonereaver)
 	[331224] = 20, -- Bonestorm (Soulforged Bonereaver)
@@ -952,7 +951,6 @@ local Spells = {
 	[1217296] = 20, -- Shocking Claw (Coin-Operated Crowd Pummeler)
 	[275907] = 20, -- Tectonic Smash (Azerokk)
 	[258628] = 20, -- Resonant Quake, Area (Azerokk)
-	[1214673] = 20, -- Azerite Aftershock (Azerokk) - TODO is this reasonable?
 	[259533] = 20, -- Azerite Catalyst (Rixxa Fluxflame)
 	[260279] = 20, -- Gatling Gun (Mogul Razdunk)
 	[276234] = 20, -- Micro Missiles (B.O.O.M.B.A., Mogul Razdunk)
@@ -1446,8 +1444,8 @@ local SpellsNoTank = {
 	--]=====]
 
 	-- The MOTHERLODE!!
-	[258674] = 20, -- Throw Wrench (Off-Duty Laborer) - TODO is this reasonable?
-	[257544] = 20, -- Jagged Cut (Earthrager, Azerokk) - TODO is this reasonable?
+	[258674] = 20, -- Throw Wrench (Off-Duty Laborer)
+	[257544] = 20, -- Jagged Cut (Earthrager, Azerokk)
 
 	-- Operation: Mechagon - Workshop
 	[1215065] = 20, -- Platinum Pummel (The Platinum Pummeler, Tussle Tonks)
@@ -1533,7 +1531,6 @@ local Auras = {
 
 	-- [**The War Within**]
 	-- Darkflame Cleft
-	--[426277] = true, -- One-Hand Headlock (Sootsnout) - TODO is this avoidable?
 	[421653] = true, -- Cursed Wax (The Candle King)
 
 	-- The Dawnbreaker
