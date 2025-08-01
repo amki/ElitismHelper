@@ -142,7 +142,8 @@ local Spells = {
 
 	[424621] = 20, -- Brutal Smash (Sergeant Shaynemail, Captain Dailcry)
 	[424460] = 20, -- Ember Storm (Taener Duelmal, Captain Dailcry)
-	[447272] = 20, -- Hurl Spear (Captain Dailcry)
+	-- [1238781] = 20, -- Earthshattering Spear, Impact (Captain Dailcry) - always does damage to party as well
+	[1238782] = 20, -- Earthshattering Spear, Area (Captain Dailcry)
 	[423076] = 20, -- Hammer of Purity, Swirly (Baron Braunpyke)
 	[423121] = 20, -- Hammer of Purity, Hammer (Baron Braunpyke)
 	[423019] = 20, -- Castigator's Detonation (Baron Braunpyke)
@@ -207,7 +208,6 @@ local Spells = {
 
 
 	-- Ara-Kara, City of Echoes
-	[438623] = 20, -- Toxic Rupture (Engorged Crawler)
 	[434830] = 20, -- Vile Webbing (Environment / Ixin / Nakt / Atik / Avanoxx)
 	[434824] = 20, -- Web Spray, Cone (Ixin / Nakt / Atik)
 	[439469] = 20, -- Web Spray, Swirly (Ixin / Nakt / Atik)
@@ -239,9 +239,6 @@ local Spells = {
 	[468727] = 20, -- Seaforium Charge (Venture Co. Diver)
 	[1213790] = 20, -- Zeppelin Barrage, Swirly (Environment)
 	[1214341] = 20, -- Bomb Pile Explosion (Environment)
-	[465487] = 20, -- Bubbles Smash (Bubbles)
-	[469819] = 20, -- Bubble (Bubbles)
-	[1217496] = 20, -- Splish Splash (Bubbles)
 	[465604] = 20, -- Battery Bolt (Darkfuse Jumpstarter)
 
 	[473224] = 20, -- Sonic Boom, Wave (Big M.O.M.M.A.)
@@ -261,6 +258,19 @@ local Spells = {
 	[468723] = 20, -- Shock Water, Area (Geezle Gigazap)
 	[468647] = 20, -- Leaping Spark (Geezle Gigazap)
 
+
+	-- Eco-Dome Al'dani
+	[1221174] = 20, -- Gorging Smash, Swirly (Voracious Gorger)
+	[1222202] = 20, -- Arcane Burn (Overcharged Sentinel)
+	[1222356] = 20, -- Warp (Tamed Ruinstalker)
+	[1223008] = 20, -- Burrowing Eruption (Wastes Creeper)
+	[1213695] = 20, -- Earthcrusher, Swirly (Burrowing Creeper)
+
+	[1217446] = 20, -- Digestive Spittle (Azhiccar)
+	[1217241] = 20, -- Feast (Azhiccar)
+	[1226444] = 20, -- Wounded Fate (Soul-Scribe)
+	[1225179] = 20, -- Ceremonial Dagger (Soul-Scribe)
+	[1236910] = 20, -- Eternal Weave (Soul-Scribe)
 
 
 	-- [**Dragonflight**]
@@ -682,7 +692,7 @@ local Spells = {
 	[329217] = 20,		-- Slime Lunge (Doctor Ickus)
 	[330026] = 20,		-- Slime Lunge (Doctor Ickus)
 	[322475] = 20,		-- Plague Crash (Environment Margrave Stradama)
-	--]=====]
+
 
 	-- Theater of Pain
 	[317605] = 20, -- Whirlwind (Dokigg the Brutalizer / Nekthara the Mangler / Heavin the Breaker / Rek the Hardened)
@@ -716,7 +726,7 @@ local Spells = {
 	[339550] = 20, -- Echo of Battle (Mordretha)
 	[339751] = 20, -- Ghostly Charge (Mordretha)
 
-	--[=====[
+
 	-- Sanguine Depths
 	[334563] = 20,		-- Volatile Trap (Dreadful Huntmaster)
 	[320991] = 20,		-- Echoing Thrust (Regal Mistdancer)
@@ -730,72 +740,73 @@ local Spells = {
 	[328494] = 20,		-- Sintouched Anima (Executor Tarvold)
 	[325885] = 20,		-- Anguished Cries (Z'rali)
 	[323810] = 20,		-- Piercing Blur (General Kaal)
-
+	--]=====]
 
 	-- Halls of Atonement
-	[325523] = 20,		-- Deadly Thrust (Depraved Darkblade)
-	[325799] = 20,		-- Rapid Fire (Depraved Houndmaster)
-	[326440] = 20,		-- Sin Quake (Shard of Halkias)
-	[326997] = 20,		-- Powerful Swipe (Stoneborn Slasher)
-	[326891] = 20,		-- Anguish (Inquisitor Sigar)
+	[326440] = 20, -- Sin Quake (Shard of Halkias)
+	[326997] = 20, -- Powerful Swipe (Stoneborn Slasher)
+	[1235762] = 20, -- Turn to Stone (Stoneborn Reaver)
+	[326891] = 20, -- Anguish (Inquisitor Sigar)
 
-	[322945] = 20,		-- Heave Debris (Halkias)
-	[324044] = 20,		-- Refracted Sinlight (Halkias)
-	[319702] = 20,		-- Blood Torrent (Echelon)
-	[319703] = 20,		-- Blood Torrent (Echelon)
-	[329340] = 20,		-- Anima Fountain (High Adjudicator Aleez)
-	[338013] = 20,		-- Anima Fountain (High Adjudicator Aleez)
-	[323126] = 20,		-- Telekinetic Collision (Lord Chamberlain)
-	[329113] = 20,		-- Telekinteic Onslaught (Lord Chamberlain)
-	[327885] = 20,		-- Erupting Torment (Lord Chamberlain)
-	[323236] = 20,		-- Unleashed Suffering (Lord Chamberlain)
+	--[322945] = 20, -- Heave Debris (Halkias) - always does damage to party as well
+	[324044] = 20, -- Refracted Sinlight (Halkias)
+	[319702] = 20, -- Blood Torrent, Impact (Echelon)
+	[319703] = 20, -- Blood Torrent, Area (Echelon)
+	[338013] = 20, -- Anima Fountain (High Adjudicator Aleez)
+	[323126] = 20, -- Telekinetic Collision (Lord Chamberlain)
+	[327885] = 20, -- Erupting Torment (Lord Chamberlain)
+	[323236] = 20, -- Unleashed Suffering (Lord Chamberlain)
 
 
 	-- Tazavesh: Streets of Wonder
-	[355903] = 20,		-- Disruption Grenade (Customs Security)
-	[356011] = 20,		-- Beam Splicer (Armored Overseer / Tracker Zo'Korss)
-	[355306] = 20,		-- Rift Blast (Portalmancer Zo'honn)
-	[357019] = 20,		-- Lightshard Retreat (Cartel Wiseguy)
-	[355502] = 20,		-- Shocklight Barrier (Environment)
-	[355476] = 20,		-- Shock Mines (Commander Zo'far)
-	[355487] = 20,		-- Lethal Force (Commander Zo'far)
+	[355903] = 20, -- Disruption Grenade (Customs Security)
+	[356011] = 20, -- Beam Splicer (Armored Overseer / Tracker Zo'Korss)
+	[355306] = 20, -- Rift Blast (Portalmancer Zo'honn)
+	[357019] = 20, -- Lightshard Retreat (Cartel Wiseguy)
+	[357799] = 20, -- Bounced! (Zo'gron)
+	[356404] = 20, -- Lava Breath (Ancient Core Hound)
+	[357509] = 20, -- Wild Trash (Enraged Direhorn)
+	[355502] = 20, -- Shocklight Barrier (Environment)
+  	[355638] = 20, -- Quelling Strike (Market Peacekeeper) - TODO is this reasonable?
+	[355476] = 20, -- Shock Mines (Commander Zo'far)
+	[355487] = 20, -- Lethal Force (Commander Zo'far)
 
-	[348366] = 20,		-- Armed Security (Zo'phex)
-	[357799] = 20,		-- Bounced! (Zo'gron)
-	[350921] = 20,		-- Crowd Control (Zo'gron)
-	[356482] = 20,		-- Rotten Food (Zo'gron)
-	[346329] = 20,		-- Spilled Liquids (P.O.S.T. Master)
-	[349801] = 20,		-- Grand Consumption (Alcruux)
-	[349663] = 20,		-- Grip of Hunger (Alcruux)
-	[349999] = 20,		-- Anima Detonation (Achillite) TODO avoidable?
-	[351070] = 20,		-- Venting Concussion (Achillite) TODO avoidable?
-	[349989] = 20,		-- Volatile Anima TODO verify
-	[350090] = 20,		-- Whirling Annihilation (Venza Goldfuse)
-	[347481] = 20,		-- Shuri (So'azmi)
+	[348366] = 20, -- Armed Security (Zo'phex)
+	[1236348] = 20, -- Charged Slash (Zo'phex)
+	[346028] = 20, -- Interrogation, Frontal (Zo'phex)
+	[356482] = 20, -- Rotten Food (Myza's Oasis)
+	[350921] = 20, -- Crowd Control (Zo'gron, Myza's Oasis)
+	[346329] = 20, -- Spilled Liquids (P.O.S.T. Master)
+	[350013] = 20, -- Gluttonous Feast (Alcruux, The Grand Menagerie)
+	[349801] = 20, -- Grand Consumption (Alcruux, The Grand Menagerie)
+	[349663] = 20, -- Grip of Hunger (Alcruux, The Grand Menagerie)
+	[351070] = 20, -- Venting Concussion (Achillite, The Grand Menagerie)
+	[349999] = 20, -- Anima Detonation (Achillite, The Grand Menagerie)
+	[350045] = 20, -- Corrosive Anima (Achillite, The Grand Menagerie)
+	[350090] = 20, -- Whirling Annihilation (Venza Goldfuse, The Grand Menagerie)
+	[347481] = 20, -- Shuri (So'azmi)
 
 
 	-- Tazavesh: So'leah's Gambit
-	[355423] = 20,		-- Volatile Pufferfish (Murkbrine Fishmancer)
-	[355465] = 20,		-- Boulder Throw (Coastwalker Goliath)
-	[355581] = 20,		-- Crackle (Stormforged Guardian)
-	[355584] = 20,		-- Charged Pulse (Stormforged Guardian)
-	[356260] = 20,		-- Tidal Burst (Hourglass Tidesage)
-	[357228] = 20,		-- Drifting Star (Adorned Starseer)
+	[355423] = 20, -- Volatile Pufferfish (Murkbrine Fishmancer)
+	[355465] = 20, -- Boulder Throw (Coastwalker Goliath)
+	[355581] = 20, -- Crackle (Stormforged Guardian)
+	[355584] = 20, -- Charged Pulse (Stormforged Guardian)
+	[356260] = 20, -- Tidal Burst (Hourglass Tidesage)
+	[357228] = 20, -- Drifting Star (Adorned Starseer)
 
-	--[346828] = 20,	-- Sanitizing Field (Hylbrande) - more like a wipe mechanic
-	[356796] = 20,		-- Runic Feedback (Hylbrande)
-	[346960] = 20,		-- Purged by Fire (Hylbrande)
-	[346961] = 20,		-- Purging Field (Hylbrande)
-	[347094] = 20,		-- Titanic Crash (Hylbrande)
-	[347149] = 20,		-- Infinite Breath (Timecap'n Hooktail)
-	[347370] = 20,		-- Cannon Barrage (Timecap'n Hooktail)
-	[358947] = 20,		-- Burning Tar (Timecap'n Hooktail)
-	[347151] = 20,		-- Hook Swipe (Timecap'n Hooktail)
-	[354334] = 20,		-- Hook'd! (Timecap'n Hooktail)
-	--[?] = 20,			-- Deadly Seas (Timecap'n Hooktail) (oneshot from going in water, debuff?)
-	[351101] = 20,		-- Energy Fragmentation (So'leah)
-	[351646] = 20,		-- Hyperlight Nova (So'leah)
-	--]=====]
+	[346828] = 20, -- Sanitizing Field (Hylbrande)
+	[356796] = 20, -- Runic Feedback (Hylbrande)
+	[346960] = 20, -- Purged by Fire (Hylbrande)
+	[346961] = 20, -- Purging Field (Hylbrande)
+	[347094] = 20, -- Titanic Crash (Hylbrande)
+	[347149] = 20, -- Infinite Breath (Timecap'n Hooktail)
+	[347370] = 20, -- Cannon Barrage (Timecap'n Hooktail)
+	[358947] = 20, -- Burning Tar (Timecap'n Hooktail)
+	[347423] = 20, -- Deadly Seas, Instakill (Timecap'n Hooktail) - does this work?
+	[351101] = 20, -- Energy Fragmentation (So'leah)
+	[351646] = 20, -- Hyperlight Nova (So'leah)
+
 
 
 	-- [**Battle for Azeroth**]
@@ -929,7 +940,7 @@ local Spells = {
 	[413146] = 20, -- Swiftwind Saber (Harlan Sweete)
 	[257293] = 20, -- Swiftwind Saber (Harlan Sweete) - TODO ID?
 	[257315] = 20, -- Black Powder Bomb (Irontide Grenadier, Harlan Sweete)
-	--]=====]
+
 
 	-- The MOTHERLODE!!
 	[257371] = 20, -- Tear Gas, Swirly (Mechanized Peacekeeper)
@@ -957,7 +968,7 @@ local Spells = {
 	[270277] = 20, -- Big Red Rocket (Mogul Razdunk)
 	[270926] = 20, -- Drill Smash, Swirly (Mogul Razdunk)
 
-	--[=====[
+
 	-- Operation: Mechagon - Junkyard
 	[300816] = 20,		-- Slimewave (Slime Elemental)
 	[300188] = 20,		-- Scrap Cannon (Weaponized Crawler)
@@ -973,7 +984,7 @@ local Spells = {
 	[298940] = 20,		-- Bolt Buster (Naeno Megacrash)
 	[295552] = 20,		-- Cannon Blast (HK-8 Aerial Oppression Unit)
 	[296150] = 20,		-- Vent Blast (HK-8 Aerial Oppression Unit - Environment)
-	--]=====]
+
 
 	-- Operation: Mechagon - Workshop
 	[282943] = 20, -- Piston Smasher (Environment)
@@ -1000,6 +1011,7 @@ local Spells = {
 	[291856] = 20, -- Recalibrate (King Mechagon)
 	[291613] = 20, -- Take Off! (Aerial Unit R-21/X, King Mechagon)
 	[291914] = 20, -- Cutting Beam, Beam (Aerial Unit R-21/X, King Mechagon)
+	--]=====]
 
 
 	-- [**Legion**]
@@ -1348,6 +1360,9 @@ local SpellsNoTank = {
 	[439763] = 20, -- Process of Elimination, Shadow (Izo the Grand Splicer)
 	[450055] = 20, -- Gutburst (Ravenous Scarab, Izo the Grand Splicer)
 
+	-- Eco-Dome Al'dani
+	[1231224] = 20, -- Arcane Slash (Overcharged Sentinel)
+
 	-- [**Dragonflight**]
 	--[=====[
 	-- Uldaman: Legacy of Tyr
@@ -1416,21 +1431,21 @@ local SpellsNoTank = {
 
 	-- Plaguefall
 
-	--]=====]
 	-- Theater of Pain
 	[474084] = 20, -- Necrotic Eruption (Kul'tharok)
 
-	--[=====[
 	-- Sanguine Depths
+	--]=====]
 
 	-- Halls of Atonement
-	--[323001] = 20,		-- Glass Shards (Halkias) This is always unavoidable for tanks but sometimes unavoidable for everyone
-	[322936] = 20,		-- Crumbling Slam (Halkias)
-	[346866] = 20,		-- Stone Breath (Loyal Stoneborn)
+	[323001] = 20, -- Glass Shards (Halkias)
 
 	-- Tazavesh: Streets of Wonder
+	[355832] = 20, -- Quickblade (Cartel Skulker)
+	[351961] = 20, -- Static Mace (Bazaar Strongarm)
+
 	-- Tazavesh: So'leah's Gambit
-	--]=====]
+
 
 
 	-- [**Battle for Azeroth**]
@@ -1441,7 +1456,6 @@ local SpellsNoTank = {
 	-- The Underrot
 	[260793] = 20, -- Indigestion (Cragmaw the Infested)
 	[272457] = 20, -- Shockwave (Sporecaller Zancha)
-	--]=====]
 
 	-- The MOTHERLODE!!
 	[258674] = 20, -- Throw Wrench (Off-Duty Laborer)
@@ -1449,7 +1463,7 @@ local SpellsNoTank = {
 
 	-- Operation: Mechagon - Workshop
 	[1215065] = 20, -- Platinum Pummel (The Platinum Pummeler, Tussle Tonks)
-
+	--]=====]
 
 
 	-- [**Legion**]
@@ -1586,13 +1600,16 @@ local Auras = {
 
 	-- Theater of Pain
 	-- Sanguine Depths
+	--]=====]
+
 	-- Halls of Atonement
-
-
+	[339237] = 20, -- Sinlight Visions (Halkias)
 
 	-- Tazavesh: Streets of Wonder
+
 	-- Tazavesh: So'leah's Gambit
-	--]=====]
+	[347422] = 20, -- Deadly Seas, Stun (Timecap'n Hooktail)
+
 
 	-- [**Battle for Azeroth**]
 	--[=====[
@@ -1615,11 +1632,10 @@ local Auras = {
 	-- Operation: Mechagon - Junkyard
 	[398529] = true,	-- Gooped (Gunker)
 	[300659] = true,	-- Consuming Slime (Toxic Monstrosity)
-	--]=====]
 
 	-- Operation: Mechagon - Workshop
 	[295130] = true, -- Neutralize Threat (Detect-o-bot)
-
+	--]=====]
 
 	-- [**Legion**]
 	--[=====[
@@ -1658,6 +1674,9 @@ local AurasNoTank = {
 local MeleeHitters = {
 	--[161917] = 20,		-- DEBUG
 	--[174773] = 20,		-- Spiteful Shade
+
+	-- Tazavesh: So'leah's Gambit
+	[177500] = 20, -- Corsair Brute, Timecap'n Hooktail - TODO does this work?
 }
 
 local function compareSemver(ver1, ver2)
