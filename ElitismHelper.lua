@@ -767,7 +767,7 @@ local Spells = {
 	[356404] = 20, -- Lava Breath (Ancient Core Hound)
 	[357509] = 20, -- Wild Trash (Enraged Direhorn)
 	[355502] = 20, -- Shocklight Barrier (Environment)
-  	[355638] = 20, -- Quelling Strike (Market Peacekeeper) - TODO is this reasonable?
+	[355638] = 20, -- Quelling Strike (Market Peacekeeper) - TODO is this reasonable?
 	[355476] = 20, -- Shock Mines (Commander Zo'far)
 	[355487] = 20, -- Lethal Force (Commander Zo'far)
 
