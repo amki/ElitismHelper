@@ -754,7 +754,7 @@ local Spells = {
 	[319703] = 20, -- Blood Torrent, Area (Echelon)
 	[338013] = 20, -- Anima Fountain (High Adjudicator Aleez)
 	[323126] = 20, -- Telekinetic Collision (Lord Chamberlain)
-	[327885] = 20, -- Erupting Torment (Lord Chamberlain)
+	[1236964] = 20, -- Erupting Torment (Lord Chamberlain)
 	[323236] = 20, -- Unleashed Suffering (Lord Chamberlain)
 
 
